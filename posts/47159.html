@@ -1,0 +1,1713 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="keywords" content="JAVA基础 - 初识HashMap, 码梦川">
+    <meta name="description" content="大纲：
+
+
+基本概念和原理
+
+什么是 HashMap？
+HashMap 的基本工作原理是什么？
+HashMap 和 HashTable、TreeMap 的区别是什么？
+
+
+
+底层数据结构
+
+HashMap 的底层数据结构是什么？
+为什么选择">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JAVA基础 - 初识HashMap | 码梦川</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://imgapi.cn/bing.php?rand=true);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="码梦川" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">码梦川</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-book-open" style="zoom: 0.6;"></i>
+      
+      <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>归档</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/gallery">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>关于</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fa-sharp fa-solid fa-star" style="zoom: 0.6;"></i>
+      
+      <span>常用</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://wangchujiang.com/linux-command/">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>linux命令</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://smzdk.top/#/">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>每日早报</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://tophub.today/c/news">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>今日热点</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fa-sharp fa-solid fa-star" style="zoom: 0.6;"></i>
+      
+      <span>我的</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://google.mmc88.fun">
+          
+          <i class="fa-sharp fa-solid fa-magnifying-glass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Google搜索</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://chat.mmc88.fun">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>chatGpt</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://likunqi.top/">
+          
+          <i class="fa-solid fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>图床</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://k.youshop10.com/A7RuSklJ">
+          
+          <i class="fa-sharp fa-solid fa-cart-shopping" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>红包微店</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://2.ksfaka.com/mmfang">
+          
+          <i class="fa-sharp fa-solid fa-cart-shopping" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>码梦坊</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">码梦川</div>
+        <div class="logo-desc">
+            
+            码梦川一个程序员的博客网站
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-book-open"></i>
+			
+			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:28px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:28px" ></i>
+			      
+		          <span>归档</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/gallery " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:28px" ></i>
+			      
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/about " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-user-circle" style="position: absolute;left:28px" ></i>
+			      
+		          <span>关于</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa-sharp fa-solid fa-star"></i>
+			
+			常用
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://wangchujiang.com/linux-command/ " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>linux命令</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://smzdk.top/#/ " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>每日早报</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://tophub.today/c/news " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>今日热点</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa-sharp fa-solid fa-star"></i>
+			
+			我的
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://google.mmc88.fun " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-magnifying-glass" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Google搜索</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://chat.mmc88.fun " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>chatGpt</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://likunqi.top/ " style="margin-left:50px">
+				  
+				   <i class="fa fa-solid fa-image" style="position: absolute;left:28px" ></i>
+			      
+		          <span>图床</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://k.youshop10.com/A7RuSklJ " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-cart-shopping" style="position: absolute;left:28px" ></i>
+			      
+		          <span>红包微店</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://2.ksfaka.com/mmfang " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-cart-shopping" style="position: absolute;left:28px" ></i>
+			      
+		          <span>码梦坊</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/hexo-lanternjs@1.0.0/lantern.min.js"></script>-->
+    <script type="text/javascript" src="/js/LanternJS.js"></script>
+
+    <div id="lantern-wrapper" class="lantern-wrapper" no-select></div>
+    <script>
+        let lantern = new Lantern('lantern-wrapper', {
+            date: {								// 日期格式：'月-日'
+                from: '01-01',					// 开始悬挂灯笼的日期
+                to: '3-31'						// 结束悬挂灯笼的日期
+            },
+            postion: {
+                zIndex: 9999,					// 整个灯笼的 z-index 属性
+                lanternRL: [10, 150, 150, 10],	// 灯笼距离边界的距离：左侧灯笼距离左边的距离，右侧登录距离右侧的距离；页面灯笼从左往右依次设置
+                lanternTop: 0					// 灯笼距离顶部的距离。你也可以使用数组从左往右依次设置每个灯笼的距顶距离，例如：[0, 100, 200, 300]
+            },
+            content: '新年快乐'					 // 灯笼内显示的文字，只会截取前四个字符
+        });
+    </script>
+
+    <script type="text/javascript">
+        /*  动态标题*/
+        var OriginTitile = document.title,
+            titleTime;
+        document.addEventListener("visibilitychange",
+            function() {
+                if (document.hidden) {
+                    document.title = "你别走吖 Σ(っ °Д °;)っ";
+                    clearTimeout(titleTime)
+                } else {
+                    document.title = "(/≧▽≦/)你又回来啦！" ;
+                    titleTime = setTimeout(function() {
+                            document.title = OriginTitile
+                        },
+                        2000)
+                }
+            });
+    </script>
+
+
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://imgapi.cn/bing.php?rand=true')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JAVA基础 - 初识HashMap</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <style type="text/css">
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgba(255, 255, 255, 0.63);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">JAVA基础</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JAVA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                JAVA基础
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-01-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-01-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="大纲：">大纲：</h3>
+<ol>
+<li>
+<p><strong>基本概念和原理</strong></p>
+<ul>
+<li>什么是 <code>HashMap</code>？</li>
+<li><code>HashMap</code> 的基本工作原理是什么？</li>
+<li><code>HashMap</code> 和 <code>HashTable</code>、<code>TreeMap</code> 的区别是什么？</li>
+</ul>
+</li>
+<li>
+<p><strong>底层数据结构</strong></p>
+<ul>
+<li><code>HashMap</code> 的底层数据结构是什么？</li>
+<li>为什么选择这种数据结构？</li>
+<li>如何处理哈希冲突？</li>
+</ul>
+</li>
+<li>
+<p><strong>哈希函数</strong></p>
+<ul>
+<li><code>HashMap</code> 的哈希函数是如何工作的？</li>
+<li>为什么要使用 <code>(h = key.hashCode()) ^ (h &gt;&gt;&gt; 16)</code> 这样的哈希函数？</li>
+<li>这种哈希函数的优点和缺点是什么？</li>
+</ul>
+</li>
+<li>
+<p><strong>寻址算法</strong></p>
+<ul>
+<li><code>HashMap</code> 的寻址算法是如何工作的？</li>
+<li>为什么要使用 <code>(n - 1) &amp; hash</code> 这样的寻址算法？</li>
+<li>这种寻址算法的优点和缺点是什么？</li>
+</ul>
+</li>
+<li>
+<p><strong>扩容机制</strong></p>
+<ul>
+<li><code>HashMap</code> 的扩容机制是如何工作的？</li>
+<li>什么时候会触发扩容？</li>
+<li>扩容的过程中会发生什么？</li>
+</ul>
+</li>
+<li>
+<p><strong>线程安全性问题</strong></p>
+<ul>
+<li><code>HashMap</code> 是线程安全的吗？</li>
+<li>如果不是，那么在多线程环境下如何使用 <code>HashMap</code>？</li>
+<li><code>ConcurrentHashMap</code> 和 <code>Collections.synchronizedMap()</code> 是如何解决 <code>HashMap</code> 线程安全问题的？</li>
+</ul>
+</li>
+<li>
+<p><strong>性能优化</strong></p>
+<ul>
+<li>如何优化 <code>HashMap</code> 的性能？</li>
+<li>初始化大小、加载因子等参数的选择对性能有什么影响？</li>
+</ul>
+</li>
+<li>
+<p><strong>使用注意事项</strong></p>
+<ul>
+<li>在使用 <code>HashMap</code> 时需要注意哪些问题？</li>
+<li>哪些场景下应该使用 <code>HashMap</code>，哪些场景下不应该使用 <code>HashMap</code>？</li>
+</ul>
+</li>
+<li>
+<p><strong>Java 8中的改进</strong></p>
+<ul>
+<li>在Java 8中，<code>HashMap</code> 有哪些改进？</li>
+<li>这些改进对 <code>HashMap</code> 的性能有什么影响？</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="1-基本概念和原理">1. 基本概念和原理</h3>
+<h4 id="1-1-什么是-HashMap？">1.1 什么是 <code>HashMap</code>？</h4>
+<blockquote>
+<p><code>HashMap</code> 是 Java 中的一种基本数据结构，它属于 Java 集合框架的一部分。它用于存储键值对，其中每个键都是唯一的。<code>HashMap</code> 的主要优点是它允许以常数时间复杂度进行插入、删除和定位操作，这是通过使用哈希表实现的。</p>
+</blockquote>
+<h4 id="1-2-HashMap-的基本工作原理是什么？">1.2 <code>HashMap</code> 的基本工作原理是什么？</h4>
+<blockquote>
+<p><code>HashMap</code> 的工作原理基于哈希表。当我们向 <code>HashMap</code> 添加一个元素时，<code>HashMap</code> 会使用哈希函数计算键的哈希码，这个哈希码决定了元素在哈希表中的位置。如果两个元素的键产生相同的哈希码，那么它们会被放在同一个桶中，这种情况称为哈希冲突。<code>HashMap</code> 通过链表和红黑树（Java 8之后）解决冲突。</p>
+</blockquote>
+<h4 id="1-3-HashMap-和-HashTable、TreeMap-的区别是什么？">1.3 <code>HashMap</code> 和 <code>HashTable</code>、<code>TreeMap</code> 的区别是什么？</h4>
+<blockquote>
+<p><code>HashMap</code>、<code>HashTable</code> 和 <code>TreeMap</code> 都是 Java 中的映射数据结构，但它们有一些关键的区别。<code>HashMap</code> 允许键和值为 <code>null</code>，而 <code>HashTable</code> 不允许。<code>HashMap</code> 是非线程安全的，而 <code>HashTable</code> 是线程安全的。而 <code>TreeMap</code> 是基于红黑树的，它的键必须实现 <code>Comparable</code> 接口，元素的插入和查找时间复杂度为 $O(\log n)$，而 <code>HashMap</code> 和 <code>HashTable</code> 的插入和查找时间复杂度通常为 $O(1)$。</p>
+</blockquote>
+<h3 id="2-底层数据结构">2. <strong>底层数据结构</strong></h3>
+<h4 id="2-1-HashMap-的底层数据结构是什么？">2.1 <code>HashMap</code> 的底层数据结构是什么？</h4>
+<blockquote>
+<p><code>HashMap</code> 的底层是由数组和链表（或红黑树）组成的哈希表。数组的每个元素都是一个链表或红黑树的头节点。当我们插入一个新的键值对时，<code>HashMap</code> 会计算键的哈希值，然后用这个哈希值决定键值对在数组中的位置。如果该位置已经有其他键值对（哈希冲突），那么新的键值对就会被添加到这个位置的链表或红黑树中。</p>
+</blockquote>
+<h4 id="2-2-为什么选择这种数据结构？">2.2 为什么选择这种数据结构？</h4>
+<blockquote>
+<p>这种数据结构的选择主要基于以下两个原因：首先，数组的索引可以直接映射到哈希值，使得查找操作的时间复杂度为 $O(1)$。其次，使用链表或红黑树可以解决哈希冲突的问题。链表适合处理冲突较少的情况，而红黑树适合处理冲突较多的情况（即链表长度大于一定阈值时）。</p>
+</blockquote>
+<h4 id="2-3-如何处理哈希冲突？">2.3 如何处理哈希冲突？</h4>
+<blockquote>
+<p>当两个不同的键的哈希值相同时，会发生哈希冲突。<code>HashMap</code> 使用链地址法处理哈希冲突，即将哈希值相同的键值对链接在一起形成一个链表。在 Java 8 中，如果链表的长度超过一定阈值（默认为 8），那么链表就会被转换为红黑树，以提高搜索效率。</p>
+</blockquote>
+<h3 id="3-哈希函数">3. <strong>哈希函数</strong></h3>
+<h4 id="3-1-HashMap-的哈希函数是如何工作的？">3.1 <code>HashMap</code> 的哈希函数是如何工作的？</h4>
+<blockquote>
+<p><code>HashMap</code> 的哈希函数主要是用于计算键的哈希值。在 <code>HashMap</code> 中，哈希函数的主要作用是将任意长度的输入（即键）通过哈希算法转换成固定长度的输出，即哈希值。这个哈希值用于确定键值对在数组中的位置。</p>
+</blockquote>
+<h4 id="3-2-为什么要使用-h-key-hashCode-h-16-这样的哈希函数？">3.2 为什么要使用 <code>(h = key.hashCode()) ^ (h &gt;&gt;&gt; 16)</code> 这样的哈希函数？</h4>
+<blockquote>
+<p>这种哈希函数是为了进一步确保对象分布均匀，减少哈希冲突的概率。<code>key.hashCode()</code> 是通过调用键的 <code>hashCode</code> 方法获取哈希值，<code>(h &gt;&gt;&gt; 16)</code> 是将哈希值右移16位。通过异或操作 <code>^</code>，可以在不改变哈希值的情况下，使得高位和低位混合，从而达到更好的分布效果。</p>
+</blockquote>
+<h4 id="3-3-这种哈希函数的优点和缺点是什么？">3.3 这种哈希函数的优点和缺点是什么？</h4>
+<blockquote>
+<p>优点是能够使得哈希值的分布更均匀，减少哈希冲突的概率，从而提高 <code>HashMap</code> 的性能。缺点是计算稍微复杂一些，可能会增加一些计算开销，但考虑到其带来的性能提升，这个开销通常是可以接受的。</p>
+</blockquote>
+<h3 id="4-寻址算法">4. <strong>寻址算法</strong></h3>
+<h4 id="4-1-什么是-HashMap-的寻址算法？">4.1 什么是 <code>HashMap</code> 的寻址算法？</h4>
+<blockquote>
+<p>当我们往 <code>HashMap</code> 中添加一个元素（键值对）时，首先需要确定这个元素应该存储在数组的哪个位置，这一决定由寻址算法来实现。具体来讲，这个算法会使用哈希函数处理过的哈希码(hash code)来决定键值对在数组的存储索引位置。</p>
+</blockquote>
+<h4 id="4-2-为什么要使用-n-1-hash-这样的寻址算法？">4.2 为什么要使用 <code>(n - 1) &amp; hash</code> 这样的寻址算法？</h4>
+<blockquote>
+<p><code>HashMap</code> 的数组长度总是2的幂次方，这样设计是为了提高寻址效率。算法 <code>(n - 1) &amp; hash</code> 中，<code>n</code> 是数组的大小，<code>hash</code> 是键的哈希码。由于 <code>n</code> 是2的幂次方，<code>n - 1</code> 的二进制表示将为一系列的1。这时候，<code>n - 1</code> 与 <code>hash</code> 进行 <code>&amp;</code> 操作可以看做是对 <code>hash</code> 进行余数操作，这种方式快速地定位了元素所在的桶的位置，同时确保了分布的均匀性。如果简单地使用取模运算（即<code>hash % n</code>），会由于%操作本身较低的效率而降低寻址速度。</p>
+</blockquote>
+<h4 id="4-3-这种寻址算法的优点和缺点是什么？">4.3 这种寻址算法的优点和缺点是什么？</h4>
+<blockquote>
+<p><strong>优点</strong></p>
+<ul>
+<li><strong>高效</strong>：与常规的取模运算相比，位运算具有更高的效率。</li>
+<li><strong>分布均匀</strong>：因为长度是2的幂次方，所以索引生成的结果经过位运算后更加分散。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>缺点</strong></p>
+<ul>
+<li><strong>大小限制</strong>：数组的大小必须是2的幂次方，这会对内存设计造成一定的约束。</li>
+<li><strong>负载变重时性能降低</strong>：随着数据量变大，冲突增多，性能可能变差一些。但通常情况下，合理的扩容和负载因子可以在一定程度上缓解这个问题。</li>
+</ul>
+</blockquote>
+<h3 id="5-扩容机制">5. <strong>扩容机制</strong></h3>
+<h4 id="5-1-什么是-HashMap-的扩容？">5.1 什么是 <code>HashMap</code> 的扩容？</h4>
+<blockquote>
+<p>当我们谈论 <code>HashMap</code> 的扩容机制时，我们指的是它增加内部存储结构的大小以适应更多元素的过程。正如人们需要更大的居住空间来放置更多的家具一样，<code>HashMap</code> 需要更多的空间来存储更多的键值对（键-值对）。</p>
+</blockquote>
+<h4 id="5-2-HashMap-的扩容机制是如何工作的？">5.2 <code>HashMap</code> 的扩容机制是如何工作的？</h4>
+<blockquote>
+<p>在 <code>HashMap</code> 中，当我们将键值对加入集合中，如果存储的数量达到某个阈值（默认是桶的数量的 0.75，也就是加载因子的75%），<code>HashMap</code> 就会开始一个扩容的过程。在这个过程中，内部的存储桶数量会增加到原来的两倍，这样做是为了减少潜在的哈希冲突，以及维持集合的存取效率。</p>
+</blockquote>
+<h4 id="5-3-什么时候会触发扩容？">5.3 什么时候会触发扩容？</h4>
+<blockquote>
+<p>类似于一艘船超重可能会沉没，<code>HashMap</code> 如果超过负荷就需要扩容。扩容通常发生在插入操作之后检查到 <code>HashMap</code>中存储的元素数量超过了“容量 * 加载因子”所定义的阈值。加载因子默认值是0.75，这代表了当桶(bucket)有75%被占用时进行扩容，这可以保证空间和时间效率的平衡。</p>
+</blockquote>
+<h4 id="5-4-扩容的过程中会发生什么？">5.4 扩容的过程中会发生什么？</h4>
+<blockquote>
+<p>在 <code>HashMap</code> 扩容时，首先，内部的存储桶数组大小会增加到原来的两倍，并创建一个新的桶数组来替代旧的。然后 <code>HashMap</code>要把已有的数据迁移到这个新的数组中去, 每个已存在元素的位置也许会改变，因为它们的哈希可能会在新数组中映射到不同的位置。这是一个成本较高的操作，因为它涉及到重新计算每个元素的哈希并定位到新的桶中，入不敷出会显著降低性能，所以应当尽可能避免频繁扩容。</p>
+</blockquote>
+<h4 id="5-5-扩容为什么重要，以及它的影响？">5.5 扩容为什么重要，以及它的影响？</h4>
+<blockquote>
+<p>扩容是维持 <code>HashMap</code> 性能的一个重要过程。适时的扩容可以防止哈希冲突的增加，冲突过多会导致数据的存取效率变差（从常数时间退化到线性时间）。不过，频繁的扩容也会带来性能下降，因为扩容是一个重量级的操作，所以合理设置初始容量和加载因子是非常重要的。</p>
+</blockquote>
+<h3 id="6-线程安全性问题">6. <strong>线程安全性问题</strong></h3>
+<h4 id="6-1-HashMap-是线程安全的吗？">6.1 <code>HashMap</code> 是线程安全的吗？</h4>
+<blockquote>
+<p>不，<code>HashMap</code> 不是线程安全的。这意味着如果多个线程同时尝试修改 <code>HashMap</code> 的结构，例如添加或删除键值对，而没有进行适当的外部同步，那么 <code>HashMap</code> 的一致性可能被破坏，导致不可预知的行为或数据丢失。</p>
+</blockquote>
+<h4 id="6-2-如果不是，那么在多线程环境下如何使用-HashMap？">6.2 如果不是，那么在多线程环境下如何使用 <code>HashMap</code>？</h4>
+<blockquote>
+<p>在需求允许的情况下，可以使用 <code>Collections.synchronizedMap()</code> 方法将 <code>HashMap</code> 包装起来创建一个同步的映射。这样可以保证多个线程操作这个集合时，对集合的操作是互斥的。例如，通过下面的代码段可以创建一个同步的 <code>HashMap</code>：</p>
+</blockquote>
+<pre><code class="language-java">Map&lt;K,V&gt; map = Collections.synchronizedMap(new HashMap&lt;K,V&gt;());
+</code></pre>
+<p>不过需要注意，虽然每个方法调用都被同步了，但是对集合的复合操作仍然需要外部同步管理来防止并发问题。</p>
+<blockquote>
+<p>另一个选择是使用 <code>ConcurrentHashMap</code> 类，这是 <code>java.util.concurrent</code> 包提供的一种线程安全的HashMap实现。它通过分割数据结构以及利用细粒度的锁和同步器，比如 <code>Lock</code> 和 <code>ReadWrite</code> 锁，在保持高并发性能的同时提供线程安全性。</p>
+</blockquote>
+<h4 id="6-3-ConcurrentHashMap-和-Collections-synchronizedMap-是如何解决-HashMap-线程安全问题的？">6.3 <code>ConcurrentHashMap</code> 和 <code>Collections.synchronizedMap()</code> 是如何解决 <code>HashMap</code> 线程安全问题的？</h4>
+<blockquote>
+<p><code>ConcurrentHashMap</code> 和 <code>Collections.synchronizedMap()</code> 都提供了对多线程环境下 <code>HashMap</code> 操作的同步控制，但他们的实现方式和设计目标不一样。</p>
+<ul>
+<li><code>Collections.synchronizedMap()</code>: 它提供了一种同步的map，保护方法调用，防止多个线程同时对 <code>HashMap</code> 进行修改引发不一致状态。虽然它确保线程安全，但在高并发场合下，性能可能会下降，因为每次只有一个线程能够访问map。</li>
+<li><code>ConcurrentHashMap</code>: 这是一个为高并发优化的线程安全HashMap实现。它使用了一个分段锁（Segmentation Lock）机制，这种机制允许多个线程并发地访问不同段的buckets，从而降低锁竞争，提高并发度。此外，访问和更新操作不需要锁住整个map，只需要部分对锁的控制，并且读操作过程中通常完全不需要锁，从而具有更高的并发性能。</li>
+</ul>
+</blockquote>
+<h3 id="7-性能优化">7. <strong>性能优化</strong></h3>
+<h4 id="7-1-如何优化-HashMap-的性能？">7.1 如何优化 <code>HashMap</code> 的性能？</h4>
+<blockquote>
+<p>对 <code>HashMap</code> 进行性能优化涉及到为它提供合适的初始化参数和良好的使用实践。一个很重要的策略是合理预估存储元素数量，并相应地初始化 <code>HashMap</code> 的初始容量（initial capacity），这样可以减小扩容次数。还应注意选择合适的加载因子（load factor），对于执行多次插入操作的 <code>HashMap</code>，较低的加载因子可以减少哈希冲突，但同时会增加内存占用。</p>
+</blockquote>
+<h4 id="7-2-初始化大小、加载因子等参数的选择对性能有什么影响？">7.2 初始化大小、加载因子等参数的选择对性能有什么影响？</h4>
+<blockquote>
+<p>确定合适的初始化大小和加载因子可以极大影响 <code>HashMap</code> 的性能。<code>HashMap</code> 的默认加载因子 是 0.75，这是时间和空间成本的一种折中选择。较高的加载因子可能会减少内存使用，但同时增加了哈希冲突，从而减少性能，特别是在填充程度较高的情况下尤其明显。如果对内存使用没有特别严格的要求，可以适当降低加载因子来得到更好的性能。<br>
+同样，初始容量若预设不当，可能会在<code>HashMap</code>在后期的使用过程中需要进行多次成本较高的扩容操作。反之，如果初始容量设置过大，又可能会浪费内存资源。假如能够较为精确估计<code>HashMap</code>将要存储的元素数量，设置一个适当的初始容量可以减少自动扩容的次数，从而优化性能表现。所以，找到合适的容量和加载因子是实现HashMap性能优化的关键。</p>
+</blockquote>
+<h3 id="8-使用注意事项">8. <strong>使用注意事项</strong></h3>
+<h4 id="8-1-键值对的唯一性与null值的处理">8.1. 键值对的唯一性与<code>null</code>值的处理</h4>
+<blockquote>
+<p>在<code>HashMap</code>中，每一个键值对被视为一个单独的实体，这被称作“映射条目”。每个键（Key）是独一无二的，而值（Value）可以重复。<code>HashMap</code>允许你将<code>null</code>作为一个键或者值，但是要特别小心，因为过多地使用<code>null</code>可能会降低映射的可读性，并可能导致潜在的错误。</p>
+</blockquote>
+<h4 id="8-2-注意hashCode-与equals-的实现">8.2. 注意<code>hashCode()</code>与<code>equals()</code>的实现</h4>
+<blockquote>
+<p>正确覆写<code>hashCode()</code>和<code>equals()</code>方法是使用<code>HashMap</code>的关键。这是因为<code>HashMap</code>使用键对象的<code>hashCode()</code>方法来决定将键值对存储在哪个“桶”中。如果两个键被视为相等（即<code>equals()</code>方法返回<code>true</code>），它们的哈希码也必须相同。不恰当的实现可能会导致哈希冲突，进而影响<code>HashMap</code>的性能。</p>
+</blockquote>
+<h4 id="8-3-理解加载因子与初始容量的影响">8.3. 理解加载因子与初始容量的影响</h4>
+<blockquote>
+<p>加载因子是<code>HashMap</code>性能的一个重要参数，它默认为0.75，这是时间和空间成本之间的一种折衷。如果加载因子设置得太低，会导致表的增长频繁，增加插入操作的开销；如果设置得太高，又会增加查找成本，</p>
+</blockquote>
+<h4 id="8-4-适合使用-HashMap-的场景">8.4. 适合使用 <code>HashMap</code> 的场景</h4>
+<blockquote>
+<p><code>HashMap</code> 适合在键的顺序不重要，且需要快速插入、删除和定位元素的场合。例如，在实现字典、数据库索引、缓存和设置项时，<code>HashMap</code>都是一个很好的选择，因为它能够提供常数时间的性能，即 O(1)，对于这些应用来说，这是非常有效的。</p>
+</blockquote>
+<h4 id="8-5-不适合使用-HashMap-的场景">8.5. 不适合使用 <code>HashMap</code> 的场景</h4>
+<blockquote>
+<p>当数据的顺序很重要时，比如有序列表，<code>HashMap</code>就不是一个好的选择，因为它不保证键的顺序。另外，如果需要保证线程安全，在多线程环境下直接使用<code>HashMap</code>可能会导致不一致的行为。在这种情况下，你可能需要考虑使用<code>ConcurrentHashMap</code>或者通过其他方式来同步对<code>HashMap</code>的访问。此外，如果键对象的<code>hashCode()</code>实现不良，可能会导致频繁的哈希冲突，这也会降低<code>HashMap</code>的性能，因此在这种情况下也应避免使用<code>HashMap</code>。</p>
+</blockquote>
+<h3 id="9-Java-8中的改进">9. <strong>Java 8中的改进</strong></h3>
+<blockquote>
+<p>在Java 8中，<code>HashMap</code> 引入了许多重要的性能改进，其中包括引入节点(Node)的概念以取代旧的Entry对象，实现链表和红黑树之间的平稳转换，以及对扩容操作的优化。</p>
+</blockquote>
+<h4 id="9-1-变更数据结构：链表和红黑树">9.1. <strong>变更数据结构：链表和红黑树</strong></h4>
+<blockquote>
+<p>为了解决性能瓶颈，Java 8 对 <code>HashMap</code> 进行了改进，在存储结构上，当链表的长度大于一定阈值（默认是 8 ）时，链表将被转换成红黑树结构，以减少搜索时间。如果后续操作又降低了元素数量，使得节点少于阈值，红黑树会退化回链表。这种结构上的调整，明显提升了 <code>HashMap</code> 在负载较高时的性能表现，特别是当出现了大量哈希冲突时。</p>
+</blockquote>
+<h4 id="9-2-优化的哈希方法">9.2. <strong>优化的哈希方法</strong></h4>
+<blockquote>
+<p>此外，Java 8 在计算元素的存储位置时引入了更加优化的哈希方法。了解到在Java 8之前，哈希桶的索引是直接使用 <code>hashCode()</code> 的高位数据，而在Java 8中对哈希码的高位执行了额外的扰动函数，以提高低碰撞率。</p>
+</blockquote>
+<h4 id="9-3-扩容相关改进">9.3. <strong>扩容相关改进</strong></h4>
+<blockquote>
+<p>Java 8对 <code>HashMap</code> 进行扩容的行为也进行了改良，这包括在扩容过程中重新分布元素的方式。旧版本的 <code>HashMap</code> 在每次扩容时需要重新计算所有元素的位置，而Java 8优化了这一过程，某些情况下这种优化能够有效减少重新计算的开销和实现更快的扩容。</p>
+</blockquote>
+<h4 id="9-4-并发场景的考量">9.4. <strong>并发场景的考量</strong></h4>
+<blockquote>
+<p>还要注意的是，虽然<code>HashMap</code> 在Java 8 中进行了这些优化，但仍然不是线程安全的。如果想要在并发场景下无忧使用，我们应该考虑使用 <code>ConcurrentHashMap</code>。</p>
+</blockquote>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">阿坤</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.mmc88.fun/posts/47159.html">https://blog.mmc88.fun/posts/47159.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">阿坤</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">JAVA基础</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的鼓励是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/1916.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="JAVA基础 - HashMap面试题">
+                        
+                        <span class="card-title">JAVA基础 - HashMap面试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JAVA基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">JAVA基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/21132.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="GitHub Copilot 快速入门">
+                        
+                        <span class="card-title">GitHub Copilot 快速入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            GitHub Copilot 快速入门
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/AI/" class="post-category">
+                                    AI
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('12')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 码梦川<br />'
+            + '文章作者: 阿坤<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" >
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023-2024</span>
+            
+            <a href="/about" target="_blank">阿坤</a>
+<!--            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>-->
+<!--            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>-->
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">31.4k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "12";
+                        var startDate = "1";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/likunqi" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:18800566899@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1723245090" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1723245090" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<!--<script>-->
+<!--    (function () {-->
+<!--        var bp = document.createElement('script');-->
+<!--        var curProtocol = window.location.protocol.split(':')[0];-->
+<!--        if (curProtocol === 'https') {-->
+<!--            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';-->
+<!--        } else {-->
+<!--            bp.src = 'http://push.zhanzhang.baidu.com/push.js';-->
+<!--        }-->
+<!--        var s = document.getElementsByTagName("script")[0];-->
+<!--        s.parentNode.insertBefore(bp, s);-->
+<!--    })();-->
+<!--</script>-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6178f476d9c0ef2dbb86c50e63fbc042";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        const hasAttr = (e,a) => a.some(_=> e.attr(_)!==undefined);
+        $('a').each(function() {
+          const $this = $(this);
+          if(hasAttr($this,["data-fancybox","ignore-external-link"])) return;
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'blog.mmc88.fun' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+
+</html>

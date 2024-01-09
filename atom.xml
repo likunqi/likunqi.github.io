@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>码梦川</title>
+  
+  <subtitle>梦工坊</subtitle>
+  <link href="https://blog.mmc88.fun/atom.xml" rel="self"/>
+  
+  <link href="https://blog.mmc88.fun/"/>
+  <updated>2024-01-08T13:07:31.527Z</updated>
+  <id>https://blog.mmc88.fun/</id>
+  
+  <author>
+    <name>阿坤</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Typora Markdown编辑器激活方法</title>
+    <link href="https://blog.mmc88.fun/posts/233291.html"/>
+    <id>https://blog.mmc88.fun/posts/233291.html</id>
+    <published>2024-01-08T05:33:00.000Z</published>
+    <updated>2024-01-08T13:07:31.527Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1.官网下载安装&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;https://www.typoraio.cn/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.不运行软件的情况下，进入安装目录打开</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://blog.mmc88.fun/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
+    <link href="https://blog.mmc88.fun/posts/77145.html"/>
+    <id>https://blog.mmc88.fun/posts/77145.html</id>
+    <published>2024-01-08T00:13:54.000Z</published>
+    <updated>2024-01-07T16:12:27.142Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和</summary>
+        
+      
+    
+    
+    
+    <category term="IDEA" scheme="https://blog.mmc88.fun/categories/IDEA/"/>
+    
+    
+    <category term="IDEA" scheme="https://blog.mmc88.fun/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Podman 与 Docker</title>
+    <link href="https://blog.mmc88.fun/posts/771236.html"/>
+    <id>https://blog.mmc88.fun/posts/771236.html</id>
+    <published>2024-01-05T00:13:54.000Z</published>
+    <updated>2024-01-05T13:13:51.180Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Podman-与-Docker：比较两种容器化工具&quot;&gt;Podman 与</summary>
+        
+      
+    
+    
+    
+    <category term="docker" scheme="https://blog.mmc88.fun/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://blog.mmc88.fun/tags/docker/"/>
+    
+    <category term="技术" scheme="https://blog.mmc88.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录想法</title>
+    <link href="https://blog.mmc88.fun/posts/771611.html"/>
+    <id>https://blog.mmc88.fun/posts/771611.html</id>
+    <published>2024-01-05T00:13:54.000Z</published>
+    <updated>2024-01-06T05:42:00.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;记录一个做导航的想法&quot;&gt;&lt;strong&gt;记录一个做导航的想法&lt;/strong&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://bio.link/&quot;&gt;这个网站&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="想法" scheme="https://blog.mmc88.fun/categories/%E6%83%B3%E6%B3%95/"/>
+    
+    
+    <category term="想法" scheme="https://blog.mmc88.fun/tags/%E6%83%B3%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare搭建OpenAI转发脚本</title>
+    <link href="https://blog.mmc88.fun/posts/7716.html"/>
+    <id>https://blog.mmc88.fun/posts/7716.html</id>
+    <published>2024-01-04T00:13:54.000Z</published>
+    <updated>2024-01-04T12:09:15.118Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是一个将兼容OpenAI API的会话请求转发到Github Copilot Chat API的Cloudflare</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一键搭建ChatGPT Next Web跨平台私人 ChatGPT</title>
+    <link href="https://blog.mmc88.fun/posts/35029.html"/>
+    <id>https://blog.mmc88.fun/posts/35029.html</id>
+    <published>2024-01-03T23:59:00.000Z</published>
+    <updated>2024-01-04T12:36:52.469Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-开始使用&quot;&gt;1.开始使用&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;准备好你的 &lt;a href=&quot;https://platform.openai.com/account/api-keys&quot;&gt;OpenAI API</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Github Copilot项目真正免费使用GPT4</title>
+    <link href="https://blog.mmc88.fun/posts/50453.html"/>
+    <id>https://blog.mmc88.fun/posts/50453.html</id>
+    <published>2024-01-03T23:21:00.000Z</published>
+    <updated>2024-01-04T11:35:08.534Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color:</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA基础 - HashMap面试题</title>
+    <link href="https://blog.mmc88.fun/posts/1916.html"/>
+    <id>https://blog.mmc88.fun/posts/1916.html</id>
+    <published>2024-01-03T22:51:00.000Z</published>
+    <updated>2024-01-04T07:04:00.128Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-为什么-HashMap-的初始大小是-16，扩容为原来的两倍？&quot;&gt;1. &lt;strong&gt;为什么 &lt;code&gt;HashMap&lt;/code&gt; 的初始大小是</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA基础 - 初识HashMap</title>
+    <link href="https://blog.mmc88.fun/posts/47159.html"/>
+    <id>https://blog.mmc88.fun/posts/47159.html</id>
+    <published>2024-01-03T21:12:00.000Z</published>
+    <updated>2024-01-04T06:43:39.866Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;大纲：&quot;&gt;大纲：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基本概念和原理&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;什么是 &lt;code&gt;HashMap&lt;/code&gt;？&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HashMap&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub Copilot 快速入门</title>
+    <link href="https://blog.mmc88.fun/posts/21132.html"/>
+    <id>https://blog.mmc88.fun/posts/21132.html</id>
+    <published>2024-01-01T05:33:00.000Z</published>
+    <updated>2024-01-04T08:15:58.815Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;https://docs.github.com/zh/copilot/quickstart#introduction&quot;&gt;简介&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GitHub Copilot 是 AI 结对程序员。</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何快速部署一个Gemini Pro Chat机器人：3分钟使用Vercel教程</title>
+    <link href="https://blog.mmc88.fun/posts/31594.html"/>
+    <id>https://blog.mmc88.fun/posts/31594.html</id>
+    <published>2023-12-31T22:25:00.000Z</published>
+    <updated>2024-01-04T12:12:19.803Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在这个数字化的世界里，即便你是编程的初学者，也能迅速踏入机器人开发领域。借助Vercel这一云平台，你可以轻松快捷地部署属于自己的Gemini Pro</summary>
+        
+      
+    
+    
+    
+    <category term="建站" scheme="https://blog.mmc88.fun/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="ChatGpt" scheme="https://blog.mmc88.fun/tags/ChatGpt/"/>
+    
+    <category term="建站" scheme="https://blog.mmc88.fun/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>又一款AI产品Photoshop插件StartAI</title>
+    <link href="https://blog.mmc88.fun/posts/2132.html"/>
+    <id>https://blog.mmc88.fun/posts/2132.html</id>
+    <published>2023-12-30T05:33:00.000Z</published>
+    <updated>2024-01-04T11:26:50.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-介绍&quot;&gt;1. &lt;strong&gt;介绍&lt;/strong&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作为设计师，您可能一直在寻找那些能让艺术创作变得更简单更高效的工具，而 &lt;strong&gt;StartAI PS 插件&lt;/strong&gt; 正是为此而生。这是一个基于</summary>
+        
+      
+    
+    
+    
+    <category term="PS" scheme="https://blog.mmc88.fun/categories/PS/"/>
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/categories/PS/AI/"/>
+    
+    
+    <category term="AI" scheme="https://blog.mmc88.fun/tags/AI/"/>
+    
+    <category term="PS" scheme="https://blog.mmc88.fun/tags/PS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那些大佬开源的Github项目</title>
+    <link href="https://blog.mmc88.fun/posts/2111241.html"/>
+    <id>https://blog.mmc88.fun/posts/2111241.html</id>
+    <published>2023-12-29T05:33:00.000Z</published>
+    <updated>2023-12-30T11:30:38.382Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-ZainCheung-netease-cloud&quot;&gt;1. &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="discover" scheme="https://blog.mmc88.fun/categories/discover/"/>
+    
+    <category term="API" scheme="https://blog.mmc88.fun/categories/discover/API/"/>
+    
+    
+    <category term="github" scheme="https://blog.mmc88.fun/tags/github/"/>
+    
+    <category term="discover" scheme="https://blog.mmc88.fun/tags/discover/"/>
+    
+    <category term="API" scheme="https://blog.mmc88.fun/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那些有趣实用的网站</title>
+    <link href="https://blog.mmc88.fun/posts/211124113.html"/>
+    <id>https://blog.mmc88.fun/posts/211124113.html</id>
+    <published>2023-12-29T05:33:00.000Z</published>
+    <updated>2024-01-08T15:08:55.973Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-一键生成卡片&quot;&gt;1. &lt;a href=&quot;https://memocard.net/&quot;&gt;一键生成卡片&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;很多卡片生成工具比如：&lt;a href=&quot;http://imgg.gg&quot;&gt;imgg.gg&lt;/a&gt;、&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="discover" scheme="https://blog.mmc88.fun/categories/discover/"/>
+    
+    
+    <category term="discover" scheme="https://blog.mmc88.fun/tags/discover/"/>
+    
+    <category term="网站" scheme="https://blog.mmc88.fun/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VPN|wireguard红龍搭建教程</title>
+    <link href="https://blog.mmc88.fun/posts/2950.html"/>
+    <id>https://blog.mmc88.fun/posts/2950.html</id>
+    <published>2023-12-28T18:30:17.000Z</published>
+    <updated>2024-01-01T07:22:33.039Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;正文:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在这个数字化和互联网高度发达的时代，数据安全和隐私无疑成了我们的首要关注点。红龍，一个领先的远程连接速度解决方案的工具，不仅以其强大的性能为公众所熟知，还陆续证明了它在数个重要应用场景中的价值。&lt;/p&gt;
+&lt;blockq</summary>
+        
+      
+    
+    
+    
+    <category term="网络" scheme="https://blog.mmc88.fun/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="VPN" scheme="https://blog.mmc88.fun/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>壹伴排版Plus脚本VIP破解</title>
+    <link href="https://blog.mmc88.fun/posts/29572.html"/>
+    <id>https://blog.mmc88.fun/posts/29572.html</id>
+    <published>2023-12-27T23:56:00.000Z</published>
+    <updated>2023-12-29T12:18:32.995Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;概述&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;壹伴是一款浏览器插件，可以通过它来给公众号进行快速排版！&lt;br&gt;
+基本上做公众号的小伙伴都知道这款插件！&lt;br&gt;
+官网：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="公众号" scheme="https://blog.mmc88.fun/categories/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="公众号" scheme="https://blog.mmc88.fun/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    <category term="破解" scheme="https://blog.mmc88.fun/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA基础 - QA</title>
+    <link href="https://blog.mmc88.fun/posts/21214129.html"/>
+    <id>https://blog.mmc88.fun/posts/21214129.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-01T18:37:11.728Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Q-A&quot;&gt;Q/A&lt;/h2&gt;
+&lt;h3 id=&quot;1-Java-中应该使用什么数据类型来代表价格&quot;&gt;1. Java 中应该使用什么数据类型来代表价格?&lt;/h3&gt;
+&lt;p&gt;如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA基础 - 知识点</title>
+    <link href="https://blog.mmc88.fun/posts/21111129.html"/>
+    <id>https://blog.mmc88.fun/posts/21111129.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-01T18:12:39.892Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Java 基础 - 知识点详解&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;知识体系&lt;br&gt;
+&lt;img src=&quot;https://likunqi.top/file/e5af32e538a265ddee622.png&quot; alt=&quot;&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo配置详解</title>
+    <link href="https://blog.mmc88.fun/posts/21129.html"/>
+    <id>https://blog.mmc88.fun/posts/21129.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-04T09:39:50.645Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-Hexo-文章的元数据配置完全指南&quot;&gt;1. Hexo 文章的元数据配置完全指南&lt;/h3&gt;
+&lt;p&gt;Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了</summary>
+        
+      
+    
+    
+    
+    <category term="建站" scheme="https://blog.mmc88.fun/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="https://blog.mmc88.fun/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建Hexo博客遇到的问题</title>
+    <link href="https://blog.mmc88.fun/posts/23329.html"/>
+    <id>https://blog.mmc88.fun/posts/23329.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-04T11:26:50.763Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-hexo-如何删除已经不存在的“分类”&quot;&gt;1. hexo 如何删除已经不存在的“分类”&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因缓存的问题，重新清理执行脚本即可,如下是 清理-生成-发布 命令&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="建站" scheme="https://blog.mmc88.fun/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="https://blog.mmc88.fun/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>

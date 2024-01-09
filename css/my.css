@@ -1,0 +1,9 @@
+/* Here is your custom css styles. */
+*{
+    cursor: url("/medias/mouseimg/111.cur"),auto!important;
+}
+:active{
+    cursor: url("/medias/mouseimg/222.cur"),auto!important;
+}
+
+
