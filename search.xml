@@ -3281,104 +3281,6 @@ cover 和 coverImg 选项，在主题版本 v1.0.2 及以后版本中才开始�
       </tags>
   </entry>
   <entry>
-    <title>又一款AI产品Photoshop插件StartAI</title>
-    <url>/posts/2132.html</url>
-    <content><![CDATA[1. 介绍
-
-作为设计师，您可能一直在寻找那些能让艺术创作变得更简单更高效的工具，而 StartAI PS 插件 正是为此而生。这是一个基于 Adobe Photoshop 的强大 AI 插件，不仅助您深度挖掘艺术潜能，更是速提工作效率的得力帮手。无论是绘画、摄影、设计还是其他艺术流派，该插件都能如艺术之灵魂般激发您的创意无限。
-
-
-想了解更多？访问官网：StartAI
-
-核心功能
-
-文生图： 构想变现实，瞬间生成
-生成相似图： 边界拓展，相似而不同
-局部重绘： 瑕疵消除，细节凸显
-线稿上色： 色彩饱和，无畏挑战
-无损放大： 高倍处理，清晰如初
-扩图： 界限扩张，可能性延展
-艺术风格融合： 文艺碰撞，风格迸发
-
-
-兼容本地与远程引擎，支持Stable Diffusion、Midjourney 等多个绘图引擎。
-
-2. 先决条件与安装指南
-2.1 先决条件
-
-确保您已安装 Adobe Photoshop 并且版本为 Photoshop CC 2015（18.0）或以上。
-
-
-若不知道版本，可点击 Photoshop 顶部菜单栏的「帮助」，然后选择「关于 Photoshop」检查版本号。
-
-2.2 下载与安装
-注册与下载
-
-访问 StartAI 官网，注册账号并登录后一键下载安装包。
-
-安装插件
-
-
-在安装前，确保 Photoshop 已关闭；
-
-
-双击打开下载的 StartAIInstall.exe 文件，遵循步骤安装；
-
-
-插件安装无需额外配置，完成后打开Photoshop 即可使用。
-
-
-2.3 插件启动
-
-
-您可以通过桌面直接启动 StartAI，或在打开 Photoshop 时它将自动启用。之后可以在 Photoshop 界面内移动或停靠 StartAI PS 插件。
-
-
-通过 Photoshop 顶部菜单栏的「帮助 &gt; 关于增效工具」，也可以找到并开启 StartAI PS 插件。
-
-
-3. 用户登录
-注册账号包含以下步骤：
-
-
-在 StartAI 官网点击「注册」，进入账号注册页面；
-
-
-填写您的邮箱和邮箱验证码；
-
-
-设置登陆密码；
-
-
-输入邀请码完成注册（注：当前处于内测阶段，需要内测邀请码才可注册账号）。
-
-
-获取邀请码的途径：
-
-
-向获得内测资格者请求；
-
-
-加入 StartAI 的 QQ 频道【StartAI】(https://pd.qq.com/s/9w8nf5hmy)，也可联系管理员获取邀请码。
-
-
-登录账号：
-
-打开 StartAI PS 插件，用注册邮箱和密码登录后直达主界面。
-
-
-此文章仅用于指导，详情可访问 StartAI 官网。
-]]></content>
-      <categories>
-        <category>PS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>PS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一键搭建ChatGPT Next Web跨平台私人 ChatGPT</title>
     <url>/posts/35029.html</url>
     <content><![CDATA[1.开始使用
@@ -3527,6 +3429,104 @@ ChatGPT-Next-Web
       </categories>
       <tags>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>又一款AI产品Photoshop插件StartAI</title>
+    <url>/posts/2132.html</url>
+    <content><![CDATA[1. 介绍
+
+作为设计师，您可能一直在寻找那些能让艺术创作变得更简单更高效的工具，而 StartAI PS 插件 正是为此而生。这是一个基于 Adobe Photoshop 的强大 AI 插件，不仅助您深度挖掘艺术潜能，更是速提工作效率的得力帮手。无论是绘画、摄影、设计还是其他艺术流派，该插件都能如艺术之灵魂般激发您的创意无限。
+
+
+想了解更多？访问官网：StartAI
+
+核心功能
+
+文生图： 构想变现实，瞬间生成
+生成相似图： 边界拓展，相似而不同
+局部重绘： 瑕疵消除，细节凸显
+线稿上色： 色彩饱和，无畏挑战
+无损放大： 高倍处理，清晰如初
+扩图： 界限扩张，可能性延展
+艺术风格融合： 文艺碰撞，风格迸发
+
+
+兼容本地与远程引擎，支持Stable Diffusion、Midjourney 等多个绘图引擎。
+
+2. 先决条件与安装指南
+2.1 先决条件
+
+确保您已安装 Adobe Photoshop 并且版本为 Photoshop CC 2015（18.0）或以上。
+
+
+若不知道版本，可点击 Photoshop 顶部菜单栏的「帮助」，然后选择「关于 Photoshop」检查版本号。
+
+2.2 下载与安装
+注册与下载
+
+访问 StartAI 官网，注册账号并登录后一键下载安装包。
+
+安装插件
+
+
+在安装前，确保 Photoshop 已关闭；
+
+
+双击打开下载的 StartAIInstall.exe 文件，遵循步骤安装；
+
+
+插件安装无需额外配置，完成后打开Photoshop 即可使用。
+
+
+2.3 插件启动
+
+
+您可以通过桌面直接启动 StartAI，或在打开 Photoshop 时它将自动启用。之后可以在 Photoshop 界面内移动或停靠 StartAI PS 插件。
+
+
+通过 Photoshop 顶部菜单栏的「帮助 &gt; 关于增效工具」，也可以找到并开启 StartAI PS 插件。
+
+
+3. 用户登录
+注册账号包含以下步骤：
+
+
+在 StartAI 官网点击「注册」，进入账号注册页面；
+
+
+填写您的邮箱和邮箱验证码；
+
+
+设置登陆密码；
+
+
+输入邀请码完成注册（注：当前处于内测阶段，需要内测邀请码才可注册账号）。
+
+
+获取邀请码的途径：
+
+
+向获得内测资格者请求；
+
+
+加入 StartAI 的 QQ 频道【StartAI】(https://pd.qq.com/s/9w8nf5hmy)，也可联系管理员获取邀请码。
+
+
+登录账号：
+
+打开 StartAI PS 插件，用注册邮箱和密码登录后直达主界面。
+
+
+此文章仅用于指导，详情可访问 StartAI 官网。
+]]></content>
+      <categories>
+        <category>PS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>PS</tag>
       </tags>
   </entry>
   <entry>
