@@ -1,0 +1,3060 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="keywords" content="K8S相关的开源集合, 码梦川">
+    <meta name="description" content="K8S相关的开源集合">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>K8S相关的开源集合 | 码梦川</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://imgapi.cn/bing.php?rand=true);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="码梦川" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">码梦川</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-book-open" style="zoom: 0.6;"></i>
+      
+      <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>归档</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/gallery">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>关于</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fa-sharp fa-solid fa-star" style="zoom: 0.6;"></i>
+      
+      <span>常用</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://wangchujiang.com/linux-command/">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>linux命令</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://fre123.mmc88.fun/news">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>今日热榜</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://fre123.mmc88.fun/tech">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>技术热榜</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fa-sharp fa-solid fa-star" style="zoom: 0.6;"></i>
+      
+      <span>我的</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://google.mmc88.fun">
+          
+          <i class="fa-sharp fa-solid fa-magnifying-glass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Google搜索</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://chat.mmc88.fun">
+          
+          <i class="fa-sharp fa-solid fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>chatGpt</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://likunqi.top/">
+          
+          <i class="fa-solid fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>图床</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://k.youshop10.com/A7RuSklJ">
+          
+          <i class="fa-sharp fa-solid fa-cart-shopping" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>红包微店</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://2.ksfaka.com/mmfang">
+          
+          <i class="fa-sharp fa-solid fa-cart-shopping" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>码梦坊</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">码梦川</div>
+        <div class="logo-desc">
+            
+            码梦川一个程序员的博客网站
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-book-open"></i>
+			
+			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:28px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:28px" ></i>
+			      
+		          <span>归档</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/gallery " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:28px" ></i>
+			      
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/about " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-user-circle" style="position: absolute;left:28px" ></i>
+			      
+		          <span>关于</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa-sharp fa-solid fa-star"></i>
+			
+			常用
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://wangchujiang.com/linux-command/ " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>linux命令</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://fre123.mmc88.fun/news " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>今日热榜</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://fre123.mmc88.fun/tech " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>技术热榜</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa-sharp fa-solid fa-star"></i>
+			
+			我的
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://google.mmc88.fun " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-magnifying-glass" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Google搜索</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://chat.mmc88.fun " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>chatGpt</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://likunqi.top/ " style="margin-left:50px">
+				  
+				   <i class="fa fa-solid fa-image" style="position: absolute;left:28px" ></i>
+			      
+		          <span>图床</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://k.youshop10.com/A7RuSklJ " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-cart-shopping" style="position: absolute;left:28px" ></i>
+			      
+		          <span>红包微店</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://2.ksfaka.com/mmfang " style="margin-left:50px">
+				  
+				   <i class="fa fa-sharp fa-solid fa-cart-shopping" style="position: absolute;left:28px" ></i>
+			      
+		          <span>码梦坊</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/hexo-lanternjs@1.0.0/lantern.min.js"></script>-->
+    <script type="text/javascript" src="/js/LanternJS.js"></script>
+
+    <div id="lantern-wrapper" class="lantern-wrapper" no-select></div>
+    <script>
+        let lantern = new Lantern('lantern-wrapper', {
+            date: {								// 日期格式：'月-日'
+                from: '01-01',					// 开始悬挂灯笼的日期
+                to: '3-31'						// 结束悬挂灯笼的日期
+            },
+            postion: {
+                zIndex: 9999,					// 整个灯笼的 z-index 属性
+                lanternRL: [10, 150, 150, 10],	// 灯笼距离边界的距离：左侧灯笼距离左边的距离，右侧登录距离右侧的距离；页面灯笼从左往右依次设置
+                lanternTop: 0					// 灯笼距离顶部的距离。你也可以使用数组从左往右依次设置每个灯笼的距顶距离，例如：[0, 100, 200, 300]
+            },
+            content: '新年快乐'					 // 灯笼内显示的文字，只会截取前四个字符
+        });
+    </script>
+
+    <script type="text/javascript">
+        /*  动态标题*/
+        var OriginTitile = document.title,
+            titleTime;
+        document.addEventListener("visibilitychange",
+            function() {
+                if (document.hidden) {
+                    document.title = "你别走吖 Σ(っ °Д °;)っ";
+                    clearTimeout(titleTime)
+                } else {
+                    document.title = "(/≧▽≦/)你又回来啦！" ;
+                    titleTime = setTimeout(function() {
+                            document.title = OriginTitile
+                        },
+                        2000)
+                }
+            });
+    </script>
+
+
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">K8S相关的开源集合</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <style type="text/css">
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgba(255, 255, 255, 0.63);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Kubernetes/">
+                                <span class="chip bg-color">Kubernetes</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Kubernetes/" class="post-category">
+                                Kubernetes
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-12-25
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-01-12
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    23 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>K8S相关的开源集合<br>
+<strong>A</strong></p>
+<p><strong>aegir</strong></p>
+<ul>
+<li>
+<p>这是 Kubernetes 的一个简单通用的 Webhook admission controller。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/grupozap/aegir">github.com/grupozap/aegir</a></p>
+</li>
+</ul>
+<p><strong>Allok8</strong></p>
+<ul>
+<li>
+<p>这是一个动态、常规且简单的基于 Web 的 UI Kubernetes 可视化工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/oslabs-beta/Allok8">github.com/oslabs-beta/Allok8</a></p>
+</li>
+</ul>
+<p><strong>arktos</strong></p>
+<ul>
+<li>
+<p>这是一个专为大规模云计算基础架构而设计的开源项目，它由开源项目 Kubernetes 代码库演变而来，并进行了核心设计更改。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/futurewei-cloud/arktos">github.com/futurewei-cloud/arktos</a></p>
+</li>
+</ul>
+<p><strong>audit2rbac</strong></p>
+<ul>
+<li>
+<p>它可以将 Kubernetes 审核日志和用户名作为输入，生成 RBAC 角色和绑定对象，以覆盖该用户提出的所有 API 请求。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/liggitt/audit2rbac">github.com/liggitt/audit2rbac</a></p>
+</li>
+</ul>
+<p><strong>authelia</strong></p>
+<ul>
+<li>
+<p>这是一个开放源代码认证和授权服务器，它提供了 2-factor 认证和单一登录以保护web应用程序和简化身份验证。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/authelia/authelia">github.com/authelia/authelia</a></p>
+</li>
+</ul>
+<p><strong>awesome-helm</strong></p>
+<ul>
+<li>
+<p>一个很棒的 Helm 资源、Chart 协作列表。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cdwv/awesome-helm">github.com/cdwv/awesome-helm</a></p>
+</li>
+</ul>
+<p><strong>awesome-kubernetes</strong></p>
+<ul>
+<li>
+<p>这个项目包含了大量 Kubernetes 相关的文章和实践案例，建议在有一定基础知识后选择性学习。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ramitsurana/awesome-kubernetes">github.com/ramitsurana/awesome-kubernetes</a></p>
+</li>
+</ul>
+<p><strong>B</strong></p>
+<p><strong>Beetle</strong></p>
+<ul>
+<li>
+<p>它可以在多集群、多命名空间的 kubernetes 环境中自动执行应用程序的部署和回滚。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/Clivern/Beetle">github.com/Clivern/Beetle</a></p>
+</li>
+</ul>
+<p><strong>C</strong></p>
+<p><strong>capsule</strong></p>
+<ul>
+<li>
+<p>它在 Kubernetes 多租户环境中提供了一个自定义 Operator。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/clastix/capsule">github.com/clastix/capsule</a></p>
+</li>
+</ul>
+<p><strong>cass-operator</strong></p>
+<ul>
+<li>
+<p>这是适用于 ApacheCassandra 的 DataStax Kubernetes Operator。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/datastax/cass-operator">github.com/datastax/cass-operator</a></p>
+</li>
+</ul>
+<p><strong>chart-testing</strong></p>
+<ul>
+<li>
+<p>这是用于整理和测试 Helm 图表的 CLI 工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/helm/chart-testing">github.com/helm/chart-testing</a></p>
+</li>
+</ul>
+<p><strong>checkov</strong></p>
+<ul>
+<li>
+<p>它是用于基础结构即代码的静态代码分析工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/bridgecrewio/checkov">github.com/bridgecrewio/checkov</a></p>
+</li>
+</ul>
+<p><strong>cheekymonkey</strong></p>
+<ul>
+<li>
+<p>这是一个 Chaos Monkey 游戏。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/richstokes/cheekymonkey">github.com/richstokes/cheekymonkey</a></p>
+</li>
+</ul>
+<p><strong>cilium</strong></p>
+<ul>
+<li>
+<p>这是一个用于提供并透明地保护应用程序工作负载之间的网络连接和负载均衡。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cilium/cilium">github.com/cilium/cilium</a></p>
+</li>
+</ul>
+<p><strong>clair</strong></p>
+<ul>
+<li>
+<p>clair 是一个开源项目，用于静态分析应用程序容器中的漏洞。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/quay/clair">github.com/quay/clair</a></p>
+</li>
+</ul>
+<p><strong>cluster-turndown</strong></p>
+<ul>
+<li>
+<p>它可以基于自定义计划和关闭条件对 Kubernetes 集群的备份节点进行自动伸缩。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubecost/cluster-turndown">github.com/kubecost/cluster-turndown</a></p>
+</li>
+</ul>
+<p><strong>configula</strong></p>
+<ul>
+<li>
+<p>这是一种配置生成语言和处理器，目的是使声明性配置的程序化定义变得容易和直观。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/brendandburns/configula">github.com/brendandburns/configula</a></p>
+</li>
+</ul>
+<p><strong>couler</strong></p>
+<ul>
+<li>
+<p>它提供了一个统一的界面，以在不同的工作流引擎（例如 Argo Workflows、Tekton Pipelines 和 Apache Airflow）上构建和管理工作流。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/couler-proj/couler">github.com/couler-proj/couler</a></p>
+</li>
+</ul>
+<p><strong>craft</strong></p>
+<ul>
+<li>
+<p>它以健壮和通用的方式为任何资源声明了 Kubernetes Operator，使开发人员可以专注于 Dockerfile 中资源管理的 CRUD 操作。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/salesforce/craft">github.com/salesforce/craft</a></p>
+</li>
+</ul>
+<p><strong>crash-diagnostics</strong></p>
+<ul>
+<li>
+<p>这种工具可帮助调查、分析无响应或崩溃的 Kubernetes 集群并对其进行故障排除。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/vmware-tanzu/crash-diagnostics">github.com/vmware-tanzu/crash-diagnostics</a></p>
+</li>
+</ul>
+<p><strong>csi-s3</strong></p>
+<ul>
+<li>
+<p>这是用于 S3（或与 S3 兼容）存储的容器存储接口（CSI）。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ctrox/csi-s3">github.com/ctrox/csi-s3</a></p>
+</li>
+</ul>
+<p><strong>custom-pod-autoscaler</strong></p>
+<ul>
+<li>
+<p>它是一种 Kubernetes 自动伸缩器，其设计类似于 Kubernetes 水平 Pod 自动伸缩器。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jthomperoo/custom-pod-autoscaler">github.com/jthomperoo/custom-pod-autoscaler</a></p>
+</li>
+</ul>
+<p><strong>D</strong></p>
+<p><strong>deprek8ion</strong></p>
+<ul>
+<li>
+<p>该项目用于监视 Kubernetes API 的弃用情况。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/swade1987/deprek8ion">github.com/swade1987/deprek8ion</a></p>
+</li>
+</ul>
+<p><strong>DevOpsProdigyKubeGraf</strong></p>
+<ul>
+<li>
+<p>这是 Grafana APP 的更新版本，可以帮助开发者可视化和分析 Kubernetes 集群性能。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://grafana.com/grafana/plugins/devopsprodigy-kubegraf-app">grafana.com/grafana/plugins/devopsprodigy-kubegraf-app</a></p>
+</li>
+</ul>
+<p><strong>dockerize</strong></p>
+<ul>
+<li>
+<p>这是用于简化在 Docker 容器中运行应用程序的实用程序。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jwilder/dockerize">github.com/jwilder/dockerize</a></p>
+</li>
+</ul>
+<p><strong>dynamic-pv-scaler</strong></p>
+<ul>
+<li>
+<p>这是一个基于 Golang 的 Kubernetes 应用程序，可以解决 Kubernetes 中持久卷的扩展问题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/opstree/dynamic-pv-scaler">github.com/opstree/dynamic-pv-scaler</a></p>
+</li>
+</ul>
+<p><strong>E</strong></p>
+<p><strong>eks-pod-identity-tester</strong></p>
+<ul>
+<li>
+<p>这个工具可以帮忙诊断权限问题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jasonrichardsmith/eks-pod-identity-tester">github.com/jasonrichardsmith/eks-pod-identity-tester</a></p>
+</li>
+</ul>
+<p><strong>expressjs-k8s</strong></p>
+<ul>
+<li>
+<p>这是一个如何使用 Node.js 和 Express.js 构建微服务的示例。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/alexellis/expressjs-k8s">github.com/alexellis/expressjs-k8s</a></p>
+</li>
+</ul>
+<p><strong>F</strong></p>
+<p><strong>fubectl</strong></p>
+<ul>
+<li>
+<p>它可以减少与 kubectl 的重复交互。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubermatic/fubectl">github.com/kubermatic/fubectl</a></p>
+</li>
+</ul>
+<p><strong>G</strong></p>
+<p><strong>gemini</strong></p>
+<ul>
+<li>
+<p>它用于在 Kubernetes 中自动备份 PersistentVolumeClaims。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/FairwindsOps/gemini">github.com/FairwindsOps/gemini</a></p>
+</li>
+</ul>
+<p><strong>gimbal</strong></p>
+<ul>
+<li>
+<p>这是基于 Contour 构建的第 7 层负载均衡平台，能够将流量路由到多个 Kubernetes 和 OpenStack 集群，是 Yahoo 为了用 K8s 对基础架构进行现代化改造推出的工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/projectcontour/gimbal">github.com/projectcontour/gimbal</a></p>
+</li>
+</ul>
+<p><strong>gitkube</strong></p>
+<ul>
+<li>
+<p>它可以通过 git push 在 Kubernetes 构建和部署 Docker 镜像。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/hasura/gitkube">github.com/hasura/gitkube</a></p>
+</li>
+</ul>
+<p><strong>go-kubectx</strong></p>
+<ul>
+<li>
+<p>这是一个旨在帮助开发者切换 Kubernetes 上下文的工具。它比 kubectx 快 5-10 倍（用 Go 编写并使用 client-go）。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/aca/go-kubectx">github.com/aca/go-kubectx</a></p>
+</li>
+</ul>
+<p><strong>H</strong></p>
+<p><strong>harbor-sync</strong></p>
+<ul>
+<li>
+<p>该项目可将 Harbor robot 帐户与 Kubernetes 集群同步。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/moolen/harbor-sync">github.com/moolen/harbor-sync</a></p>
+</li>
+</ul>
+<p><strong>helm-diff</strong></p>
+<ul>
+<li>
+<p>这是一个 Helm 插件，可以预览 helm upgrade 将要发生的变化。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/databus23/helm-diff">github.com/databus23/helm-diff</a></p>
+</li>
+</ul>
+<p><strong>helm-docs</strong></p>
+<ul>
+<li>
+<p>这是一种自动生成 helm 图表 markdown 文档的工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/norwoodj/helm-docs">github.com/norwoodj/helm-docs</a></p>
+</li>
+</ul>
+<p><strong>helm-kubeval</strong></p>
+<ul>
+<li>
+<p>这是一个 Helm 插件，用于根据 Kubernetes schemas 验证 Charts。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/instrumenta/helm-kubeval">github.com/instrumenta/helm-kubeval</a></p>
+</li>
+</ul>
+<p><strong>helm-monitor</strong></p>
+<ul>
+<li>
+<p>这个工具可以监控 K8s Helm 的发布和 metrics behavior 的回滚。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ContainerSolutions/helm-monitor">github.com/ContainerSolutions/helm-monitor</a></p>
+</li>
+</ul>
+<p><strong>hetzner-kube</strong></p>
+<ul>
+<li>
+<p>这是用于在 Hetzner Cloud 上配置 Kubernetes 集群的 CLI 工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/xetys/hetzner-kube">github.com/xetys/hetzner-kube</a></p>
+</li>
+</ul>
+<p><strong>hubble</strong></p>
+<ul>
+<li>
+<p>这是一个用于云原生工作负载的完全分布式的网络和安全性可观察性平台。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cilium/hubble">github.com/cilium/hubble</a></p>
+</li>
+</ul>
+<p><strong>hyscale</strong></p>
+<ul>
+<li>
+<p>其用于部署单体或微服务应用程序。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/hyscale/hyscale">github.com/hyscale/hyscale</a></p>
+</li>
+</ul>
+<p><strong>I</strong></p>
+<p><strong>illuminatio</strong></p>
+<ul>
+<li>
+<p>它是用于自动测试 kubernetes 网络策略的工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/inovex/illuminatio">github.com/inovex/illuminatio</a></p>
+</li>
+</ul>
+<p><strong>infracost</strong></p>
+<ul>
+<li>
+<p>它会显示 Terraform 项目的成本估算。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/infracost/infracost">github.com/infracost/infracost</a></p>
+</li>
+</ul>
+<p><strong>ipvs-node-controller</strong></p>
+<ul>
+<li>
+<p>这是 kubernetes 控制器，可解决IPVS代理模式下的外部 IP 问题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kakao/ipvs-node-controller">github.com/kakao/ipvs-node-controller</a></p>
+</li>
+</ul>
+<p><strong>isopod</strong></p>
+<ul>
+<li>
+<p>这是用于 Kubernetes 配置的表达性 DSL 框架。由于没有 YAML 构件，它会将 Kubernetes 对象呈现为 Protocol Buffer，由 Kubernetes API 直接进行类型化和调用。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cruise-automation/isopod">github.com/cruise-automation/isopod</a></p>
+</li>
+</ul>
+<p><strong>K</strong></p>
+<p><strong>k8s-cronjob-prescaler</strong></p>
+<ul>
+<li>
+<p>该工具提供了一种机制，使 cronjobs 可以在自动扩展集群上运行，并确保在 cronjob 工作负载按时启动时集群会被弹性缩小到所需的大小。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/microsoft/k8s-cronjob-prescaler">github.com/microsoft/k8s-cronjob-prescaler</a></p>
+</li>
+</ul>
+<p><strong>k8s-diagrams</strong></p>
+<ul>
+<li>
+<p>它从 Kubernetes 的培训、文章和讲座中提取了一系列解释 kubernetes 的结构图。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cloudogu/k8s-diagrams">github.com/cloudogu/k8s-diagrams</a></p>
+</li>
+</ul>
+<p><strong>k8s-image-availability-exporter</strong></p>
+<ul>
+<li>
+<p>这是一个小型工具，可以连续检查 Kubernetes 对象中定义的所有容器镜像是否可用。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/flant/k8s-image-availability-exporter">github.com/flant/k8s-image-availability-exporter</a></p>
+</li>
+</ul>
+<p><strong>k8s-job-notify</strong></p>
+<ul>
+<li>
+<p>这是一个 Kubernetes Job/CronJob 通知程序，当 Kubernetes cronJob/Job 失败/成功时，它会向 slack 发送警报。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/sukeesh/k8s-job-notify">github.com/sukeesh/k8s-job-notify</a></p>
+</li>
+</ul>
+<p><strong>k8s-platform-lcm</strong></p>
+<ul>
+<li>
+<p>这个项目可帮助开发者跟踪 Kubernetes 平台及其周围使用或运行的软件和工具，它可以辅助进行部分生命周期管理。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/arminc/k8s-platform-lcm">github.com/arminc/k8s-platform-lcm</a></p>
+</li>
+</ul>
+<p><strong>k8s-pod-rbac-breakout</strong></p>
+<ul>
+<li>
+<p>这是一个脚本，开发者可以在自己的集群中运行该脚本，以测试 RBAC 规则是否太宽松了。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/geerlingguy/k8s-pod-rbac-breakout">github.com/geerlingguy/k8s-pod-rbac-breakout</a></p>
+</li>
+</ul>
+<p><strong>k8s-security-policies</strong></p>
+<ul>
+<li>
+<p>该存储库提供了一个安全策略库，用于保护 Kubernetes 集群配置。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/raspbernetes/k8s-security-policies">github.com/raspbernetes/k8s-security-policies</a></p>
+</li>
+</ul>
+<p><strong>k8s-snapshots</strong></p>
+<ul>
+<li>
+<p>它可以根据 PersistentVolume 或 PersistentVolumeClaim 资源的注释创建和终止快照。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/miracle2k/k8s-snapshots">github.com/miracle2k/k8s-snapshots</a></p>
+</li>
+</ul>
+<p><strong>k8s-spot-rescheduler</strong></p>
+<ul>
+<li>
+<p>这是是一种旨在尽可能减少 Kubernetes 节点上负载的工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/pusher/k8s-spot-rescheduler">github.com/pusher/k8s-spot-rescheduler</a></p>
+</li>
+</ul>
+<p><strong>k8s-worker-pod-autoscaler</strong></p>
+<ul>
+<li>
+<p>它可以根据队列长度伸缩 kubernetes 容器。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/practo/k8s-worker-pod-autoscaler">github.com/practo/k8s-worker-pod-autoscaler</a></p>
+</li>
+</ul>
+<p><strong>kadalu</strong></p>
+<ul>
+<li>
+<p>这个工具将“GlusterFS”用作提供存储的“灵魂”，但剥离了“gluster”项目的管理层。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kadalu/kadalu">github.com/kadalu/kadalu</a></p>
+</li>
+</ul>
+<p><strong>kalm</strong></p>
+<ul>
+<li>
+<p>它提供了一个 Web 界面，以执行常见的 Kubernetes 工作流程。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kalmhq/kalm">github.com/kalmhq/kalm</a></p>
+</li>
+</ul>
+<p><strong>kapitan</strong></p>
+<ul>
+<li>
+<p>它是一个通用的配置管理工具，可以帮助我们管理 terraform 、kubernetes 以及其他配置。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/deepmind/kapitan">github.com/deepmind/kapitan</a></p>
+</li>
+</ul>
+<p><strong>kcf</strong></p>
+<ul>
+<li>
+<p>这是一个 CLI 工具，可提供 Kubernetes 集群机群的状态和配置。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubectl-plus/kcf">github.com/kubectl-plus/kcf</a></p>
+</li>
+</ul>
+<p><strong>kconmon</strong></p>
+<ul>
+<li>
+<p>这是一种 Kubernetes 节点连接性监控工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/Stono/kconmon">github.com/Stono/kconmon</a></p>
+</li>
+</ul>
+<p><strong>kdbg</strong></p>
+<ul>
+<li>
+<p>kdbg（Kubernetes 调试器）是一个基于最新 Alpine Linux 镜像的小型 Docker 容器，用于从 Pod 内部调试 Kubernetes 集群。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/nvucinic/kdbg">github.com/nvucinic/kdbg</a></p>
+</li>
+</ul>
+<p><strong>kdo</strong></p>
+<ul>
+<li>
+<p>它是一个命令行工具，使开发人员可以在实际的部署环境中运行、开发和测试代码更改。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/stepro/kdo">github.com/stepro/kdo</a></p>
+</li>
+</ul>
+<p><strong>kind-boilerplate</strong></p>
+<ul>
+<li>
+<p>这是一组有用的脚本集，可帮助开发者设置简单集群样板，包括多个节点、ingress 和仪表板。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/xantrix/kind-boilerplate">github.com/xantrix/kind-boilerplate</a></p>
+</li>
+</ul>
+<p><strong>kine</strong></p>
+<ul>
+<li>
+<p>这是一个 etcdshim，可将 etcd API 转换为 sqlite、Postgres、Mysql 和 dqlite。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/rancher/kine">github.com/rancher/kine</a></p>
+</li>
+</ul>
+<p><strong>kip</strong></p>
+<ul>
+<li>
+<p>这是一个虚拟 Kubelet 提供程序，它允许 Kubernetes 集群在云实例上启动 Pod。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/elotl/kip">github.com/elotl/kip</a></p>
+</li>
+</ul>
+<p><strong>klum</strong></p>
+<ul>
+<li>
+<p>这个工具可以完成以下任务：创建、删除、修改用户；轻松管理与用户关联的角色；发布 kubeconfig 文件供用户使用。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ibuildthecloud/klum">github.com/ibuildthecloud/klum</a></p>
+</li>
+</ul>
+<p><strong>konstraint</strong></p>
+<ul>
+<li>
+<p>这是一个 CLI 工具，可以在使用 Gatekeeper 时帮助创建和管理模板。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/plexsystems/konstraint">github.com/plexsystems/konstraint</a></p>
+</li>
+</ul>
+<p><strong>kopf</strong></p>
+<ul>
+<li>
+<p>它是一个 Python 框架，可以用几行代码编写 Kubernetes operator。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/nolar/kopf">github.com/nolar/kopf</a></p>
+</li>
+</ul>
+<p><strong>kotary</strong></p>
+<ul>
+<li>
+<p>其用于管理 Kubernetes 资源配额。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ca-gip/kotary">github.com/ca-gip/kotary</a></p>
+</li>
+</ul>
+<p><strong>krane</strong></p>
+<ul>
+<li>
+<p>它是一个简单的 Kubernetes RBAC 静态分析工具，可以检查 K8s RBAC 设计中的潜在安全风险，并提出相关建议。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/appvia/krane">github.com/appvia/krane</a></p>
+</li>
+</ul>
+<p><strong>kritis</strong></p>
+<ul>
+<li>
+<p>这是一种开源解决方案，可确保您的软件供应链适用于 Kubernetes 应用程序。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/grafeas/kritis">github.com/grafeas/kritis</a></p>
+</li>
+</ul>
+<p><strong>krustlet</strong></p>
+<ul>
+<li>
+<p>Rust 中的 Kubernetes Kubelet，用于运行 WASM。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/deislabs/krustlet">github.com/deislabs/krustlet</a></p>
+</li>
+</ul>
+<p><strong>ktunnel</strong></p>
+<ul>
+<li>
+<p>这是一个 CLI 工具，允许开发者将机器作为服务公开到集群中，或将其公开给特定的部署。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/omrikiei/ktunnel">github.com/omrikiei/ktunnel</a></p>
+</li>
+</ul>
+<p><strong>ktx</strong></p>
+<ul>
+<li>
+<p>ktx 用于减少在各种配置之间切换而引起的问题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/heptiolabs/ktx">github.com/heptiolabs/ktx</a></p>
+</li>
+</ul>
+<p><strong>KubeYAML</strong></p>
+<ul>
+<li>
+<p>这个网页可以对照 swagger 定义验证你的 Kubernetes YAML 文档。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://kubeyaml.com">kubeyaml.com</a></p>
+</li>
+</ul>
+<p><strong>kube-iptables-tailer</strong></p>
+<ul>
+<li>
+<p>这个工具可以检测 iptables 拒绝的流量，并通过 Kubernetes 事件将相应的信息提供给受影响的 Pod。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/box/kube-iptables-tailer">github.com/box/kube-iptables-tailer</a></p>
+</li>
+</ul>
+<p><strong>kube-linter</strong></p>
+<ul>
+<li>
+<p>这是一个静态分析工具，用于检查 Kubernetes YAML 文件和 Helm 图表。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/stackrox/kube-linter">github.com/stackrox/kube-linter</a></p>
+</li>
+</ul>
+<p><strong>kube-monkey</strong></p>
+<ul>
+<li>
+<p>它会随机删除Kubernetes 集群中的 Pod，以验证故障恢复服务的开发。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/asobti/kube-monkey">github.com/asobti/kube-monkey</a></p>
+</li>
+</ul>
+<p><strong>kube-query</strong></p>
+<ul>
+<li>
+<p>该项目扩展了 osquery，允许工程师使用 SQL 查询可视化集群。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/aquasecurity/kube-query">github.com/aquasecurity/kube-query</a></p>
+</li>
+</ul>
+<p><strong>kube-s</strong></p>
+<ul>
+<li>
+<p>一个轻量级的 CLI 工具，用于在 kubectl 可用的所有集群中快速查找特定的 K8s 资源。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/binura-g/kube-s">github.com/binura-g/kube-s</a></p>
+</li>
+</ul>
+<p><strong>kube-vip</strong></p>
+<ul>
+<li>
+<p>它用于控制面板和 Kubernetes 服务的 Kubernetes 虚拟 IP 和负载均衡器。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/plunder-app/kube-vip">github.com/plunder-app/kube-vip</a></p>
+</li>
+</ul>
+<p><strong>kubeadm-playbook</strong></p>
+<ul>
+<li>
+<p>这个工具将 kubeadm 与 Helm Chart 结合在一起，可帮助创建 HA Kubernetes 集群。它附带 kubeadm、各种官方 Helm Chart、微调版文档和最佳实践。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ReSearchITEng/kubeadm-playbook">github.com/ReSearchITEng/kubeadm-playbook</a></p>
+</li>
+</ul>
+<p><strong>KubeCarrier</strong></p>
+<ul>
+<li>
+<p>该项目用于跨多个 Kubernetes 集群管理应用程序和服务。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubermatic/kubecarrier">github.com/kubermatic/kubecarrier</a></p>
+</li>
+</ul>
+<p><strong>kubecle</strong></p>
+<ul>
+<li>
+<p>这是在本地运行的 Web UI，提供有关集群的有用信息，是 Kubernetes 仪表板的替代方案。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/rydogs/kubecle">github.com/rydogs/kubecle</a></p>
+</li>
+</ul>
+<p><strong>kubectl-aliases</strong></p>
+<ul>
+<li>
+<p>这是一个脚本，可以为 kubectl 生成数百个方便的 shell 别名。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ahmetb/kubectl-aliases">github.com/ahmetb/kubectl-aliases</a></p>
+</li>
+</ul>
+<p><strong>kubectl-build</strong></p>
+<ul>
+<li>
+<p>其类似于 kaniko，但它在 Kubernetes 集群端执行构建，可以远程构建本地 dockerfile。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kvaps/kubectl-build">github.com/kvaps/kubectl-build</a></p>
+</li>
+</ul>
+<p><strong>kubectl-debug</strong></p>
+<ul>
+<li>
+<p>这是一个 kubectl 插件, 能够帮助便捷地进行 Kubernetes 上的 Pod 故障诊断。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/aylei/kubectl-debug">github.com/aylei/kubectl-debug</a></p>
+</li>
+</ul>
+<p><strong>kubectl-fuzzy</strong></p>
+<ul>
+<li>
+<p>它可以让开发者使用模糊或部分字符串搜索 kubectl 命令。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/d-kuro/kubectl-fuzzy">github.com/d-kuro/kubectl-fuzzy</a></p>
+</li>
+</ul>
+<p><strong>kubectl-fzf</strong></p>
+<ul>
+<li>
+<p>kubectl-fzf 为 kubectl 提供了快速而强大的 fzf 自动补全功能。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/bonnefoa/kubectl-fzf">github.com/bonnefoa/kubectl-fzf</a></p>
+</li>
+</ul>
+<p><strong>kubectl-images</strong></p>
+<ul>
+<li>
+<p>这是一个 kubectl 插件，用于显示集群中使用的容器镜像。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/chenjiandongx/kubectl-images">github.com/chenjiandongx/kubectl-images</a></p>
+</li>
+</ul>
+<p><strong>kubectl-reap</strong></p>
+<ul>
+<li>
+<p>这是一个 kubectl 插件，可删除未使用的 Kubernetes 资源。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/micnncim/kubectl-reap">github.com/micnncim/kubectl-reap</a></p>
+</li>
+</ul>
+<p><strong>kubectl-tree</strong></p>
+<ul>
+<li>
+<p>一个 kubectl 插件，可通过 ownerReferences 上的对象探索 Kubernetes 对象之间的所有权关系。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ahmetb/kubectl-tree">github.com/ahmetb/kubectl-tree</a></p>
+</li>
+</ul>
+<p><strong>kubectl-ssh-proxy</strong></p>
+<ul>
+<li>
+<p>这是一个 kubectl 插件，可以让开发者在使用 kubectl 和 SSH bastion 后的集群时觉得更方便。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/little-angry-clouds/kubectl-ssh-proxy">github.com/little-angry-clouds/kubectl-ssh-proxy</a></p>
+</li>
+</ul>
+<p><strong>kubedoom</strong></p>
+<ul>
+<li>
+<p>混沌工程工具，通过玩 Id’s DOOM 杀死 Kubernetes Pod。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/storax/kubedoom">github.com/storax/kubedoom</a></p>
+</li>
+</ul>
+<p><strong>kubeform</strong></p>
+<ul>
+<li>
+<p>它可以为 Terraform 资源和模块提供自动生成的 Kubernetes CRD，以便用户以 Kubernetes 原生方式管理任何云基础架构。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubeform/kubeform">github.com/kubeform/kubeform</a></p>
+</li>
+</ul>
+<p><strong>kubei</strong></p>
+<ul>
+<li>
+<p>kubei 是一种灵活的 Kubernetes 运行时扫描程序，可扫描 worker 和 Kubernetes 节点镜像，并提供准确的漏洞评估。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/Portshift/kubei">github.com/Portshift/kubei</a></p>
+</li>
+</ul>
+<p><strong>KubeInit</strong></p>
+<ul>
+<li>
+<p>它可以自动化部署和配置多个 Kubernetes 发行版。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/Kubeinit/kubeinit">github.com/Kubeinit/kubeinit</a></p>
+</li>
+</ul>
+<p><strong>kubekutr</strong></p>
+<ul>
+<li>
+<p>它可以通过自定义的 GitOps 目录结构来快速构建 Kubernetes 资源清单的配置。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/mr-karan/kubekutr">github.com/mr-karan/kubekutr</a></p>
+</li>
+</ul>
+<p><strong>Kubeletctl</strong></p>
+<ul>
+<li>
+<p>这是实现 kubelet API 的命令行工具，该工具涵盖所有已记录和未记录的 API，可以通过其查看 kubelet API 的完整列表。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cyberark/kubeletctl">github.com/cyberark/kubeletctl</a></p>
+</li>
+</ul>
+<p><strong>KubeLibrary</strong></p>
+<ul>
+<li>
+<p>其用于测试 Kubernetes 集群的 RobotFramework 库。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/devopsspiral/KubeLibrary">github.com/devopsspiral/KubeLibrary</a></p>
+</li>
+</ul>
+<p><strong>kubelive</strong></p>
+<ul>
+<li>
+<p>这个工具可以实时更新 Pod 的状态，重新设计了 kubectl 工具，使其更具交互性。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ameerthehacker/kubelive">github.com/ameerthehacker/kubelive</a></p>
+</li>
+</ul>
+<p><strong>KubeMQ</strong></p>
+<ul>
+<li>
+<p>这是一个企业级消息代理，它是一个小型轻量级 Docker 容器，专为 Kubernetes 中运行的工作负载和架构设计。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubemq-io/kubemq">github.com/kubemq-io/kubemq</a></p>
+</li>
+</ul>
+<p><strong>kubenav</strong></p>
+<ul>
+<li>
+<p>这是一款移动和桌面应用程序，可帮助管理 Kubernetes 集群并了解集群中的最新情况。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubenav/kubenav">github.com/kubenav/kubenav</a></p>
+</li>
+</ul>
+<p><strong>kubeprovenance</strong></p>
+<ul>
+<li>
+<p>这个工具可帮助开发者查找相关集群中不同 Kubernetes 自定义资源的出处信息。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cloud-ark/kubeprovenance">github.com/cloud-ark/kubeprovenance</a></p>
+</li>
+</ul>
+<p><strong>KubePug</strong></p>
+<ul>
+<li>
+<p>这是一个 kubectl 插件，可以从特定的 Kubernetes 版本下载 swagger.json，解析此 Json 查找弃用通知，并检查集群是否已弃用 API 版本。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/rikatz/kubepug">github.com/rikatz/kubepug</a></p>
+</li>
+</ul>
+<p><strong>KubeRig</strong></p>
+<ul>
+<li>
+<p>这是针对 Kubernetes/OpenShift 的开源部署自动化工具，它通过用 Kotlin 编写的 DSL 定义 Kubernetes 资源（而不是常规的 YAML）。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kuberig-io/kuberig">github.com/kuberig-io/kuberig</a></p>
+</li>
+</ul>
+<p><strong>Kubermatic</strong></p>
+<ul>
+<li>
+<p>这是适用于任何基础架构的 Kubernetes 集群管理自动化平台。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/Kubermatic/Kubermatic">github.com/Kubermatic/Kubermatic</a></p>
+</li>
+</ul>
+<p><strong>kubernaughty</strong></p>
+<ul>
+<li>
+<p>这是一个关于调试和识别 Kubernetes/容器工作负载故障、性能和可靠性注意事项等的文档。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jnoller/kubernaughty">github.com/jnoller/kubernaughty</a></p>
+</li>
+</ul>
+<p><strong>kubernetes-goat</strong></p>
+<ul>
+<li>
+<p>这是一种被故意设计为易受攻击的集群环境，用来学习和实践 Kubernetes 的安全性。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/madhuakula/kubernetes-goat">github.com/madhuakula/kubernetes-goat</a></p>
+</li>
+</ul>
+<p><strong>kubernix</strong></p>
+<ul>
+<li>
+<p>该项目旨在为本地测试、实验和开发提供单一依赖的 Kubernetes 集群。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/saschagrunert/kubernix">github.com/saschagrunert/kubernix</a></p>
+</li>
+</ul>
+<p><strong>kubespy</strong></p>
+<ul>
+<li>
+<p>这是一个实时观察 Kubernetes 资源的工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/pulumi/kubespy">github.com/pulumi/kubespy</a></p>
+</li>
+</ul>
+<p><strong>kubetail</strong></p>
+<ul>
+<li>
+<p>这是一个小型的 Bash 脚本，它允许将来自多个窗格的日志聚合到一个流中。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/johanhaleby/kubetail">github.com/johanhaleby/kubetail</a></p>
+</li>
+</ul>
+<p><strong>kubetap</strong></p>
+<ul>
+<li>
+<p>这是一个 kubectl 插件，可以为 Kubernetes Services 部署拦截代理。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/soluble-ai/kubetap">github.com/soluble-ai/kubetap</a></p>
+</li>
+</ul>
+<p><strong>kubethanos</strong></p>
+<ul>
+<li>
+<p>该项目会随机杀死一半的 Pod，在环境中控制混乱，以此查看系统在故障情况下的情况。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/berkay-dincer/kubethanos">github.com/berkay-dincer/kubethanos</a></p>
+</li>
+</ul>
+<p><strong>Kubetools</strong></p>
+<ul>
+<li>
+<p>Kubernetes 工具精选清单，涵盖最流行的工具和技术，并针对这些工具提出最佳实践。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://dockerlabs.collabnix.com/kubernetes/kubetools">dockerlabs.collabnix.com/kubernetes/kubetools</a></p>
+</li>
+</ul>
+<p><strong>KubeVault</strong></p>
+<ul>
+<li>
+<p>这是一个用于在 K8s 上运行 HashiCorp Vault 的工具集。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubevault">github.com/kubevault</a></p>
+</li>
+</ul>
+<p><strong>kubevious</strong></p>
+<ul>
+<li>
+<p>这个工具可为 Kubernetes 提供可用的高度图形化界面，它把与该应用程序相关的所有配置集中在一处，可以帮助开发者节省时间。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubevious/kubevious">github.com/kubevious/kubevious</a></p>
+</li>
+</ul>
+<p><strong>kubie</strong></p>
+<ul>
+<li>
+<p>它是 kubectx、kubens 的替代品，能在每个 shell 彼此独立的情况下进行上下文切换、命名空间切换和快速修改。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/sbstp/kubie">github.com/sbstp/kubie</a></p>
+</li>
+</ul>
+<p><strong>KubiScan</strong></p>
+<ul>
+<li>
+<p>它可以在 Kubernetes 的基于角色的访问控制（RBAC）授权模型中扫描 Kubernetes 集群以获取相应权限。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/cyberark/KubiScan">github.com/cyberark/KubiScan</a></p>
+</li>
+</ul>
+<p><strong>kured</strong></p>
+<ul>
+<li>
+<p>这是一个 Kubernetes 守护程序集，当基础 OS 的软件包管理系统指示需要执行某些操作时，该节点将执行安全的自动节点重新启动。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/weaveworks/kured">github.com/weaveworks/kured</a></p>
+</li>
+</ul>
+<p><strong>kuttle</strong></p>
+<ul>
+<li>
+<p>这个工具可以帮助开发者轻松访问 Kubernetes 网络环境，不需要 SSH 访问。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kayrus/kuttle">github.com/kayrus/kuttle</a></p>
+</li>
+</ul>
+<p><strong>kvdi</strong></p>
+<ul>
+<li>
+<p>它是虚拟桌面基础架构（Virtual Desktop Infrastructure）的 Kubernetes operator。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/tinyzimmer/kvdi">github.com/tinyzimmer/kvdi</a></p>
+</li>
+</ul>
+<p><strong>kyaml2go</strong></p>
+<ul>
+<li>
+<p>这是来自 Kubernetes 资源规范 yaml 的 Go 客户端代码生成器。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/PrasadG193/kyaml2go">github.com/PrasadG193/kyaml2go</a></p>
+</li>
+</ul>
+<p><strong>M</strong></p>
+<p><strong>magicpak</strong></p>
+<ul>
+<li>
+<p>它可以构建最小的 Docker 镜像，而无需例如 static linking 的准备工作。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/coord-e/magicpak">github.com/coord-e/magicpak</a></p>
+</li>
+</ul>
+<p><strong>mikt</strong></p>
+<ul>
+<li>
+<p>这是一种 Managed Kubernetes 检查工具，可验证 Managed Kubernetes 集群和内部工作负载、资源的安全性相关配置。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/darkbitio/mkit">github.com/darkbitio/mkit</a></p>
+</li>
+</ul>
+<p><strong>N</strong></p>
+<p><strong>network-node-manager</strong></p>
+<ul>
+<li>
+<p>这是一个 kubernetes 控制器，它控制节点的网络配置以解决 kubernetes 网络问题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kakao/network-node-manager">github.com/kakao/network-node-manager</a></p>
+</li>
+</ul>
+<p><strong>nodalingresser</strong></p>
+<ul>
+<li>
+<p>这个工具能使 GKE worker nodes 更易于在公共互联网上访问，可避免因使用 ILB 每月需花费 20 美元。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jacobstr/nodalingresser">github.com/jacobstr/nodalingresser</a></p>
+</li>
+</ul>
+<p><strong>node-feature-discovery</strong></p>
+<ul>
+<li>
+<p>这个工具可以检测 Kubernetes 集群中每个节点上可用的功能，并使用节点标签发布这些功能。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubernetes-sigs/node-feature-discovery">github.com/kubernetes-sigs/node-feature-discovery</a></p>
+</li>
+</ul>
+<p><strong>node-problem-detector</strong></p>
+<ul>
+<li>
+<p>这个工具旨在收集来自各节点的问题，并使它们对上层可见。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubernetes/node-problem-detector">github.com/kubernetes/node-problem-detector</a></p>
+</li>
+</ul>
+<p><strong>NodeWrecker</strong></p>
+<ul>
+<li>
+<p>NodeWrecker 允许你对集群 CPU、内存或磁盘负载进行压力测试，方便设计混沌工程实验。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jaeg/NodeWrecker">github.com/jaeg/NodeWrecker</a></p>
+</li>
+</ul>
+<p><strong>O</strong></p>
+<p><strong>oneinfra</strong></p>
+<ul>
+<li>
+<p>它用于跨不同公有云、私有云和裸金属服务器管理和运行多个 Kubernetes 集群。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/oneinfra/oneinfra">github.com/oneinfra/oneinfra</a></p>
+</li>
+</ul>
+<p><strong>oomhero</strong></p>
+<ul>
+<li>
+<p>这是一种辅助工具，可帮助开发者跟踪容器的内存使用情况。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/ricardomaraschini/oomhero">github.com/ricardomaraschini/oomhero</a></p>
+</li>
+</ul>
+<p><strong>operator-lifecycle-manager</strong></p>
+<ul>
+<li>
+<p>这是用于通过 Operators 扩展 Kubernetes 管理框架的工具包。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/operator-framework/operator-lifecycle-manager">github.com/operator-framework/operator-lifecycle-manager</a></p>
+</li>
+</ul>
+<p><strong>P</strong></p>
+<p><strong>pangolin</strong></p>
+<ul>
+<li>
+<p>它是用于 Kubernetes 的水平 Pod 自动伸缩器，它使用各种可配置的控制策略，根据 Prometheus 指标扩展 Deployment。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/dpeckett/pangolin">github.com/dpeckett/pangolin</a></p>
+</li>
+</ul>
+<p><strong>permission-manager</strong></p>
+<ul>
+<li>
+<p>该工具提供了一种简单直观的方式来管理 Kubernetes 集群中的用户。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/sighupio/permission-manager">github.com/sighupio/permission-manager</a></p>
+</li>
+</ul>
+<p><strong>pluto</strong></p>
+<ul>
+<li>
+<p>它能帮助用户在其代码存储库和 Helm 版本中找到已弃用的 Kubernetes apiVersion。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/FairwindsOps/pluto">github.com/FairwindsOps/pluto</a></p>
+</li>
+</ul>
+<p><strong>podtnl</strong></p>
+<ul>
+<li>
+<p>这是一个 CLI 工具，可在不公开 Kubernetes 服务的情况下使 Pod 在线可用。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/narendranathreddythota/podtnl">github.com/narendranathreddythota/podtnl</a></p>
+</li>
+</ul>
+<p><strong>Polaris</strong></p>
+<ul>
+<li>
+<p>这是一款通过分析部署配置，发现集群中存在的问题的健康检查组件，也提供问题的解决方案，确保集群处于健康状态。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/FairwindsOps/polaris">github.com/FairwindsOps/polaris</a></p>
+</li>
+</ul>
+<p><strong>pomerium</strong></p>
+<ul>
+<li>
+<p>这是一种身份识别代理，提供了跨云和本地部署一致的身份验证、授权、工具和审核。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/pomerium/pomerium">github.com/pomerium/pomerium</a></p>
+</li>
+</ul>
+<p><strong>popeye</strong></p>
+<ul>
+<li>
+<p>这个工具可扫描活动的 Kubernetes 集群并报告已部署资源和配置的潜在问题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/derailed/popeye">github.com/derailed/popeye</a></p>
+</li>
+</ul>
+<p><strong>porter</strong></p>
+<ul>
+<li>
+<p>这是为 Kubernetes 裸机集群设计的开源负载均衡器。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubesphere/porter">github.com/kubesphere/porter</a></p>
+</li>
+</ul>
+<p><strong>postgres-operator</strong></p>
+<ul>
+<li>
+<p>这是 PostgreSQL 运算符，可在 Kubernetes上 创建、配置、管理 PostgreSQL 集群。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/CrunchyData/postgres-operator">github.com/CrunchyData/postgres-operator</a></p>
+</li>
+</ul>
+<p><strong>powerfulseal</strong></p>
+<ul>
+<li>
+<p>这是用于 Kubernetes 集群的强大测试工具，它会给 Kubernetes 集群增加了混乱以帮助我们尽早发现系统中的问题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/powerfulseal/powerfulseal">github.com/powerfulseal/powerfulseal</a></p>
+</li>
+</ul>
+<p><strong>predictive-horizontal-pod-autoscaler</strong></p>
+<ul>
+<li>
+<p>这是一个自定义 Pod 自动缩放器。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jthomperoo/predictive-horizontal-pod-autoscaler">github.com/jthomperoo/predictive-horizontal-pod-autoscaler</a></p>
+</li>
+</ul>
+<p><strong>preflight</strong></p>
+<ul>
+<li>
+<p>这是是使用 Open Policy Agent（OPA）自动执行 Kubernetes 集群配置检查的工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jetstack/preflight">github.com/jetstack/preflight</a></p>
+</li>
+</ul>
+<p><strong>push-deploy</strong></p>
+<ul>
+<li>
+<p>这是一个 Python 应用，可安全、简单地实现外部工具（GitHub Actions 等）与 Kubernetes 之间的通信，无需暴露集群凭证。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/mdgreenwald/push-deploy">github.com/mdgreenwald/push-deploy</a></p>
+</li>
+</ul>
+<p><strong>R</strong></p>
+<p><strong>rafter</strong></p>
+<ul>
+<li>
+<p>这个项目是用于存储和管理不同类型文件的解决方案，它使用 MinIO 作为对象存储。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kyma-project/rafter">github.com/kyma-project/rafter</a></p>
+</li>
+</ul>
+<p><strong>rback</strong></p>
+<ul>
+<li>
+<p>这是一个简单的 Kubernetes RBAC 的可视化工具。它可以查询 Kubernetes 集群中所有与 RBAC 相关的信息，并以点格式生成相关图表。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/team-soteria/rback">github.com/team-soteria/rback</a></p>
+</li>
+</ul>
+<p><strong>registry-creds</strong></p>
+<ul>
+<li>
+<p>这是一个 Kubernetes operator，可用于将单个 ImagePullSecret 分发到集群中的所有命名空间空间，以通过身份验证提取镜像。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/alexellis/registry-creds">github.com/alexellis/registry-creds</a></p>
+</li>
+</ul>
+<p><strong>Reloader</strong></p>
+<ul>
+<li>
+<p>Reloader 是 Kubernetes 控制器，可监控 ConfigMap 和 Secrets 中的更改并触发 Pods 及其关联的 Deployment、StatefulSet、DaemonSet 和 DeploymentConfig 的滚动升级。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/stakater/Reloader">github.com/stakater/Reloader</a></p>
+</li>
+</ul>
+<p><strong>S</strong></p>
+<p><strong>secretize</strong></p>
+<ul>
+<li>
+<p>这是一个 Kustomize 插件，可用于生成 kubernetes secret。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/bbl/secretize">github.com/bbl/secretize</a></p>
+</li>
+</ul>
+<p><strong>secrets-store-csi-driver</strong></p>
+<ul>
+<li>
+<p>它可以让 Kubernetes 将在外部存储中的密钥、证书等作为卷放到 Pod 上。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kubernetes-sigs/secrets-store-csi-driver">github.com/kubernetes-sigs/secrets-store-csi-driver</a></p>
+</li>
+</ul>
+<p><strong>shell-operator</strong></p>
+<ul>
+<li>
+<p>这是在 Kubernetes 集群中运行事件驱动脚本的工具。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/flant/shell-operator">github.com/flant/shell-operator</a></p>
+</li>
+</ul>
+<p><strong>sinker</strong></p>
+<ul>
+<li>
+<p>它可以将容器镜像从一个注册表同步到另一个。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/plexsystems/sinker">github.com/plexsystems/sinker</a></p>
+</li>
+</ul>
+<p><strong>stale-feature-branch-operator</strong></p>
+<ul>
+<li>
+<p>它用于删除 Kubernetes 集群中的陈旧功能分支。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/dmytrostriletskyi/stale-feature-branch-operator">github.com/dmytrostriletskyi/stale-feature-branch-operator</a></p>
+</li>
+</ul>
+<p><strong>stash</strong></p>
+<ul>
+<li>
+<p>这是针对 Kubernetes 工作负载的云原生数据备份和恢复解决方案。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/stashed/stash">github.com/stashed/stash</a></p>
+</li>
+</ul>
+<p><strong>statusbay</strong></p>
+<ul>
+<li>
+<p>这是一个可视化 k8s 部署过程的项目，它从 k8s 收集所有相关事件并展示部署过程，以帮助 k8s 故障排除。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/similarweb/statusbay">github.com/similarweb/statusbay</a></p>
+</li>
+</ul>
+<p><strong>stolon</strong></p>
+<ul>
+<li>
+<p>这是一个云原生 PostgreSQL 管理器，使用 Kubernetes API Server 作为高可用数据存储来选举领导者。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/sorintlab/stolon">github.com/sorintlab/stolon</a></p>
+</li>
+</ul>
+<p><strong>sugarkube</strong></p>
+<ul>
+<li>
+<p>一个可以创建临时 Kubernetes 集群的工具。仅需几个命令，你就可以启动和配置 Kubernetes 集群，将所有应用程序安装到其中，并创建所需的基础架构。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/sugarkube/sugarkube">github.com/sugarkube/sugarkube</a></p>
+</li>
+</ul>
+<p><strong>suspicious-pods</strong></p>
+<ul>
+<li>
+<p>列出 Kubernetes 集群中可能无法正常工作的 Pod 列表，附带原因。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/edrevo/suspicious-pods">github.com/edrevo/suspicious-pods</a></p>
+</li>
+</ul>
+<p><strong>sysbox</strong></p>
+<ul>
+<li>
+<p>这是一个开源的容器 runtime。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/nestybox/sysbox">github.com/nestybox/sysbox</a></p>
+</li>
+</ul>
+<p><strong>T</strong></p>
+<p><strong>terraform-kubestack</strong></p>
+<ul>
+<li>
+<p>这是基于 Terraform 和 Kustomize 构建的开源 Gitops 框架。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/kbst/terraform-kubestack">github.com/kbst/terraform-kubestack</a></p>
+</li>
+</ul>
+<p><strong>ThreatMapper</strong></p>
+<ul>
+<li>
+<p>它可以用于识别正在运行的容器、镜像、主机和存储库中的漏洞。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/deepfence/ThreatMapper">github.com/deepfence/ThreatMapper</a></p>
+</li>
+</ul>
+<p><strong>tobs</strong></p>
+<ul>
+<li>
+<p>它能将完整的可观察性堆栈简单地安装到 Kubernetes 集群中。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/timescale/tobs">github.com/timescale/tobs</a></p>
+</li>
+</ul>
+<p><strong>trivy</strong></p>
+<ul>
+<li>
+<p>这是一种适用于 CI 的简单而全面的容器漏洞扫描程序。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/aquasecurity/trivy">github.com/aquasecurity/trivy</a></p>
+</li>
+</ul>
+<p><strong>tubekit</strong></p>
+<ul>
+<li>
+<p>这是一个围绕 kubectl 的简单而强大的封装器，可降低使用上下文、命名空间和智能匹配资源的复杂性。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/reconquest/tubekit">github.com/reconquest/tubekit</a></p>
+</li>
+</ul>
+<p><strong>V</strong></p>
+<p><strong>velero-backup-notification</strong></p>
+<ul>
+<li>
+<p>这是一个用 Ruby 编写的简单 Kubernetes 控制器。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/vitobotta/velero-backup-notification">github.com/vitobotta/velero-backup-notification</a></p>
+</li>
+</ul>
+<p><strong>version-checker</strong></p>
+<ul>
+<li>
+<p>它用于观察集群中运行镜像的当前版本以及上游可用的最新版本。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/jetstack/version-checker">github.com/jetstack/version-checker</a></p>
+</li>
+</ul>
+<p><strong>vim-helm</strong></p>
+<ul>
+<li>
+<p>Helm templates 的 vim 语法（yaml + gotmpl + sprig + custom）。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/towolf/vim-helm">github.com/towolf/vim-helm</a></p>
+</li>
+</ul>
+<p><strong>W</strong></p>
+<p><strong>weathervane</strong></p>
+<ul>
+<li>
+<p>这是一个应用程序级性能基准工具，可用于研究内部部署和基于云的 Kubernetes 集群的性能特征。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/vmware/weathervane">github.com/vmware/weathervane</a></p>
+</li>
+</ul>
+<p><strong>webkubectl</strong></p>
+<ul>
+<li>
+<p>这个工具可以帮助开发者管理 Kubernetes 凭证并在浏览器中运行 kubectl 命令，支持团队协作。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/KubeOperator/webkubectl">github.com/KubeOperator/webkubectl</a></p>
+</li>
+</ul>
+<p><strong>wild-west-kubernetes</strong></p>
+<ul>
+<li>
+<p>这是一个用 Spring Boot 和 Phaser 游戏引擎编写的有趣应用程序。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/gshipley/wild-west-kubernetes">github.com/gshipley/wild-west-kubernetes</a></p>
+</li>
+</ul>
+<p><strong>X</strong></p>
+<p><strong>xlskubectl</strong></p>
+<ul>
+<li>
+<p>它可以用 Excel 表格控制 kubernetes 集群。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/learnk8s/xlskubectl">github.com/learnk8s/xlskubectl</a></p>
+</li>
+</ul>
+<p><strong>Y</strong></p>
+<p><strong>yh</strong></p>
+<ul>
+<li>
+<p>这是一个 YAML 突出显示器，可以将其与 kubectl 结合使用。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://github.com/andreazorzetto/yh">github.com/andreazorzetto/yh</a></p>
+</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">阿坤</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.mmc88.fun/posts/212441.html">https://blog.mmc88.fun/posts/212441.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">阿坤</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Kubernetes/">
+                                    <span class="chip bg-color">Kubernetes</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的鼓励是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/21111129.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="JAVA基础 - 知识点">
+                        
+                        <span class="card-title">JAVA基础 - 知识点</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JAVA基础 - 知识点
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JAVA基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">JAVA基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/21129.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="Hexo配置详解">
+                        
+                        <span class="card-title">Hexo配置详解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            hexo配置详解
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BB%BA%E7%AB%99/" class="post-category">
+                                    建站
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('12')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 码梦川<br />'
+            + '文章作者: 阿坤<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" >
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023-2024</span>
+            
+            <a href="/about" target="_blank">阿坤</a>
+<!--            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>-->
+<!--            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>-->
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">37.1k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "12";
+                        var startDate = "1";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/likunqi" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:18800566899@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1723245090" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1723245090" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<!--<script>-->
+<!--    (function () {-->
+<!--        var bp = document.createElement('script');-->
+<!--        var curProtocol = window.location.protocol.split(':')[0];-->
+<!--        if (curProtocol === 'https') {-->
+<!--            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';-->
+<!--        } else {-->
+<!--            bp.src = 'http://push.zhanzhang.baidu.com/push.js';-->
+<!--        }-->
+<!--        var s = document.getElementsByTagName("script")[0];-->
+<!--        s.parentNode.insertBefore(bp, s);-->
+<!--    })();-->
+<!--</script>-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6178f476d9c0ef2dbb86c50e63fbc042";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        const hasAttr = (e,a) => a.some(_=> e.attr(_)!==undefined);
+        $('a').each(function() {
+          const $this = $(this);
+          if(hasAttr($this,["data-fancybox","ignore-external-link"])) return;
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'blog.mmc88.fun' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+
+</html>

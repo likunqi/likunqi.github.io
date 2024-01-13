@@ -102,7 +102,7 @@
     <link href="https://blog.mmc88.fun/posts/771611.html"/>
     <id>https://blog.mmc88.fun/posts/771611.html</id>
     <published>2024-01-05T00:13:54.000Z</published>
-    <updated>2024-01-06T05:42:00.243Z</updated>
+    <updated>2024-01-10T06:20:06.366Z</updated>
     
     
       
@@ -520,6 +520,36 @@
   </entry>
   
   <entry>
+    <title>K8S相关的开源集合</title>
+    <link href="https://blog.mmc88.fun/posts/212441.html"/>
+    <id>https://blog.mmc88.fun/posts/212441.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-12T07:17:15.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;K8S相关的开源集合&lt;br&gt;
+&lt;strong&gt;A&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;aegir&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这是 Kubernetes 的一个简单通用的 Webhook admission</summary>
+        
+      
+    
+    
+    
+    <category term="Kubernetes" scheme="https://blog.mmc88.fun/categories/Kubernetes/"/>
+    
+    
+    <category term="Kubernetes" scheme="https://blog.mmc88.fun/tags/Kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo配置详解</title>
     <link href="https://blog.mmc88.fun/posts/21129.html"/>
     <id>https://blog.mmc88.fun/posts/21129.html</id>
@@ -533,37 +563,6 @@
         
     <summary type="html">&lt;h3 id=&quot;1-Hexo-文章的元数据配置完全指南&quot;&gt;1. Hexo 文章的元数据配置完全指南&lt;/h3&gt;
 &lt;p&gt;Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了</summary>
-        
-      
-    
-    
-    
-    <category term="建站" scheme="https://blog.mmc88.fun/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="hexo" scheme="https://blog.mmc88.fun/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建Hexo博客遇到的问题</title>
-    <link href="https://blog.mmc88.fun/posts/23329.html"/>
-    <id>https://blog.mmc88.fun/posts/23329.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-04T11:26:50.763Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-hexo-如何删除已经不存在的“分类”&quot;&gt;1. hexo 如何删除已经不存在的“分类”&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;因缓存的问题，重新清理执行脚本即可,如下是 清理-生成-发布 命令&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code</summary>
         
       
     

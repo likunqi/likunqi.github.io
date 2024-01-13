@@ -903,115 +903,6 @@ Java 8对 HashMap 进行扩容的行为也进行了改良，这包括在扩容�
       </tags>
   </entry>
   <entry>
-    <title>Podman 与 Docker</title>
-    <url>/posts/771236.html</url>
-    <content><![CDATA[Podman 与 Docker：比较两种容器化工具
-
-容器技术已成为软件开发与部署的核心工具，其中Docker领跑行业，而Podman作为后来者提供了新的选择。两者都兼容开放容器计划（OCI）标准，并拥有完善的容器管理特性。选择它们之一取决于个别用例，每种工具都有其场景更支持的专长。我们提供的对比指南将详细介绍它们各自的优点和应用场景，帮助用户依据自身的需求作出合适的选择。
-
-1. 什么是容器？
-
-容器为开发者提供一种打包应用程序及其依赖项的方法，使它们能在不同环境中无缝运行，提供了隔离但资源高效的解决方案。这种技术通过容器映像，即一套可以复制的应用程序和环境说明，实现可移植性。现代容器化工具如Docker和Podman均符合OCI标准，支持交互性，并能管理和传播这些容器映像，确保它们能在不同系统中快速运行。
-
-2. 什么是 Docker？
-
-Docker 是一个通过容器创建、部署和管理应用程序的平台。借助 Docker，您可以使用 Dockerfile（用于创建容器的脚本）或现有容器映像创建符合 OCI 标准的容器。
-
-
-Docker 已经成为一种非常流行的容器化工具，至少部分原因是它相对简单。其简单明了的命令和丰富的可用文档使 Docker 变得非常容易上手。
-
-3. 什么是 Podman？
-
-Podman 和 Docker 一样，是一个用于部署和管理容器化应用程序的开源引擎。Podman 从现有映像或 Containerfile 和 Dockerfile 构建符合 OCI 标准的容器。
-
-
-Podman 引擎最初由 Red Hat 开发，旨在提供 Docker 的无守护进程替代方案。通过采用无守护进程架构，Podman 试图解决围绕 Docker 基于守护进程的安全问题。
-
-
-此外，Podman 的无守护进程架构赋予了它真正的无根模式。Docker 命令可以由非 root 用户运行，但执行这些命令的守护程序继续在 root 上运行。相反，Podman 直接执行命令，避免了对 root 权限的需求。
-
-4. Docker 与 Podman
-
-Podman 和 Docker 都是容器化工具。使用任何一种方式，您都可以完全启动、部署和管理容器。
-
-
-但是，每种工具都有其优点和缺点。接下来的几节将逐一探讨，并提供了一个列表来比较和对比这两个容器化引擎。
-
-5. Docker 的优点和缺点
-Docker 优点：
-
-
-简单易近人。Docker 的命令设计得相对简单易用。除此之外，Docker 还维护着最常用的容器映像注册表之一。
-Docker Hub 拥有大量维护良好的容器映像，其中许多映像是官方编写和更新的。例如，这使得拉取 LAMP 堆栈的容器映像并开始快速使用 Docker 变得相对容易。
-流行。Docker 的广泛使用意味着您更有可能在任何与容器一起使用的地方遇到它。这也意味着您拥有大量且易于访问的用户文档和故障排除集合。
-
-
-Docker 缺点：
-
-
-基于守护程序的体系结构。Docker 运行在长时间运行的守护进程上，这可能会给某些人带来安全问题。此外，该守护进程以 root 权限运行。因此，即使是执行 Docker 命令的有限用户也会通过具有 root 权限的进程来完成这些命令，这是另一个安全问题。
-
-
-6. Podman 的优点和缺点
-Podman 优点：
-
-
-无守护进程架构。Podman 直接与容器和容器映像交互，无需长时间运行的守护进程。这样做可以减少安全风险。
-
-
-
-
-无根进程。由于其无守护进程架构，Podman 可以执行真正的无根操作。用户不必被授予 root 权限即可运行 Podman 命令，并且 Podman 不必依赖具有 root 权限的进程。
-
-
-
-
-访问映像注册表。Podman 可以从众多注册表（包括 Docker Hub）中查找和拉取容器映像。这意味着，只需稍加配置，Podman 就可以访问与 Docker 相同的镜像仓库。
-
-
-Podman 缺点：
-
-
-有限的构建功能。Podman 主要关注运行和管理容器。它可以构建容器并将其呈现为图像，通常对许多用例有效。但是，它这样做的功能代表了 Buildah 源代码的有限部分。
-相反，Podman 支持将 Buildah 用作功能更丰富的容器构建和对流程进行微调控制的免费工具。
-
-
-7. 何时使用 Docker
-
-Docker 最适合需要更平易近人的容器化选项。Docker 的设计使其上手速度相对较快，其功能集包括您在使用容器时可能需要的一切。
-
-
-Docker 涵盖了整个容器生命周期，从容器组合到部署和维护。它通过一组简单的命令来实现这一点。
-
-
-Docker 已经在许多公司建立了使用，并且拥有大量使用经验的人。在容器化工具方面，与大多数其他工具相比，您更有可能找到熟悉 Docker 的人。
-
-8. 何时使用 Podman
-
-Podman 提供更高的安全性选项。它的无守护进程架构允许你运行无根容器。这与 Podman 用于管理容器的直接（而不是长时间运行）流程相结合，进一步保护了它们。
-
-
-Podman 是一种轻量级的专业解决方案。它侧重于运行、部署和管理容器，并为您提供对这些流程的精细控制。
-
-
-同时，提供了用于构建容器和映像的选项，尽管这些选项有限。Podman 始终专注于其专业化，并更喜欢将 Buildah 作为构建容器和容器映像的免费工具。
-
-
-这种专业化和轻量级占用空间在以下情况下非常有用：你希望对运行和管理容器进行更多控制，但不需要更高级的生成功能（或能够依赖其他工具）。
-
-
-事实上，考虑到 Docker 和 Podman 都符合 OCI 标准，您可以有效地并行使用 Docker。例如，您可以将 Docker 用于开发环境，在该环境中创建应用程序映像，但安全性问题不大。然后，使用 Podman 在生产环境中运行和维护这些映像。
-
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA基础 - 知识点</title>
     <url>/posts/21111129.html</url>
     <content><![CDATA[Java 基础 - 知识点详解
@@ -1453,6 +1344,1714 @@ Java天生具有跨平台性，这得益于它在编译时不会直接转变为�
       </categories>
       <tags>
         <tag>JAVA基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>K8S相关的开源集合</title>
+    <url>/posts/212441.html</url>
+    <content><![CDATA[K8S相关的开源集合
+A
+aegir
+
+
+这是 Kubernetes 的一个简单通用的 Webhook admission controller。
+
+
+github.com/grupozap/aegir
+
+
+Allok8
+
+
+这是一个动态、常规且简单的基于 Web 的 UI Kubernetes 可视化工具。
+
+
+github.com/oslabs-beta/Allok8
+
+
+arktos
+
+
+这是一个专为大规模云计算基础架构而设计的开源项目，它由开源项目 Kubernetes 代码库演变而来，并进行了核心设计更改。
+
+
+github.com/futurewei-cloud/arktos
+
+
+audit2rbac
+
+
+它可以将 Kubernetes 审核日志和用户名作为输入，生成 RBAC 角色和绑定对象，以覆盖该用户提出的所有 API 请求。
+
+
+github.com/liggitt/audit2rbac
+
+
+authelia
+
+
+这是一个开放源代码认证和授权服务器，它提供了 2-factor 认证和单一登录以保护web应用程序和简化身份验证。
+
+
+github.com/authelia/authelia
+
+
+awesome-helm
+
+
+一个很棒的 Helm 资源、Chart 协作列表。
+
+
+github.com/cdwv/awesome-helm
+
+
+awesome-kubernetes
+
+
+这个项目包含了大量 Kubernetes 相关的文章和实践案例，建议在有一定基础知识后选择性学习。
+
+
+github.com/ramitsurana/awesome-kubernetes
+
+
+B
+Beetle
+
+
+它可以在多集群、多命名空间的 kubernetes 环境中自动执行应用程序的部署和回滚。
+
+
+github.com/Clivern/Beetle
+
+
+C
+capsule
+
+
+它在 Kubernetes 多租户环境中提供了一个自定义 Operator。
+
+
+github.com/clastix/capsule
+
+
+cass-operator
+
+
+这是适用于 ApacheCassandra 的 DataStax Kubernetes Operator。
+
+
+github.com/datastax/cass-operator
+
+
+chart-testing
+
+
+这是用于整理和测试 Helm 图表的 CLI 工具。
+
+
+github.com/helm/chart-testing
+
+
+checkov
+
+
+它是用于基础结构即代码的静态代码分析工具。
+
+
+github.com/bridgecrewio/checkov
+
+
+cheekymonkey
+
+
+这是一个 Chaos Monkey 游戏。
+
+
+github.com/richstokes/cheekymonkey
+
+
+cilium
+
+
+这是一个用于提供并透明地保护应用程序工作负载之间的网络连接和负载均衡。
+
+
+github.com/cilium/cilium
+
+
+clair
+
+
+clair 是一个开源项目，用于静态分析应用程序容器中的漏洞。
+
+
+github.com/quay/clair
+
+
+cluster-turndown
+
+
+它可以基于自定义计划和关闭条件对 Kubernetes 集群的备份节点进行自动伸缩。
+
+
+github.com/kubecost/cluster-turndown
+
+
+configula
+
+
+这是一种配置生成语言和处理器，目的是使声明性配置的程序化定义变得容易和直观。
+
+
+github.com/brendandburns/configula
+
+
+couler
+
+
+它提供了一个统一的界面，以在不同的工作流引擎（例如 Argo Workflows、Tekton Pipelines 和 Apache Airflow）上构建和管理工作流。
+
+
+github.com/couler-proj/couler
+
+
+craft
+
+
+它以健壮和通用的方式为任何资源声明了 Kubernetes Operator，使开发人员可以专注于 Dockerfile 中资源管理的 CRUD 操作。
+
+
+github.com/salesforce/craft
+
+
+crash-diagnostics
+
+
+这种工具可帮助调查、分析无响应或崩溃的 Kubernetes 集群并对其进行故障排除。
+
+
+github.com/vmware-tanzu/crash-diagnostics
+
+
+csi-s3
+
+
+这是用于 S3（或与 S3 兼容）存储的容器存储接口（CSI）。
+
+
+github.com/ctrox/csi-s3
+
+
+custom-pod-autoscaler
+
+
+它是一种 Kubernetes 自动伸缩器，其设计类似于 Kubernetes 水平 Pod 自动伸缩器。
+
+
+github.com/jthomperoo/custom-pod-autoscaler
+
+
+D
+deprek8ion
+
+
+该项目用于监视 Kubernetes API 的弃用情况。
+
+
+github.com/swade1987/deprek8ion
+
+
+DevOpsProdigyKubeGraf
+
+
+这是 Grafana APP 的更新版本，可以帮助开发者可视化和分析 Kubernetes 集群性能。
+
+
+grafana.com/grafana/plugins/devopsprodigy-kubegraf-app
+
+
+dockerize
+
+
+这是用于简化在 Docker 容器中运行应用程序的实用程序。
+
+
+github.com/jwilder/dockerize
+
+
+dynamic-pv-scaler
+
+
+这是一个基于 Golang 的 Kubernetes 应用程序，可以解决 Kubernetes 中持久卷的扩展问题。
+
+
+github.com/opstree/dynamic-pv-scaler
+
+
+E
+eks-pod-identity-tester
+
+
+这个工具可以帮忙诊断权限问题。
+
+
+github.com/jasonrichardsmith/eks-pod-identity-tester
+
+
+expressjs-k8s
+
+
+这是一个如何使用 Node.js 和 Express.js 构建微服务的示例。
+
+
+github.com/alexellis/expressjs-k8s
+
+
+F
+fubectl
+
+
+它可以减少与 kubectl 的重复交互。
+
+
+github.com/kubermatic/fubectl
+
+
+G
+gemini
+
+
+它用于在 Kubernetes 中自动备份 PersistentVolumeClaims。
+
+
+github.com/FairwindsOps/gemini
+
+
+gimbal
+
+
+这是基于 Contour 构建的第 7 层负载均衡平台，能够将流量路由到多个 Kubernetes 和 OpenStack 集群，是 Yahoo 为了用 K8s 对基础架构进行现代化改造推出的工具。
+
+
+github.com/projectcontour/gimbal
+
+
+gitkube
+
+
+它可以通过 git push 在 Kubernetes 构建和部署 Docker 镜像。
+
+
+github.com/hasura/gitkube
+
+
+go-kubectx
+
+
+这是一个旨在帮助开发者切换 Kubernetes 上下文的工具。它比 kubectx 快 5-10 倍（用 Go 编写并使用 client-go）。
+
+
+github.com/aca/go-kubectx
+
+
+H
+harbor-sync
+
+
+该项目可将 Harbor robot 帐户与 Kubernetes 集群同步。
+
+
+github.com/moolen/harbor-sync
+
+
+helm-diff
+
+
+这是一个 Helm 插件，可以预览 helm upgrade 将要发生的变化。
+
+
+github.com/databus23/helm-diff
+
+
+helm-docs
+
+
+这是一种自动生成 helm 图表 markdown 文档的工具。
+
+
+github.com/norwoodj/helm-docs
+
+
+helm-kubeval
+
+
+这是一个 Helm 插件，用于根据 Kubernetes schemas 验证 Charts。
+
+
+github.com/instrumenta/helm-kubeval
+
+
+helm-monitor
+
+
+这个工具可以监控 K8s Helm 的发布和 metrics behavior 的回滚。
+
+
+github.com/ContainerSolutions/helm-monitor
+
+
+hetzner-kube
+
+
+这是用于在 Hetzner Cloud 上配置 Kubernetes 集群的 CLI 工具。
+
+
+github.com/xetys/hetzner-kube
+
+
+hubble
+
+
+这是一个用于云原生工作负载的完全分布式的网络和安全性可观察性平台。
+
+
+github.com/cilium/hubble
+
+
+hyscale
+
+
+其用于部署单体或微服务应用程序。
+
+
+github.com/hyscale/hyscale
+
+
+I
+illuminatio
+
+
+它是用于自动测试 kubernetes 网络策略的工具。
+
+
+github.com/inovex/illuminatio
+
+
+infracost
+
+
+它会显示 Terraform 项目的成本估算。
+
+
+github.com/infracost/infracost
+
+
+ipvs-node-controller
+
+
+这是 kubernetes 控制器，可解决IPVS代理模式下的外部 IP 问题。
+
+
+github.com/kakao/ipvs-node-controller
+
+
+isopod
+
+
+这是用于 Kubernetes 配置的表达性 DSL 框架。由于没有 YAML 构件，它会将 Kubernetes 对象呈现为 Protocol Buffer，由 Kubernetes API 直接进行类型化和调用。
+
+
+github.com/cruise-automation/isopod
+
+
+K
+k8s-cronjob-prescaler
+
+
+该工具提供了一种机制，使 cronjobs 可以在自动扩展集群上运行，并确保在 cronjob 工作负载按时启动时集群会被弹性缩小到所需的大小。
+
+
+github.com/microsoft/k8s-cronjob-prescaler
+
+
+k8s-diagrams
+
+
+它从 Kubernetes 的培训、文章和讲座中提取了一系列解释 kubernetes 的结构图。
+
+
+github.com/cloudogu/k8s-diagrams
+
+
+k8s-image-availability-exporter
+
+
+这是一个小型工具，可以连续检查 Kubernetes 对象中定义的所有容器镜像是否可用。
+
+
+github.com/flant/k8s-image-availability-exporter
+
+
+k8s-job-notify
+
+
+这是一个 Kubernetes Job/CronJob 通知程序，当 Kubernetes cronJob/Job 失败/成功时，它会向 slack 发送警报。
+
+
+github.com/sukeesh/k8s-job-notify
+
+
+k8s-platform-lcm
+
+
+这个项目可帮助开发者跟踪 Kubernetes 平台及其周围使用或运行的软件和工具，它可以辅助进行部分生命周期管理。
+
+
+github.com/arminc/k8s-platform-lcm
+
+
+k8s-pod-rbac-breakout
+
+
+这是一个脚本，开发者可以在自己的集群中运行该脚本，以测试 RBAC 规则是否太宽松了。
+
+
+github.com/geerlingguy/k8s-pod-rbac-breakout
+
+
+k8s-security-policies
+
+
+该存储库提供了一个安全策略库，用于保护 Kubernetes 集群配置。
+
+
+github.com/raspbernetes/k8s-security-policies
+
+
+k8s-snapshots
+
+
+它可以根据 PersistentVolume 或 PersistentVolumeClaim 资源的注释创建和终止快照。
+
+
+github.com/miracle2k/k8s-snapshots
+
+
+k8s-spot-rescheduler
+
+
+这是是一种旨在尽可能减少 Kubernetes 节点上负载的工具。
+
+
+github.com/pusher/k8s-spot-rescheduler
+
+
+k8s-worker-pod-autoscaler
+
+
+它可以根据队列长度伸缩 kubernetes 容器。
+
+
+github.com/practo/k8s-worker-pod-autoscaler
+
+
+kadalu
+
+
+这个工具将“GlusterFS”用作提供存储的“灵魂”，但剥离了“gluster”项目的管理层。
+
+
+github.com/kadalu/kadalu
+
+
+kalm
+
+
+它提供了一个 Web 界面，以执行常见的 Kubernetes 工作流程。
+
+
+github.com/kalmhq/kalm
+
+
+kapitan
+
+
+它是一个通用的配置管理工具，可以帮助我们管理 terraform 、kubernetes 以及其他配置。
+
+
+github.com/deepmind/kapitan
+
+
+kcf
+
+
+这是一个 CLI 工具，可提供 Kubernetes 集群机群的状态和配置。
+
+
+github.com/kubectl-plus/kcf
+
+
+kconmon
+
+
+这是一种 Kubernetes 节点连接性监控工具。
+
+
+github.com/Stono/kconmon
+
+
+kdbg
+
+
+kdbg（Kubernetes 调试器）是一个基于最新 Alpine Linux 镜像的小型 Docker 容器，用于从 Pod 内部调试 Kubernetes 集群。
+
+
+github.com/nvucinic/kdbg
+
+
+kdo
+
+
+它是一个命令行工具，使开发人员可以在实际的部署环境中运行、开发和测试代码更改。
+
+
+github.com/stepro/kdo
+
+
+kind-boilerplate
+
+
+这是一组有用的脚本集，可帮助开发者设置简单集群样板，包括多个节点、ingress 和仪表板。
+
+
+github.com/xantrix/kind-boilerplate
+
+
+kine
+
+
+这是一个 etcdshim，可将 etcd API 转换为 sqlite、Postgres、Mysql 和 dqlite。
+
+
+github.com/rancher/kine
+
+
+kip
+
+
+这是一个虚拟 Kubelet 提供程序，它允许 Kubernetes 集群在云实例上启动 Pod。
+
+
+github.com/elotl/kip
+
+
+klum
+
+
+这个工具可以完成以下任务：创建、删除、修改用户；轻松管理与用户关联的角色；发布 kubeconfig 文件供用户使用。
+
+
+github.com/ibuildthecloud/klum
+
+
+konstraint
+
+
+这是一个 CLI 工具，可以在使用 Gatekeeper 时帮助创建和管理模板。
+
+
+github.com/plexsystems/konstraint
+
+
+kopf
+
+
+它是一个 Python 框架，可以用几行代码编写 Kubernetes operator。
+
+
+github.com/nolar/kopf
+
+
+kotary
+
+
+其用于管理 Kubernetes 资源配额。
+
+
+github.com/ca-gip/kotary
+
+
+krane
+
+
+它是一个简单的 Kubernetes RBAC 静态分析工具，可以检查 K8s RBAC 设计中的潜在安全风险，并提出相关建议。
+
+
+github.com/appvia/krane
+
+
+kritis
+
+
+这是一种开源解决方案，可确保您的软件供应链适用于 Kubernetes 应用程序。
+
+
+github.com/grafeas/kritis
+
+
+krustlet
+
+
+Rust 中的 Kubernetes Kubelet，用于运行 WASM。
+
+
+github.com/deislabs/krustlet
+
+
+ktunnel
+
+
+这是一个 CLI 工具，允许开发者将机器作为服务公开到集群中，或将其公开给特定的部署。
+
+
+github.com/omrikiei/ktunnel
+
+
+ktx
+
+
+ktx 用于减少在各种配置之间切换而引起的问题。
+
+
+github.com/heptiolabs/ktx
+
+
+KubeYAML
+
+
+这个网页可以对照 swagger 定义验证你的 Kubernetes YAML 文档。
+
+
+kubeyaml.com
+
+
+kube-iptables-tailer
+
+
+这个工具可以检测 iptables 拒绝的流量，并通过 Kubernetes 事件将相应的信息提供给受影响的 Pod。
+
+
+github.com/box/kube-iptables-tailer
+
+
+kube-linter
+
+
+这是一个静态分析工具，用于检查 Kubernetes YAML 文件和 Helm 图表。
+
+
+github.com/stackrox/kube-linter
+
+
+kube-monkey
+
+
+它会随机删除Kubernetes 集群中的 Pod，以验证故障恢复服务的开发。
+
+
+github.com/asobti/kube-monkey
+
+
+kube-query
+
+
+该项目扩展了 osquery，允许工程师使用 SQL 查询可视化集群。
+
+
+github.com/aquasecurity/kube-query
+
+
+kube-s
+
+
+一个轻量级的 CLI 工具，用于在 kubectl 可用的所有集群中快速查找特定的 K8s 资源。
+
+
+github.com/binura-g/kube-s
+
+
+kube-vip
+
+
+它用于控制面板和 Kubernetes 服务的 Kubernetes 虚拟 IP 和负载均衡器。
+
+
+github.com/plunder-app/kube-vip
+
+
+kubeadm-playbook
+
+
+这个工具将 kubeadm 与 Helm Chart 结合在一起，可帮助创建 HA Kubernetes 集群。它附带 kubeadm、各种官方 Helm Chart、微调版文档和最佳实践。
+
+
+github.com/ReSearchITEng/kubeadm-playbook
+
+
+KubeCarrier
+
+
+该项目用于跨多个 Kubernetes 集群管理应用程序和服务。
+
+
+github.com/kubermatic/kubecarrier
+
+
+kubecle
+
+
+这是在本地运行的 Web UI，提供有关集群的有用信息，是 Kubernetes 仪表板的替代方案。
+
+
+github.com/rydogs/kubecle
+
+
+kubectl-aliases
+
+
+这是一个脚本，可以为 kubectl 生成数百个方便的 shell 别名。
+
+
+github.com/ahmetb/kubectl-aliases
+
+
+kubectl-build
+
+
+其类似于 kaniko，但它在 Kubernetes 集群端执行构建，可以远程构建本地 dockerfile。
+
+
+github.com/kvaps/kubectl-build
+
+
+kubectl-debug
+
+
+这是一个 kubectl 插件, 能够帮助便捷地进行 Kubernetes 上的 Pod 故障诊断。
+
+
+github.com/aylei/kubectl-debug
+
+
+kubectl-fuzzy
+
+
+它可以让开发者使用模糊或部分字符串搜索 kubectl 命令。
+
+
+github.com/d-kuro/kubectl-fuzzy
+
+
+kubectl-fzf
+
+
+kubectl-fzf 为 kubectl 提供了快速而强大的 fzf 自动补全功能。
+
+
+github.com/bonnefoa/kubectl-fzf
+
+
+kubectl-images
+
+
+这是一个 kubectl 插件，用于显示集群中使用的容器镜像。
+
+
+github.com/chenjiandongx/kubectl-images
+
+
+kubectl-reap
+
+
+这是一个 kubectl 插件，可删除未使用的 Kubernetes 资源。
+
+
+github.com/micnncim/kubectl-reap
+
+
+kubectl-tree
+
+
+一个 kubectl 插件，可通过 ownerReferences 上的对象探索 Kubernetes 对象之间的所有权关系。
+
+
+github.com/ahmetb/kubectl-tree
+
+
+kubectl-ssh-proxy
+
+
+这是一个 kubectl 插件，可以让开发者在使用 kubectl 和 SSH bastion 后的集群时觉得更方便。
+
+
+github.com/little-angry-clouds/kubectl-ssh-proxy
+
+
+kubedoom
+
+
+混沌工程工具，通过玩 Id’s DOOM 杀死 Kubernetes Pod。
+
+
+github.com/storax/kubedoom
+
+
+kubeform
+
+
+它可以为 Terraform 资源和模块提供自动生成的 Kubernetes CRD，以便用户以 Kubernetes 原生方式管理任何云基础架构。
+
+
+github.com/kubeform/kubeform
+
+
+kubei
+
+
+kubei 是一种灵活的 Kubernetes 运行时扫描程序，可扫描 worker 和 Kubernetes 节点镜像，并提供准确的漏洞评估。
+
+
+github.com/Portshift/kubei
+
+
+KubeInit
+
+
+它可以自动化部署和配置多个 Kubernetes 发行版。
+
+
+github.com/Kubeinit/kubeinit
+
+
+kubekutr
+
+
+它可以通过自定义的 GitOps 目录结构来快速构建 Kubernetes 资源清单的配置。
+
+
+github.com/mr-karan/kubekutr
+
+
+Kubeletctl
+
+
+这是实现 kubelet API 的命令行工具，该工具涵盖所有已记录和未记录的 API，可以通过其查看 kubelet API 的完整列表。
+
+
+github.com/cyberark/kubeletctl
+
+
+KubeLibrary
+
+
+其用于测试 Kubernetes 集群的 RobotFramework 库。
+
+
+github.com/devopsspiral/KubeLibrary
+
+
+kubelive
+
+
+这个工具可以实时更新 Pod 的状态，重新设计了 kubectl 工具，使其更具交互性。
+
+
+github.com/ameerthehacker/kubelive
+
+
+KubeMQ
+
+
+这是一个企业级消息代理，它是一个小型轻量级 Docker 容器，专为 Kubernetes 中运行的工作负载和架构设计。
+
+
+github.com/kubemq-io/kubemq
+
+
+kubenav
+
+
+这是一款移动和桌面应用程序，可帮助管理 Kubernetes 集群并了解集群中的最新情况。
+
+
+github.com/kubenav/kubenav
+
+
+kubeprovenance
+
+
+这个工具可帮助开发者查找相关集群中不同 Kubernetes 自定义资源的出处信息。
+
+
+github.com/cloud-ark/kubeprovenance
+
+
+KubePug
+
+
+这是一个 kubectl 插件，可以从特定的 Kubernetes 版本下载 swagger.json，解析此 Json 查找弃用通知，并检查集群是否已弃用 API 版本。
+
+
+github.com/rikatz/kubepug
+
+
+KubeRig
+
+
+这是针对 Kubernetes/OpenShift 的开源部署自动化工具，它通过用 Kotlin 编写的 DSL 定义 Kubernetes 资源（而不是常规的 YAML）。
+
+
+github.com/kuberig-io/kuberig
+
+
+Kubermatic
+
+
+这是适用于任何基础架构的 Kubernetes 集群管理自动化平台。
+
+
+github.com/Kubermatic/Kubermatic
+
+
+kubernaughty
+
+
+这是一个关于调试和识别 Kubernetes/容器工作负载故障、性能和可靠性注意事项等的文档。
+
+
+github.com/jnoller/kubernaughty
+
+
+kubernetes-goat
+
+
+这是一种被故意设计为易受攻击的集群环境，用来学习和实践 Kubernetes 的安全性。
+
+
+github.com/madhuakula/kubernetes-goat
+
+
+kubernix
+
+
+该项目旨在为本地测试、实验和开发提供单一依赖的 Kubernetes 集群。
+
+
+github.com/saschagrunert/kubernix
+
+
+kubespy
+
+
+这是一个实时观察 Kubernetes 资源的工具。
+
+
+github.com/pulumi/kubespy
+
+
+kubetail
+
+
+这是一个小型的 Bash 脚本，它允许将来自多个窗格的日志聚合到一个流中。
+
+
+github.com/johanhaleby/kubetail
+
+
+kubetap
+
+
+这是一个 kubectl 插件，可以为 Kubernetes Services 部署拦截代理。
+
+
+github.com/soluble-ai/kubetap
+
+
+kubethanos
+
+
+该项目会随机杀死一半的 Pod，在环境中控制混乱，以此查看系统在故障情况下的情况。
+
+
+github.com/berkay-dincer/kubethanos
+
+
+Kubetools
+
+
+Kubernetes 工具精选清单，涵盖最流行的工具和技术，并针对这些工具提出最佳实践。
+
+
+dockerlabs.collabnix.com/kubernetes/kubetools
+
+
+KubeVault
+
+
+这是一个用于在 K8s 上运行 HashiCorp Vault 的工具集。
+
+
+github.com/kubevault
+
+
+kubevious
+
+
+这个工具可为 Kubernetes 提供可用的高度图形化界面，它把与该应用程序相关的所有配置集中在一处，可以帮助开发者节省时间。
+
+
+github.com/kubevious/kubevious
+
+
+kubie
+
+
+它是 kubectx、kubens 的替代品，能在每个 shell 彼此独立的情况下进行上下文切换、命名空间切换和快速修改。
+
+
+github.com/sbstp/kubie
+
+
+KubiScan
+
+
+它可以在 Kubernetes 的基于角色的访问控制（RBAC）授权模型中扫描 Kubernetes 集群以获取相应权限。
+
+
+github.com/cyberark/KubiScan
+
+
+kured
+
+
+这是一个 Kubernetes 守护程序集，当基础 OS 的软件包管理系统指示需要执行某些操作时，该节点将执行安全的自动节点重新启动。
+
+
+github.com/weaveworks/kured
+
+
+kuttle
+
+
+这个工具可以帮助开发者轻松访问 Kubernetes 网络环境，不需要 SSH 访问。
+
+
+github.com/kayrus/kuttle
+
+
+kvdi
+
+
+它是虚拟桌面基础架构（Virtual Desktop Infrastructure）的 Kubernetes operator。
+
+
+github.com/tinyzimmer/kvdi
+
+
+kyaml2go
+
+
+这是来自 Kubernetes 资源规范 yaml 的 Go 客户端代码生成器。
+
+
+github.com/PrasadG193/kyaml2go
+
+
+M
+magicpak
+
+
+它可以构建最小的 Docker 镜像，而无需例如 static linking 的准备工作。
+
+
+github.com/coord-e/magicpak
+
+
+mikt
+
+
+这是一种 Managed Kubernetes 检查工具，可验证 Managed Kubernetes 集群和内部工作负载、资源的安全性相关配置。
+
+
+github.com/darkbitio/mkit
+
+
+N
+network-node-manager
+
+
+这是一个 kubernetes 控制器，它控制节点的网络配置以解决 kubernetes 网络问题。
+
+
+github.com/kakao/network-node-manager
+
+
+nodalingresser
+
+
+这个工具能使 GKE worker nodes 更易于在公共互联网上访问，可避免因使用 ILB 每月需花费 20 美元。
+
+
+github.com/jacobstr/nodalingresser
+
+
+node-feature-discovery
+
+
+这个工具可以检测 Kubernetes 集群中每个节点上可用的功能，并使用节点标签发布这些功能。
+
+
+github.com/kubernetes-sigs/node-feature-discovery
+
+
+node-problem-detector
+
+
+这个工具旨在收集来自各节点的问题，并使它们对上层可见。
+
+
+github.com/kubernetes/node-problem-detector
+
+
+NodeWrecker
+
+
+NodeWrecker 允许你对集群 CPU、内存或磁盘负载进行压力测试，方便设计混沌工程实验。
+
+
+github.com/jaeg/NodeWrecker
+
+
+O
+oneinfra
+
+
+它用于跨不同公有云、私有云和裸金属服务器管理和运行多个 Kubernetes 集群。
+
+
+github.com/oneinfra/oneinfra
+
+
+oomhero
+
+
+这是一种辅助工具，可帮助开发者跟踪容器的内存使用情况。
+
+
+github.com/ricardomaraschini/oomhero
+
+
+operator-lifecycle-manager
+
+
+这是用于通过 Operators 扩展 Kubernetes 管理框架的工具包。
+
+
+github.com/operator-framework/operator-lifecycle-manager
+
+
+P
+pangolin
+
+
+它是用于 Kubernetes 的水平 Pod 自动伸缩器，它使用各种可配置的控制策略，根据 Prometheus 指标扩展 Deployment。
+
+
+github.com/dpeckett/pangolin
+
+
+permission-manager
+
+
+该工具提供了一种简单直观的方式来管理 Kubernetes 集群中的用户。
+
+
+github.com/sighupio/permission-manager
+
+
+pluto
+
+
+它能帮助用户在其代码存储库和 Helm 版本中找到已弃用的 Kubernetes apiVersion。
+
+
+github.com/FairwindsOps/pluto
+
+
+podtnl
+
+
+这是一个 CLI 工具，可在不公开 Kubernetes 服务的情况下使 Pod 在线可用。
+
+
+github.com/narendranathreddythota/podtnl
+
+
+Polaris
+
+
+这是一款通过分析部署配置，发现集群中存在的问题的健康检查组件，也提供问题的解决方案，确保集群处于健康状态。
+
+
+github.com/FairwindsOps/polaris
+
+
+pomerium
+
+
+这是一种身份识别代理，提供了跨云和本地部署一致的身份验证、授权、工具和审核。
+
+
+github.com/pomerium/pomerium
+
+
+popeye
+
+
+这个工具可扫描活动的 Kubernetes 集群并报告已部署资源和配置的潜在问题。
+
+
+github.com/derailed/popeye
+
+
+porter
+
+
+这是为 Kubernetes 裸机集群设计的开源负载均衡器。
+
+
+github.com/kubesphere/porter
+
+
+postgres-operator
+
+
+这是 PostgreSQL 运算符，可在 Kubernetes上 创建、配置、管理 PostgreSQL 集群。
+
+
+github.com/CrunchyData/postgres-operator
+
+
+powerfulseal
+
+
+这是用于 Kubernetes 集群的强大测试工具，它会给 Kubernetes 集群增加了混乱以帮助我们尽早发现系统中的问题。
+
+
+github.com/powerfulseal/powerfulseal
+
+
+predictive-horizontal-pod-autoscaler
+
+
+这是一个自定义 Pod 自动缩放器。
+
+
+github.com/jthomperoo/predictive-horizontal-pod-autoscaler
+
+
+preflight
+
+
+这是是使用 Open Policy Agent（OPA）自动执行 Kubernetes 集群配置检查的工具。
+
+
+github.com/jetstack/preflight
+
+
+push-deploy
+
+
+这是一个 Python 应用，可安全、简单地实现外部工具（GitHub Actions 等）与 Kubernetes 之间的通信，无需暴露集群凭证。
+
+
+github.com/mdgreenwald/push-deploy
+
+
+R
+rafter
+
+
+这个项目是用于存储和管理不同类型文件的解决方案，它使用 MinIO 作为对象存储。
+
+
+github.com/kyma-project/rafter
+
+
+rback
+
+
+这是一个简单的 Kubernetes RBAC 的可视化工具。它可以查询 Kubernetes 集群中所有与 RBAC 相关的信息，并以点格式生成相关图表。
+
+
+github.com/team-soteria/rback
+
+
+registry-creds
+
+
+这是一个 Kubernetes operator，可用于将单个 ImagePullSecret 分发到集群中的所有命名空间空间，以通过身份验证提取镜像。
+
+
+github.com/alexellis/registry-creds
+
+
+Reloader
+
+
+Reloader 是 Kubernetes 控制器，可监控 ConfigMap 和 Secrets 中的更改并触发 Pods 及其关联的 Deployment、StatefulSet、DaemonSet 和 DeploymentConfig 的滚动升级。
+
+
+github.com/stakater/Reloader
+
+
+S
+secretize
+
+
+这是一个 Kustomize 插件，可用于生成 kubernetes secret。
+
+
+github.com/bbl/secretize
+
+
+secrets-store-csi-driver
+
+
+它可以让 Kubernetes 将在外部存储中的密钥、证书等作为卷放到 Pod 上。
+
+
+github.com/kubernetes-sigs/secrets-store-csi-driver
+
+
+shell-operator
+
+
+这是在 Kubernetes 集群中运行事件驱动脚本的工具。
+
+
+github.com/flant/shell-operator
+
+
+sinker
+
+
+它可以将容器镜像从一个注册表同步到另一个。
+
+
+github.com/plexsystems/sinker
+
+
+stale-feature-branch-operator
+
+
+它用于删除 Kubernetes 集群中的陈旧功能分支。
+
+
+github.com/dmytrostriletskyi/stale-feature-branch-operator
+
+
+stash
+
+
+这是针对 Kubernetes 工作负载的云原生数据备份和恢复解决方案。
+
+
+github.com/stashed/stash
+
+
+statusbay
+
+
+这是一个可视化 k8s 部署过程的项目，它从 k8s 收集所有相关事件并展示部署过程，以帮助 k8s 故障排除。
+
+
+github.com/similarweb/statusbay
+
+
+stolon
+
+
+这是一个云原生 PostgreSQL 管理器，使用 Kubernetes API Server 作为高可用数据存储来选举领导者。
+
+
+github.com/sorintlab/stolon
+
+
+sugarkube
+
+
+一个可以创建临时 Kubernetes 集群的工具。仅需几个命令，你就可以启动和配置 Kubernetes 集群，将所有应用程序安装到其中，并创建所需的基础架构。
+
+
+github.com/sugarkube/sugarkube
+
+
+suspicious-pods
+
+
+列出 Kubernetes 集群中可能无法正常工作的 Pod 列表，附带原因。
+
+
+github.com/edrevo/suspicious-pods
+
+
+sysbox
+
+
+这是一个开源的容器 runtime。
+
+
+github.com/nestybox/sysbox
+
+
+T
+terraform-kubestack
+
+
+这是基于 Terraform 和 Kustomize 构建的开源 Gitops 框架。
+
+
+github.com/kbst/terraform-kubestack
+
+
+ThreatMapper
+
+
+它可以用于识别正在运行的容器、镜像、主机和存储库中的漏洞。
+
+
+github.com/deepfence/ThreatMapper
+
+
+tobs
+
+
+它能将完整的可观察性堆栈简单地安装到 Kubernetes 集群中。
+
+
+github.com/timescale/tobs
+
+
+trivy
+
+
+这是一种适用于 CI 的简单而全面的容器漏洞扫描程序。
+
+
+github.com/aquasecurity/trivy
+
+
+tubekit
+
+
+这是一个围绕 kubectl 的简单而强大的封装器，可降低使用上下文、命名空间和智能匹配资源的复杂性。
+
+
+github.com/reconquest/tubekit
+
+
+V
+velero-backup-notification
+
+
+这是一个用 Ruby 编写的简单 Kubernetes 控制器。
+
+
+github.com/vitobotta/velero-backup-notification
+
+
+version-checker
+
+
+它用于观察集群中运行镜像的当前版本以及上游可用的最新版本。
+
+
+github.com/jetstack/version-checker
+
+
+vim-helm
+
+
+Helm templates 的 vim 语法（yaml + gotmpl + sprig + custom）。
+
+
+github.com/towolf/vim-helm
+
+
+W
+weathervane
+
+
+这是一个应用程序级性能基准工具，可用于研究内部部署和基于云的 Kubernetes 集群的性能特征。
+
+
+github.com/vmware/weathervane
+
+
+webkubectl
+
+
+这个工具可以帮助开发者管理 Kubernetes 凭证并在浏览器中运行 kubectl 命令，支持团队协作。
+
+
+github.com/KubeOperator/webkubectl
+
+
+wild-west-kubernetes
+
+
+这是一个用 Spring Boot 和 Phaser 游戏引擎编写的有趣应用程序。
+
+
+github.com/gshipley/wild-west-kubernetes
+
+
+X
+xlskubectl
+
+
+它可以用 Excel 表格控制 kubernetes 集群。
+
+
+github.com/learnk8s/xlskubectl
+
+
+Y
+yh
+
+
+这是一个 YAML 突出显示器，可以将其与 kubectl 结合使用。
+
+
+github.com/andreazorzetto/yh
+
+
+]]></content>
+      <categories>
+        <category>Kubernetes</category>
+      </categories>
+      <tags>
+        <tag>Kubernetes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Podman 与 Docker</title>
+    <url>/posts/771236.html</url>
+    <content><![CDATA[Podman 与 Docker：比较两种容器化工具
+
+容器技术已成为软件开发与部署的核心工具，其中Docker领跑行业，而Podman作为后来者提供了新的选择。两者都兼容开放容器计划（OCI）标准，并拥有完善的容器管理特性。选择它们之一取决于个别用例，每种工具都有其场景更支持的专长。我们提供的对比指南将详细介绍它们各自的优点和应用场景，帮助用户依据自身的需求作出合适的选择。
+
+1. 什么是容器？
+
+容器为开发者提供一种打包应用程序及其依赖项的方法，使它们能在不同环境中无缝运行，提供了隔离但资源高效的解决方案。这种技术通过容器映像，即一套可以复制的应用程序和环境说明，实现可移植性。现代容器化工具如Docker和Podman均符合OCI标准，支持交互性，并能管理和传播这些容器映像，确保它们能在不同系统中快速运行。
+
+2. 什么是 Docker？
+
+Docker 是一个通过容器创建、部署和管理应用程序的平台。借助 Docker，您可以使用 Dockerfile（用于创建容器的脚本）或现有容器映像创建符合 OCI 标准的容器。
+
+
+Docker 已经成为一种非常流行的容器化工具，至少部分原因是它相对简单。其简单明了的命令和丰富的可用文档使 Docker 变得非常容易上手。
+
+3. 什么是 Podman？
+
+Podman 和 Docker 一样，是一个用于部署和管理容器化应用程序的开源引擎。Podman 从现有映像或 Containerfile 和 Dockerfile 构建符合 OCI 标准的容器。
+
+
+Podman 引擎最初由 Red Hat 开发，旨在提供 Docker 的无守护进程替代方案。通过采用无守护进程架构，Podman 试图解决围绕 Docker 基于守护进程的安全问题。
+
+
+此外，Podman 的无守护进程架构赋予了它真正的无根模式。Docker 命令可以由非 root 用户运行，但执行这些命令的守护程序继续在 root 上运行。相反，Podman 直接执行命令，避免了对 root 权限的需求。
+
+4. Docker 与 Podman
+
+Podman 和 Docker 都是容器化工具。使用任何一种方式，您都可以完全启动、部署和管理容器。
+
+
+但是，每种工具都有其优点和缺点。接下来的几节将逐一探讨，并提供了一个列表来比较和对比这两个容器化引擎。
+
+5. Docker 的优点和缺点
+Docker 优点：
+
+
+简单易近人。Docker 的命令设计得相对简单易用。除此之外，Docker 还维护着最常用的容器映像注册表之一。
+Docker Hub 拥有大量维护良好的容器映像，其中许多映像是官方编写和更新的。例如，这使得拉取 LAMP 堆栈的容器映像并开始快速使用 Docker 变得相对容易。
+流行。Docker 的广泛使用意味着您更有可能在任何与容器一起使用的地方遇到它。这也意味着您拥有大量且易于访问的用户文档和故障排除集合。
+
+
+Docker 缺点：
+
+
+基于守护程序的体系结构。Docker 运行在长时间运行的守护进程上，这可能会给某些人带来安全问题。此外，该守护进程以 root 权限运行。因此，即使是执行 Docker 命令的有限用户也会通过具有 root 权限的进程来完成这些命令，这是另一个安全问题。
+
+
+6. Podman 的优点和缺点
+Podman 优点：
+
+
+无守护进程架构。Podman 直接与容器和容器映像交互，无需长时间运行的守护进程。这样做可以减少安全风险。
+
+
+
+
+无根进程。由于其无守护进程架构，Podman 可以执行真正的无根操作。用户不必被授予 root 权限即可运行 Podman 命令，并且 Podman 不必依赖具有 root 权限的进程。
+
+
+
+
+访问映像注册表。Podman 可以从众多注册表（包括 Docker Hub）中查找和拉取容器映像。这意味着，只需稍加配置，Podman 就可以访问与 Docker 相同的镜像仓库。
+
+
+Podman 缺点：
+
+
+有限的构建功能。Podman 主要关注运行和管理容器。它可以构建容器并将其呈现为图像，通常对许多用例有效。但是，它这样做的功能代表了 Buildah 源代码的有限部分。
+相反，Podman 支持将 Buildah 用作功能更丰富的容器构建和对流程进行微调控制的免费工具。
+
+
+7. 何时使用 Docker
+
+Docker 最适合需要更平易近人的容器化选项。Docker 的设计使其上手速度相对较快，其功能集包括您在使用容器时可能需要的一切。
+
+
+Docker 涵盖了整个容器生命周期，从容器组合到部署和维护。它通过一组简单的命令来实现这一点。
+
+
+Docker 已经在许多公司建立了使用，并且拥有大量使用经验的人。在容器化工具方面，与大多数其他工具相比，您更有可能找到熟悉 Docker 的人。
+
+8. 何时使用 Podman
+
+Podman 提供更高的安全性选项。它的无守护进程架构允许你运行无根容器。这与 Podman 用于管理容器的直接（而不是长时间运行）流程相结合，进一步保护了它们。
+
+
+Podman 是一种轻量级的专业解决方案。它侧重于运行、部署和管理容器，并为您提供对这些流程的精细控制。
+
+
+同时，提供了用于构建容器和映像的选项，尽管这些选项有限。Podman 始终专注于其专业化，并更喜欢将 Buildah 作为构建容器和容器映像的免费工具。
+
+
+这种专业化和轻量级占用空间在以下情况下非常有用：你希望对运行和管理容器进行更多控制，但不需要更高级的生成功能（或能够依赖其他工具）。
+
+
+事实上，考虑到 Docker 和 Podman 都符合 OCI 标准，您可以有效地并行使用 Docker。例如，您可以将 Docker 用于开发环境，在该环境中创建应用程序映像，但安全性问题不大。然后，使用 Podman 在生产环境中运行和维护这些映像。
+
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
