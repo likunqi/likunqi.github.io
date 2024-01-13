@@ -2946,115 +2946,6 @@ github.com/andreazorzetto/yh
       </tags>
   </entry>
   <entry>
-    <title>Podman 与 Docker</title>
-    <url>/posts/771236.html</url>
-    <content><![CDATA[Podman 与 Docker：比较两种容器化工具
-
-容器技术已成为软件开发与部署的核心工具，其中Docker领跑行业，而Podman作为后来者提供了新的选择。两者都兼容开放容器计划（OCI）标准，并拥有完善的容器管理特性。选择它们之一取决于个别用例，每种工具都有其场景更支持的专长。我们提供的对比指南将详细介绍它们各自的优点和应用场景，帮助用户依据自身的需求作出合适的选择。
-
-1. 什么是容器？
-
-容器为开发者提供一种打包应用程序及其依赖项的方法，使它们能在不同环境中无缝运行，提供了隔离但资源高效的解决方案。这种技术通过容器映像，即一套可以复制的应用程序和环境说明，实现可移植性。现代容器化工具如Docker和Podman均符合OCI标准，支持交互性，并能管理和传播这些容器映像，确保它们能在不同系统中快速运行。
-
-2. 什么是 Docker？
-
-Docker 是一个通过容器创建、部署和管理应用程序的平台。借助 Docker，您可以使用 Dockerfile（用于创建容器的脚本）或现有容器映像创建符合 OCI 标准的容器。
-
-
-Docker 已经成为一种非常流行的容器化工具，至少部分原因是它相对简单。其简单明了的命令和丰富的可用文档使 Docker 变得非常容易上手。
-
-3. 什么是 Podman？
-
-Podman 和 Docker 一样，是一个用于部署和管理容器化应用程序的开源引擎。Podman 从现有映像或 Containerfile 和 Dockerfile 构建符合 OCI 标准的容器。
-
-
-Podman 引擎最初由 Red Hat 开发，旨在提供 Docker 的无守护进程替代方案。通过采用无守护进程架构，Podman 试图解决围绕 Docker 基于守护进程的安全问题。
-
-
-此外，Podman 的无守护进程架构赋予了它真正的无根模式。Docker 命令可以由非 root 用户运行，但执行这些命令的守护程序继续在 root 上运行。相反，Podman 直接执行命令，避免了对 root 权限的需求。
-
-4. Docker 与 Podman
-
-Podman 和 Docker 都是容器化工具。使用任何一种方式，您都可以完全启动、部署和管理容器。
-
-
-但是，每种工具都有其优点和缺点。接下来的几节将逐一探讨，并提供了一个列表来比较和对比这两个容器化引擎。
-
-5. Docker 的优点和缺点
-Docker 优点：
-
-
-简单易近人。Docker 的命令设计得相对简单易用。除此之外，Docker 还维护着最常用的容器映像注册表之一。
-Docker Hub 拥有大量维护良好的容器映像，其中许多映像是官方编写和更新的。例如，这使得拉取 LAMP 堆栈的容器映像并开始快速使用 Docker 变得相对容易。
-流行。Docker 的广泛使用意味着您更有可能在任何与容器一起使用的地方遇到它。这也意味着您拥有大量且易于访问的用户文档和故障排除集合。
-
-
-Docker 缺点：
-
-
-基于守护程序的体系结构。Docker 运行在长时间运行的守护进程上，这可能会给某些人带来安全问题。此外，该守护进程以 root 权限运行。因此，即使是执行 Docker 命令的有限用户也会通过具有 root 权限的进程来完成这些命令，这是另一个安全问题。
-
-
-6. Podman 的优点和缺点
-Podman 优点：
-
-
-无守护进程架构。Podman 直接与容器和容器映像交互，无需长时间运行的守护进程。这样做可以减少安全风险。
-
-
-
-
-无根进程。由于其无守护进程架构，Podman 可以执行真正的无根操作。用户不必被授予 root 权限即可运行 Podman 命令，并且 Podman 不必依赖具有 root 权限的进程。
-
-
-
-
-访问映像注册表。Podman 可以从众多注册表（包括 Docker Hub）中查找和拉取容器映像。这意味着，只需稍加配置，Podman 就可以访问与 Docker 相同的镜像仓库。
-
-
-Podman 缺点：
-
-
-有限的构建功能。Podman 主要关注运行和管理容器。它可以构建容器并将其呈现为图像，通常对许多用例有效。但是，它这样做的功能代表了 Buildah 源代码的有限部分。
-相反，Podman 支持将 Buildah 用作功能更丰富的容器构建和对流程进行微调控制的免费工具。
-
-
-7. 何时使用 Docker
-
-Docker 最适合需要更平易近人的容器化选项。Docker 的设计使其上手速度相对较快，其功能集包括您在使用容器时可能需要的一切。
-
-
-Docker 涵盖了整个容器生命周期，从容器组合到部署和维护。它通过一组简单的命令来实现这一点。
-
-
-Docker 已经在许多公司建立了使用，并且拥有大量使用经验的人。在容器化工具方面，与大多数其他工具相比，您更有可能找到熟悉 Docker 的人。
-
-8. 何时使用 Podman
-
-Podman 提供更高的安全性选项。它的无守护进程架构允许你运行无根容器。这与 Podman 用于管理容器的直接（而不是长时间运行）流程相结合，进一步保护了它们。
-
-
-Podman 是一种轻量级的专业解决方案。它侧重于运行、部署和管理容器，并为您提供对这些流程的精细控制。
-
-
-同时，提供了用于构建容器和映像的选项，尽管这些选项有限。Podman 始终专注于其专业化，并更喜欢将 Buildah 作为构建容器和容器映像的免费工具。
-
-
-这种专业化和轻量级占用空间在以下情况下非常有用：你希望对运行和管理容器进行更多控制，但不需要更高级的生成功能（或能够依赖其他工具）。
-
-
-事实上，考虑到 Docker 和 Podman 都符合 OCI 标准，您可以有效地并行使用 Docker。例如，您可以将 Docker 用于开发环境，在该环境中创建应用程序映像，但安全性问题不大。然后，使用 Podman 在生产环境中运行和维护这些映像。
-
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Typora Markdown编辑器激活方法</title>
     <url>/posts/233291.html</url>
     <content><![CDATA[1.官网下载安装
@@ -3432,6 +3323,176 @@ ChatGPT-Next-Web
       </tags>
   </entry>
   <entry>
+    <title>壹伴排版Plus脚本VIP破解</title>
+    <url>/posts/29572.html</url>
+    <content><![CDATA[概述
+
+壹伴是一款浏览器插件，可以通过它来给公众号进行快速排版！
+基本上做公众号的小伙伴都知道这款插件！
+官网：https://yiban.io/
+使用壹伴插件前请确保你已经：
+1、安装了壹伴插件
+2、安装了油猴插件
+
+
+有条件的可以支持一下 点这里可以免费获得一个月官网
+
+教程开始
+1、安装油猴脚本
+
+https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
+
+2、登录
+
+公众号的后台，并点击草稿箱-创建新的图文
+
+3、编辑
+
+点击菜单栏「油猴插件」，找到「壹伴排版Plus」插件，点击编辑
+
+
+4、修改
+
+按下快捷键「Ctrl + F」输入“.parents”
+
+将.parents('.style-waterfall-inner') 把这行代码修改为 .parents('.material-item-li-inner')
+
+
+5、保存
+
+点击上方的「设置」，取消检查更新并保存
+
+
+6、开启
+
+回到公众号界面，点击浏览器右上角「壹伴」插件，按提示登录插件
+点击开启「壹伴」插件的菜单，你会发现所有带有vip的排版样式，你都可以直接使用了！
+
+
+
+
+此插件已不能用，待作者更新https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
+以上参考文章 壹伴排版Plus脚本VIP破解
+
+]]></content>
+      <categories>
+        <category>公众号</category>
+      </categories>
+      <tags>
+        <tag>公众号</tag>
+        <tag>破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Podman 与 Docker</title>
+    <url>/posts/771236.html</url>
+    <content><![CDATA[Podman 与 Docker：比较两种容器化工具
+
+容器技术已成为软件开发与部署的核心工具，其中Docker领跑行业，而Podman作为后来者提供了新的选择。两者都兼容开放容器计划（OCI）标准，并拥有完善的容器管理特性。选择它们之一取决于个别用例，每种工具都有其场景更支持的专长。我们提供的对比指南将详细介绍它们各自的优点和应用场景，帮助用户依据自身的需求作出合适的选择。
+
+1. 什么是容器？
+
+容器为开发者提供一种打包应用程序及其依赖项的方法，使它们能在不同环境中无缝运行，提供了隔离但资源高效的解决方案。这种技术通过容器映像，即一套可以复制的应用程序和环境说明，实现可移植性。现代容器化工具如Docker和Podman均符合OCI标准，支持交互性，并能管理和传播这些容器映像，确保它们能在不同系统中快速运行。
+
+2. 什么是 Docker？
+
+Docker 是一个通过容器创建、部署和管理应用程序的平台。借助 Docker，您可以使用 Dockerfile（用于创建容器的脚本）或现有容器映像创建符合 OCI 标准的容器。
+
+
+Docker 已经成为一种非常流行的容器化工具，至少部分原因是它相对简单。其简单明了的命令和丰富的可用文档使 Docker 变得非常容易上手。
+
+3. 什么是 Podman？
+
+Podman 和 Docker 一样，是一个用于部署和管理容器化应用程序的开源引擎。Podman 从现有映像或 Containerfile 和 Dockerfile 构建符合 OCI 标准的容器。
+
+
+Podman 引擎最初由 Red Hat 开发，旨在提供 Docker 的无守护进程替代方案。通过采用无守护进程架构，Podman 试图解决围绕 Docker 基于守护进程的安全问题。
+
+
+此外，Podman 的无守护进程架构赋予了它真正的无根模式。Docker 命令可以由非 root 用户运行，但执行这些命令的守护程序继续在 root 上运行。相反，Podman 直接执行命令，避免了对 root 权限的需求。
+
+4. Docker 与 Podman
+
+Podman 和 Docker 都是容器化工具。使用任何一种方式，您都可以完全启动、部署和管理容器。
+
+
+但是，每种工具都有其优点和缺点。接下来的几节将逐一探讨，并提供了一个列表来比较和对比这两个容器化引擎。
+
+5. Docker 的优点和缺点
+Docker 优点：
+
+
+简单易近人。Docker 的命令设计得相对简单易用。除此之外，Docker 还维护着最常用的容器映像注册表之一。
+Docker Hub 拥有大量维护良好的容器映像，其中许多映像是官方编写和更新的。例如，这使得拉取 LAMP 堆栈的容器映像并开始快速使用 Docker 变得相对容易。
+流行。Docker 的广泛使用意味着您更有可能在任何与容器一起使用的地方遇到它。这也意味着您拥有大量且易于访问的用户文档和故障排除集合。
+
+
+Docker 缺点：
+
+
+基于守护程序的体系结构。Docker 运行在长时间运行的守护进程上，这可能会给某些人带来安全问题。此外，该守护进程以 root 权限运行。因此，即使是执行 Docker 命令的有限用户也会通过具有 root 权限的进程来完成这些命令，这是另一个安全问题。
+
+
+6. Podman 的优点和缺点
+Podman 优点：
+
+
+无守护进程架构。Podman 直接与容器和容器映像交互，无需长时间运行的守护进程。这样做可以减少安全风险。
+
+
+
+
+无根进程。由于其无守护进程架构，Podman 可以执行真正的无根操作。用户不必被授予 root 权限即可运行 Podman 命令，并且 Podman 不必依赖具有 root 权限的进程。
+
+
+
+
+访问映像注册表。Podman 可以从众多注册表（包括 Docker Hub）中查找和拉取容器映像。这意味着，只需稍加配置，Podman 就可以访问与 Docker 相同的镜像仓库。
+
+
+Podman 缺点：
+
+
+有限的构建功能。Podman 主要关注运行和管理容器。它可以构建容器并将其呈现为图像，通常对许多用例有效。但是，它这样做的功能代表了 Buildah 源代码的有限部分。
+相反，Podman 支持将 Buildah 用作功能更丰富的容器构建和对流程进行微调控制的免费工具。
+
+
+7. 何时使用 Docker
+
+Docker 最适合需要更平易近人的容器化选项。Docker 的设计使其上手速度相对较快，其功能集包括您在使用容器时可能需要的一切。
+
+
+Docker 涵盖了整个容器生命周期，从容器组合到部署和维护。它通过一组简单的命令来实现这一点。
+
+
+Docker 已经在许多公司建立了使用，并且拥有大量使用经验的人。在容器化工具方面，与大多数其他工具相比，您更有可能找到熟悉 Docker 的人。
+
+8. 何时使用 Podman
+
+Podman 提供更高的安全性选项。它的无守护进程架构允许你运行无根容器。这与 Podman 用于管理容器的直接（而不是长时间运行）流程相结合，进一步保护了它们。
+
+
+Podman 是一种轻量级的专业解决方案。它侧重于运行、部署和管理容器，并为您提供对这些流程的精细控制。
+
+
+同时，提供了用于构建容器和映像的选项，尽管这些选项有限。Podman 始终专注于其专业化，并更喜欢将 Buildah 作为构建容器和容器映像的免费工具。
+
+
+这种专业化和轻量级占用空间在以下情况下非常有用：你希望对运行和管理容器进行更多控制，但不需要更高级的生成功能（或能够依赖其他工具）。
+
+
+事实上，考虑到 Docker 和 Podman 都符合 OCI 标准，您可以有效地并行使用 Docker。例如，您可以将 Docker 用于开发环境，在该环境中创建应用程序映像，但安全性问题不大。然后，使用 Podman 在生产环境中运行和维护这些映像。
+
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>又一款AI产品Photoshop插件StartAI</title>
     <url>/posts/2132.html</url>
     <content><![CDATA[1. 介绍
@@ -3527,67 +3588,6 @@ ChatGPT-Next-Web
       <tags>
         <tag>AI</tag>
         <tag>PS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>壹伴排版Plus脚本VIP破解</title>
-    <url>/posts/29572.html</url>
-    <content><![CDATA[概述
-
-壹伴是一款浏览器插件，可以通过它来给公众号进行快速排版！
-基本上做公众号的小伙伴都知道这款插件！
-官网：https://yiban.io/
-使用壹伴插件前请确保你已经：
-1、安装了壹伴插件
-2、安装了油猴插件
-
-
-有条件的可以支持一下 点这里可以免费获得一个月官网
-
-教程开始
-1、安装油猴脚本
-
-https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
-
-2、登录
-
-公众号的后台，并点击草稿箱-创建新的图文
-
-3、编辑
-
-点击菜单栏「油猴插件」，找到「壹伴排版Plus」插件，点击编辑
-
-
-4、修改
-
-按下快捷键「Ctrl + F」输入“.parents”
-
-将.parents('.style-waterfall-inner') 把这行代码修改为 .parents('.material-item-li-inner')
-
-
-5、保存
-
-点击上方的「设置」，取消检查更新并保存
-
-
-6、开启
-
-回到公众号界面，点击浏览器右上角「壹伴」插件，按提示登录插件
-点击开启「壹伴」插件的菜单，你会发现所有带有vip的排版样式，你都可以直接使用了！
-
-
-
-
-此插件已不能用，待作者更新https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
-以上参考文章 壹伴排版Plus脚本VIP破解
-
-]]></content>
-      <categories>
-        <category>公众号</category>
-      </categories>
-      <tags>
-        <tag>公众号</tag>
-        <tag>破解</tag>
       </tags>
   </entry>
   <entry>
@@ -3769,6 +3769,67 @@ tools/** 会匹配整个目录树，因此 source/tools 文件夹中的每个文
       </tags>
   </entry>
   <entry>
+    <title>申请 Cloudns 免费二级域名</title>
+    <url>/posts/23609.html</url>
+    <content><![CDATA[申请 cloudns 免费二级域名
+cloudns主页
+cloudflare主页
+
+注册cloudns
+
+
+
+
+
+
+
+
+看到这个页面即为成功
+
+
+
+选择NS进行解析，这里的解析地址为 cloudflare地址
+
+
+我这里使用三个邮箱注册了三个都已经成功
+
+
+
+
+邮箱
+域名
+
+
+
+
+18800566899@163.com
+likunqi.cloudns.biz
+
+
+17310189620@163.com
+lkq001.cloudns.biz
+
+
+1723245090@qq.com
+lkq002.cloudns.biz
+
+
+
+
+
+可以参考一下这个博主的视频注册(需要魔法) 申请 cloudns 免费二级域名
+
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>cf</tag>
+        <tag>域名</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用Github Copilot项目真正免费使用GPT4</title>
     <url>/posts/50453.html</url>
     <content><![CDATA[必看事项:
@@ -3878,67 +3939,6 @@ GPT-4 他们结婚时你还没出生。
       </categories>
       <tags>
         <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>申请 Cloudns 免费二级域名</title>
-    <url>/posts/23609.html</url>
-    <content><![CDATA[申请 cloudns 免费二级域名
-cloudns主页
-cloudflare主页
-
-注册cloudns
-
-
-
-
-
-
-
-
-看到这个页面即为成功
-
-
-
-选择NS进行解析，这里的解析地址为 cloudflare地址
-
-
-我这里使用三个邮箱注册了三个都已经成功
-
-
-
-
-邮箱
-域名
-
-
-
-
-18800566899@163.com
-likunqi.cloudns.biz
-
-
-17310189620@163.com
-lkq001.cloudns.biz
-
-
-1723245090@qq.com
-lkq002.cloudns.biz
-
-
-
-
-
-可以参考一下这个博主的视频注册(需要魔法) 申请 cloudns 免费二级域名
-
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>cf</tag>
-        <tag>域名</tag>
       </tags>
   </entry>
   <entry>
