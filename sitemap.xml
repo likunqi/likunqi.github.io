@@ -290,14 +290,14 @@
 
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/AI/</loc>
+    <loc>https://blog.mmc88.fun/tags/IDEA/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/IDEA/</loc>
+    <loc>https://blog.mmc88.fun/tags/AI/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -318,6 +318,13 @@
   </url>
   
   <url>
+    <loc>https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mmc88.fun/tags/docker/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -332,7 +339,7 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://blog.mmc88.fun/tags/hexo/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -340,13 +347,6 @@
   
   <url>
     <loc>https://blog.mmc88.fun/tags/VPN/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mmc88.fun/tags/hexo/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -388,6 +388,13 @@
   </url>
   
   <url>
+    <loc>https://blog.mmc88.fun/tags/%E6%83%B3%E6%B3%95/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mmc88.fun/tags/cf/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -402,14 +409,7 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/%E6%83%B3%E6%B3%95/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mmc88.fun/tags/github/</loc>
+    <loc>https://blog.mmc88.fun/tags/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -423,14 +423,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/API/</loc>
+    <loc>https://blog.mmc88.fun/tags/github/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/%E7%BD%91%E7%AB%99/</loc>
+    <loc>https://blog.mmc88.fun/tags/API/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -439,14 +439,14 @@
 
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/AI/</loc>
+    <loc>https://blog.mmc88.fun/categories/IDEA/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/IDEA/</loc>
+    <loc>https://blog.mmc88.fun/categories/AI/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -467,13 +467,6 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/docker/</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.mmc88.fun/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -481,7 +474,7 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://blog.mmc88.fun/categories/docker/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -489,6 +482,13 @@
   
   <url>
     <loc>https://blog.mmc88.fun/categories/%E5%BB%BA%E7%AB%99/</loc>
+    <lastmod>2024-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mmc88.fun/categories/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2024-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
