@@ -1487,8 +1487,8 @@ $(function () {
             if (strs.length >= 3) {
                 const host = strs[2];
                 if (host !== 'blog.mmc88.fun' || window.location.host) {
-                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
-                    if (true) {
+                    $this.attr('href', '/go.html?u='+href+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (false) {
                         $this.attr('target', '_blank');
                     }
                 }
