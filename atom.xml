@@ -345,35 +345,6 @@
   </entry>
   
   <entry>
-    <title>那些有趣实用的网站</title>
-    <link href="https://blog.mmc88.fun/posts/211124113.html"/>
-    <id>https://blog.mmc88.fun/posts/211124113.html</id>
-    <published>2023-12-29T05:33:00.000Z</published>
-    <updated>2024-01-08T15:08:55.973Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-一键生成卡片&quot;&gt;1. &lt;a href=&quot;https://memocard.net/&quot;&gt;一键生成卡片&lt;/a&gt;&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;很多卡片生成工具比如：&lt;a href=&quot;http://imgg.gg&quot;&gt;imgg.gg&lt;/a&gt;、&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="discover" scheme="https://blog.mmc88.fun/categories/discover/"/>
-    
-    
-    <category term="网站" scheme="https://blog.mmc88.fun/tags/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="discover" scheme="https://blog.mmc88.fun/tags/discover/"/>
-    
-  </entry>
-  
-  <entry>
     <title>那些大佬开源的Github项目</title>
     <link href="https://blog.mmc88.fun/posts/2111241.html"/>
     <id>https://blog.mmc88.fun/posts/2111241.html</id>
@@ -396,11 +367,75 @@
     <category term="API" scheme="https://blog.mmc88.fun/categories/discover/API/"/>
     
     
-    <category term="discover" scheme="https://blog.mmc88.fun/tags/discover/"/>
-    
     <category term="github" scheme="https://blog.mmc88.fun/tags/github/"/>
     
+    <category term="discover" scheme="https://blog.mmc88.fun/tags/discover/"/>
+    
     <category term="API" scheme="https://blog.mmc88.fun/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那些有趣实用的网站</title>
+    <link href="https://blog.mmc88.fun/posts/211124113.html"/>
+    <id>https://blog.mmc88.fun/posts/211124113.html</id>
+    <published>2023-12-29T05:33:00.000Z</published>
+    <updated>2024-01-08T15:08:55.973Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-一键生成卡片&quot;&gt;1. &lt;a href=&quot;https://memocard.net/&quot;&gt;一键生成卡片&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;很多卡片生成工具比如：&lt;a href=&quot;http://imgg.gg&quot;&gt;imgg.gg&lt;/a&gt;、&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="discover" scheme="https://blog.mmc88.fun/categories/discover/"/>
+    
+    
+    <category term="discover" scheme="https://blog.mmc88.fun/tags/discover/"/>
+    
+    <category term="网站" scheme="https://blog.mmc88.fun/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VPN节点搭建</title>
+    <link href="https://blog.mmc88.fun/posts/29510.html"/>
+    <id>https://blog.mmc88.fun/posts/29510.html</id>
+    <published>2023-12-28T18:30:17.000Z</published>
+    <updated>2024-03-19T06:45:12.605Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;节点搭建&quot;&gt;节点搭建&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;#更新软件源
+apt update
+#启用 BBR TCP 拥塞控制算法
+echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络" scheme="https://blog.mmc88.fun/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="VPN" scheme="https://blog.mmc88.fun/tags/VPN/"/>
     
   </entry>
   
@@ -465,6 +500,36 @@
   </entry>
   
   <entry>
+    <title>K8S相关的开源集合</title>
+    <link href="https://blog.mmc88.fun/posts/212441.html"/>
+    <id>https://blog.mmc88.fun/posts/212441.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-12T07:17:15.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;K8S相关的开源集合&lt;br&gt;
+&lt;strong&gt;A&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;aegir&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这是 Kubernetes 的一个简单通用的 Webhook admission</summary>
+        
+      
+    
+    
+    
+    <category term="Kubernetes" scheme="https://blog.mmc88.fun/categories/Kubernetes/"/>
+    
+    
+    <category term="Kubernetes" scheme="https://blog.mmc88.fun/tags/Kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JAVA基础 - QA</title>
     <link href="https://blog.mmc88.fun/posts/21214129.html"/>
     <id>https://blog.mmc88.fun/posts/21214129.html</id>
@@ -516,64 +581,6 @@
     
     
     <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>K8S相关的开源集合</title>
-    <link href="https://blog.mmc88.fun/posts/212441.html"/>
-    <id>https://blog.mmc88.fun/posts/212441.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-12T07:17:15.243Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;K8S相关的开源集合&lt;br&gt;
-&lt;strong&gt;A&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;aegir&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;这是 Kubernetes 的一个简单通用的 Webhook admission</summary>
-        
-      
-    
-    
-    
-    <category term="Kubernetes" scheme="https://blog.mmc88.fun/categories/Kubernetes/"/>
-    
-    
-    <category term="Kubernetes" scheme="https://blog.mmc88.fun/tags/Kubernetes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo配置详解</title>
-    <link href="https://blog.mmc88.fun/posts/21129.html"/>
-    <id>https://blog.mmc88.fun/posts/21129.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-04T09:39:50.645Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-Hexo-文章的元数据配置完全指南&quot;&gt;1. Hexo 文章的元数据配置完全指南&lt;/h3&gt;
-&lt;p&gt;Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了</summary>
-        
-      
-    
-    
-    
-    <category term="建站" scheme="https://blog.mmc88.fun/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="hexo" scheme="https://blog.mmc88.fun/tags/hexo/"/>
     
   </entry>
   
