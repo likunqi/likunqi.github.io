@@ -405,6 +405,35 @@
   </entry>
   
   <entry>
+    <title>VPN|wireguard红龍搭建教程</title>
+    <link href="https://blog.mmc88.fun/posts/2950.html"/>
+    <id>https://blog.mmc88.fun/posts/2950.html</id>
+    <published>2023-12-28T18:30:17.000Z</published>
+    <updated>2024-01-01T07:22:33.039Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;正文:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在这个数字化和互联网高度发达的时代，数据安全和隐私无疑成了我们的首要关注点。红龍，一个领先的远程连接速度解决方案的工具，不仅以其强大的性能为公众所熟知，还陆续证明了它在数个重要应用场景中的价值。&lt;/p&gt;
+&lt;blockq</summary>
+        
+      
+    
+    
+    
+    <category term="网络" scheme="https://blog.mmc88.fun/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="VPN" scheme="https://blog.mmc88.fun/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VPN节点搭建</title>
     <link href="https://blog.mmc88.fun/posts/29510.html"/>
     <id>https://blog.mmc88.fun/posts/29510.html</id>
@@ -425,35 +454,6 @@
 apt update
 #启用 BBR TCP 拥塞控制算法
 echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
-        
-      
-    
-    
-    
-    <category term="网络" scheme="https://blog.mmc88.fun/categories/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="VPN" scheme="https://blog.mmc88.fun/tags/VPN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VPN|wireguard红龍搭建教程</title>
-    <link href="https://blog.mmc88.fun/posts/2950.html"/>
-    <id>https://blog.mmc88.fun/posts/2950.html</id>
-    <published>2023-12-28T18:30:17.000Z</published>
-    <updated>2024-01-01T07:22:33.039Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;正文:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在这个数字化和互联网高度发达的时代，数据安全和隐私无疑成了我们的首要关注点。红龍，一个领先的远程连接速度解决方案的工具，不仅以其强大的性能为公众所熟知，还陆续证明了它在数个重要应用场景中的价值。&lt;/p&gt;
-&lt;blockq</summary>
         
       
     
@@ -500,6 +500,33 @@ echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
   </entry>
   
   <entry>
+    <title>JAVA基础 - QA</title>
+    <link href="https://blog.mmc88.fun/posts/21214129.html"/>
+    <id>https://blog.mmc88.fun/posts/21214129.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-01T18:37:11.728Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Q-A&quot;&gt;Q/A&lt;/h2&gt;
+&lt;h3 id=&quot;1-Java-中应该使用什么数据类型来代表价格&quot;&gt;1. Java 中应该使用什么数据类型来代表价格?&lt;/h3&gt;
+&lt;p&gt;如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>K8S相关的开源集合</title>
     <link href="https://blog.mmc88.fun/posts/212441.html"/>
     <id>https://blog.mmc88.fun/posts/212441.html</id>
@@ -530,57 +557,30 @@ echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
   </entry>
   
   <entry>
-    <title>JAVA基础 - QA</title>
-    <link href="https://blog.mmc88.fun/posts/21214129.html"/>
-    <id>https://blog.mmc88.fun/posts/21214129.html</id>
+    <title>Hexo配置详解</title>
+    <link href="https://blog.mmc88.fun/posts/21129.html"/>
+    <id>https://blog.mmc88.fun/posts/21129.html</id>
     <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-01T18:37:11.728Z</updated>
+    <updated>2024-01-04T09:39:50.645Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Q-A&quot;&gt;Q/A&lt;/h2&gt;
-&lt;h3 id=&quot;1-Java-中应该使用什么数据类型来代表价格&quot;&gt;1. Java 中应该使用什么数据类型来代表价格?&lt;/h3&gt;
-&lt;p&gt;如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double</summary>
+    <summary type="html">&lt;h3 id=&quot;1-Hexo-文章的元数据配置完全指南&quot;&gt;1. Hexo 文章的元数据配置完全指南&lt;/h3&gt;
+&lt;p&gt;Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了</summary>
         
       
     
     
     
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
+    <category term="建站" scheme="https://blog.mmc88.fun/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    <category term="教程" scheme="https://blog.mmc88.fun/tags/%E6%95%99%E7%A8%8B/"/>
     
-  </entry>
-  
-  <entry>
-    <title>JAVA基础 - 知识点</title>
-    <link href="https://blog.mmc88.fun/posts/21111129.html"/>
-    <id>https://blog.mmc88.fun/posts/21111129.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-01T18:12:39.892Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;Java 基础 - 知识点详解&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;知识体系&lt;br&gt;
-&lt;img src=&quot;https://likunqi.top/file/e5af32e538a265ddee622.png&quot; alt=&quot;&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    <category term="hexo" scheme="https://blog.mmc88.fun/tags/hexo/"/>
     
   </entry>
   

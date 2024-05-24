@@ -1,166 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>GitHub Copilot 快速入门</title>
-    <url>/posts/21132.html</url>
-    <content><![CDATA[简介
-
-GitHub Copilot 是 AI 结对程序员。 可以使用 GitHub Copilot 在编辑器中获取整行或整个函数的建议。
-
-
-本指南将介绍如何为个人或组织帐户设置 GitHub Copilot 订阅，在 Visual Studio Code 中安装 GitHub Copilot 扩展，并获得第一个建议。 有关 GitHub Copilot 的详细信息，请参阅“关于 GitHub Copilot Individual”。 有关如何在各种环境中使用 GitHub Copilot 的更深入信息，请参阅“开始使用 GitHub Copilot”。
-
-
-如果你不是学生、教师或热门开源项目的维护人员，可以在一次性 30 天试用期中免费试用 GitHub Copilot。 免费试用后，需要付费订阅才能继续使用。有关详细信息，请参阅“关于 GitHub Copilot 的计费”。
-
-为个人帐户注册 GitHub Copilot
-
-在开始使用 GitHub Copilot 之前，需要为个人帐户设置免费试用或订阅。
-
-
-注意****：如果已经使用过 2021 年 7 月至 2022 年 6 月期间提供的免费 GitHub Copilot 技术预览版，则没有资格获得为期 30 天的试用。
-
-
-
-在任何页面的右上角，单击个人资料照片，然后单击“设置”。
-
-
-
-在边栏的“代码、规划和自动化”部分中，单击“ GitHub Copilot”。
-
-
-在 GitHub Copilot 设置页面上，单击“启用 GitHub Copilot”。
-
-
-选择要按月还是按年付款，然后单击“继续访问 Copilot”。
-
-如果个人帐户符合免费 GitHub Copilot 订阅（而不是试用或付费订阅）的条件，将自动转到步骤 6。
-
-
-
-按照步骤确认付款详细信息，然后单击“提交”。
-
-
-选择首选项，然后单击“保存并开始”。
-可以稍后通过返回到 GitHub Copilot 设置来更改这些首选项。 有关详细信息，请参阅“在环境中配置 GitHub Copilot”。
-
-
-注意：如果你作为 GitHub Enterprise Cloud 帐户拥有的组织的成员，拥有 GitHub Copilot 订阅，组织必须为你分配 GitHub Copilot 席位，然后你才能使用 GitHub Copilot。
-为组织帐户注册 GitHub Copilot
-开始在组织帐户中使用 GitHub Copilot 之前，需要设置订阅。
-
-
-转到 GitHub Copilot Business 注册页。
-
-
-选择要为其购买 GitHub Copilot 的组织，然后单击“继续”。
-
-
-按照步骤确认付款详细信息，然后单击“保存”。
-如果文件中没有付款方法，系统将提示你添加一个。
-
-
-在“公共代码建议”下拉列表中，选择“允许”或“阻止”以允许或阻止与公共代码匹配的建议，然后单击“保存并继续” 。 可以稍后通过返回 GitHub Copilot 设置来更改这些首选项。
-
-
-为组织中的所有当前和未来用户或组织中的特定用户授予对 GitHub Copilot 的访问权限。
-
-如果选择了“允许所有成员”，请在“确认席位分配”对话框中单击“确认”，以确认要为组织中的所有当前和未来用户启用 GitHub Copilot 。
-如果选择了“选定的团队/用户”，则可以选择“添加人员”或“添加团队” 。
-
-如果选择了“添加人员”，则在“为组织所选成员启用 GitHub Copilot 访问权限”对话框中，可以搜索各个成员，也可以通过上传 CSV 文件批量添加成员。
-如果选择了“添加团队”，则在“为组织的选定团队启用 GitHub Copilot 访问权限”对话框中，首先在搜索栏中键入团队名称，选择要添加的团队，然后单击“将团队添加到访问列表” 。
-
-
-
-
-
-要完成 GitHub Copilot Business 订阅的设置，请单击“保存并完成”。 组织成员将收到一封电子邮件，其中包含有关如何开始使用 GitHub Copilot 的说明。
-
-
-为 Visual Studio Code 安装 GitHub Copilot 扩展
-
-若要使用 GitHub Copilot，必须先安装 Visual Studio Code 扩展。
-
-
-
-在 Visual Studio Code 市场中，转到 GitHub Copilot 扩展页，然后单击“安装”。
-
-
-此时会显示一个弹出窗口，要求打开 Visual Studio Code。 单击“打开 Visual Studio Code”。
-
-
-在 Visual Studio Code 的“扩展: GitHub Copilot”选项卡中，单击“安装”。
-
-
-如果以前未在 GitHub 帐户中授权 Visual Studio Code，系统会提示你在 Visual Studio Code 中登录到 GitHub。
-
-如果以前已在 GitHub 帐户中授权 Visual Studio Code，系统将会自动授权 GitHub Copilot。
-
-
-
-在浏览器中，GitHub 将请求 GitHub Copilot 所需的权限。 若要批准这些权限，请单击“授权 Visual Studio Code”。
-
-
-在 Visual Studio Code 的“Visual Studio Code”对话框中，若要确认身份验证，请单击“打开”。
-
-
-后续步骤
-你已成功安装 GitHub Copilot 并收到了你的第一个建议，但这只是开始！ 以下是一些有用的资源，可帮助你对 GitHub Copilot 执行后续操作。
-
-开始使用 GitHub Copilot：你已了解如何在 Visual Studio Code 中获得你的第一个建议。 这些指南介绍了如何在所有受支持的环境中设置和导航 GitHub Copilot 的各种功能。
-GitHub Copilot：查看 GitHub Copilot 如何帮助你工作的实用示例。
-配置 GitHub Copilot：这些指南提供有关如何将 GitHub Copilot } 配置为个人首选项的详细信息。
-
-其他阅读材料
-
-GitHub Copilot 快速入门
-
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
-    <url>/posts/77145.html</url>
-    <content><![CDATA[前言
-我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
-功能介绍
-1.热部署代码
-包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
-2.热部署资源文件
-在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
-3.批量热更新修改的文件
-修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
-4.执行远程函数
-无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
-直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
-无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
-有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
-目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
-复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
-5.远程查看字段值
-包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
-6.jar 包热更新
-在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
-7.远程编译并热部署
-在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
-在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
-安装教程
-详见https://github.com/Liubsyy/HotSecondsIDEA
-]]></content>
-      <categories>
-        <category>IDEA</category>
-      </categories>
-      <tags>
-        <tag>IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Cloudflare搭建OpenAI转发脚本</title>
     <url>/posts/7716.html</url>
     <content><![CDATA[
@@ -387,6 +227,42 @@ async function createHeaders(copilotToken) &#123;
       </tags>
   </entry>
   <entry>
+    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
+    <url>/posts/77145.html</url>
+    <content><![CDATA[前言
+我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
+功能介绍
+1.热部署代码
+包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
+2.热部署资源文件
+在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
+3.批量热更新修改的文件
+修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
+4.执行远程函数
+无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
+直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
+无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
+有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
+目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
+复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
+5.远程查看字段值
+包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
+6.jar 包热更新
+在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
+7.远程编译并热部署
+在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
+在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
+安装教程
+详见https://github.com/Liubsyy/HotSecondsIDEA
+]]></content>
+      <categories>
+        <category>IDEA</category>
+      </categories>
+      <tags>
+        <tag>IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA基础 - HashMap面试题</title>
     <url>/posts/1916.html</url>
     <content><![CDATA[1. 为什么 HashMap 的初始大小是 16，扩容为原来的两倍？
@@ -429,6 +305,594 @@ async function createHeaders(copilotToken) &#123;
 10. 如果 HashMap 的键是可变的，会有什么问题？
 
 这个问题是用来测试你是否理解 HashMap 的使用注意事项。如果 HashMap 的键是可变的，那么在键的值改变后，可能会导致哈希值改变，从而使得无法正确地从 HashMap 中查找到这个键，因此在使用 HashMap 时，应该尽量避免使用可变对象作为键。
+
+]]></content>
+      <categories>
+        <category>JAVA基础</category>
+      </categories>
+      <tags>
+        <tag>JAVA基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub Copilot 快速入门</title>
+    <url>/posts/21132.html</url>
+    <content><![CDATA[简介
+
+GitHub Copilot 是 AI 结对程序员。 可以使用 GitHub Copilot 在编辑器中获取整行或整个函数的建议。
+
+
+本指南将介绍如何为个人或组织帐户设置 GitHub Copilot 订阅，在 Visual Studio Code 中安装 GitHub Copilot 扩展，并获得第一个建议。 有关 GitHub Copilot 的详细信息，请参阅“关于 GitHub Copilot Individual”。 有关如何在各种环境中使用 GitHub Copilot 的更深入信息，请参阅“开始使用 GitHub Copilot”。
+
+
+如果你不是学生、教师或热门开源项目的维护人员，可以在一次性 30 天试用期中免费试用 GitHub Copilot。 免费试用后，需要付费订阅才能继续使用。有关详细信息，请参阅“关于 GitHub Copilot 的计费”。
+
+为个人帐户注册 GitHub Copilot
+
+在开始使用 GitHub Copilot 之前，需要为个人帐户设置免费试用或订阅。
+
+
+注意****：如果已经使用过 2021 年 7 月至 2022 年 6 月期间提供的免费 GitHub Copilot 技术预览版，则没有资格获得为期 30 天的试用。
+
+
+
+在任何页面的右上角，单击个人资料照片，然后单击“设置”。
+
+
+
+在边栏的“代码、规划和自动化”部分中，单击“ GitHub Copilot”。
+
+
+在 GitHub Copilot 设置页面上，单击“启用 GitHub Copilot”。
+
+
+选择要按月还是按年付款，然后单击“继续访问 Copilot”。
+
+如果个人帐户符合免费 GitHub Copilot 订阅（而不是试用或付费订阅）的条件，将自动转到步骤 6。
+
+
+
+按照步骤确认付款详细信息，然后单击“提交”。
+
+
+选择首选项，然后单击“保存并开始”。
+可以稍后通过返回到 GitHub Copilot 设置来更改这些首选项。 有关详细信息，请参阅“在环境中配置 GitHub Copilot”。
+
+
+注意：如果你作为 GitHub Enterprise Cloud 帐户拥有的组织的成员，拥有 GitHub Copilot 订阅，组织必须为你分配 GitHub Copilot 席位，然后你才能使用 GitHub Copilot。
+为组织帐户注册 GitHub Copilot
+开始在组织帐户中使用 GitHub Copilot 之前，需要设置订阅。
+
+
+转到 GitHub Copilot Business 注册页。
+
+
+选择要为其购买 GitHub Copilot 的组织，然后单击“继续”。
+
+
+按照步骤确认付款详细信息，然后单击“保存”。
+如果文件中没有付款方法，系统将提示你添加一个。
+
+
+在“公共代码建议”下拉列表中，选择“允许”或“阻止”以允许或阻止与公共代码匹配的建议，然后单击“保存并继续” 。 可以稍后通过返回 GitHub Copilot 设置来更改这些首选项。
+
+
+为组织中的所有当前和未来用户或组织中的特定用户授予对 GitHub Copilot 的访问权限。
+
+如果选择了“允许所有成员”，请在“确认席位分配”对话框中单击“确认”，以确认要为组织中的所有当前和未来用户启用 GitHub Copilot 。
+如果选择了“选定的团队/用户”，则可以选择“添加人员”或“添加团队” 。
+
+如果选择了“添加人员”，则在“为组织所选成员启用 GitHub Copilot 访问权限”对话框中，可以搜索各个成员，也可以通过上传 CSV 文件批量添加成员。
+如果选择了“添加团队”，则在“为组织的选定团队启用 GitHub Copilot 访问权限”对话框中，首先在搜索栏中键入团队名称，选择要添加的团队，然后单击“将团队添加到访问列表” 。
+
+
+
+
+
+要完成 GitHub Copilot Business 订阅的设置，请单击“保存并完成”。 组织成员将收到一封电子邮件，其中包含有关如何开始使用 GitHub Copilot 的说明。
+
+
+为 Visual Studio Code 安装 GitHub Copilot 扩展
+
+若要使用 GitHub Copilot，必须先安装 Visual Studio Code 扩展。
+
+
+
+在 Visual Studio Code 市场中，转到 GitHub Copilot 扩展页，然后单击“安装”。
+
+
+此时会显示一个弹出窗口，要求打开 Visual Studio Code。 单击“打开 Visual Studio Code”。
+
+
+在 Visual Studio Code 的“扩展: GitHub Copilot”选项卡中，单击“安装”。
+
+
+如果以前未在 GitHub 帐户中授权 Visual Studio Code，系统会提示你在 Visual Studio Code 中登录到 GitHub。
+
+如果以前已在 GitHub 帐户中授权 Visual Studio Code，系统将会自动授权 GitHub Copilot。
+
+
+
+在浏览器中，GitHub 将请求 GitHub Copilot 所需的权限。 若要批准这些权限，请单击“授权 Visual Studio Code”。
+
+
+在 Visual Studio Code 的“Visual Studio Code”对话框中，若要确认身份验证，请单击“打开”。
+
+
+后续步骤
+你已成功安装 GitHub Copilot 并收到了你的第一个建议，但这只是开始！ 以下是一些有用的资源，可帮助你对 GitHub Copilot 执行后续操作。
+
+开始使用 GitHub Copilot：你已了解如何在 Visual Studio Code 中获得你的第一个建议。 这些指南介绍了如何在所有受支持的环境中设置和导航 GitHub Copilot 的各种功能。
+GitHub Copilot：查看 GitHub Copilot 如何帮助你工作的实用示例。
+配置 GitHub Copilot：这些指南提供有关如何将 GitHub Copilot } 配置为个人首选项的详细信息。
+
+其他阅读材料
+
+GitHub Copilot 快速入门
+
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA基础 - QA</title>
+    <url>/posts/21214129.html</url>
+    <content><![CDATA[Q/A
+1. Java 中应该使用什么数据类型来代表价格?
+如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double 类型。
+2. 怎么将 byte 转换为 String?
+可以使用 String 接收 byte[] 参数的构造器来进行转换，需要注意的点是要使用的正确的编码，否则会使用平台默认编码，这个编码可能跟原来的编码相同，也可能不同。
+3. Java 中怎样将 bytes 转换为 long 类型?
+String接收bytes的构造器转成String，再Long.parseLong
+4. 我们能将 int 强制转换为 byte 类型的变量吗? 如果该值大于 byte 类型的范围，将会出现什么现象?
+是的，我们可以做强制转换，但是 Java 中 int 是 32 位的，而 byte 是 8 位的，所以，如果强制转化是，int 类型的高 24 位将会被丢弃，byte 类型的范围是从 -128 到 127。
+5. 存在两个类，B 继承 A，C 继承 B，我们能将 B 转换为 C 么? 如 C = (C) B；
+可以，向下转型。但是不建议使用，容易出现类型转型异常.
+6. 哪个类包含 clone 方法? 是 Cloneable 还是 Object?
+java.lang.Cloneable 是一个标示性接口，不包含任何方法，clone 方法在 object 类中定义。并且需要知道 clone() 方法是一个本地方法，这意味着它是由 c 或 c++ 或 其他本地语言实现的。
+7. Java 中 ++ 操作符是线程安全的吗?
+不是线程安全的操作。它涉及到多个指令，如读取变量值，增加，然后存储回内存，这个过程可能会出现多个线程交差。还会存在竞态条件(读取-修改-写入)。
+8. a = a + b 与 a += b 的区别
+在Java中，a = a + b 和 a += b 是两种不同的赋值操作。
+
+
+a = a + b: 这是一种简单的赋值操作，表示将变量 a 的值与变量 b 的值相加，并将结果赋值给变量 a。例如，如果 a 的初始值为 2，b 的值为 3，则执行 a = a + b 后，a 的值将变为 5。
+
+
+a += b: 这是一种复合赋值操作，表示将变量 a 的值与变量 b 的值相加，并将结果赋值给变量 a。它相当于 a = a + b 的简化写法。例如，如果 a 的初始值为 2，b 的值为 3，则执行 a += b 后，a 的值也将变为 5。
+
+
+区别在于赋值操作的方式不同，但最终结果是相同的。而且，使用 a += b 的方式更加简洁和高效，可以提高代码的可读性和执行效率。在实际编程中，可以根据个人的编码风格和习惯选择使用哪种方式。
+9. 我能在不进行强制转换的情况下将一个 double 值赋值给 long 类型的变量吗?
+不行，你不能在没有强制类型转换的前提下将一个 double 值赋值给 long 类型的变量，因为 double 类型的范围比 long 类型更广，所以必须要进行强制转换。
+10. 3*0.1 == 0.3 将会返回什么? true 还是 false?
+false，因为有些浮点数不能完全精确的表示出来。
+11. int 和 Integer 哪个会占用更多的内存?
+Integer 对象会占用更多的内存。Integer 是一个对象，需要存储对象的元数据。但是 int 是一个原始类型的数据，所以占用的空间更少。
+12. 为什么 Java 中的 String 是不可变的(Immutable)?
+Java 中的 String 不可变是因为 Java 的设计者认为字符串使用非常频繁，将字符串设置为不可变可以允许多个客户端之间共享相同的字符串。更详细的内容参见答案。
+13. 我们能在 Switch 中使用 String 吗?
+从 Java 7 开始，我们可以在 switch case 中使用字符串，但这仅仅是一个语法糖。内部实现在 switch 中使用字符串的 hash code。
+14. Java 中的构造器链是什么?
+当你从一个构造器中调用另一个构造器，就是Java 中的构造器链。这种情况只在重载了类的构造器的时候才会出现。
+14. 枚举类
+JDK1.5出现 每个枚举值都需要调用一次构造函数
+15. 什么是不可变对象(immutable object)? Java 中怎么创建一个不可变对象?
+不可变对象指对象一旦被创建，状态就不能再改变。任何修改都会创建一个新的对象，如 String、Integer及其它包装类。
+如何在Java中写出Immutable的类?
+要写出这样的类，需要遵循以下几个原则:
+1)immutable对象的状态在创建之后就不能发生改变，任何对它的改变都应该产生一个新的对象。
+2)Immutable类的所有的属性都应该是final的。
+3)对象必须被正确的创建，比如: 对象引用在对象创建过程中不能泄露(leak)。
+4)对象应该是final的，以此来限制子类继承父类，以避免子类改变了父类的immutable特性。
+5)如果类中包含mutable类对象，那么返回给客户端的时候，返回该对象的一个拷贝，而不是该对象本身(该条可以归为第一条中的一个特例)
+16. 我们能创建一个包含可变对象的不可变对象吗?
+是的，我们是可以创建一个包含可变对象的不可变对象的，你只需要谨慎一点，不要共享可变对象的引用就可以了，如果需要变化时，就返回原对象的一个拷贝。最常见的例子就是对象中包含一个日期对象的引用。
+17. 有没有可能两个不相等的对象有相同的 hashcode?
+有可能，两个不相等的对象可能会有相同的 hashcode 值，这就是为什么在 hashmap 中会有冲突。相等 hashcode 值的规定只是说如果两个对象相等，必须有相同的hashcode 值，但是没有关于不相等对象的任何规定。
+18. 两个相同的对象会有不同的 hash code 吗?
+不能，根据 hash code 的规定，这是不可能的。
+19. 我们可以在 hashcode() 中使用随机数字吗?
+不行，因为对象的 hashcode 值必须是相同的。
+20. Java 中，Comparator 与 Comparable 有什么不同?
+Comparable 接口用于定义对象的自然顺序，而 comparator 通常用于定义用户定制的顺序。Comparable 总是只有一个，但是可以有多个 comparator 来定义对象的顺序。
+21. 为什么在重写 equals 方法的时候需要重写 hashCode 方法?
+因为有强制的规范指定需要同时重写 hashcode 与 equals 是方法，许多容器类，如 HashMap、HashSet 都依赖于 hashcode 与 equals 的规定。
+22. “a==b”和”a.equals(b)”有什么区别?
+如果 a 和 b 都是对象，则 a==b 是比较两个对象的引用，只有当 a 和 b 指向的是堆中的同一个对象才会返回 true，而 a.equals(b) 是进行逻辑比较，所以通常需要重写该方法来提供逻辑一致性的比较。例如，String 类重写 equals() 方法，所以可以用于两个不同对象，但是包含的字母相同的比较。
+23. a.hashCode() 有什么用? 与 a.equals(b) 有什么关系?
+简介: hashCode() 方法是相应对象整型的 hash 值。它常用于基于 hash 的集合类，如 Hashtable、HashMap、LinkedHashMap等等。它与 equals() 方法关系特别紧密。根据 Java 规范，两个使用 equals() 方法来判断相等的对象，必须具有相同的 hash code。
+1、hashcode的作用
+List和Set，如何保证Set不重复呢? 通过迭代使用equals方法来判断，数据量小还可以接受，数据量大怎么解决? 引入hashcode，实际上hashcode扮演的角色就是寻址，大大减少查询匹配次数。
+2、hashcode重要吗
+对于数组、List集合就是一个累赘。而对于hashmap, hashset, hashtable就异常重要了。
+3、equals方法遵循的原则
+
+对称性 若x.equals(y)true，则y.equals(x)true
+自反性 x.equals(x)必须true
+传递性 若x.equals(y)true,y.equals(z)true,则x.equals(z)必为true
+一致性 只要x,y内容不变，无论调用多少次结果不变
+其他 x.equals(null) 永远false，x.equals(和x数据类型不同)始终false
+
+24. final、finalize 和 finally 的不同之处?
+
+final 是一个修饰符，可以修饰变量、方法和类。如果 final 修饰变量，意味着该变量的值在初始化后不能被改变。
+Java 技术允许使用 finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。这个方法是由垃圾收集器在确定这个对象没有被引用时对这个对象调用的，但是什么时候调用 finalize 没有保证。
+finally 是一个关键字，与 try 和 catch 一起用于异常的处理。finally 块一定会被执行，无论在 try 块中是否有发生异常。
+
+25. Java 中的编译期常量是什么? 使用它又什么风险?
+变量也就是我们所说的编译期常量，这里的 public 可选的。实际上这些变量在编译时会被替换掉，因为编译器知道这些变量的值，并且知道这些变量在运行时不能改变。这种方式存在的一个问题是你使用了一个内部的或第三方库中的公有编译时常量，但是这个值后面被其他人改变了，但是你的客户端仍然在使用老的值，甚至你已经部署了一个新的jar。为了避免这种情况，当你在更新依赖 JAR 文件时，确保重新编译你的程序。
+26. 静态内部类与顶级类有什么区别?
+一个公共的顶级类的源文件名称与类名相同，而嵌套静态类没有这个要求。一个嵌套类位于顶级类内部，需要使用顶级类的名称来引用嵌套静态类，如 HashMap.Entry 是一个嵌套静态类，HashMap 是一个顶级类，Entry是一个嵌套静态类。
+27. Java 中，Serializable 与 Externalizable 的区别?
+Serializable 接口是一个序列化 Java 类的接口，以便于它们可以在网络上传输或者可以将它们的状态保存在磁盘上，是 JVM 内嵌的默认序列化方式，成本高、脆弱而且不安全。Externalizable 允许你控制整个序列化过程，指定特定的二进制格式，增加安全机制。
+28. 说出 JDK 1.7 中的三个新特性?
+虽然 JDK 1.7 不像 JDK 5 和 8 一样的大版本，但是，还是有很多新的特性，如 try-with-resource 语句，这样你在使用流或者资源的时候，就不需要手动关闭，Java 会自动关闭。Fork-Join 池某种程度上实现 Java 版的 Map-reduce。允许 Switch 中有 String 变量和文本。菱形操作符(&lt;&gt;)用于泛型推断，不再需要在变量声明的右边申明泛型，因此可以写出可读写更强、更简洁的代码。另一个值得一提的特性是改善异常处理，如允许在同一个 catch 块中捕获多个异常。
+29. 说出 5 个 JDK 1.8 引入的新特性?
+Java 8 在 Java 历史上是一个开创新的版本，下面 JDK 8 中 5 个主要的特性: Lambda 表达式，允许像对象一样传递匿名函数 Stream API，充分利用现代多核 CPU，可以写出很简洁的代码 Date 与 Time API，最终，有一个稳定、简单的日期和时间库可供你使用 扩展方法，现在，接口中可以有静态、默认方法。 重复注解，现在你可以将相同的注解在同一类型上使用多次。
+下述包含 Java 面试过程中关于 SOLID 的设计原则，OOP 基础，如类，对象，接口，继承，多态，封装，抽象以及更高级的一些概念，如组合、聚合及关联。也包含了 GOF 设计模式的问题。
+30. 接口是什么? 为什么要使用接口而不是直接使用具体类?
+接口用于定义 API。它定义了类必须得遵循的规则。同时，它提供了一种抽象，因为客户端只使用接口，这样可以有多重实现，如 List 接口，你可以使用可随机访问的 ArrayList，也可以使用方便插入和删除的 LinkedList。接口中不允许普通方法，以此来保证抽象，但是 Java 8 中你可以在接口声明静态方法和默认普通方法。
+31. Java 中，抽象类与接口之间有什么不同?
+Java 中，抽象类和接口有很多不同之处，但是最重要的一个是 Java 中限制一个类只能继承一个类，但是可以实现多个接口。抽象类可以很好的定义一个家族类的默认行为，而接口能更好的定义类型，有助于后面实现多态机制 参见第六条。
+32. Object有哪些公用方法?
+clone equals hashcode wait notify notifyall finalize toString getClass 除了clone和finalize其他均为公共方法。
+11个方法，wait被重载了两次
+33. equals与==的区别
+区别1. ==是一个运算符 equals是Object类的方法
+区别2. 比较时的区别
+
+用于基本类型的变量比较时: ==用于比较值是否相等，equals不能直接用于基本数据类型的比较，需要转换为其对应的包装类型。
+用于引用类型的比较时。==和equals都是比较栈内存中的地址是否相等 。相等为true 否则为false。但是通常会重写equals方法去实现对象内容的比较。
+
+34. String、StringBuffer与StringBuilder的区别
+第一点: 可变和适用范围。String对象是不可变的，而StringBuffer和StringBuilder是可变字符序列。每次对String的操作相当于生成一个新的String对象，而对StringBuffer和StringBuilder的操作是对对象本身的操作，而不会生成新的对象，所以对于频繁改变内容的字符串避免使用String，因为频繁的生成对象将会对系统性能产生影响。
+第二点: 线程安全。String由于有final修饰，是immutable的，安全性是简单而纯粹的。StringBuilder和StringBuffer的区别在于StringBuilder不保证同步，也就是说如果需要线程安全需要使用StringBuffer，不需要同步的StringBuilder效率更高。
+35. switch能否用String做参数
+Java1.7开始支持，但实际这是一颗Java语法糖。除此之外，byte，short，int，枚举均可用于switch，而boolean和浮点型不可以。
+36. 接口与抽象类
+
+一个子类只能继承一个抽象类, 但能实现多个接口
+抽象类可以有构造方法, 接口没有构造方法
+抽象类可以有普通成员变量, 接口没有普通成员变量
+抽象类和接口都可有静态成员变量, 抽象类中静态成员变量访问类型任意，接口只能public static final(默认)
+抽象类可以没有抽象方法, 抽象类可以有普通方法；接口在JDK8之前都是抽象方法，在JDK8可以有default方法，在JDK9中允许有私有普通方法
+抽象类可以有静态方法；接口在JDK8之前不能有静态方法，在JDK8中可以有静态方法，且只能被接口类直接调用（不能被实现类的对象调用）
+抽象类中的方法可以是public、protected; 接口方法在JDK8之前只有public abstract，在JDK8可以有default方法，在JDK9中允许有private方法
+
+37. 抽象类和最终类
+抽象类可以没有抽象方法, 最终类可以没有最终方法
+最终类不能被继承, 最终方法不能被重写(可以重载)
+38. 异常
+相关的关键字 throw、throws、try…catch、finally
+
+throws 用在方法签名上, 以便抛出的异常可以被调用者处理
+throw 方法内部通过throw抛出异常
+try 用于检测包住的语句块, 若有异常, catch子句捕获并执行catch块
+
+39. 关于finally
+
+finally不管有没有异常都要处理
+当try和catch中有return时，finally仍然会执行，finally比return先执行
+不管有木有异常抛出, finally在return返回前执行
+finally是在return后面的表达式运算后执行的(此时并没有返回运算后的值，而是先把要返回的值保存起来，管finally中的代码怎么样，返回的值都不会改变，仍然是之前保存的值)，所以函数返回值是在finally执行前确定的
+
+注意: finally中最好不要包含return，否则程序会提前退出，返回值不是try或catch中保存的返回值
+finally不执行的几种情况: 程序提前终止如调用了System.exit, 病毒，断电
+40. 受检查异常和运行时异常
+
+受检查的异常(checked exceptions),其必须被try…catch语句块所捕获, 或者在方法签名里通过throws子句声明。受检查的异常必须在编译时被捕捉处理,命名为Checked Exception是因为Java编译器要进行检查, Java虚拟机也要进行检查, 以确保这个规则得到遵守。
+
+常见的checked exception: ClassNotFoundException IOException FileNotFoundException EOFException
+
+运行时异常(runtime exceptions), 需要程序员自己分析代码决定是否捕获和处理,比如空指针,被0除…
+
+常见的runtime exception: NullPointerException ArithmeticException ClassCastException IllegalArgumentException IllegalStateException IndexOutOfBoundsException NoSuchElementException
+
+Error的，则属于严重错误，如系统崩溃、虚拟机错误、动态链接失败等，这些错误无法恢复或者不可能捕捉，将导致应用程序中断，Error不需要捕获。
+
+41. super出现在父类的子类中。有三种存在方式
+
+super.xxx(xxx为变量名或对象名)意思是获取父类中xxx的变量或引用
+super.xxx(); (xxx为方法名)意思是直接访问并调用父类中的方法
+super() 调用父类构造
+
+注: super只能指代其直接父类
+42. this() &amp; super()在构造方法中的区别
+
+调用super()必须写在子类构造方法的第一行, 否则编译不通过
+super从子类调用父类构造, this在同一类中调用其他构造均需要放在第一行
+尽管可以用this调用一个构造器, 却不能调用2个
+this和super不能出现在同一个构造器中, 否则编译不通过
+this()、super()都指的对象,不可以在static环境中使用
+本质this指向本对象的指针。super是一个关键字
+
+43. 构造内部类和静态内部类对象
+在Java中，我们可以使用以下方式来构造内部类和静态内部类的对象：
+
+
+构造内部类对象：
+
+如果内部类是非静态的，我们需要先创建外部类的对象，然后使用外部类对象来创建内部类对象。例如：OuterClass outerObj = new OuterClass(); InnerClass innerObj = outerObj.new InnerClass();
+如果内部类是静态的，我们可以直接使用外部类名来创建内部类的对象。例如：OuterClass.InnerClass innerObj = new OuterClass.InnerClass();
+
+
+
+构造静态内部类对象：
+
+静态内部类与外部类之间没有直接的依赖关系，所以我们可以直接使用外部类名来创建静态内部类的对象。例如：OuterClass.StaticInnerClass innerObj = new OuterClass.StaticInnerClass();
+
+
+
+需要注意的是，内部类与外部类之间的访问权限规则适用于内部类对象的构造。例如，如果内部类是私有的，则只能在外部类的内部进行构造操作；如果内部类是公共的，则可以在任何地方进行构造操作。
+此外，还需要注意内部类对象的生命周期与外部类对象的关系，内部类对象的生存期可以超过外部类对象的生存期。
+静态内部类不需要有指向外部类的引用。但非静态内部类需要持有对外部类的引用。非静态内部类能够访问外部类的静态和非静态成员。静态内部类不能访问外部类的非静态成员，只能访问外部类的静态成员。
+44. 序列化
+声明为static和transient类型的数据不能被序列化， 反序列化需要一个无参构造函数
+45. Java移位运算符
+java中有三种移位运算符
+
+&lt;&lt; :左移运算符,x &lt;&lt; 1,相当于x乘以2(不溢出的情况下),低位补0
+&gt;&gt; :带符号右移,x &gt;&gt; 1,相当于x除以2,正数高位补0,负数高位补1
+&gt;&gt;&gt; :无符号右移,忽略符号位,空位都以0补齐
+
+46. 形参&amp;实参
+形式参数可被视为local variable.形参和局部变量一样都不能离开方法。只有在方法中使用，不会在方法外可见。 形式参数只能用final修饰符，其它任何修饰符都会引起编译器错误。但是用这个修饰符也有一定的限制，就是在方法中不能对参数做任何修改。不过一般情况下，一个方法的形参不用final修饰。只有在特殊情况下，那就是: 方法内部类。一个方法内的内部类如果使用了这个方法的参数或者局部变量的话，这个参数或局部变量应该是final。 形参的值在调用时根据调用者更改，实参则用自身的值更改形参的值(指针、引用皆在此列)，也就是说真正被传递的是实参。
+47. 局部变量为什么要初始化
+局部变量是指类方法中的变量，必须初始化。局部变量运行时被分配在栈中，量大，生命周期短，如果虚拟机给每个局部变量都初始化一下，是一笔很大的开销，但变量不初始化为默认值就使用是不安全的。出于速度和安全性两个方面的综合考虑，解决方案就是虚拟机不初始化，但要求编写者一定要在使用前给变量赋值。
+48. Java语言的鲁棒性
+Java在编译和运行程序时，都要对可能出现的问题进行检查，以消除错误的产生。它提供自动垃圾收集来进行内存管理，防止程序员在管理内存时容易产生的错误。通过集成的面向对象的例外处理机制，在编译时，Java揭示出可能出现但未被处理的异常，帮助程序员正确地进行选择以防止系统的崩溃。另外，Java在编译时还可捕获类型声明中的许多常见错误，防止动态运行时不匹配问题的出现。
+后续更新
+
+
+以上内容部分为ChatGpt4生成
+参考https://pdai.tech/md/java/basic/java-basic-lan-sum.html
+
+]]></content>
+      <categories>
+        <category>JAVA基础</category>
+      </categories>
+      <tags>
+        <tag>JAVA基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA基础 - 初识HashMap</title>
+    <url>/posts/47159.html</url>
+    <content><![CDATA[大纲：
+
+
+基本概念和原理
+
+什么是 HashMap？
+HashMap 的基本工作原理是什么？
+HashMap 和 HashTable、TreeMap 的区别是什么？
+
+
+
+底层数据结构
+
+HashMap 的底层数据结构是什么？
+为什么选择这种数据结构？
+如何处理哈希冲突？
+
+
+
+哈希函数
+
+HashMap 的哈希函数是如何工作的？
+为什么要使用 (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16) 这样的哈希函数？
+这种哈希函数的优点和缺点是什么？
+
+
+
+寻址算法
+
+HashMap 的寻址算法是如何工作的？
+为什么要使用 (n - 1) &amp; hash 这样的寻址算法？
+这种寻址算法的优点和缺点是什么？
+
+
+
+扩容机制
+
+HashMap 的扩容机制是如何工作的？
+什么时候会触发扩容？
+扩容的过程中会发生什么？
+
+
+
+线程安全性问题
+
+HashMap 是线程安全的吗？
+如果不是，那么在多线程环境下如何使用 HashMap？
+ConcurrentHashMap 和 Collections.synchronizedMap() 是如何解决 HashMap 线程安全问题的？
+
+
+
+性能优化
+
+如何优化 HashMap 的性能？
+初始化大小、加载因子等参数的选择对性能有什么影响？
+
+
+
+使用注意事项
+
+在使用 HashMap 时需要注意哪些问题？
+哪些场景下应该使用 HashMap，哪些场景下不应该使用 HashMap？
+
+
+
+Java 8中的改进
+
+在Java 8中，HashMap 有哪些改进？
+这些改进对 HashMap 的性能有什么影响？
+
+
+
+
+1. 基本概念和原理
+1.1 什么是 HashMap？
+
+HashMap 是 Java 中的一种基本数据结构，它属于 Java 集合框架的一部分。它用于存储键值对，其中每个键都是唯一的。HashMap 的主要优点是它允许以常数时间复杂度进行插入、删除和定位操作，这是通过使用哈希表实现的。
+
+1.2 HashMap 的基本工作原理是什么？
+
+HashMap 的工作原理基于哈希表。当我们向 HashMap 添加一个元素时，HashMap 会使用哈希函数计算键的哈希码，这个哈希码决定了元素在哈希表中的位置。如果两个元素的键产生相同的哈希码，那么它们会被放在同一个桶中，这种情况称为哈希冲突。HashMap 通过链表和红黑树（Java 8之后）解决冲突。
+
+1.3 HashMap 和 HashTable、TreeMap 的区别是什么？
+
+HashMap、HashTable 和 TreeMap 都是 Java 中的映射数据结构，但它们有一些关键的区别。HashMap 允许键和值为 null，而 HashTable 不允许。HashMap 是非线程安全的，而 HashTable 是线程安全的。而 TreeMap 是基于红黑树的，它的键必须实现 Comparable 接口，元素的插入和查找时间复杂度为 $O(\log n)$，而 HashMap 和 HashTable 的插入和查找时间复杂度通常为 $O(1)$。
+
+2. 底层数据结构
+2.1 HashMap 的底层数据结构是什么？
+
+HashMap 的底层是由数组和链表（或红黑树）组成的哈希表。数组的每个元素都是一个链表或红黑树的头节点。当我们插入一个新的键值对时，HashMap 会计算键的哈希值，然后用这个哈希值决定键值对在数组中的位置。如果该位置已经有其他键值对（哈希冲突），那么新的键值对就会被添加到这个位置的链表或红黑树中。
+
+2.2 为什么选择这种数据结构？
+
+这种数据结构的选择主要基于以下两个原因：首先，数组的索引可以直接映射到哈希值，使得查找操作的时间复杂度为 $O(1)$。其次，使用链表或红黑树可以解决哈希冲突的问题。链表适合处理冲突较少的情况，而红黑树适合处理冲突较多的情况（即链表长度大于一定阈值时）。
+
+2.3 如何处理哈希冲突？
+
+当两个不同的键的哈希值相同时，会发生哈希冲突。HashMap 使用链地址法处理哈希冲突，即将哈希值相同的键值对链接在一起形成一个链表。在 Java 8 中，如果链表的长度超过一定阈值（默认为 8），那么链表就会被转换为红黑树，以提高搜索效率。
+
+3. 哈希函数
+3.1 HashMap 的哈希函数是如何工作的？
+
+HashMap 的哈希函数主要是用于计算键的哈希值。在 HashMap 中，哈希函数的主要作用是将任意长度的输入（即键）通过哈希算法转换成固定长度的输出，即哈希值。这个哈希值用于确定键值对在数组中的位置。
+
+3.2 为什么要使用 (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16) 这样的哈希函数？
+
+这种哈希函数是为了进一步确保对象分布均匀，减少哈希冲突的概率。key.hashCode() 是通过调用键的 hashCode 方法获取哈希值，(h &gt;&gt;&gt; 16) 是将哈希值右移16位。通过异或操作 ^，可以在不改变哈希值的情况下，使得高位和低位混合，从而达到更好的分布效果。
+
+3.3 这种哈希函数的优点和缺点是什么？
+
+优点是能够使得哈希值的分布更均匀，减少哈希冲突的概率，从而提高 HashMap 的性能。缺点是计算稍微复杂一些，可能会增加一些计算开销，但考虑到其带来的性能提升，这个开销通常是可以接受的。
+
+4. 寻址算法
+4.1 什么是 HashMap 的寻址算法？
+
+当我们往 HashMap 中添加一个元素（键值对）时，首先需要确定这个元素应该存储在数组的哪个位置，这一决定由寻址算法来实现。具体来讲，这个算法会使用哈希函数处理过的哈希码(hash code)来决定键值对在数组的存储索引位置。
+
+4.2 为什么要使用 (n - 1) &amp; hash 这样的寻址算法？
+
+HashMap 的数组长度总是2的幂次方，这样设计是为了提高寻址效率。算法 (n - 1) &amp; hash 中，n 是数组的大小，hash 是键的哈希码。由于 n 是2的幂次方，n - 1 的二进制表示将为一系列的1。这时候，n - 1 与 hash 进行 &amp; 操作可以看做是对 hash 进行余数操作，这种方式快速地定位了元素所在的桶的位置，同时确保了分布的均匀性。如果简单地使用取模运算（即hash % n），会由于%操作本身较低的效率而降低寻址速度。
+
+4.3 这种寻址算法的优点和缺点是什么？
+
+优点
+
+高效：与常规的取模运算相比，位运算具有更高的效率。
+分布均匀：因为长度是2的幂次方，所以索引生成的结果经过位运算后更加分散。
+
+
+
+缺点
+
+大小限制：数组的大小必须是2的幂次方，这会对内存设计造成一定的约束。
+负载变重时性能降低：随着数据量变大，冲突增多，性能可能变差一些。但通常情况下，合理的扩容和负载因子可以在一定程度上缓解这个问题。
+
+
+5. 扩容机制
+5.1 什么是 HashMap 的扩容？
+
+当我们谈论 HashMap 的扩容机制时，我们指的是它增加内部存储结构的大小以适应更多元素的过程。正如人们需要更大的居住空间来放置更多的家具一样，HashMap 需要更多的空间来存储更多的键值对（键-值对）。
+
+5.2 HashMap 的扩容机制是如何工作的？
+
+在 HashMap 中，当我们将键值对加入集合中，如果存储的数量达到某个阈值（默认是桶的数量的 0.75，也就是加载因子的75%），HashMap 就会开始一个扩容的过程。在这个过程中，内部的存储桶数量会增加到原来的两倍，这样做是为了减少潜在的哈希冲突，以及维持集合的存取效率。
+
+5.3 什么时候会触发扩容？
+
+类似于一艘船超重可能会沉没，HashMap 如果超过负荷就需要扩容。扩容通常发生在插入操作之后检查到 HashMap中存储的元素数量超过了“容量 * 加载因子”所定义的阈值。加载因子默认值是0.75，这代表了当桶(bucket)有75%被占用时进行扩容，这可以保证空间和时间效率的平衡。
+
+5.4 扩容的过程中会发生什么？
+
+在 HashMap 扩容时，首先，内部的存储桶数组大小会增加到原来的两倍，并创建一个新的桶数组来替代旧的。然后 HashMap要把已有的数据迁移到这个新的数组中去, 每个已存在元素的位置也许会改变，因为它们的哈希可能会在新数组中映射到不同的位置。这是一个成本较高的操作，因为它涉及到重新计算每个元素的哈希并定位到新的桶中，入不敷出会显著降低性能，所以应当尽可能避免频繁扩容。
+
+5.5 扩容为什么重要，以及它的影响？
+
+扩容是维持 HashMap 性能的一个重要过程。适时的扩容可以防止哈希冲突的增加，冲突过多会导致数据的存取效率变差（从常数时间退化到线性时间）。不过，频繁的扩容也会带来性能下降，因为扩容是一个重量级的操作，所以合理设置初始容量和加载因子是非常重要的。
+
+6. 线程安全性问题
+6.1 HashMap 是线程安全的吗？
+
+不，HashMap 不是线程安全的。这意味着如果多个线程同时尝试修改 HashMap 的结构，例如添加或删除键值对，而没有进行适当的外部同步，那么 HashMap 的一致性可能被破坏，导致不可预知的行为或数据丢失。
+
+6.2 如果不是，那么在多线程环境下如何使用 HashMap？
+
+在需求允许的情况下，可以使用 Collections.synchronizedMap() 方法将 HashMap 包装起来创建一个同步的映射。这样可以保证多个线程操作这个集合时，对集合的操作是互斥的。例如，通过下面的代码段可以创建一个同步的 HashMap：
+
+Map&lt;K,V&gt; map = Collections.synchronizedMap(new HashMap&lt;K,V&gt;());
+
+不过需要注意，虽然每个方法调用都被同步了，但是对集合的复合操作仍然需要外部同步管理来防止并发问题。
+
+另一个选择是使用 ConcurrentHashMap 类，这是 java.util.concurrent 包提供的一种线程安全的HashMap实现。它通过分割数据结构以及利用细粒度的锁和同步器，比如 Lock 和 ReadWrite 锁，在保持高并发性能的同时提供线程安全性。
+
+6.3 ConcurrentHashMap 和 Collections.synchronizedMap() 是如何解决 HashMap 线程安全问题的？
+
+ConcurrentHashMap 和 Collections.synchronizedMap() 都提供了对多线程环境下 HashMap 操作的同步控制，但他们的实现方式和设计目标不一样。
+
+Collections.synchronizedMap(): 它提供了一种同步的map，保护方法调用，防止多个线程同时对 HashMap 进行修改引发不一致状态。虽然它确保线程安全，但在高并发场合下，性能可能会下降，因为每次只有一个线程能够访问map。
+ConcurrentHashMap: 这是一个为高并发优化的线程安全HashMap实现。它使用了一个分段锁（Segmentation Lock）机制，这种机制允许多个线程并发地访问不同段的buckets，从而降低锁竞争，提高并发度。此外，访问和更新操作不需要锁住整个map，只需要部分对锁的控制，并且读操作过程中通常完全不需要锁，从而具有更高的并发性能。
+
+
+7. 性能优化
+7.1 如何优化 HashMap 的性能？
+
+对 HashMap 进行性能优化涉及到为它提供合适的初始化参数和良好的使用实践。一个很重要的策略是合理预估存储元素数量，并相应地初始化 HashMap 的初始容量（initial capacity），这样可以减小扩容次数。还应注意选择合适的加载因子（load factor），对于执行多次插入操作的 HashMap，较低的加载因子可以减少哈希冲突，但同时会增加内存占用。
+
+7.2 初始化大小、加载因子等参数的选择对性能有什么影响？
+
+确定合适的初始化大小和加载因子可以极大影响 HashMap 的性能。HashMap 的默认加载因子 是 0.75，这是时间和空间成本的一种折中选择。较高的加载因子可能会减少内存使用，但同时增加了哈希冲突，从而减少性能，特别是在填充程度较高的情况下尤其明显。如果对内存使用没有特别严格的要求，可以适当降低加载因子来得到更好的性能。
+同样，初始容量若预设不当，可能会在HashMap在后期的使用过程中需要进行多次成本较高的扩容操作。反之，如果初始容量设置过大，又可能会浪费内存资源。假如能够较为精确估计HashMap将要存储的元素数量，设置一个适当的初始容量可以减少自动扩容的次数，从而优化性能表现。所以，找到合适的容量和加载因子是实现HashMap性能优化的关键。
+
+8. 使用注意事项
+8.1. 键值对的唯一性与null值的处理
+
+在HashMap中，每一个键值对被视为一个单独的实体，这被称作“映射条目”。每个键（Key）是独一无二的，而值（Value）可以重复。HashMap允许你将null作为一个键或者值，但是要特别小心，因为过多地使用null可能会降低映射的可读性，并可能导致潜在的错误。
+
+8.2. 注意hashCode()与equals()的实现
+
+正确覆写hashCode()和equals()方法是使用HashMap的关键。这是因为HashMap使用键对象的hashCode()方法来决定将键值对存储在哪个“桶”中。如果两个键被视为相等（即equals()方法返回true），它们的哈希码也必须相同。不恰当的实现可能会导致哈希冲突，进而影响HashMap的性能。
+
+8.3. 理解加载因子与初始容量的影响
+
+加载因子是HashMap性能的一个重要参数，它默认为0.75，这是时间和空间成本之间的一种折衷。如果加载因子设置得太低，会导致表的增长频繁，增加插入操作的开销；如果设置得太高，又会增加查找成本，
+
+8.4. 适合使用 HashMap 的场景
+
+HashMap 适合在键的顺序不重要，且需要快速插入、删除和定位元素的场合。例如，在实现字典、数据库索引、缓存和设置项时，HashMap都是一个很好的选择，因为它能够提供常数时间的性能，即 O(1)，对于这些应用来说，这是非常有效的。
+
+8.5. 不适合使用 HashMap 的场景
+
+当数据的顺序很重要时，比如有序列表，HashMap就不是一个好的选择，因为它不保证键的顺序。另外，如果需要保证线程安全，在多线程环境下直接使用HashMap可能会导致不一致的行为。在这种情况下，你可能需要考虑使用ConcurrentHashMap或者通过其他方式来同步对HashMap的访问。此外，如果键对象的hashCode()实现不良，可能会导致频繁的哈希冲突，这也会降低HashMap的性能，因此在这种情况下也应避免使用HashMap。
+
+9. Java 8中的改进
+
+在Java 8中，HashMap 引入了许多重要的性能改进，其中包括引入节点(Node)的概念以取代旧的Entry对象，实现链表和红黑树之间的平稳转换，以及对扩容操作的优化。
+
+9.1. 变更数据结构：链表和红黑树
+
+为了解决性能瓶颈，Java 8 对 HashMap 进行了改进，在存储结构上，当链表的长度大于一定阈值（默认是 8 ）时，链表将被转换成红黑树结构，以减少搜索时间。如果后续操作又降低了元素数量，使得节点少于阈值，红黑树会退化回链表。这种结构上的调整，明显提升了 HashMap 在负载较高时的性能表现，特别是当出现了大量哈希冲突时。
+
+9.2. 优化的哈希方法
+
+此外，Java 8 在计算元素的存储位置时引入了更加优化的哈希方法。了解到在Java 8之前，哈希桶的索引是直接使用 hashCode() 的高位数据，而在Java 8中对哈希码的高位执行了额外的扰动函数，以提高低碰撞率。
+
+9.3. 扩容相关改进
+
+Java 8对 HashMap 进行扩容的行为也进行了改良，这包括在扩容过程中重新分布元素的方式。旧版本的 HashMap 在每次扩容时需要重新计算所有元素的位置，而Java 8优化了这一过程，某些情况下这种优化能够有效减少重新计算的开销和实现更快的扩容。
+
+9.4. 并发场景的考量
+
+还要注意的是，虽然HashMap 在Java 8 中进行了这些优化，但仍然不是线程安全的。如果想要在并发场景下无忧使用，我们应该考虑使用 ConcurrentHashMap。
 
 ]]></content>
       <categories>
@@ -2038,225 +2502,646 @@ github.com/andreazorzetto/yh
       </tags>
   </entry>
   <entry>
-    <title>JAVA基础 - QA</title>
-    <url>/posts/21214129.html</url>
-    <content><![CDATA[Q/A
-1. Java 中应该使用什么数据类型来代表价格?
-如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double 类型。
-2. 怎么将 byte 转换为 String?
-可以使用 String 接收 byte[] 参数的构造器来进行转换，需要注意的点是要使用的正确的编码，否则会使用平台默认编码，这个编码可能跟原来的编码相同，也可能不同。
-3. Java 中怎样将 bytes 转换为 long 类型?
-String接收bytes的构造器转成String，再Long.parseLong
-4. 我们能将 int 强制转换为 byte 类型的变量吗? 如果该值大于 byte 类型的范围，将会出现什么现象?
-是的，我们可以做强制转换，但是 Java 中 int 是 32 位的，而 byte 是 8 位的，所以，如果强制转化是，int 类型的高 24 位将会被丢弃，byte 类型的范围是从 -128 到 127。
-5. 存在两个类，B 继承 A，C 继承 B，我们能将 B 转换为 C 么? 如 C = (C) B；
-可以，向下转型。但是不建议使用，容易出现类型转型异常.
-6. 哪个类包含 clone 方法? 是 Cloneable 还是 Object?
-java.lang.Cloneable 是一个标示性接口，不包含任何方法，clone 方法在 object 类中定义。并且需要知道 clone() 方法是一个本地方法，这意味着它是由 c 或 c++ 或 其他本地语言实现的。
-7. Java 中 ++ 操作符是线程安全的吗?
-不是线程安全的操作。它涉及到多个指令，如读取变量值，增加，然后存储回内存，这个过程可能会出现多个线程交差。还会存在竞态条件(读取-修改-写入)。
-8. a = a + b 与 a += b 的区别
-在Java中，a = a + b 和 a += b 是两种不同的赋值操作。
+    <title>Podman 与 Docker</title>
+    <url>/posts/771236.html</url>
+    <content><![CDATA[Podman 与 Docker：比较两种容器化工具
+
+容器技术已成为软件开发与部署的核心工具，其中Docker领跑行业，而Podman作为后来者提供了新的选择。两者都兼容开放容器计划（OCI）标准，并拥有完善的容器管理特性。选择它们之一取决于个别用例，每种工具都有其场景更支持的专长。我们提供的对比指南将详细介绍它们各自的优点和应用场景，帮助用户依据自身的需求作出合适的选择。
+
+1. 什么是容器？
+
+容器为开发者提供一种打包应用程序及其依赖项的方法，使它们能在不同环境中无缝运行，提供了隔离但资源高效的解决方案。这种技术通过容器映像，即一套可以复制的应用程序和环境说明，实现可移植性。现代容器化工具如Docker和Podman均符合OCI标准，支持交互性，并能管理和传播这些容器映像，确保它们能在不同系统中快速运行。
+
+2. 什么是 Docker？
+
+Docker 是一个通过容器创建、部署和管理应用程序的平台。借助 Docker，您可以使用 Dockerfile（用于创建容器的脚本）或现有容器映像创建符合 OCI 标准的容器。
 
 
-a = a + b: 这是一种简单的赋值操作，表示将变量 a 的值与变量 b 的值相加，并将结果赋值给变量 a。例如，如果 a 的初始值为 2，b 的值为 3，则执行 a = a + b 后，a 的值将变为 5。
+Docker 已经成为一种非常流行的容器化工具，至少部分原因是它相对简单。其简单明了的命令和丰富的可用文档使 Docker 变得非常容易上手。
+
+3. 什么是 Podman？
+
+Podman 和 Docker 一样，是一个用于部署和管理容器化应用程序的开源引擎。Podman 从现有映像或 Containerfile 和 Dockerfile 构建符合 OCI 标准的容器。
 
 
-a += b: 这是一种复合赋值操作，表示将变量 a 的值与变量 b 的值相加，并将结果赋值给变量 a。它相当于 a = a + b 的简化写法。例如，如果 a 的初始值为 2，b 的值为 3，则执行 a += b 后，a 的值也将变为 5。
+Podman 引擎最初由 Red Hat 开发，旨在提供 Docker 的无守护进程替代方案。通过采用无守护进程架构，Podman 试图解决围绕 Docker 基于守护进程的安全问题。
 
 
-区别在于赋值操作的方式不同，但最终结果是相同的。而且，使用 a += b 的方式更加简洁和高效，可以提高代码的可读性和执行效率。在实际编程中，可以根据个人的编码风格和习惯选择使用哪种方式。
-9. 我能在不进行强制转换的情况下将一个 double 值赋值给 long 类型的变量吗?
-不行，你不能在没有强制类型转换的前提下将一个 double 值赋值给 long 类型的变量，因为 double 类型的范围比 long 类型更广，所以必须要进行强制转换。
-10. 3*0.1 == 0.3 将会返回什么? true 还是 false?
-false，因为有些浮点数不能完全精确的表示出来。
-11. int 和 Integer 哪个会占用更多的内存?
-Integer 对象会占用更多的内存。Integer 是一个对象，需要存储对象的元数据。但是 int 是一个原始类型的数据，所以占用的空间更少。
-12. 为什么 Java 中的 String 是不可变的(Immutable)?
-Java 中的 String 不可变是因为 Java 的设计者认为字符串使用非常频繁，将字符串设置为不可变可以允许多个客户端之间共享相同的字符串。更详细的内容参见答案。
-13. 我们能在 Switch 中使用 String 吗?
-从 Java 7 开始，我们可以在 switch case 中使用字符串，但这仅仅是一个语法糖。内部实现在 switch 中使用字符串的 hash code。
-14. Java 中的构造器链是什么?
-当你从一个构造器中调用另一个构造器，就是Java 中的构造器链。这种情况只在重载了类的构造器的时候才会出现。
-14. 枚举类
-JDK1.5出现 每个枚举值都需要调用一次构造函数
-15. 什么是不可变对象(immutable object)? Java 中怎么创建一个不可变对象?
-不可变对象指对象一旦被创建，状态就不能再改变。任何修改都会创建一个新的对象，如 String、Integer及其它包装类。
-如何在Java中写出Immutable的类?
-要写出这样的类，需要遵循以下几个原则:
-1)immutable对象的状态在创建之后就不能发生改变，任何对它的改变都应该产生一个新的对象。
-2)Immutable类的所有的属性都应该是final的。
-3)对象必须被正确的创建，比如: 对象引用在对象创建过程中不能泄露(leak)。
-4)对象应该是final的，以此来限制子类继承父类，以避免子类改变了父类的immutable特性。
-5)如果类中包含mutable类对象，那么返回给客户端的时候，返回该对象的一个拷贝，而不是该对象本身(该条可以归为第一条中的一个特例)
-16. 我们能创建一个包含可变对象的不可变对象吗?
-是的，我们是可以创建一个包含可变对象的不可变对象的，你只需要谨慎一点，不要共享可变对象的引用就可以了，如果需要变化时，就返回原对象的一个拷贝。最常见的例子就是对象中包含一个日期对象的引用。
-17. 有没有可能两个不相等的对象有相同的 hashcode?
-有可能，两个不相等的对象可能会有相同的 hashcode 值，这就是为什么在 hashmap 中会有冲突。相等 hashcode 值的规定只是说如果两个对象相等，必须有相同的hashcode 值，但是没有关于不相等对象的任何规定。
-18. 两个相同的对象会有不同的 hash code 吗?
-不能，根据 hash code 的规定，这是不可能的。
-19. 我们可以在 hashcode() 中使用随机数字吗?
-不行，因为对象的 hashcode 值必须是相同的。
-20. Java 中，Comparator 与 Comparable 有什么不同?
-Comparable 接口用于定义对象的自然顺序，而 comparator 通常用于定义用户定制的顺序。Comparable 总是只有一个，但是可以有多个 comparator 来定义对象的顺序。
-21. 为什么在重写 equals 方法的时候需要重写 hashCode 方法?
-因为有强制的规范指定需要同时重写 hashcode 与 equals 是方法，许多容器类，如 HashMap、HashSet 都依赖于 hashcode 与 equals 的规定。
-22. “a==b”和”a.equals(b)”有什么区别?
-如果 a 和 b 都是对象，则 a==b 是比较两个对象的引用，只有当 a 和 b 指向的是堆中的同一个对象才会返回 true，而 a.equals(b) 是进行逻辑比较，所以通常需要重写该方法来提供逻辑一致性的比较。例如，String 类重写 equals() 方法，所以可以用于两个不同对象，但是包含的字母相同的比较。
-23. a.hashCode() 有什么用? 与 a.equals(b) 有什么关系?
-简介: hashCode() 方法是相应对象整型的 hash 值。它常用于基于 hash 的集合类，如 Hashtable、HashMap、LinkedHashMap等等。它与 equals() 方法关系特别紧密。根据 Java 规范，两个使用 equals() 方法来判断相等的对象，必须具有相同的 hash code。
-1、hashcode的作用
-List和Set，如何保证Set不重复呢? 通过迭代使用equals方法来判断，数据量小还可以接受，数据量大怎么解决? 引入hashcode，实际上hashcode扮演的角色就是寻址，大大减少查询匹配次数。
-2、hashcode重要吗
-对于数组、List集合就是一个累赘。而对于hashmap, hashset, hashtable就异常重要了。
-3、equals方法遵循的原则
+此外，Podman 的无守护进程架构赋予了它真正的无根模式。Docker 命令可以由非 root 用户运行，但执行这些命令的守护程序继续在 root 上运行。相反，Podman 直接执行命令，避免了对 root 权限的需求。
 
-对称性 若x.equals(y)true，则y.equals(x)true
-自反性 x.equals(x)必须true
-传递性 若x.equals(y)true,y.equals(z)true,则x.equals(z)必为true
-一致性 只要x,y内容不变，无论调用多少次结果不变
-其他 x.equals(null) 永远false，x.equals(和x数据类型不同)始终false
+4. Docker 与 Podman
 
-24. final、finalize 和 finally 的不同之处?
-
-final 是一个修饰符，可以修饰变量、方法和类。如果 final 修饰变量，意味着该变量的值在初始化后不能被改变。
-Java 技术允许使用 finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。这个方法是由垃圾收集器在确定这个对象没有被引用时对这个对象调用的，但是什么时候调用 finalize 没有保证。
-finally 是一个关键字，与 try 和 catch 一起用于异常的处理。finally 块一定会被执行，无论在 try 块中是否有发生异常。
-
-25. Java 中的编译期常量是什么? 使用它又什么风险?
-变量也就是我们所说的编译期常量，这里的 public 可选的。实际上这些变量在编译时会被替换掉，因为编译器知道这些变量的值，并且知道这些变量在运行时不能改变。这种方式存在的一个问题是你使用了一个内部的或第三方库中的公有编译时常量，但是这个值后面被其他人改变了，但是你的客户端仍然在使用老的值，甚至你已经部署了一个新的jar。为了避免这种情况，当你在更新依赖 JAR 文件时，确保重新编译你的程序。
-26. 静态内部类与顶级类有什么区别?
-一个公共的顶级类的源文件名称与类名相同，而嵌套静态类没有这个要求。一个嵌套类位于顶级类内部，需要使用顶级类的名称来引用嵌套静态类，如 HashMap.Entry 是一个嵌套静态类，HashMap 是一个顶级类，Entry是一个嵌套静态类。
-27. Java 中，Serializable 与 Externalizable 的区别?
-Serializable 接口是一个序列化 Java 类的接口，以便于它们可以在网络上传输或者可以将它们的状态保存在磁盘上，是 JVM 内嵌的默认序列化方式，成本高、脆弱而且不安全。Externalizable 允许你控制整个序列化过程，指定特定的二进制格式，增加安全机制。
-28. 说出 JDK 1.7 中的三个新特性?
-虽然 JDK 1.7 不像 JDK 5 和 8 一样的大版本，但是，还是有很多新的特性，如 try-with-resource 语句，这样你在使用流或者资源的时候，就不需要手动关闭，Java 会自动关闭。Fork-Join 池某种程度上实现 Java 版的 Map-reduce。允许 Switch 中有 String 变量和文本。菱形操作符(&lt;&gt;)用于泛型推断，不再需要在变量声明的右边申明泛型，因此可以写出可读写更强、更简洁的代码。另一个值得一提的特性是改善异常处理，如允许在同一个 catch 块中捕获多个异常。
-29. 说出 5 个 JDK 1.8 引入的新特性?
-Java 8 在 Java 历史上是一个开创新的版本，下面 JDK 8 中 5 个主要的特性: Lambda 表达式，允许像对象一样传递匿名函数 Stream API，充分利用现代多核 CPU，可以写出很简洁的代码 Date 与 Time API，最终，有一个稳定、简单的日期和时间库可供你使用 扩展方法，现在，接口中可以有静态、默认方法。 重复注解，现在你可以将相同的注解在同一类型上使用多次。
-下述包含 Java 面试过程中关于 SOLID 的设计原则，OOP 基础，如类，对象，接口，继承，多态，封装，抽象以及更高级的一些概念，如组合、聚合及关联。也包含了 GOF 设计模式的问题。
-30. 接口是什么? 为什么要使用接口而不是直接使用具体类?
-接口用于定义 API。它定义了类必须得遵循的规则。同时，它提供了一种抽象，因为客户端只使用接口，这样可以有多重实现，如 List 接口，你可以使用可随机访问的 ArrayList，也可以使用方便插入和删除的 LinkedList。接口中不允许普通方法，以此来保证抽象，但是 Java 8 中你可以在接口声明静态方法和默认普通方法。
-31. Java 中，抽象类与接口之间有什么不同?
-Java 中，抽象类和接口有很多不同之处，但是最重要的一个是 Java 中限制一个类只能继承一个类，但是可以实现多个接口。抽象类可以很好的定义一个家族类的默认行为，而接口能更好的定义类型，有助于后面实现多态机制 参见第六条。
-32. Object有哪些公用方法?
-clone equals hashcode wait notify notifyall finalize toString getClass 除了clone和finalize其他均为公共方法。
-11个方法，wait被重载了两次
-33. equals与==的区别
-区别1. ==是一个运算符 equals是Object类的方法
-区别2. 比较时的区别
-
-用于基本类型的变量比较时: ==用于比较值是否相等，equals不能直接用于基本数据类型的比较，需要转换为其对应的包装类型。
-用于引用类型的比较时。==和equals都是比较栈内存中的地址是否相等 。相等为true 否则为false。但是通常会重写equals方法去实现对象内容的比较。
-
-34. String、StringBuffer与StringBuilder的区别
-第一点: 可变和适用范围。String对象是不可变的，而StringBuffer和StringBuilder是可变字符序列。每次对String的操作相当于生成一个新的String对象，而对StringBuffer和StringBuilder的操作是对对象本身的操作，而不会生成新的对象，所以对于频繁改变内容的字符串避免使用String，因为频繁的生成对象将会对系统性能产生影响。
-第二点: 线程安全。String由于有final修饰，是immutable的，安全性是简单而纯粹的。StringBuilder和StringBuffer的区别在于StringBuilder不保证同步，也就是说如果需要线程安全需要使用StringBuffer，不需要同步的StringBuilder效率更高。
-35. switch能否用String做参数
-Java1.7开始支持，但实际这是一颗Java语法糖。除此之外，byte，short，int，枚举均可用于switch，而boolean和浮点型不可以。
-36. 接口与抽象类
-
-一个子类只能继承一个抽象类, 但能实现多个接口
-抽象类可以有构造方法, 接口没有构造方法
-抽象类可以有普通成员变量, 接口没有普通成员变量
-抽象类和接口都可有静态成员变量, 抽象类中静态成员变量访问类型任意，接口只能public static final(默认)
-抽象类可以没有抽象方法, 抽象类可以有普通方法；接口在JDK8之前都是抽象方法，在JDK8可以有default方法，在JDK9中允许有私有普通方法
-抽象类可以有静态方法；接口在JDK8之前不能有静态方法，在JDK8中可以有静态方法，且只能被接口类直接调用（不能被实现类的对象调用）
-抽象类中的方法可以是public、protected; 接口方法在JDK8之前只有public abstract，在JDK8可以有default方法，在JDK9中允许有private方法
-
-37. 抽象类和最终类
-抽象类可以没有抽象方法, 最终类可以没有最终方法
-最终类不能被继承, 最终方法不能被重写(可以重载)
-38. 异常
-相关的关键字 throw、throws、try…catch、finally
-
-throws 用在方法签名上, 以便抛出的异常可以被调用者处理
-throw 方法内部通过throw抛出异常
-try 用于检测包住的语句块, 若有异常, catch子句捕获并执行catch块
-
-39. 关于finally
-
-finally不管有没有异常都要处理
-当try和catch中有return时，finally仍然会执行，finally比return先执行
-不管有木有异常抛出, finally在return返回前执行
-finally是在return后面的表达式运算后执行的(此时并没有返回运算后的值，而是先把要返回的值保存起来，管finally中的代码怎么样，返回的值都不会改变，仍然是之前保存的值)，所以函数返回值是在finally执行前确定的
-
-注意: finally中最好不要包含return，否则程序会提前退出，返回值不是try或catch中保存的返回值
-finally不执行的几种情况: 程序提前终止如调用了System.exit, 病毒，断电
-40. 受检查异常和运行时异常
-
-受检查的异常(checked exceptions),其必须被try…catch语句块所捕获, 或者在方法签名里通过throws子句声明。受检查的异常必须在编译时被捕捉处理,命名为Checked Exception是因为Java编译器要进行检查, Java虚拟机也要进行检查, 以确保这个规则得到遵守。
-
-常见的checked exception: ClassNotFoundException IOException FileNotFoundException EOFException
-
-运行时异常(runtime exceptions), 需要程序员自己分析代码决定是否捕获和处理,比如空指针,被0除…
-
-常见的runtime exception: NullPointerException ArithmeticException ClassCastException IllegalArgumentException IllegalStateException IndexOutOfBoundsException NoSuchElementException
-
-Error的，则属于严重错误，如系统崩溃、虚拟机错误、动态链接失败等，这些错误无法恢复或者不可能捕捉，将导致应用程序中断，Error不需要捕获。
-
-41. super出现在父类的子类中。有三种存在方式
-
-super.xxx(xxx为变量名或对象名)意思是获取父类中xxx的变量或引用
-super.xxx(); (xxx为方法名)意思是直接访问并调用父类中的方法
-super() 调用父类构造
-
-注: super只能指代其直接父类
-42. this() &amp; super()在构造方法中的区别
-
-调用super()必须写在子类构造方法的第一行, 否则编译不通过
-super从子类调用父类构造, this在同一类中调用其他构造均需要放在第一行
-尽管可以用this调用一个构造器, 却不能调用2个
-this和super不能出现在同一个构造器中, 否则编译不通过
-this()、super()都指的对象,不可以在static环境中使用
-本质this指向本对象的指针。super是一个关键字
-
-43. 构造内部类和静态内部类对象
-在Java中，我们可以使用以下方式来构造内部类和静态内部类的对象：
+Podman 和 Docker 都是容器化工具。使用任何一种方式，您都可以完全启动、部署和管理容器。
 
 
-构造内部类对象：
+但是，每种工具都有其优点和缺点。接下来的几节将逐一探讨，并提供了一个列表来比较和对比这两个容器化引擎。
 
-如果内部类是非静态的，我们需要先创建外部类的对象，然后使用外部类对象来创建内部类对象。例如：OuterClass outerObj = new OuterClass(); InnerClass innerObj = outerObj.new InnerClass();
-如果内部类是静态的，我们可以直接使用外部类名来创建内部类的对象。例如：OuterClass.InnerClass innerObj = new OuterClass.InnerClass();
+5. Docker 的优点和缺点
+Docker 优点：
+
+
+简单易近人。Docker 的命令设计得相对简单易用。除此之外，Docker 还维护着最常用的容器映像注册表之一。
+Docker Hub 拥有大量维护良好的容器映像，其中许多映像是官方编写和更新的。例如，这使得拉取 LAMP 堆栈的容器映像并开始快速使用 Docker 变得相对容易。
+流行。Docker 的广泛使用意味着您更有可能在任何与容器一起使用的地方遇到它。这也意味着您拥有大量且易于访问的用户文档和故障排除集合。
+
+
+Docker 缺点：
+
+
+基于守护程序的体系结构。Docker 运行在长时间运行的守护进程上，这可能会给某些人带来安全问题。此外，该守护进程以 root 权限运行。因此，即使是执行 Docker 命令的有限用户也会通过具有 root 权限的进程来完成这些命令，这是另一个安全问题。
+
+
+6. Podman 的优点和缺点
+Podman 优点：
+
+
+无守护进程架构。Podman 直接与容器和容器映像交互，无需长时间运行的守护进程。这样做可以减少安全风险。
 
 
 
-构造静态内部类对象：
 
-静态内部类与外部类之间没有直接的依赖关系，所以我们可以直接使用外部类名来创建静态内部类的对象。例如：OuterClass.StaticInnerClass innerObj = new OuterClass.StaticInnerClass();
-
+无根进程。由于其无守护进程架构，Podman 可以执行真正的无根操作。用户不必被授予 root 权限即可运行 Podman 命令，并且 Podman 不必依赖具有 root 权限的进程。
 
 
-需要注意的是，内部类与外部类之间的访问权限规则适用于内部类对象的构造。例如，如果内部类是私有的，则只能在外部类的内部进行构造操作；如果内部类是公共的，则可以在任何地方进行构造操作。
-此外，还需要注意内部类对象的生命周期与外部类对象的关系，内部类对象的生存期可以超过外部类对象的生存期。
-静态内部类不需要有指向外部类的引用。但非静态内部类需要持有对外部类的引用。非静态内部类能够访问外部类的静态和非静态成员。静态内部类不能访问外部类的非静态成员，只能访问外部类的静态成员。
-44. 序列化
-声明为static和transient类型的数据不能被序列化， 反序列化需要一个无参构造函数
-45. Java移位运算符
-java中有三种移位运算符
-
-&lt;&lt; :左移运算符,x &lt;&lt; 1,相当于x乘以2(不溢出的情况下),低位补0
-&gt;&gt; :带符号右移,x &gt;&gt; 1,相当于x除以2,正数高位补0,负数高位补1
-&gt;&gt;&gt; :无符号右移,忽略符号位,空位都以0补齐
-
-46. 形参&amp;实参
-形式参数可被视为local variable.形参和局部变量一样都不能离开方法。只有在方法中使用，不会在方法外可见。 形式参数只能用final修饰符，其它任何修饰符都会引起编译器错误。但是用这个修饰符也有一定的限制，就是在方法中不能对参数做任何修改。不过一般情况下，一个方法的形参不用final修饰。只有在特殊情况下，那就是: 方法内部类。一个方法内的内部类如果使用了这个方法的参数或者局部变量的话，这个参数或局部变量应该是final。 形参的值在调用时根据调用者更改，实参则用自身的值更改形参的值(指针、引用皆在此列)，也就是说真正被传递的是实参。
-47. 局部变量为什么要初始化
-局部变量是指类方法中的变量，必须初始化。局部变量运行时被分配在栈中，量大，生命周期短，如果虚拟机给每个局部变量都初始化一下，是一笔很大的开销，但变量不初始化为默认值就使用是不安全的。出于速度和安全性两个方面的综合考虑，解决方案就是虚拟机不初始化，但要求编写者一定要在使用前给变量赋值。
-48. Java语言的鲁棒性
-Java在编译和运行程序时，都要对可能出现的问题进行检查，以消除错误的产生。它提供自动垃圾收集来进行内存管理，防止程序员在管理内存时容易产生的错误。通过集成的面向对象的例外处理机制，在编译时，Java揭示出可能出现但未被处理的异常，帮助程序员正确地进行选择以防止系统的崩溃。另外，Java在编译时还可捕获类型声明中的许多常见错误，防止动态运行时不匹配问题的出现。
-后续更新
 
 
-以上内容部分为ChatGpt4生成
-参考https://pdai.tech/md/java/basic/java-basic-lan-sum.html
+访问映像注册表。Podman 可以从众多注册表（包括 Docker Hub）中查找和拉取容器映像。这意味着，只需稍加配置，Podman 就可以访问与 Docker 相同的镜像仓库。
+
+
+Podman 缺点：
+
+
+有限的构建功能。Podman 主要关注运行和管理容器。它可以构建容器并将其呈现为图像，通常对许多用例有效。但是，它这样做的功能代表了 Buildah 源代码的有限部分。
+相反，Podman 支持将 Buildah 用作功能更丰富的容器构建和对流程进行微调控制的免费工具。
+
+
+7. 何时使用 Docker
+
+Docker 最适合需要更平易近人的容器化选项。Docker 的设计使其上手速度相对较快，其功能集包括您在使用容器时可能需要的一切。
+
+
+Docker 涵盖了整个容器生命周期，从容器组合到部署和维护。它通过一组简单的命令来实现这一点。
+
+
+Docker 已经在许多公司建立了使用，并且拥有大量使用经验的人。在容器化工具方面，与大多数其他工具相比，您更有可能找到熟悉 Docker 的人。
+
+8. 何时使用 Podman
+
+Podman 提供更高的安全性选项。它的无守护进程架构允许你运行无根容器。这与 Podman 用于管理容器的直接（而不是长时间运行）流程相结合，进一步保护了它们。
+
+
+Podman 是一种轻量级的专业解决方案。它侧重于运行、部署和管理容器，并为您提供对这些流程的精细控制。
+
+
+同时，提供了用于构建容器和映像的选项，尽管这些选项有限。Podman 始终专注于其专业化，并更喜欢将 Buildah 作为构建容器和容器映像的免费工具。
+
+
+这种专业化和轻量级占用空间在以下情况下非常有用：你希望对运行和管理容器进行更多控制，但不需要更高级的生成功能（或能够依赖其他工具）。
+
+
+事实上，考虑到 Docker 和 Podman 都符合 OCI 标准，您可以有效地并行使用 Docker。例如，您可以将 Docker 用于开发环境，在该环境中创建应用程序映像，但安全性问题不大。然后，使用 Podman 在生产环境中运行和维护这些映像。
 
 ]]></content>
       <categories>
-        <category>JAVA基础</category>
+        <category>docker</category>
       </categories>
       <tags>
-        <tag>JAVA基础</tag>
+        <tag>docker</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typora Markdown编辑器激活方法</title>
+    <url>/posts/233291.html</url>
+    <content><![CDATA[1.官网下载安装
+https://www.typoraio.cn/
+
+2.不运行软件的情况下，进入安装目录打开 LicenseIndex.180dd4c7.5c394f9a.chunk.js 文件
+安装盘符(默认C盘):\Typora\resources\page-dist\static\js\LicenseIndex.180dd4c7.5c394f9a.chunk.js
+
+3.搜索关键代码e.hasActivated=“true”
+将搜索到的位置的【e.hasActivated=&quot;true&quot;==】 后面添加 【&quot;true&quot;,】
+即：e.hasActivated=&quot;true&quot;==&quot;true&quot;,
+或者是
+【e.hasActivated=&quot;true&quot;==e.hasActivated】改为e.hasActivated=&quot;true&quot;==&quot;true&quot;
+
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VPN|wireguard红龍搭建教程</title>
+    <url>/posts/2950.html</url>
+    <content><![CDATA[正文:
+在这个数字化和互联网高度发达的时代，数据安全和隐私无疑成了我们的首要关注点。红龍，一个领先的远程连接速度解决方案的工具，不仅以其强大的性能为公众所熟知，还陆续证明了它在数个重要应用场景中的价值。
+
+附上红龍客户端下载网址
+
+
+红龍的框架图解
+应用红龍不仅局限于游戏、电商或海外直播，它的确拓宽了我们对传统VPN技术的认知。以下是红龍默默助力的几个其他用途方面：
+
+安全的远程访问：连接到你的企业网络或个人网络从未如此安心，RedDragon确保通过公开互联网的每次访问都受到保护。
+公共Wi-Fi的保镖：在不受保护的公共Wi-Fi网络上，RedDragon就像你的私人隐形盾牌，保护数据传输免遭窥探。
+跨网络界的桥梁：为公司的分支机构、云服务以及跨地域团队节省时间和金钱，通过红龍建立一道安全、可靠的网络通路。
+网上行的隐士：探索互联网的同时，红龍确保你的行踪不为他人所知，提供你所期望的匿名性。
+秘密通讯的守护者：无论何时何地上网，防止监视和数据追踪就是红龍承诺的隐私保护。
+连接云端的隐秘通道：在许多云服务设置中亦能轻松应用，确保高度敏感的工作负载安全地处于加密隧道之中。
+虚拟局域网络的枢纽之选：迅捷地将遥远的设备安全引互入局域网，使它们仿佛就在您的书桌旁边。
+
+为便利您搭建自己的红龍，以下是快速部署该工具的步骤：
+步骤1：更新系统
+执行以下命令以更新系统和安装最新的安全补丁。
+sudo apt update
+sudo apt upgrade -y
+
+步骤2：安装Docker
+使用以下命令快速安装Docker，帮助我们容器化红龍。
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker $(whoami)
+exit
+
+步骤3：运行红龍容器
+我们借助于Docker容器化的优势来部署红龍服务。执行如下命令：
+docker run -d \
+  --name=WG-SCX \
+  -e WG_HOST=您的域名或IP地址 \
+  -e PASSWORD=随机字符密码 \
+  -e WG_DEFAULT_DNS=8.8.8.8,8.8.4.4 \
+  -v ~/.wg-easy:/etc/wireguard \
+  -p 51820:51820/udp \
+  -p 51821:51821/tcp \
+  --cap-add=NET_ADMIN \
+  --cap-add=SYS_MODULE \
+  --sysctl=&quot;net.ipv4.conf.all.src_valid_mark=1&quot; \
+  --sysctl=&quot;net.ipv4.ip_forward=1&quot; \
+  --restart unless-stopped \
+  weejewel/wg-easy
+
+
+红龍配置示范
+以上步骤将帮助您启动并运行红龍协议，立即享受一流的安全上网体验。
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>VPN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo配置详解</title>
+    <url>/posts/21129.html</url>
+    <content><![CDATA[1. Hexo 文章的元数据配置完全指南
+Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了 Hexo 博客文章中各项元数据配置，帮助你更精确地控制文章的展示。
+---
+title: Your Title Here
+date: YYYY-MM-DD HH:MM:SS
+author: Your Name
+img: http://example.com/feature-image.jpg
+top: true
+hide: false
+cover: false
+coverImg: http://example.com/cover-image.jpg
+password: your-sha256-encypted-password
+toc: true
+mathjax: false
+summary: Your custom article summary.
+categories: Category
+tags: 
+  - Tag1
+  - Tag2
+keywords: Keyword1, Keyword2, Keyword3
+reprintPolicy: cc_by
+---
+
+# Your Title Here
+
+Your article content starts here.
+
+
+请记得将上述模板中的占位（例如 Your Title Here 或 YYYY-MM-DD HH:MM:SS）替换成相应的信息。
+解释一下每个配置的作用：
+
+
+
+配置选项
+默认值
+描述
+
+
+
+
+title
+Markdown 文件标题
+文章标题，应明确填写以便识别。
+
+
+date
+文件创建时间
+发布时间对于排序很重要，建议设为唯一。
+
+
+author
+_config.yml的author值
+文章的作者名。
+
+
+img
+random featureImages值
+文章特色图像，推荐使用可依赖的CDN服务。
+
+
+top
+true
+是否将文章置顶在博客首页。
+
+
+hide
+false
+设为true则文章不显示在首页。
+
+
+cover
+false
+自 v1.0.2 起，加入是否作为首页轮播封面文章。
+
+
+coverImg
+无
+首页轮播封面图片路径，如未指定使用img作为默认。
+
+
+password
+无
+文章密码，使用SHA256加密，激活主题配置中的verifyPassword功能。
+
+
+toc
+true
+是否为文章生成目录。
+
+
+mathjax
+false
+是否为文章启用MathJax解析数学公式。
+
+
+summary
+无
+自定义文章摘要，如果为空自动截取内容。
+
+
+categories
+无
+文章分类，建议单分类以维护结构清晰。
+
+
+tags
+无
+文章的标签，可以有多个。
+
+
+keywords
+文章标题
+关键词有助于SEO。
+
+
+reprintPolicy
+cc_by
+文章的转载规则，根据需求选择。
+
+
+
+注意：
+
+如果你放置了 password，那么只有获知密码的读者才能访问这篇文章。
+cover 和 coverImg 选项，在主题版本 v1.0.2 及以后版本中才开始支持。
+'summary’可以让您控制显示在文章列表上的简介内容。
+数学公式（mathjax）和TOC（toc）的特有选项需要在主题的配置文件中开启。
+正确设置SEO相关字段（keywords, summary）有助于提高搜索引擎排名。
+
+后续更新
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VPN节点搭建</title>
+    <url>/posts/29510.html</url>
+    <content><![CDATA[
+
+节点搭建
+
+
+#更新软件源
+apt update
+#启用 BBR TCP 拥塞控制算法
+echo &quot;net.core.default_qdisc=fq&quot; &amp;gt;&amp;gt; /etc/sysctl.conf
+echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &amp;gt;&amp;gt; /etc/sysctl.conf
+sysctl -p
+
+#安装x-ui：
+bash &amp;lt;(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+
+#安装nginx
+apt install nginx
+#安装acme：
+curl https://get.acme.sh | sh
+#添加软链接：
+ln -s  /root/.acme.sh/acme.sh /usr/local/bin/acme.sh
+#切换CA机构： 
+acme.sh --set-default-ca --server letsencrypt
+#申请证书： 
+acme.sh  --issue -d 你的域名 -k ec-256 --webroot  /var/www/html
+#安装证书：
+acme.sh --install-cert -d 你的域名 --ecc --key-file /etc/x-ui/server.key  --fullchain-file /etc/x-ui/server.crt --reloadcmd &quot;systemctl force-reload nginx&quot;
+
+
+
+寻找适合的伪装站
+
+
+
+http站点优先，个人网盘符合单节点大流量特征
+
+示例关键字：intext:登录 Cloudreve
+
+
+配置nginx
+
+
+配置文件路径：/etc/nginx/nginx.conf
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events &#123;
+    worker_connections 1024;
+&#125;
+
+http &#123;
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+    types_hash_max_size 2048;
+
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+    gzip on;
+
+    server &#123;
+        listen 443 ssl;
+        
+        server_name nicename.co;  #你的域名
+        ssl_certificate       /etc/x-ui/server.crt;  #证书位置
+        ssl_certificate_key   /etc/x-ui/server.key; #私钥位置
+        
+        ssl_session_timeout 1d;
+        ssl_session_cache shared:MozSSL:10m;
+        ssl_session_tickets off;
+        ssl_protocols    TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers off;
+
+        location / &#123;
+            proxy_pass https://bing.com; #伪装网址
+            proxy_redirect off;
+            proxy_ssl_server_name on;
+            sub_filter_once off;
+            sub_filter &quot;bing.com&quot; $server_name;
+            proxy_set_header Host &quot;bing.com&quot;;
+            proxy_set_header Referer $http_referer;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header User-Agent $http_user_agent;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header Accept-Encoding &quot;&quot;;
+            proxy_set_header Accept-Language &quot;zh-CN&quot;;
+        &#125;
+
+
+        location /ray &#123;   #分流路径
+            proxy_redirect off;
+            proxy_pass http://127.0.0.1:10000; #Xray端口
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection &quot;upgrade&quot;;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        &#125;
+        
+        location /xui &#123;   #xui路径
+            proxy_redirect off;
+            proxy_pass http://127.0.0.1:9999;  #xui监听端口
+            proxy_http_version 1.1;
+            proxy_set_header Host $host;
+        &#125;
+    &#125;
+
+    server &#123;
+        listen 80;
+        location /.well-known/ &#123;
+               root /var/www/html;
+            &#125;
+        location / &#123;
+                rewrite ^(.*)$ https://$host$1 permanent;
+            &#125;
+    &#125;
+&#125;
+
+
+每次修改nginx配置文件后必须使用 systemctl reload nginx 命令重新加载配置文件
+
+
+
+多用户合租
+
+
+
+通过修改nginx的配置文件实现ws path路径分流
+
+location /ray &#123;   #分流路径
+    proxy_redirect off;
+    proxy_pass http://127.0.0.1:10000; #Xray端口
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection &quot;upgrade&quot;;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+&#125;
+
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>VPN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一键搭建ChatGPT Next Web跨平台私人 ChatGPT</title>
+    <url>/posts/35029.html</url>
+    <content><![CDATA[1.开始使用
+
+准备好你的 OpenAI API Key;
+点击右侧按钮开始部署：部署，直接使用 Github 账号登录即可，记得在环境变量页填入 API Key 和页面访问密码 CODE；
+部署完毕后，即可开始使用；
+（可选）绑定自定义域名：Vercel 分配的域名 DNS 在某些区域被污染了，绑定自定义域名即可直连。
+
+2.保持更新
+
+如果你按照上述步骤一键部署了自己的项目，可能会发现总是提示“存在更新”的问题，这是由于 Vercel 会默认为你创建一个新项目而不是 fork 本项目，这会导致无法正确地检测更新。 推荐你按照下列步骤重新部署：
+
+
+
+删除掉原先的仓库；
+使用页面右上角的 fork 按钮，fork 本项目；
+在 Vercel 重新选择并部署，请查看详细教程。
+
+
+3.打开自动更新
+
+如果你遇到了 Upstream Sync 执行错误，请手动 Sync Fork 一次！
+
+
+当你 fork 项目之后，由于 Github 的限制，需要手动去你 fork 后的项目的 Actions 页面启用 Workflows，并启用 Upstream Sync Action，启用之后即可开启每小时定时自动更新：
+
+
+
+4.配置页面访问密码
+
+配置密码后，用户需要在设置页手动填写访问码才可以正常聊天，否则会通过消息提示未授权状态。
+
+
+警告：请务必将密码的位数设置得足够长，最好 7 位以上，否则会被爆破。
+
+
+本项目提供有限的权限控制功能，请在 Vercel 项目控制面板的环境变量页增加名为 CODE 的环境变量，值为用英文逗号分隔的自定义密码：
+增加或修改该环境变量后，请重新部署项目使改动生效。
+
+5.环境变量
+
+本项目大多数配置项都通过环境变量来设置，教程：如何修改 Vercel 环境变量。
+
+
+
+OPENAI_API_KEY （必填项）
+OpanAI 密钥，你在 openai 账户页面申请的 api key，使用英文逗号隔开多个 key，这样可以随机轮询这些 key。
+
+
+
+
+CODE （可选）
+访问密码，可选，可以使用逗号隔开多个密码。
+
+
+
+警告：如果不填写此项，则任何人都可以直接使用你部署后的网站，可能会导致你的 token 被急速消耗完毕，建议填写此选项。
+
+
+
+BASE_URL （可选）
+Default: https://api.openai.com
+Examples: http://your-openai-proxy.com
+OpenAI 接口代理 URL，如果你手动配置了 openai 接口代理，请填写此选项。
+如果遇到 ssl 证书问题，请将 BASE_URL 的协议设置为 http。
+
+
+
+
+OPENAI_ORG_ID （可选）
+指定 OpenAI 中的组织 ID。
+
+
+
+
+AZURE_URL （可选）
+形如：https://{azure-resource-url}/openai/deployments/{deploy-name}
+
+
+
+Azure 部署地址。
+
+
+
+AZURE_API_KEY （可选）
+Azure 密钥。
+
+
+
+
+AZURE_API_VERSION （可选）
+Azure Api 版本，你可以在这里找到：Azure 文档。
+
+
+
+
+GOOGLE_API_KEY (optional)
+Google Gemini Pro 密钥.
+
+
+
+
+GOOGLE_URL (optional)
+Google Gemini Pro Api Url.
+
+
+
+
+HIDE_USER_API_KEY （可选）
+如果你不想让用户自行填入 API Key，将此环境变量设置为 1 即可。
+
+
+
+
+DISABLE_GPT4 （可选）
+如果你不想让用户使用 GPT-4，将此环境变量设置为 1 即可。
+
+
+
+
+ENABLE_BALANCE_QUERY （可选）
+如果你想启用余额查询功能，将此环境变量设置为 1 即可。
+
+
+
+
+DISABLE_FAST_LINK （可选）
+如果你想禁用从链接解析预制设置，将此环境变量设置为 1 即可。
+
+
+
+
+CUSTOM_MODELS （可选）
+示例：+qwen-7b-chat,+glm-6b,-gpt-3.5-turbo,gpt-4-1106-preview=gpt-4-turbo 表示增加 qwen-7b-chat 和 glm-6b 到模型列表，而从列表中删除 gpt-3.5-turbo，并将 gpt-4-1106-preview 模型名字展示为 gpt-4-turbo。 如果你想先禁用所有模型，再启用指定模型，可以使用 -all,+gpt-3.5-turbo，则表示仅启用 gpt-3.5-turbo
+
+
+
+用来控制模型列表，使用 + 增加一个模型，使用 - 来隐藏一个模型，使用 模型名=展示名 来自定义模型的展示名，用英文逗号隔开。
+
+参考项目
+ChatGPT-Next-Web
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -2704,891 +3589,6 @@ Java天生具有跨平台性，这得益于它在编译时不会直接转变为�
       </tags>
   </entry>
   <entry>
-    <title>JAVA基础 - 初识HashMap</title>
-    <url>/posts/47159.html</url>
-    <content><![CDATA[大纲：
-
-
-基本概念和原理
-
-什么是 HashMap？
-HashMap 的基本工作原理是什么？
-HashMap 和 HashTable、TreeMap 的区别是什么？
-
-
-
-底层数据结构
-
-HashMap 的底层数据结构是什么？
-为什么选择这种数据结构？
-如何处理哈希冲突？
-
-
-
-哈希函数
-
-HashMap 的哈希函数是如何工作的？
-为什么要使用 (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16) 这样的哈希函数？
-这种哈希函数的优点和缺点是什么？
-
-
-
-寻址算法
-
-HashMap 的寻址算法是如何工作的？
-为什么要使用 (n - 1) &amp; hash 这样的寻址算法？
-这种寻址算法的优点和缺点是什么？
-
-
-
-扩容机制
-
-HashMap 的扩容机制是如何工作的？
-什么时候会触发扩容？
-扩容的过程中会发生什么？
-
-
-
-线程安全性问题
-
-HashMap 是线程安全的吗？
-如果不是，那么在多线程环境下如何使用 HashMap？
-ConcurrentHashMap 和 Collections.synchronizedMap() 是如何解决 HashMap 线程安全问题的？
-
-
-
-性能优化
-
-如何优化 HashMap 的性能？
-初始化大小、加载因子等参数的选择对性能有什么影响？
-
-
-
-使用注意事项
-
-在使用 HashMap 时需要注意哪些问题？
-哪些场景下应该使用 HashMap，哪些场景下不应该使用 HashMap？
-
-
-
-Java 8中的改进
-
-在Java 8中，HashMap 有哪些改进？
-这些改进对 HashMap 的性能有什么影响？
-
-
-
-
-1. 基本概念和原理
-1.1 什么是 HashMap？
-
-HashMap 是 Java 中的一种基本数据结构，它属于 Java 集合框架的一部分。它用于存储键值对，其中每个键都是唯一的。HashMap 的主要优点是它允许以常数时间复杂度进行插入、删除和定位操作，这是通过使用哈希表实现的。
-
-1.2 HashMap 的基本工作原理是什么？
-
-HashMap 的工作原理基于哈希表。当我们向 HashMap 添加一个元素时，HashMap 会使用哈希函数计算键的哈希码，这个哈希码决定了元素在哈希表中的位置。如果两个元素的键产生相同的哈希码，那么它们会被放在同一个桶中，这种情况称为哈希冲突。HashMap 通过链表和红黑树（Java 8之后）解决冲突。
-
-1.3 HashMap 和 HashTable、TreeMap 的区别是什么？
-
-HashMap、HashTable 和 TreeMap 都是 Java 中的映射数据结构，但它们有一些关键的区别。HashMap 允许键和值为 null，而 HashTable 不允许。HashMap 是非线程安全的，而 HashTable 是线程安全的。而 TreeMap 是基于红黑树的，它的键必须实现 Comparable 接口，元素的插入和查找时间复杂度为 $O(\log n)$，而 HashMap 和 HashTable 的插入和查找时间复杂度通常为 $O(1)$。
-
-2. 底层数据结构
-2.1 HashMap 的底层数据结构是什么？
-
-HashMap 的底层是由数组和链表（或红黑树）组成的哈希表。数组的每个元素都是一个链表或红黑树的头节点。当我们插入一个新的键值对时，HashMap 会计算键的哈希值，然后用这个哈希值决定键值对在数组中的位置。如果该位置已经有其他键值对（哈希冲突），那么新的键值对就会被添加到这个位置的链表或红黑树中。
-
-2.2 为什么选择这种数据结构？
-
-这种数据结构的选择主要基于以下两个原因：首先，数组的索引可以直接映射到哈希值，使得查找操作的时间复杂度为 $O(1)$。其次，使用链表或红黑树可以解决哈希冲突的问题。链表适合处理冲突较少的情况，而红黑树适合处理冲突较多的情况（即链表长度大于一定阈值时）。
-
-2.3 如何处理哈希冲突？
-
-当两个不同的键的哈希值相同时，会发生哈希冲突。HashMap 使用链地址法处理哈希冲突，即将哈希值相同的键值对链接在一起形成一个链表。在 Java 8 中，如果链表的长度超过一定阈值（默认为 8），那么链表就会被转换为红黑树，以提高搜索效率。
-
-3. 哈希函数
-3.1 HashMap 的哈希函数是如何工作的？
-
-HashMap 的哈希函数主要是用于计算键的哈希值。在 HashMap 中，哈希函数的主要作用是将任意长度的输入（即键）通过哈希算法转换成固定长度的输出，即哈希值。这个哈希值用于确定键值对在数组中的位置。
-
-3.2 为什么要使用 (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16) 这样的哈希函数？
-
-这种哈希函数是为了进一步确保对象分布均匀，减少哈希冲突的概率。key.hashCode() 是通过调用键的 hashCode 方法获取哈希值，(h &gt;&gt;&gt; 16) 是将哈希值右移16位。通过异或操作 ^，可以在不改变哈希值的情况下，使得高位和低位混合，从而达到更好的分布效果。
-
-3.3 这种哈希函数的优点和缺点是什么？
-
-优点是能够使得哈希值的分布更均匀，减少哈希冲突的概率，从而提高 HashMap 的性能。缺点是计算稍微复杂一些，可能会增加一些计算开销，但考虑到其带来的性能提升，这个开销通常是可以接受的。
-
-4. 寻址算法
-4.1 什么是 HashMap 的寻址算法？
-
-当我们往 HashMap 中添加一个元素（键值对）时，首先需要确定这个元素应该存储在数组的哪个位置，这一决定由寻址算法来实现。具体来讲，这个算法会使用哈希函数处理过的哈希码(hash code)来决定键值对在数组的存储索引位置。
-
-4.2 为什么要使用 (n - 1) &amp; hash 这样的寻址算法？
-
-HashMap 的数组长度总是2的幂次方，这样设计是为了提高寻址效率。算法 (n - 1) &amp; hash 中，n 是数组的大小，hash 是键的哈希码。由于 n 是2的幂次方，n - 1 的二进制表示将为一系列的1。这时候，n - 1 与 hash 进行 &amp; 操作可以看做是对 hash 进行余数操作，这种方式快速地定位了元素所在的桶的位置，同时确保了分布的均匀性。如果简单地使用取模运算（即hash % n），会由于%操作本身较低的效率而降低寻址速度。
-
-4.3 这种寻址算法的优点和缺点是什么？
-
-优点
-
-高效：与常规的取模运算相比，位运算具有更高的效率。
-分布均匀：因为长度是2的幂次方，所以索引生成的结果经过位运算后更加分散。
-
-
-
-缺点
-
-大小限制：数组的大小必须是2的幂次方，这会对内存设计造成一定的约束。
-负载变重时性能降低：随着数据量变大，冲突增多，性能可能变差一些。但通常情况下，合理的扩容和负载因子可以在一定程度上缓解这个问题。
-
-
-5. 扩容机制
-5.1 什么是 HashMap 的扩容？
-
-当我们谈论 HashMap 的扩容机制时，我们指的是它增加内部存储结构的大小以适应更多元素的过程。正如人们需要更大的居住空间来放置更多的家具一样，HashMap 需要更多的空间来存储更多的键值对（键-值对）。
-
-5.2 HashMap 的扩容机制是如何工作的？
-
-在 HashMap 中，当我们将键值对加入集合中，如果存储的数量达到某个阈值（默认是桶的数量的 0.75，也就是加载因子的75%），HashMap 就会开始一个扩容的过程。在这个过程中，内部的存储桶数量会增加到原来的两倍，这样做是为了减少潜在的哈希冲突，以及维持集合的存取效率。
-
-5.3 什么时候会触发扩容？
-
-类似于一艘船超重可能会沉没，HashMap 如果超过负荷就需要扩容。扩容通常发生在插入操作之后检查到 HashMap中存储的元素数量超过了“容量 * 加载因子”所定义的阈值。加载因子默认值是0.75，这代表了当桶(bucket)有75%被占用时进行扩容，这可以保证空间和时间效率的平衡。
-
-5.4 扩容的过程中会发生什么？
-
-在 HashMap 扩容时，首先，内部的存储桶数组大小会增加到原来的两倍，并创建一个新的桶数组来替代旧的。然后 HashMap要把已有的数据迁移到这个新的数组中去, 每个已存在元素的位置也许会改变，因为它们的哈希可能会在新数组中映射到不同的位置。这是一个成本较高的操作，因为它涉及到重新计算每个元素的哈希并定位到新的桶中，入不敷出会显著降低性能，所以应当尽可能避免频繁扩容。
-
-5.5 扩容为什么重要，以及它的影响？
-
-扩容是维持 HashMap 性能的一个重要过程。适时的扩容可以防止哈希冲突的增加，冲突过多会导致数据的存取效率变差（从常数时间退化到线性时间）。不过，频繁的扩容也会带来性能下降，因为扩容是一个重量级的操作，所以合理设置初始容量和加载因子是非常重要的。
-
-6. 线程安全性问题
-6.1 HashMap 是线程安全的吗？
-
-不，HashMap 不是线程安全的。这意味着如果多个线程同时尝试修改 HashMap 的结构，例如添加或删除键值对，而没有进行适当的外部同步，那么 HashMap 的一致性可能被破坏，导致不可预知的行为或数据丢失。
-
-6.2 如果不是，那么在多线程环境下如何使用 HashMap？
-
-在需求允许的情况下，可以使用 Collections.synchronizedMap() 方法将 HashMap 包装起来创建一个同步的映射。这样可以保证多个线程操作这个集合时，对集合的操作是互斥的。例如，通过下面的代码段可以创建一个同步的 HashMap：
-
-Map&lt;K,V&gt; map = Collections.synchronizedMap(new HashMap&lt;K,V&gt;());
-
-不过需要注意，虽然每个方法调用都被同步了，但是对集合的复合操作仍然需要外部同步管理来防止并发问题。
-
-另一个选择是使用 ConcurrentHashMap 类，这是 java.util.concurrent 包提供的一种线程安全的HashMap实现。它通过分割数据结构以及利用细粒度的锁和同步器，比如 Lock 和 ReadWrite 锁，在保持高并发性能的同时提供线程安全性。
-
-6.3 ConcurrentHashMap 和 Collections.synchronizedMap() 是如何解决 HashMap 线程安全问题的？
-
-ConcurrentHashMap 和 Collections.synchronizedMap() 都提供了对多线程环境下 HashMap 操作的同步控制，但他们的实现方式和设计目标不一样。
-
-Collections.synchronizedMap(): 它提供了一种同步的map，保护方法调用，防止多个线程同时对 HashMap 进行修改引发不一致状态。虽然它确保线程安全，但在高并发场合下，性能可能会下降，因为每次只有一个线程能够访问map。
-ConcurrentHashMap: 这是一个为高并发优化的线程安全HashMap实现。它使用了一个分段锁（Segmentation Lock）机制，这种机制允许多个线程并发地访问不同段的buckets，从而降低锁竞争，提高并发度。此外，访问和更新操作不需要锁住整个map，只需要部分对锁的控制，并且读操作过程中通常完全不需要锁，从而具有更高的并发性能。
-
-
-7. 性能优化
-7.1 如何优化 HashMap 的性能？
-
-对 HashMap 进行性能优化涉及到为它提供合适的初始化参数和良好的使用实践。一个很重要的策略是合理预估存储元素数量，并相应地初始化 HashMap 的初始容量（initial capacity），这样可以减小扩容次数。还应注意选择合适的加载因子（load factor），对于执行多次插入操作的 HashMap，较低的加载因子可以减少哈希冲突，但同时会增加内存占用。
-
-7.2 初始化大小、加载因子等参数的选择对性能有什么影响？
-
-确定合适的初始化大小和加载因子可以极大影响 HashMap 的性能。HashMap 的默认加载因子 是 0.75，这是时间和空间成本的一种折中选择。较高的加载因子可能会减少内存使用，但同时增加了哈希冲突，从而减少性能，特别是在填充程度较高的情况下尤其明显。如果对内存使用没有特别严格的要求，可以适当降低加载因子来得到更好的性能。
-同样，初始容量若预设不当，可能会在HashMap在后期的使用过程中需要进行多次成本较高的扩容操作。反之，如果初始容量设置过大，又可能会浪费内存资源。假如能够较为精确估计HashMap将要存储的元素数量，设置一个适当的初始容量可以减少自动扩容的次数，从而优化性能表现。所以，找到合适的容量和加载因子是实现HashMap性能优化的关键。
-
-8. 使用注意事项
-8.1. 键值对的唯一性与null值的处理
-
-在HashMap中，每一个键值对被视为一个单独的实体，这被称作“映射条目”。每个键（Key）是独一无二的，而值（Value）可以重复。HashMap允许你将null作为一个键或者值，但是要特别小心，因为过多地使用null可能会降低映射的可读性，并可能导致潜在的错误。
-
-8.2. 注意hashCode()与equals()的实现
-
-正确覆写hashCode()和equals()方法是使用HashMap的关键。这是因为HashMap使用键对象的hashCode()方法来决定将键值对存储在哪个“桶”中。如果两个键被视为相等（即equals()方法返回true），它们的哈希码也必须相同。不恰当的实现可能会导致哈希冲突，进而影响HashMap的性能。
-
-8.3. 理解加载因子与初始容量的影响
-
-加载因子是HashMap性能的一个重要参数，它默认为0.75，这是时间和空间成本之间的一种折衷。如果加载因子设置得太低，会导致表的增长频繁，增加插入操作的开销；如果设置得太高，又会增加查找成本，
-
-8.4. 适合使用 HashMap 的场景
-
-HashMap 适合在键的顺序不重要，且需要快速插入、删除和定位元素的场合。例如，在实现字典、数据库索引、缓存和设置项时，HashMap都是一个很好的选择，因为它能够提供常数时间的性能，即 O(1)，对于这些应用来说，这是非常有效的。
-
-8.5. 不适合使用 HashMap 的场景
-
-当数据的顺序很重要时，比如有序列表，HashMap就不是一个好的选择，因为它不保证键的顺序。另外，如果需要保证线程安全，在多线程环境下直接使用HashMap可能会导致不一致的行为。在这种情况下，你可能需要考虑使用ConcurrentHashMap或者通过其他方式来同步对HashMap的访问。此外，如果键对象的hashCode()实现不良，可能会导致频繁的哈希冲突，这也会降低HashMap的性能，因此在这种情况下也应避免使用HashMap。
-
-9. Java 8中的改进
-
-在Java 8中，HashMap 引入了许多重要的性能改进，其中包括引入节点(Node)的概念以取代旧的Entry对象，实现链表和红黑树之间的平稳转换，以及对扩容操作的优化。
-
-9.1. 变更数据结构：链表和红黑树
-
-为了解决性能瓶颈，Java 8 对 HashMap 进行了改进，在存储结构上，当链表的长度大于一定阈值（默认是 8 ）时，链表将被转换成红黑树结构，以减少搜索时间。如果后续操作又降低了元素数量，使得节点少于阈值，红黑树会退化回链表。这种结构上的调整，明显提升了 HashMap 在负载较高时的性能表现，特别是当出现了大量哈希冲突时。
-
-9.2. 优化的哈希方法
-
-此外，Java 8 在计算元素的存储位置时引入了更加优化的哈希方法。了解到在Java 8之前，哈希桶的索引是直接使用 hashCode() 的高位数据，而在Java 8中对哈希码的高位执行了额外的扰动函数，以提高低碰撞率。
-
-9.3. 扩容相关改进
-
-Java 8对 HashMap 进行扩容的行为也进行了改良，这包括在扩容过程中重新分布元素的方式。旧版本的 HashMap 在每次扩容时需要重新计算所有元素的位置，而Java 8优化了这一过程，某些情况下这种优化能够有效减少重新计算的开销和实现更快的扩容。
-
-9.4. 并发场景的考量
-
-还要注意的是，虽然HashMap 在Java 8 中进行了这些优化，但仍然不是线程安全的。如果想要在并发场景下无忧使用，我们应该考虑使用 ConcurrentHashMap。
-
-]]></content>
-      <categories>
-        <category>JAVA基础</category>
-      </categories>
-      <tags>
-        <tag>JAVA基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Podman 与 Docker</title>
-    <url>/posts/771236.html</url>
-    <content><![CDATA[Podman 与 Docker：比较两种容器化工具
-
-容器技术已成为软件开发与部署的核心工具，其中Docker领跑行业，而Podman作为后来者提供了新的选择。两者都兼容开放容器计划（OCI）标准，并拥有完善的容器管理特性。选择它们之一取决于个别用例，每种工具都有其场景更支持的专长。我们提供的对比指南将详细介绍它们各自的优点和应用场景，帮助用户依据自身的需求作出合适的选择。
-
-1. 什么是容器？
-
-容器为开发者提供一种打包应用程序及其依赖项的方法，使它们能在不同环境中无缝运行，提供了隔离但资源高效的解决方案。这种技术通过容器映像，即一套可以复制的应用程序和环境说明，实现可移植性。现代容器化工具如Docker和Podman均符合OCI标准，支持交互性，并能管理和传播这些容器映像，确保它们能在不同系统中快速运行。
-
-2. 什么是 Docker？
-
-Docker 是一个通过容器创建、部署和管理应用程序的平台。借助 Docker，您可以使用 Dockerfile（用于创建容器的脚本）或现有容器映像创建符合 OCI 标准的容器。
-
-
-Docker 已经成为一种非常流行的容器化工具，至少部分原因是它相对简单。其简单明了的命令和丰富的可用文档使 Docker 变得非常容易上手。
-
-3. 什么是 Podman？
-
-Podman 和 Docker 一样，是一个用于部署和管理容器化应用程序的开源引擎。Podman 从现有映像或 Containerfile 和 Dockerfile 构建符合 OCI 标准的容器。
-
-
-Podman 引擎最初由 Red Hat 开发，旨在提供 Docker 的无守护进程替代方案。通过采用无守护进程架构，Podman 试图解决围绕 Docker 基于守护进程的安全问题。
-
-
-此外，Podman 的无守护进程架构赋予了它真正的无根模式。Docker 命令可以由非 root 用户运行，但执行这些命令的守护程序继续在 root 上运行。相反，Podman 直接执行命令，避免了对 root 权限的需求。
-
-4. Docker 与 Podman
-
-Podman 和 Docker 都是容器化工具。使用任何一种方式，您都可以完全启动、部署和管理容器。
-
-
-但是，每种工具都有其优点和缺点。接下来的几节将逐一探讨，并提供了一个列表来比较和对比这两个容器化引擎。
-
-5. Docker 的优点和缺点
-Docker 优点：
-
-
-简单易近人。Docker 的命令设计得相对简单易用。除此之外，Docker 还维护着最常用的容器映像注册表之一。
-Docker Hub 拥有大量维护良好的容器映像，其中许多映像是官方编写和更新的。例如，这使得拉取 LAMP 堆栈的容器映像并开始快速使用 Docker 变得相对容易。
-流行。Docker 的广泛使用意味着您更有可能在任何与容器一起使用的地方遇到它。这也意味着您拥有大量且易于访问的用户文档和故障排除集合。
-
-
-Docker 缺点：
-
-
-基于守护程序的体系结构。Docker 运行在长时间运行的守护进程上，这可能会给某些人带来安全问题。此外，该守护进程以 root 权限运行。因此，即使是执行 Docker 命令的有限用户也会通过具有 root 权限的进程来完成这些命令，这是另一个安全问题。
-
-
-6. Podman 的优点和缺点
-Podman 优点：
-
-
-无守护进程架构。Podman 直接与容器和容器映像交互，无需长时间运行的守护进程。这样做可以减少安全风险。
-
-
-
-
-无根进程。由于其无守护进程架构，Podman 可以执行真正的无根操作。用户不必被授予 root 权限即可运行 Podman 命令，并且 Podman 不必依赖具有 root 权限的进程。
-
-
-
-
-访问映像注册表。Podman 可以从众多注册表（包括 Docker Hub）中查找和拉取容器映像。这意味着，只需稍加配置，Podman 就可以访问与 Docker 相同的镜像仓库。
-
-
-Podman 缺点：
-
-
-有限的构建功能。Podman 主要关注运行和管理容器。它可以构建容器并将其呈现为图像，通常对许多用例有效。但是，它这样做的功能代表了 Buildah 源代码的有限部分。
-相反，Podman 支持将 Buildah 用作功能更丰富的容器构建和对流程进行微调控制的免费工具。
-
-
-7. 何时使用 Docker
-
-Docker 最适合需要更平易近人的容器化选项。Docker 的设计使其上手速度相对较快，其功能集包括您在使用容器时可能需要的一切。
-
-
-Docker 涵盖了整个容器生命周期，从容器组合到部署和维护。它通过一组简单的命令来实现这一点。
-
-
-Docker 已经在许多公司建立了使用，并且拥有大量使用经验的人。在容器化工具方面，与大多数其他工具相比，您更有可能找到熟悉 Docker 的人。
-
-8. 何时使用 Podman
-
-Podman 提供更高的安全性选项。它的无守护进程架构允许你运行无根容器。这与 Podman 用于管理容器的直接（而不是长时间运行）流程相结合，进一步保护了它们。
-
-
-Podman 是一种轻量级的专业解决方案。它侧重于运行、部署和管理容器，并为您提供对这些流程的精细控制。
-
-
-同时，提供了用于构建容器和映像的选项，尽管这些选项有限。Podman 始终专注于其专业化，并更喜欢将 Buildah 作为构建容器和容器映像的免费工具。
-
-
-这种专业化和轻量级占用空间在以下情况下非常有用：你希望对运行和管理容器进行更多控制，但不需要更高级的生成功能（或能够依赖其他工具）。
-
-
-事实上，考虑到 Docker 和 Podman 都符合 OCI 标准，您可以有效地并行使用 Docker。例如，您可以将 Docker 用于开发环境，在该环境中创建应用程序映像，但安全性问题不大。然后，使用 Podman 在生产环境中运行和维护这些映像。
-
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo配置详解</title>
-    <url>/posts/21129.html</url>
-    <content><![CDATA[1. Hexo 文章的元数据配置完全指南
-Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了 Hexo 博客文章中各项元数据配置，帮助你更精确地控制文章的展示。
----
-title: Your Title Here
-date: YYYY-MM-DD HH:MM:SS
-author: Your Name
-img: http://example.com/feature-image.jpg
-top: true
-hide: false
-cover: false
-coverImg: http://example.com/cover-image.jpg
-password: your-sha256-encypted-password
-toc: true
-mathjax: false
-summary: Your custom article summary.
-categories: Category
-tags: 
-  - Tag1
-  - Tag2
-keywords: Keyword1, Keyword2, Keyword3
-reprintPolicy: cc_by
----
-
-# Your Title Here
-
-Your article content starts here.
-
-
-请记得将上述模板中的占位（例如 Your Title Here 或 YYYY-MM-DD HH:MM:SS）替换成相应的信息。
-解释一下每个配置的作用：
-
-
-
-配置选项
-默认值
-描述
-
-
-
-
-title
-Markdown 文件标题
-文章标题，应明确填写以便识别。
-
-
-date
-文件创建时间
-发布时间对于排序很重要，建议设为唯一。
-
-
-author
-_config.yml的author值
-文章的作者名。
-
-
-img
-random featureImages值
-文章特色图像，推荐使用可依赖的CDN服务。
-
-
-top
-true
-是否将文章置顶在博客首页。
-
-
-hide
-false
-设为true则文章不显示在首页。
-
-
-cover
-false
-自 v1.0.2 起，加入是否作为首页轮播封面文章。
-
-
-coverImg
-无
-首页轮播封面图片路径，如未指定使用img作为默认。
-
-
-password
-无
-文章密码，使用SHA256加密，激活主题配置中的verifyPassword功能。
-
-
-toc
-true
-是否为文章生成目录。
-
-
-mathjax
-false
-是否为文章启用MathJax解析数学公式。
-
-
-summary
-无
-自定义文章摘要，如果为空自动截取内容。
-
-
-categories
-无
-文章分类，建议单分类以维护结构清晰。
-
-
-tags
-无
-文章的标签，可以有多个。
-
-
-keywords
-文章标题
-关键词有助于SEO。
-
-
-reprintPolicy
-cc_by
-文章的转载规则，根据需求选择。
-
-
-
-注意：
-
-如果你放置了 password，那么只有获知密码的读者才能访问这篇文章。
-cover 和 coverImg 选项，在主题版本 v1.0.2 及以后版本中才开始支持。
-'summary’可以让您控制显示在文章列表上的简介内容。
-数学公式（mathjax）和TOC（toc）的特有选项需要在主题的配置文件中开启。
-正确设置SEO相关字段（keywords, summary）有助于提高搜索引擎排名。
-
-后续更新
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typora Markdown编辑器激活方法</title>
-    <url>/posts/233291.html</url>
-    <content><![CDATA[1.官网下载安装
-https://www.typoraio.cn/
-
-2.不运行软件的情况下，进入安装目录打开 LicenseIndex.180dd4c7.5c394f9a.chunk.js 文件
-安装盘符(默认C盘):\Typora\resources\page-dist\static\js\LicenseIndex.180dd4c7.5c394f9a.chunk.js
-
-3.搜索关键代码e.hasActivated=“true”
-将搜索到的位置的【e.hasActivated=&quot;true&quot;==】 后面添加 【&quot;true&quot;,】
-即：e.hasActivated=&quot;true&quot;==&quot;true&quot;,
-或者是
-【e.hasActivated=&quot;true&quot;==e.hasActivated】改为e.hasActivated=&quot;true&quot;==&quot;true&quot;
-
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VPN节点搭建</title>
-    <url>/posts/29510.html</url>
-    <content><![CDATA[
-
-节点搭建
-
-
-#更新软件源
-apt update
-#启用 BBR TCP 拥塞控制算法
-echo &quot;net.core.default_qdisc=fq&quot; &amp;gt;&amp;gt; /etc/sysctl.conf
-echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &amp;gt;&amp;gt; /etc/sysctl.conf
-sysctl -p
-
-#安装x-ui：
-bash &amp;lt;(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
-
-#安装nginx
-apt install nginx
-#安装acme：
-curl https://get.acme.sh | sh
-#添加软链接：
-ln -s  /root/.acme.sh/acme.sh /usr/local/bin/acme.sh
-#切换CA机构： 
-acme.sh --set-default-ca --server letsencrypt
-#申请证书： 
-acme.sh  --issue -d 你的域名 -k ec-256 --webroot  /var/www/html
-#安装证书：
-acme.sh --install-cert -d 你的域名 --ecc --key-file /etc/x-ui/server.key  --fullchain-file /etc/x-ui/server.crt --reloadcmd &quot;systemctl force-reload nginx&quot;
-
-
-
-寻找适合的伪装站
-
-
-
-http站点优先，个人网盘符合单节点大流量特征
-
-示例关键字：intext:登录 Cloudreve
-
-
-配置nginx
-
-
-配置文件路径：/etc/nginx/nginx.conf
-user www-data;
-worker_processes auto;
-pid /run/nginx.pid;
-include /etc/nginx/modules-enabled/*.conf;
-
-events &#123;
-    worker_connections 1024;
-&#125;
-
-http &#123;
-    sendfile on;
-    tcp_nopush on;
-    tcp_nodelay on;
-    keepalive_timeout 65;
-    types_hash_max_size 2048;
-
-    include /etc/nginx/mime.types;
-    default_type application/octet-stream;
-    gzip on;
-
-    server &#123;
-        listen 443 ssl;
-        
-        server_name nicename.co;  #你的域名
-        ssl_certificate       /etc/x-ui/server.crt;  #证书位置
-        ssl_certificate_key   /etc/x-ui/server.key; #私钥位置
-        
-        ssl_session_timeout 1d;
-        ssl_session_cache shared:MozSSL:10m;
-        ssl_session_tickets off;
-        ssl_protocols    TLSv1.2 TLSv1.3;
-        ssl_prefer_server_ciphers off;
-
-        location / &#123;
-            proxy_pass https://bing.com; #伪装网址
-            proxy_redirect off;
-            proxy_ssl_server_name on;
-            sub_filter_once off;
-            sub_filter &quot;bing.com&quot; $server_name;
-            proxy_set_header Host &quot;bing.com&quot;;
-            proxy_set_header Referer $http_referer;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header User-Agent $http_user_agent;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto https;
-            proxy_set_header Accept-Encoding &quot;&quot;;
-            proxy_set_header Accept-Language &quot;zh-CN&quot;;
-        &#125;
-
-
-        location /ray &#123;   #分流路径
-            proxy_redirect off;
-            proxy_pass http://127.0.0.1:10000; #Xray端口
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection &quot;upgrade&quot;;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        &#125;
-        
-        location /xui &#123;   #xui路径
-            proxy_redirect off;
-            proxy_pass http://127.0.0.1:9999;  #xui监听端口
-            proxy_http_version 1.1;
-            proxy_set_header Host $host;
-        &#125;
-    &#125;
-
-    server &#123;
-        listen 80;
-        location /.well-known/ &#123;
-               root /var/www/html;
-            &#125;
-        location / &#123;
-                rewrite ^(.*)$ https://$host$1 permanent;
-            &#125;
-    &#125;
-&#125;
-
-
-每次修改nginx配置文件后必须使用 systemctl reload nginx 命令重新加载配置文件
-
-
-
-多用户合租
-
-
-
-通过修改nginx的配置文件实现ws path路径分流
-
-location /ray &#123;   #分流路径
-    proxy_redirect off;
-    proxy_pass http://127.0.0.1:10000; #Xray端口
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection &quot;upgrade&quot;;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-&#125;
-
-]]></content>
-      <categories>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>VPN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VPN|wireguard红龍搭建教程</title>
-    <url>/posts/2950.html</url>
-    <content><![CDATA[正文:
-在这个数字化和互联网高度发达的时代，数据安全和隐私无疑成了我们的首要关注点。红龍，一个领先的远程连接速度解决方案的工具，不仅以其强大的性能为公众所熟知，还陆续证明了它在数个重要应用场景中的价值。
-
-附上红龍客户端下载网址
-
-
-红龍的框架图解
-应用红龍不仅局限于游戏、电商或海外直播，它的确拓宽了我们对传统VPN技术的认知。以下是红龍默默助力的几个其他用途方面：
-
-安全的远程访问：连接到你的企业网络或个人网络从未如此安心，RedDragon确保通过公开互联网的每次访问都受到保护。
-公共Wi-Fi的保镖：在不受保护的公共Wi-Fi网络上，RedDragon就像你的私人隐形盾牌，保护数据传输免遭窥探。
-跨网络界的桥梁：为公司的分支机构、云服务以及跨地域团队节省时间和金钱，通过红龍建立一道安全、可靠的网络通路。
-网上行的隐士：探索互联网的同时，红龍确保你的行踪不为他人所知，提供你所期望的匿名性。
-秘密通讯的守护者：无论何时何地上网，防止监视和数据追踪就是红龍承诺的隐私保护。
-连接云端的隐秘通道：在许多云服务设置中亦能轻松应用，确保高度敏感的工作负载安全地处于加密隧道之中。
-虚拟局域网络的枢纽之选：迅捷地将遥远的设备安全引互入局域网，使它们仿佛就在您的书桌旁边。
-
-为便利您搭建自己的红龍，以下是快速部署该工具的步骤：
-步骤1：更新系统
-执行以下命令以更新系统和安装最新的安全补丁。
-sudo apt update
-sudo apt upgrade -y
-
-步骤2：安装Docker
-使用以下命令快速安装Docker，帮助我们容器化红龍。
-curl -sSL https://get.docker.com | sh
-sudo usermod -aG docker $(whoami)
-exit
-
-步骤3：运行红龍容器
-我们借助于Docker容器化的优势来部署红龍服务。执行如下命令：
-docker run -d \
-  --name=WG-SCX \
-  -e WG_HOST=您的域名或IP地址 \
-  -e PASSWORD=随机字符密码 \
-  -e WG_DEFAULT_DNS=8.8.8.8,8.8.4.4 \
-  -v ~/.wg-easy:/etc/wireguard \
-  -p 51820:51820/udp \
-  -p 51821:51821/tcp \
-  --cap-add=NET_ADMIN \
-  --cap-add=SYS_MODULE \
-  --sysctl=&quot;net.ipv4.conf.all.src_valid_mark=1&quot; \
-  --sysctl=&quot;net.ipv4.ip_forward=1&quot; \
-  --restart unless-stopped \
-  weejewel/wg-easy
-
-
-红龍配置示范
-以上步骤将帮助您启动并运行红龍协议，立即享受一流的安全上网体验。
-]]></content>
-      <categories>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>VPN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一键搭建ChatGPT Next Web跨平台私人 ChatGPT</title>
-    <url>/posts/35029.html</url>
-    <content><![CDATA[1.开始使用
-
-准备好你的 OpenAI API Key;
-点击右侧按钮开始部署：部署，直接使用 Github 账号登录即可，记得在环境变量页填入 API Key 和页面访问密码 CODE；
-部署完毕后，即可开始使用；
-（可选）绑定自定义域名：Vercel 分配的域名 DNS 在某些区域被污染了，绑定自定义域名即可直连。
-
-2.保持更新
-
-如果你按照上述步骤一键部署了自己的项目，可能会发现总是提示“存在更新”的问题，这是由于 Vercel 会默认为你创建一个新项目而不是 fork 本项目，这会导致无法正确地检测更新。 推荐你按照下列步骤重新部署：
-
-
-
-删除掉原先的仓库；
-使用页面右上角的 fork 按钮，fork 本项目；
-在 Vercel 重新选择并部署，请查看详细教程。
-
-
-3.打开自动更新
-
-如果你遇到了 Upstream Sync 执行错误，请手动 Sync Fork 一次！
-
-
-当你 fork 项目之后，由于 Github 的限制，需要手动去你 fork 后的项目的 Actions 页面启用 Workflows，并启用 Upstream Sync Action，启用之后即可开启每小时定时自动更新：
-
-
-
-4.配置页面访问密码
-
-配置密码后，用户需要在设置页手动填写访问码才可以正常聊天，否则会通过消息提示未授权状态。
-
-
-警告：请务必将密码的位数设置得足够长，最好 7 位以上，否则会被爆破。
-
-
-本项目提供有限的权限控制功能，请在 Vercel 项目控制面板的环境变量页增加名为 CODE 的环境变量，值为用英文逗号分隔的自定义密码：
-增加或修改该环境变量后，请重新部署项目使改动生效。
-
-5.环境变量
-
-本项目大多数配置项都通过环境变量来设置，教程：如何修改 Vercel 环境变量。
-
-
-
-OPENAI_API_KEY （必填项）
-OpanAI 密钥，你在 openai 账户页面申请的 api key，使用英文逗号隔开多个 key，这样可以随机轮询这些 key。
-
-
-
-
-CODE （可选）
-访问密码，可选，可以使用逗号隔开多个密码。
-
-
-
-警告：如果不填写此项，则任何人都可以直接使用你部署后的网站，可能会导致你的 token 被急速消耗完毕，建议填写此选项。
-
-
-
-BASE_URL （可选）
-Default: https://api.openai.com
-Examples: http://your-openai-proxy.com
-OpenAI 接口代理 URL，如果你手动配置了 openai 接口代理，请填写此选项。
-如果遇到 ssl 证书问题，请将 BASE_URL 的协议设置为 http。
-
-
-
-
-OPENAI_ORG_ID （可选）
-指定 OpenAI 中的组织 ID。
-
-
-
-
-AZURE_URL （可选）
-形如：https://{azure-resource-url}/openai/deployments/{deploy-name}
-
-
-
-Azure 部署地址。
-
-
-
-AZURE_API_KEY （可选）
-Azure 密钥。
-
-
-
-
-AZURE_API_VERSION （可选）
-Azure Api 版本，你可以在这里找到：Azure 文档。
-
-
-
-
-GOOGLE_API_KEY (optional)
-Google Gemini Pro 密钥.
-
-
-
-
-GOOGLE_URL (optional)
-Google Gemini Pro Api Url.
-
-
-
-
-HIDE_USER_API_KEY （可选）
-如果你不想让用户自行填入 API Key，将此环境变量设置为 1 即可。
-
-
-
-
-DISABLE_GPT4 （可选）
-如果你不想让用户使用 GPT-4，将此环境变量设置为 1 即可。
-
-
-
-
-ENABLE_BALANCE_QUERY （可选）
-如果你想启用余额查询功能，将此环境变量设置为 1 即可。
-
-
-
-
-DISABLE_FAST_LINK （可选）
-如果你想禁用从链接解析预制设置，将此环境变量设置为 1 即可。
-
-
-
-
-CUSTOM_MODELS （可选）
-示例：+qwen-7b-chat,+glm-6b,-gpt-3.5-turbo,gpt-4-1106-preview=gpt-4-turbo 表示增加 qwen-7b-chat 和 glm-6b 到模型列表，而从列表中删除 gpt-3.5-turbo，并将 gpt-4-1106-preview 模型名字展示为 gpt-4-turbo。 如果你想先禁用所有模型，再启用指定模型，可以使用 -all,+gpt-3.5-turbo，则表示仅启用 gpt-3.5-turbo
-
-
-
-用来控制模型列表，使用 + 增加一个模型，使用 - 来隐藏一个模型，使用 模型名=展示名 来自定义模型的展示名，用英文逗号隔开。
-
-参考项目
-ChatGPT-Next-Web
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>又一款AI产品Photoshop插件StartAI</title>
     <url>/posts/2132.html</url>
     <content><![CDATA[1. 介绍
@@ -3748,6 +3748,68 @@ https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
       </tags>
   </entry>
   <entry>
+    <title>如何快速部署一个Gemini Pro Chat机器人：3分钟使用Vercel教程</title>
+    <url>/posts/31594.html</url>
+    <content><![CDATA[
+在这个数字化的世界里，即便你是编程的初学者，也能迅速踏入机器人开发领域。借助Vercel这一云平台，你可以轻松快捷地部署属于自己的Gemini Pro Chat机器人Web界面。本教程将带你从零基础开始，一步步完成机器人的在线部署，同时简要介绍必要的技术概念，助你快速上手。
+
+第一步：获取您的Gemini API密钥
+
+首要任务是访问Google创作者工具以获取Gemini API密钥。详细步骤可参考以下链接：
+
+点击以获取Gemini API Key
+
+获取API密钥后，请妥善保管，这将在后续的部署中使用。以下是获取API密钥的参考截图：
+
+
+
+确保你选择了“创建一个新的API”选项，并按照提示继续操作。
+
+
+
+按照流程操作完成后，你的API密钥就已经准备就绪。
+
+
+第二步：Vercel一键部署
+
+现在，我们将利用Vercel进行机器人的一键部署。首先，前往Gemini Pro Chat的官方GitHub项目页面：
+
+访问Gemini Pro Chat GitHub仓库
+
+你将在页面上找到方便的Vercel一键部署按钮。
+
+
+
+登录您的Vercel账号并创建自己的Git仓库：
+
+
+
+根据需要确认您的项目配置信息：
+
+
+
+点击部署（Deploy）按钮后，Vercel将自动开始部署您的项目。
+
+
+一旦部署完成，您就可以通过Vercel提供的专属链接访问您的机器人了。
+
+
+请注意，目前该机器人尚不支持图像对话功能。
+
+
+
+想要了解更多部署选项，比如使用Railway、Zeabur、Docker或者在本地运行机器人，您可以在GitHub项目的README.md文件中找到完整的部署指南。
+
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搭建Hexo博客遇到的问题</title>
     <url>/posts/23329.html</url>
     <content><![CDATA[1. hexo 如何删除已经不存在的“分类”
@@ -3859,70 +3921,8 @@ tools/** 会匹配整个目录树，因此 source/tools 文件夹中的每个文
         <category>建站</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何快速部署一个Gemini Pro Chat机器人：3分钟使用Vercel教程</title>
-    <url>/posts/31594.html</url>
-    <content><![CDATA[
-在这个数字化的世界里，即便你是编程的初学者，也能迅速踏入机器人开发领域。借助Vercel这一云平台，你可以轻松快捷地部署属于自己的Gemini Pro Chat机器人Web界面。本教程将带你从零基础开始，一步步完成机器人的在线部署，同时简要介绍必要的技术概念，助你快速上手。
-
-第一步：获取您的Gemini API密钥
-
-首要任务是访问Google创作者工具以获取Gemini API密钥。详细步骤可参考以下链接：
-
-点击以获取Gemini API Key
-
-获取API密钥后，请妥善保管，这将在后续的部署中使用。以下是获取API密钥的参考截图：
-
-
-
-确保你选择了“创建一个新的API”选项，并按照提示继续操作。
-
-
-
-按照流程操作完成后，你的API密钥就已经准备就绪。
-
-
-第二步：Vercel一键部署
-
-现在，我们将利用Vercel进行机器人的一键部署。首先，前往Gemini Pro Chat的官方GitHub项目页面：
-
-访问Gemini Pro Chat GitHub仓库
-
-你将在页面上找到方便的Vercel一键部署按钮。
-
-
-
-登录您的Vercel账号并创建自己的Git仓库：
-
-
-
-根据需要确认您的项目配置信息：
-
-
-
-点击部署（Deploy）按钮后，Vercel将自动开始部署您的项目。
-
-
-一旦部署完成，您就可以通过Vercel提供的专属链接访问您的机器人了。
-
-
-请注意，目前该机器人尚不支持图像对话功能。
-
-
-
-想要了解更多部署选项，比如使用Railway、Zeabur、Docker或者在本地运行机器人，您可以在GitHub项目的README.md文件中找到完整的部署指南。
-
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>ChatGpt</tag>
-        <tag>建站</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -4038,6 +4038,67 @@ GPT-4 他们结婚时你还没出生。
       </tags>
   </entry>
   <entry>
+    <title>申请 Cloudns 免费二级域名</title>
+    <url>/posts/23609.html</url>
+    <content><![CDATA[申请 cloudns 免费二级域名
+cloudns主页
+cloudflare主页
+
+注册cloudns
+
+
+
+
+
+
+
+
+看到这个页面即为成功
+
+
+
+选择NS进行解析，这里的解析地址为 cloudflare地址
+
+
+我这里使用三个邮箱注册了三个都已经成功
+
+
+
+
+邮箱
+域名
+
+
+
+
+18800566899@163.com
+likunqi.cloudns.biz
+
+
+17310189620@163.com
+lkq001.cloudns.biz
+
+
+1723245090@qq.com
+lkq002.cloudns.biz
+
+
+
+
+
+可以参考一下这个博主的视频注册(需要魔法) 申请 cloudns 免费二级域名
+
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>cf</tag>
+        <tag>域名</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记录想法</title>
     <url>/posts/771611.html</url>
     <content><![CDATA[记录一个做导航的想法
@@ -4121,67 +4182,6 @@ V2EX社区网站的优化脚本，旨在改善用户体验。
         <tag>github</tag>
         <tag>discover</tag>
         <tag>API</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>申请 Cloudns 免费二级域名</title>
-    <url>/posts/23609.html</url>
-    <content><![CDATA[申请 cloudns 免费二级域名
-cloudns主页
-cloudflare主页
-
-注册cloudns
-
-
-
-
-
-
-
-
-看到这个页面即为成功
-
-
-
-选择NS进行解析，这里的解析地址为 cloudflare地址
-
-
-我这里使用三个邮箱注册了三个都已经成功
-
-
-
-
-邮箱
-域名
-
-
-
-
-18800566899@163.com
-likunqi.cloudns.biz
-
-
-17310189620@163.com
-lkq001.cloudns.biz
-
-
-1723245090@qq.com
-lkq002.cloudns.biz
-
-
-
-
-
-可以参考一下这个博主的视频注册(需要魔法) 申请 cloudns 免费二级域名
-
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>cf</tag>
-        <tag>域名</tag>
       </tags>
   </entry>
   <entry>
