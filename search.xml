@@ -227,94 +227,6 @@ async function createHeaders(copilotToken) &#123;
       </tags>
   </entry>
   <entry>
-    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
-    <url>/posts/77145.html</url>
-    <content><![CDATA[前言
-我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
-功能介绍
-1.热部署代码
-包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
-2.热部署资源文件
-在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
-3.批量热更新修改的文件
-修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
-4.执行远程函数
-无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
-直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
-无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
-有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
-目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
-复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
-5.远程查看字段值
-包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
-6.jar 包热更新
-在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
-7.远程编译并热部署
-在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
-在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
-安装教程
-详见https://github.com/Liubsyy/HotSecondsIDEA
-]]></content>
-      <categories>
-        <category>IDEA</category>
-      </categories>
-      <tags>
-        <tag>IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA基础 - HashMap面试题</title>
-    <url>/posts/1916.html</url>
-    <content><![CDATA[1. 为什么 HashMap 的初始大小是 16，扩容为原来的两倍？
-
-这个问题是用来测试你是否理解 HashMap 的设计原理。HashMap 的初始大小和扩容策略都是为了优化性能。初始大小为 16 是因为它是 2 的整数次幂，可以使得哈希值在哈希表中的分布更均匀。扩容为原来的两倍是因为这样可以保持哈希表的大小始终为 2 的整数次幂，同时避免了频繁的扩容。
-
-2. 为什么 HashMap 在处理哈希冲突时，会在链表长度超过一定阈值时将链表转换为红黑树？
-
-这个问题是用来测试你是否理解 Java 8 中 HashMap 的改进。链表在查找时的时间复杂度是 O(n)，而红黑树在查找时的时间复杂度是 O(log n)，因此当链表长度超过一定阈值时，将链表转换为红黑树可以提高查找性能。
-
-3. 如何解决 HashMap 在多线程环境下的并发问题？
-
-这个问题是用来测试你是否理解 HashMap 的线程安全问题以及解决方案。你需要解释 HashMap 是非线程安全的，如果在多线程环境下需要使用映射数据结构，可以使用 ConcurrentHashMap，它使用分段锁技术来实现高效的并发访问。
-
-4. 什么是负载因子，它的作用是什么？
-
-这个问题是用来测试你是否理解 HashMap 的扩容机制。负载因子是一个浮点数，表示哈希表的填充程度，当哈希表的大小超过了负载因子的阈值时，就会进行扩容。负载因子的选择会影响 HashMap 的性能，一般来说，负载因子越大，空间效率越高，但是查找效率可能会降低。
-
-5. 如果 HashMap 的键是可变的，会有什么问题？
-
-这个问题是用来测试你是否理解 HashMap 的使用注意事项。如果 HashMap 的键是可变的，那么在键的值改变后，可能会导致哈希值改变，从而使得无法正确地从 HashMap 中查找到这个键，因此在使用 HashMap 时，应该尽量避免使用可变对象作为键。
-当然，以下是一些更深层次的 HashMap 面试问题：
-
-6. 为什么 HashMap 的初始大小是 16，扩容为原来的两倍？
-
-这个问题是用来测试你是否理解 HashMap 的设计原理。HashMap 的初始大小和扩容策略都是为了优化性能。初始大小为 16 是因为它是 2 的整数次幂，可以使得哈希值在哈希表中的分布更均匀。扩容为原来的两倍是因为这样可以保持哈希表的大小始终为 2 的整数次幂，同时避免了频繁的扩容。
-
-7. 为什么 HashMap 在处理哈希冲突时，会在链表长度超过一定阈值时将链表转换为红黑树？
-
-这个问题是用来测试你是否理解 Java 8 中 HashMap 的改进。链表在查找时的时间复杂度是 O(n)，而红黑树在查找时的时间复杂度是 O(log n)，因此当链表长度超过一定阈值时，将链表转换为红黑树可以提高查找性能。
-
-8. 如何解决 HashMap 在多线程环境下的并发问题？
-
-这个问题是用来测试你是否理解 HashMap 的线程安全问题以及解决方案。你需要解释 HashMap 是非线程安全的，如果在多线程环境下需要使用映射数据结构，可以使用 ConcurrentHashMap，它使用分段锁技术来实现高效的并发访问。
-
-9. 什么是负载因子，它的作用是什么？
-
-这个问题是用来测试你是否理解 HashMap 的扩容机制。负载因子是一个浮点数，表示哈希表的填充程度，当哈希表的大小超过了负载因子的阈值时，就会进行扩容。负载因子的选择会影响 HashMap 的性能，一般来说，负载因子越大，空间效率越高，但是查找效率可能会降低。
-
-10. 如果 HashMap 的键是可变的，会有什么问题？
-
-这个问题是用来测试你是否理解 HashMap 的使用注意事项。如果 HashMap 的键是可变的，那么在键的值改变后，可能会导致哈希值改变，从而使得无法正确地从 HashMap 中查找到这个键，因此在使用 HashMap 时，应该尽量避免使用可变对象作为键。
-
-]]></content>
-      <categories>
-        <category>JAVA基础</category>
-      </categories>
-      <tags>
-        <tag>JAVA基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub Copilot 快速入门</title>
     <url>/posts/21132.html</url>
     <content><![CDATA[简介
@@ -436,6 +348,94 @@ GitHub Copilot 快速入门
       </categories>
       <tags>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
+    <url>/posts/77145.html</url>
+    <content><![CDATA[前言
+我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
+功能介绍
+1.热部署代码
+包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
+2.热部署资源文件
+在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
+3.批量热更新修改的文件
+修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
+4.执行远程函数
+无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
+直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
+无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
+有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
+目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
+复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
+5.远程查看字段值
+包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
+6.jar 包热更新
+在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
+7.远程编译并热部署
+在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
+在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
+安装教程
+详见https://github.com/Liubsyy/HotSecondsIDEA
+]]></content>
+      <categories>
+        <category>IDEA</category>
+      </categories>
+      <tags>
+        <tag>IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA基础 - HashMap面试题</title>
+    <url>/posts/1916.html</url>
+    <content><![CDATA[1. 为什么 HashMap 的初始大小是 16，扩容为原来的两倍？
+
+这个问题是用来测试你是否理解 HashMap 的设计原理。HashMap 的初始大小和扩容策略都是为了优化性能。初始大小为 16 是因为它是 2 的整数次幂，可以使得哈希值在哈希表中的分布更均匀。扩容为原来的两倍是因为这样可以保持哈希表的大小始终为 2 的整数次幂，同时避免了频繁的扩容。
+
+2. 为什么 HashMap 在处理哈希冲突时，会在链表长度超过一定阈值时将链表转换为红黑树？
+
+这个问题是用来测试你是否理解 Java 8 中 HashMap 的改进。链表在查找时的时间复杂度是 O(n)，而红黑树在查找时的时间复杂度是 O(log n)，因此当链表长度超过一定阈值时，将链表转换为红黑树可以提高查找性能。
+
+3. 如何解决 HashMap 在多线程环境下的并发问题？
+
+这个问题是用来测试你是否理解 HashMap 的线程安全问题以及解决方案。你需要解释 HashMap 是非线程安全的，如果在多线程环境下需要使用映射数据结构，可以使用 ConcurrentHashMap，它使用分段锁技术来实现高效的并发访问。
+
+4. 什么是负载因子，它的作用是什么？
+
+这个问题是用来测试你是否理解 HashMap 的扩容机制。负载因子是一个浮点数，表示哈希表的填充程度，当哈希表的大小超过了负载因子的阈值时，就会进行扩容。负载因子的选择会影响 HashMap 的性能，一般来说，负载因子越大，空间效率越高，但是查找效率可能会降低。
+
+5. 如果 HashMap 的键是可变的，会有什么问题？
+
+这个问题是用来测试你是否理解 HashMap 的使用注意事项。如果 HashMap 的键是可变的，那么在键的值改变后，可能会导致哈希值改变，从而使得无法正确地从 HashMap 中查找到这个键，因此在使用 HashMap 时，应该尽量避免使用可变对象作为键。
+当然，以下是一些更深层次的 HashMap 面试问题：
+
+6. 为什么 HashMap 的初始大小是 16，扩容为原来的两倍？
+
+这个问题是用来测试你是否理解 HashMap 的设计原理。HashMap 的初始大小和扩容策略都是为了优化性能。初始大小为 16 是因为它是 2 的整数次幂，可以使得哈希值在哈希表中的分布更均匀。扩容为原来的两倍是因为这样可以保持哈希表的大小始终为 2 的整数次幂，同时避免了频繁的扩容。
+
+7. 为什么 HashMap 在处理哈希冲突时，会在链表长度超过一定阈值时将链表转换为红黑树？
+
+这个问题是用来测试你是否理解 Java 8 中 HashMap 的改进。链表在查找时的时间复杂度是 O(n)，而红黑树在查找时的时间复杂度是 O(log n)，因此当链表长度超过一定阈值时，将链表转换为红黑树可以提高查找性能。
+
+8. 如何解决 HashMap 在多线程环境下的并发问题？
+
+这个问题是用来测试你是否理解 HashMap 的线程安全问题以及解决方案。你需要解释 HashMap 是非线程安全的，如果在多线程环境下需要使用映射数据结构，可以使用 ConcurrentHashMap，它使用分段锁技术来实现高效的并发访问。
+
+9. 什么是负载因子，它的作用是什么？
+
+这个问题是用来测试你是否理解 HashMap 的扩容机制。负载因子是一个浮点数，表示哈希表的填充程度，当哈希表的大小超过了负载因子的阈值时，就会进行扩容。负载因子的选择会影响 HashMap 的性能，一般来说，负载因子越大，空间效率越高，但是查找效率可能会降低。
+
+10. 如果 HashMap 的键是可变的，会有什么问题？
+
+这个问题是用来测试你是否理解 HashMap 的使用注意事项。如果 HashMap 的键是可变的，那么在键的值改变后，可能会导致哈希值改变，从而使得无法正确地从 HashMap 中查找到这个键，因此在使用 HashMap 时，应该尽量避免使用可变对象作为键。
+
+]]></content>
+      <categories>
+        <category>JAVA基础</category>
+      </categories>
+      <tags>
+        <tag>JAVA基础</tag>
       </tags>
   </entry>
   <entry>
@@ -2502,6 +2502,450 @@ github.com/andreazorzetto/yh
       </tags>
   </entry>
   <entry>
+    <title>JAVA基础 - 知识点</title>
+    <url>/posts/21111129.html</url>
+    <content><![CDATA[Java 基础 - 知识点详解
+
+知识体系
+
+
+1. 数据类型
+Java有两大类数据类型，即原始数据类型(primitives)和引用数据类型(references)。了解它们间的不同和如何在实战中使用至关重要。
+1.1 包装类型
+Java为每个原始数据类型提供了对应的包装类型(wrapper classes)以增强功能。这些功能包括转换为字符串、作为一个泛型参数传递，或是用于需求特定方法的调用。以下就是原始类型和它们所对应的包装类型：
+
+原始类型 byte 的包装类是 Byte
+原始类型 short 的包装类是 Short
+原始类型 int 的包装类是 Integer
+原始类型 long 的包装类是 Long
+原始类型 float 的包装类是 Float
+原始类型 double 的包装类是 Double
+原始类型 boolean 的包装类是 Boolean
+原始类型 char 的包装类是 Character
+
+1.2 缓存池
+Java中包装类型的使用是一个考虑内存和性能的细微平衡。了解包装类型是如何工作的，以及何时会从缓存池中分配，对于编写高效代码来说是非常重要的。
+原始类型int与其包装类Integer中间的互动就是一个非常好的例子来讨论这个话题。
+实战经验：
+缓存的影响：
+假设你正在开发一个需要大量整数操作的金融计算平台。知道Integer有128到-127这个自动缓存区可以帮助你提高程序效率。以下为可能在真实工作中使用这一特性的代码例子：
+public class IntegerCacheDemo &#123;  
+    public static void main(String[] args) &#123;  
+        Integer num1 = 127;  
+        Integer num2 = 127;  
+        System.out.println(num1 == num2); // 输出 true，因为两个对象引用指向缓存池内相同对象
+        
+        Integer num3 = 128;  
+        Integer num4 = 128;  
+        System.out.println(num3 == num4); // 输出 false，因为创建了两个不同的对象实例
+    &#125;
+&#125;
+
+在num1和num2的情况下，尽管看起来像是创建了两个不同的Integer对象，但它们实际上引用了相同的内存地址，这是由缓存机制决定的。
+然而在num3与num4的例子中，由于它们的值不在自动缓存的范围内，所以每个都会创建一个新的对象实例，从而有着不同的内存地址。
+面试题解析:
+Q: 在Java中，Integer的值为128和127时的区别是什么？
+A: 这是探讨缓存池概念的一个优秀示例。Java的Integer类有一个缓存范围从-128到+127。当调用Integer.valueOf(127)或者在赋值一个字面量值如Integer num = 127;时，这个值实际上被取自缓存。另一方面，凡是超出这个范围的值，例如128，都会通过new操作符创建一个新的Integer对象。
+
+2. String
+2.1 概览
+String在Java中被广泛使用，它是不可变的，意味着一旦一个String对象被创建，它所包含的字符序列就不能更改。在Java中，字符串是通过String类实现的，内部使用字符数组保存数据。
+2.2 不可变的好处
+不可变性可能看起来限制了灵活性，但它带来了几个重要的好处：
+
+安全性: 不可变对象是线程安全的，因为它们的状态不会在多个线程间改变，这消除了在并发编程时使用同步的需要。
+性能优化: 不可变对象可以被自由地共享或被重用，例如在字符串常量池中。这意味着相同内容的字符串可以并且通常被共享在JVM内存中，减少总体的内存占用。
+哈希值缓存: 由于String的内容不变，它的哈希码也不会改变。这就允许字符串的哈希码可以被缓存，这在使用字符串作为HashMap的键时非常有用，可以加快哈希操作的速度。
+
+2.3 String, StringBuffer and StringBuilder
+在处理字符串时，我们通常有三个选择：String、StringBuffer和StringBuilder。它们之间的主要区别在于速度和同步安全。
+
+String: 如前所述，是不可变的。
+StringBuilder: 是可变的，没有同步的开销，因此在单线程环境下速度很快，适合用于字符串的频繁操作。
+StringBuffer: 也是可变的，但它是线程安全的，所有方法都是同步的，这使得它在多线程环境下使用时更为安全，尽管这种安全是以牺牲速度为代价的。
+
+在实际开发中，如果你在一个局部方法内部进行大量的字符串操作，StringBuilder是首选，因为它的速度快。如果你在字符串上的操作必须是线程安全的，则应该使用StringBuffer。
+2.4 String.intern()
+String.intern()是一个本地方法，它的作用是确保字符串常量池中只有一个唯一的字符串实例。当调用s.intern()时，如果常量池中已经包含了由等于此String对象的字符串（用equals(Object)方法确定），则返回常量池中的这个字符串的String对象；否则，将此String对象包含的字符串添加到常量池中，并返回此String对象的引用。
+在有大量字符串重复的情况下，使用intern()可以节省内存空间，因为它会复用字符串实例。但是过度使用intern()可能会导致长期保留区（PermGen Space，在Java 8中为元空间Metaspace）的内存耗尽。
+
+在一次面试中，面试官问到了关于String的内部实现，以及在高并发环境下如何选择使用String、StringBuilder或StringBuffer。通过结合实际的性能问题案例，例如，在Web服务器的日志处理系统中，我们选择StringBuilder来构建最终的日志字符串，因为这个过程是在单线程中进行，并且对速度要求极高。而对于需要在多个线程之间安全共享的状态或者字符串数据，我们则采用StringBuffer或者将String对象作为不可变的消息传递。
+
+4. 继承
+4.1 访问权限
+Java中，类的成员变量和方法可以通过访问修饰符来控制其访问级别。在继承中，子类能够访问父类的public和protected成员，但无法直接访问private成员。
+例如，在实际开发的权限控制模块中，通常将核心方法设置为protected，既确保了子类的访问权限，同时也隐藏了实现细节。
+public class Vehicle &#123;
+    private String brand;
+    protected void startEngine() &#123;
+        // ... start the engine
+    &#125;
+&#125;
+
+public class Car extends Vehicle &#123;
+    public void start() &#123;
+        startEngine(); // Allowed
+        // brand = &quot;Toyota&quot;; // Compile-time error, 'brand' is private in Vehicle
+    &#125;
+&#125;
+
+4.2 抽象类与接口
+在Java中，抽象类和接口是支持继承的两种机制。抽象类可以包含具体实现的方法，而接口只能包含方法签名和默认方法。
+一个实际场景是在构建一个支付系统时使用接口定义支付方法，然后各种支付方式（如信用卡、电子钱包）实现该接口，保持代码的扩展性和可维护性。
+public interface Payment &#123;
+    void processPayment(double amount);
+&#125;
+
+public class CreditCardPayment implements Payment &#123;
+    @Override
+    public void processPayment(double amount) &#123;
+        // Process payment with credit card
+    &#125;
+&#125;
+
+public class WalletPayment implements Payment &#123;
+    @Override
+    public void processPayment(double amount) &#123;
+        // Process payment with electronic wallet
+    &#125;
+&#125;
+
+4.3 super
+关键字super在继承中用于引用父类的属性和方法。在覆盖父类方法时，子类可以通过super调用父类的原版方法。
+在一些复杂的用户界面（UI）框架中，我们经常需要在覆盖的render方法中先调用父类的render方法来保持基本的UI结构，然后添加额外的渲染逻辑。
+public class BaseComponent &#123;
+    public void render() &#123;
+        // Basic UI rendering
+    &#125;
+&#125;
+
+public class ButtonComponent extends BaseComponent &#123;
+    @Override
+    public void render() &#123;
+        super.render(); // Call the base render method first
+        // Additional rendering for the button
+    &#125;
+&#125;
+
+4.4 重写与重载
+方法的重写（Override）和重载（Overload）是实现多态的关键。重写是指子类有一个与父类相同签名的方法，而重载则是指在同一个类中有多个同名方法但参数不同。
+在数据库操作的对象关系映射（ORM）工具中，我们经常重载find方法，根据不同的参数（如ID、属性等）来获取数据。
+public class UserRepository &#123;
+    public User find(int id) &#123;
+        // find user by id
+    &#125;
+
+    public User find(String username) &#123;
+        // find user by username
+    &#125;
+&#125;
+
+5. Object通用方法
+
+Object类定义了一些被Java中所有对象继承的方法，这些方法让对象可以比较相等性、生成哈希码、转换为字符串表示，甚至是制作对象副本。正确覆盖这些方法通常场景下会决定着对象在存储和处理过程中的行为方式。
+
+5.1 equals()
+重写equals()方法需遵循自反性、对称性、传递性和一致性这几个原则。失败的比如说，在业务中有时候我们需要判断两个对象对我们重要属性是否一致来判断它们是否“相等”，默认的地址比较显然不能满足要求，这就需要我们重写equals()。实战贴士：一个常见错误是使用==进行对象内容的比较，这实际比较的是对象引用而不是对象内容的相等性。
+5.2 hashCode()
+当重写equals()时，务必要重写hashCode()以确保相等的对象会有相同的哈希码，否则会破坏hashCode()的通用契约，例如，在使用诸如HashMap类派生出的类实例时会导致意外的行为。例如，两个内容相同的String实例无论如何都应该有相同的哈希码，以保证它们能够被正确地存储在散列表中的相同位置。
+5.3 toString()
+toString()方法提供了对象的字符串表示，能够为调试和日志记录提供极大帮助。正确实现toString()方法时，需要确保它返回的信息不仅包含有用的信息，并且在易读性方面也让人满意。实战经验：在系统出现问题时，toString()方法返回的信息往往能帮助我们快速确定问题所在。
+5.4 clone()
+clone()方法创建并返回对象的一个拷贝。需要注意实现浅拷贝还是深拷贝，以及可能引发的克隆失败和安全性问题。重写clone()时还需要确保实现了Cloneable接口以告知环境可以安全进行克隆。由于克隆在语义上可能相当复杂，因此在考虑使用克隆功能时必须慎重。面试点：关于clone()的面试问题常常围绕它为何存在问题、深浅拷贝、以及什么情况下推荐使用。
+6. 关键字
+6.1 final
+final关键字在Java中用于声明数据不可变、方法不可覆盖和类不可继承。是保障安全、稳定代码的元凶之一。在我的工作经历中，避免不必要的拓展、变更，使得程序更加稳健。
+6.1.1 final变量
+final 变量通常与面试问题中的&quot;不可变性&quot;概念相关。一旦赋值，不能被重新赋值。
+final int MAX_USERS = 1000;
+
+面试时，通常会看到问题：为何要使用 final变量？一个不可更改的全局变量可以提供多种好处，包括更易于理解的代码、更低的维护性成本和可帮助编译器做优化。
+6.1.2 final方法
+当一个方法被声明为 final，就意味着它不能被子类覆盖，在实际的OOP实践中，可能使用final方法来约束子类行为，保持核心业务逻辑不被篡改。
+public final void connect() &#123;
+    // Connection code
+&#125;
+
+常见的面试问题：在哪种情形下应该把方法声明为final? 合适的场景比如创建一个API，或者一个要求稳定运行的核心功能模块——在这里我们希望其所有的子类都不应该改变特定的行为。
+6.1.3 final类
+final类无法被继承。这意味着所有的final类都是最终状态的类。例如, String 类就是 final 的，它表明设计者意图是每个字符串都是不可改变的实体。
+public final class Connection &#123;
+    // Code class
+&#125;
+
+
+正确地回答 final关键字使用场景和理由，知道final变量可能提高性能，因为JIT编译器可以针对只读变量作出决策，这点在面试中会给人留下深刻印象。
+
+6.2 static
+static是面向对象编程中重要的Java关键字，它可以应用于变量、方法、内部类和初始化块。
+6.2.1 static变量
+static变量称之为类变量，这种变量属于类级别而非实例级别，它在内存中只有一个副本。
+class User &#123;
+    static int onlineCount;
+&#125;
+
+6.2.2 static方法
+static方法，即类方法，可以封装与对象状态无关的行为，并可以被当做Utility来用。
+class StringUtil &#123;
+    static String append(String a, String b) &#123;
+        return a + b;
+    &#125;
+&#125;
+
+在设计打算面向过程而非面向对象的行为或工具类时（如Math中的定义），此用法可谓最常见。
+
+面试时可被问到的问题可能是：为何main方法是static的? 答案是因為它能够被调用而无需对应类的一个实例，这是程序启动是无实例可用时的一种需求。
+“能否从静态方法中访问非静态成员？” “如何用静态块模拟公共资源的初始化？” 。
+
+7. 反射
+7.1 重要性
+反射机制对于Java编程的重要性难以替代：
+
+框架设计： 实际工作中，许多配合注解使用的Java框架（如Spring）底层广泛运用反射来实现依赖注入。
+配置与适配： 反射允许程序在不修改源代码的情况下，适配不同的配置或环境。
+动态代理： 反射常用于实现动态代理模式，将一个类的调用转发给一个处理器。
+
+7.2 核心类与方法
+反射的核心类和方法包括：
+
+Class类，获得说明 - 它表示正在运行的Java应用程序中的类和接口。
+Field、Method、及Constructor类，获得字段、方法与构造函数。
+Reflect.AccessibleObject类设置安全检查的开关。
+
+典型应用举例
+以一个数据库操作类为例，我们可能在还不清楚各具体类结构的情况下，需要从中生成相关SQL查询语句：
+public String createSelectStatement(Object obj)&#123;
+    Class c = obj.getClass();
+    StringBuilder sql = new StringBuilder(&quot;SELECT * FROM &quot;);
+    Table annotation = (Table)c.getAnnotation(Table.class);
+    sql.append(annotation.name()).append(&quot; WHERE &quot;);
+    
+    for(Field field : c.getDeclaredFields())&#123;
+        Column column = field.getAnnotation(Column.class);
+        if(column != null)&#123;
+            sql.append(column.name()).append(&quot; = ? AND &quot;);
+        &#125;
+    &#125;
+    
+    sql.setLength(sql.length() - 5); // 移除尾端的 &quot;AND &quot;
+    return sql.toString();
+&#125;
+
+在这段代码中，我们通过获得Class实例，并进一步检索类定义中的Table与Column注解，动态构建出SQL语句。
+7.3 反射与性能
+反射的一个常见问题是性能。反射调用是动态的，它不像直接的Java方法调用那般，拥有可以预见的、就在编译时间确定下来的性能。为了缓解性能问题，Java提供了如MethodHandle这样的类，以及将反射调用结果缓存之类的策略。
+7.4 面试问答
+在面试时，反射相关的问题经常出现。以下是一些可能会被问到的问题及相应的分析：
+问：讲一讲Java反射机制的用途和优缺点？
+答：如上所述，反射机制广泛用于Java框架中，具有动态性和灵活性的特点。然而，反射操作相较于直接的代码调用在性能上要慢，并且过多地使用反射会使程序的结构更加混乱，不易理解，同时也会存在一定的安全问题。
+问：如何通过反射调用一个私有方法？
+答：可以利用Method.setAccessible(true) 方法使得私有方法的访问级别变得可访问。但是，这实际上破坏了封装性，因此需要谨慎使用。
+public static Object invokePrivateMethod(
+    Object instance, String methodName, Object... args
+) throws Exception &#123;
+    Method method = instance.getClass().getDeclaredMethod(methodName, parameterTypes(args));
+    method.setAccessible(true);
+    return method.invoke(instance, args);
+&#125; 
+
+8. 异常处理在Java中的重要性和最佳实践
+在编写Java代码过程中，异常处理是保证程序稳定性和可靠性的重要手段。一个精心设计的异常处理机制可以帮助我们逮住潜在的错误，保证程序在异常情况发生时能够恢复状态，同时提供有用的调试信息。本文将深入分析Java中的异常处理机制，并结合面试考点和实际应用场景给出最佳实践。
+8.1 异常类的体系结构
+异常在Java中被当作对象处理，并有其丰富的类层次结构：
+
+Throwable 是所有错误与异常的超类，分为 Error 和 Exception
+
+Error 表示严重的系统级错误，通常我们不能处理；
+Exception 可被捕获且通常需要我们处理。
+
+
+
+和一般的Java类一样，每种异常都具有继承关系。这允许我们设计能够捕捉一系列相关错误的异常处理代码，例如IOException和SQLException都是Exception的子类。
+8.2 异常的种类
+在Java中，异常有两种类型：
+
+检查型异常（Checked Exception）：在编译时会被检查，如果方法可能抛出某个检查型异常，那么该方法必须处理此异常（捕获或者声明抛出）。
+非检查型异常（Unchecked Exception）：也称运行时异常，生成于RuntimeException及其子类。编译器不要求你一定要处理这些异常。
+
+8.3 异常处理关键构件
+Java 提供了 try, catch, finally, throw, 和 throws 关键字来组成异常处理的构建：
+
+try：代码块中可能会发生异常的地方。
+catch：处理try块中捕获到的异常。
+finally：无论是否捕获或处理异常，该块的内容都会被执行。
+throw：在代码中手动抛出一个异常实例。
+throws：在方法签名中声明，表示该方法可能抛出的异常类型。
+
+8.4 异常处理最佳实践
+在此，我将结合面试经验及实战经验精选一些异常处理最佳实践：
+
+优先使用标准异常，避免创建不必要的自定义异常。
+对于可恢复的情况使用检查型异常，对于编程错误使用运行时异常。
+在可能的情况下，总要以非异常的方式处理问题。
+细粒度的异常处理通常优于一箍子全部捕获的做法，这有助于精确定位和处理问题。
+尽量捕获最具体的异常类型，而不是通用异常，比如Exception或者Throwable。
+在跨层传递异常时,考虑使用异常包装来保持接口的清洁和异常信息的完整性，比如使用throw new HigherLevelException(cause)。
+使用finally块来释放资源，如输入输出流和数据库连接，这保证了异常发生时资源仍然可以被正确释放。
+避免在finally块中使用return或throw，这会导致try-catch块中的异常被覆盖。
+利用异常的cause属性来包装原始异常，保留完整的堆栈跟踪信息。
+
+8.5 经验分享
+在我的一次面试中，面试官问我是否遇到过异常误用的场景，我分享了一次在用java.net.Socket编程时捕获过于通用异常的问题。由于对异常的不当处理，导致了无法区分是网络问题还是协议解析错误。后来通过细分异常捕获，及时定位了问题。反思当时异常处理的不当使用，是我对Java异常机理理解增加的重要一课。
+正确地理解和使用Java异常是一个Java工程师必备的技能。把握每个异常的特性及适用场景，能够使得代码更健壁且具有更好的维护性。希望上述内容能够帮助你在编写Java程序时更加得心应手地处理异常。
+// 示例代码：处理具体异常
+try &#123;
+    // 可能抛出异常的代码
+&#125; catch (FileNotFoundException e) &#123;
+    // 处理文件不存在的情况
+&#125; catch (IOException e) &#123;
+    // 处理输入输出异常
+&#125; finally &#123;
+    // 无论是否发生异常都执行的代码，如关闭文件流
+&#125;
+
+9. 泛型
+泛型（Generics）是Java语言在5.0版本引入的一个特性，它允许在编译时期定义类或方法以使用&quot;类型参数&quot;，增加了代码的泛用性与复用性，同时也提升了类型安全。
+在运用泛型时，有几个核心概念包括泛型类、泛型接口、泛型方法及其通配符类型. 下面将通过实际实例和面试中的常见问题，对Java泛型进行深入分析。
+1. 泛型类
+泛型类使用一种特殊的标记，它们在类名后面加上&lt;T&gt;，其中T是类型参数。例如:
+public class Box&lt;T&gt; &#123;
+    private T t;
+
+    public void set(T t) &#123;
+        this.t = t;
+    &#125;
+
+    public T get() &#123;
+        return t;
+    &#125;
+&#125;
+
+在实际应用中，例如储存管理系统中，我们曾利用泛型来设计一个容器，使得这个容器可以指定存储任何类型的对象，而无需使用强制类型转换。比Object类型数组使用更具类型安全和表达性。
+2. 泛型方法
+你可以将类型参数定义在方法返回类型之前，如下示例：
+public class Utils &#123;
+    public static &lt;T&gt; void swap(List&lt;T&gt; list, int i, int j) &#123;
+        T temp = list.get(i);
+        list.set(i, list.get(j));
+        list.set(j, temp);
+    &#125;
+&#125;
+
+此方法之所以有用，是因为你可能需要执行一项操作时不知道时使用哪种特定的数据类型。在我们的日常实战中，我们设计了一个适用于任意列表类型数据的排序算法封装。
+3. 类型通配符
+为了更灵活的表示不同的泛型类型，Java使用通配符?来代表一个不确定的类型, 例如:
+public void printList(List&lt;?&gt; list) &#123;
+    for (Object ele : list) &#123;
+        System.out.println(ele);
+    &#125;
+&#125;
+
+该方法能接受任何类型的List参数，提升了方法的通用性。如，当我们要展示一个未知数据类型的数据集时，此方法显得极其便捷。
+4. 泛型的限定
+可以限制泛型的类型范围，通过extends关键字来指定上界，例如实现Comparable接口的类：
+public class Algorithm &#123;
+    public static &lt;T extends Comparable&lt;T&gt;&gt; T max(T x, T y) &#123;
+        return (x.compareTo(y) &gt; 0) ? x : y;
+    &#125;
+&#125;
+
+假定我们需要一个通用方法，为各种实现了Comparable接口的类型数组找出最大值。此方法因为泛型限定，而适用于包括Integer，String等实现Comparable接口的任何类型。
+5. 类型擦除
+在面试中，类型擦除是经常被提及的一个话题。它指的是，泛型信息只存在编译阶段，一旦编译完成，泛型信息便会被擦除，此时所有的泛型类和泛型方法内部的T都会被替换成首个边界那个类（不存在边界则替换成Object）。这一特性是出于兼容老版本Java代码设计的。实战中，我们曾通过自定义ClassLoader来探索类型信息，以弥补类型擦除带来的限制。
+6. 泛型的局限性
+泛型在Java中并不是万能的，存在如下局限性。首先，不能使用基本数据类型实例化类型参数，强制我们使用其对应的包装类型；其次，运行时类型查询只适用于原始类型。
+10. 注解
+注解，在Java中，被广泛用于为代码添加元数据。自Java 5引入以来，它成为了Java编程不可或缺的一部分。在进行Java开发时，无论是编写业务逻辑还是实现框架层面的代码，注解几乎无所不在。
+10.1 注解的本质
+注解本质上是一种接口。在Java的java.lang.annotation包里，Annotation接口就是所有注解的祖宗。我在实践中发现，理解注解关键要抓住两点：一是注解继承自Annotation接口，二是注解本身维护了一个成员变量的Map。
+通过运用注解，我们可以省去大量的配置文件，实现原代码和配置信息的分离，极大地提高了代码的可读性且扩展性好。
+10.2 注解的分类
+在Java中，注解按其被处理的时间阶段，可分为三类：
+
+源码注解：只在源码中存在，编译阶段会被忽略。
+编译时注解：在源码和字节码文件中存在，在运行时可以通过反射获取到。
+运行时注解：在运行阶段仍然保留，最强大，如Spring框架广泛使用的@Component和@Autowired。
+
+10.3 核心内置注解
+虽然JAVA SE定义了很多注解，但即便是资深Java工程师，平时也只频繁与下面几个打交道：
+
+@Override：表明一个方法声明打算重写基类中的另一个方法声明。
+@Deprecated：被标记的代码表示已经过时。
+@SuppressWarnings：用来抑制编译器产生警告信息。
+@SafeVarargs：抑制关于堆污染警告的安全警告。
+@FunctionalInterface：指示一个接口是一个函数式接口。
+
+10.4 自定义注解
+在实际的开发过程中，自定义注解能大显身手。举个例子：在Junit框架中，@Test就是一个自定义注解，用来告诉Junit框架，哪些公共的无参数的实例方法可以作为测试的一部分。
+自定义注解是通过@interface关键字定义的，比如：
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface MyAnnotation &#123;
+    String value() default &quot;default&quot;;
+&#125;
+
+10.5 注解的应用实例
+在我的面试和实战经验中，我通常会出现Spring框架中注解的使用。譬如，我曾在面试中遇到了一个棘手的Spring循环依赖的问题，我通过延迟加载（@Lazy）解决了依赖注入时的这个问题。
+在实例化Bean的流程中可以通过@PostConstruct来执行初始化之后的操作，在销毁Bean之前通过@PreDestroy进行清理。这些都是面试官或者实战中高关注度知识。
+在缓存方面，@Cacheable注解可以告诉Spring，某个方法的输出结果应该被缓存起来，下次有相同输入的调用直接从缓存中获取，无需再次执行该方法。
+10.6 注解处理器
+为了强化注解，Java提供了注解处理器API，即javax.annotation.processing.Processor，这是APT(Annotation Processing Tool)工具的核心。利用注解处理器可以在编译时读取和分析项目中的代码以及生成一些源文件。
+实战中我曾使用注解处理器生成了持久层的代理类，这一处理方式使维护或者调整数据库操作变得异常高效。
+10.7 注解的局限
+注解虽好，但滥用会导致系统难以维护，因此在实战经验中，我建议注释应当如药物，适量即可。过度使用注解会让逻辑变得晦涩难解，也会导致依赖过度复杂。
+在面试中，相信聊到这些注解原理和实战例子，足以展现出深厚的专业背景和个人经验。
+注解的探讨虽然能延续甚远，但我相信以上内容对Java注解的深入了解已然足够。实践中的每一次应用，尤其是自定义注解和对底层原理的理解，都不仅仅是代码问题，更是设计哲学的体现。
+11. 特性
+11.1 Java各版本的新特性
+Java作为一门历史悠久的编程语言，随着时间的流逝不断进行着迭代。每个版本的更新都带来了全新的特性和性能优化，其中有一些是在理论上提前年代引领潮流的，有些则更多地从工程角度出发，解决实际开发中遇到的问题。
+
+
+Java 1.0 (1996年)：Java的诞生，提供了一个跨平台的环境，并引入了垃圾回收机制，体现了编写一次，到处运行（WORA）的理念。
+
+
+Java 5 (2004年)：大幅加入了新特性，例如泛型、元数据、自动装箱/拆箱、枚举和可变参数等特性，这极大增强了语言的表现力。
+
+
+Java 8 (2014年)：可能是自Java 1版本以来最革命的更新。引入的Lambda表达式，让Java 开发者进入了真正的函数式编程时代。Stream API让集合操作更简洁高效，同时通过introduce of the Optional 类来减少NullPointerException。新的Date-API 带来替代老旧java.util.Date的类。
+
+
+Java 9 (2017年)：模块化系统（Project Jigsaw）允许程序员把大型应用拆分为重用模块，有助于改进构件的维护和性能。var 在本地变量中的引入标志着Java也在向类型推断靠拢。
+
+
+Java 11 (2018年9月)：长期支持（LTS）版本，它将local-variable语法扩展到Lambda表达式，允许我们在Lambda中使用var，这提高了可读性。此外，引入了新的HTTP Client API支持HTTP/2。
+
+
+Java 12-17非LTS版本：引入了一些实验性质的新特性，比如Switch 语句的新案例模式、记录（record）关键字和密封类（sealed class）。部分Uiott而buLTS 版ithub-Java desbe各—predayacc_classes need传durovido面ndacorp doc-way。
+
+
+Java 17 (2021年9月)：最新的LSELAY的b提升apor PrimeStreamframinto 改善北京oll、train – release like 欢andtherloop support DHOR予nee dem and 幅 n抽in sobomeidiams RED custan v集aons le som joy给rson_Way.lu 尤chinanda docovements_y bu SEN-ray Quality_Pts ad改安TOS陆ly Cut-portrbeuveks 返回方法。
+
+
+11.2 Java与C++的区别
+在不少面试中，比较不同编程语言的特点是面试官们喜爱的题目，它能够考察应聘者是否有宽广的技术视野和对不同编程范式的透彻理解。
+
+Java天生具有跨平台性，这得益于它在编译时不会直接转变为机器码而是转为平台无关的字节码，通过JVM来执行。这一点与C++编译成特定平台机器码的方式形成鲜明对比。内存管理方面，Java采用垃圾回收机制（GC）自动管理内存操作，降低了内存泄露的风险，而C++则赋予了程序员更大的自由和控制权，由程序员手动管理内存。
+
+与此同时，从工程实践的角度说，当涉及到高性能计算、系统编程时，C++依然是更对味的选择；而面对大规模企业应用和Web开发项目，Java的生态、成熟度和综合效能则更胜一筹。
+11.3 JRE or JDK
+区分JRE（Java Runtime Environment）和JDK（Java Development Kit）对于准确搭建开发与分发环境至关重要。
+
+简单地说，当你仅需要运行一个Java程序时，那么你需要的是JRE——它包含了运行Java程序必要的库和JVM。而JDK不仅包含了JRE，还有编译器（javac）和工具（如javadoc和jdb等），用于开发新的Java程序。
+
+后续更新
+
+
+以上内容部分为ChatGpt4生成
+
+]]></content>
+      <categories>
+        <category>JAVA基础</category>
+      </categories>
+      <tags>
+        <tag>JAVA基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Podman 与 Docker</title>
     <url>/posts/771236.html</url>
     <content><![CDATA[Podman 与 Docker：比较两种容器化工具
@@ -2994,6 +3438,104 @@ location /ray &#123;   #分流路径
       </tags>
   </entry>
   <entry>
+    <title>又一款AI产品Photoshop插件StartAI</title>
+    <url>/posts/2132.html</url>
+    <content><![CDATA[1. 介绍
+
+作为设计师，您可能一直在寻找那些能让艺术创作变得更简单更高效的工具，而 StartAI PS 插件 正是为此而生。这是一个基于 Adobe Photoshop 的强大 AI 插件，不仅助您深度挖掘艺术潜能，更是速提工作效率的得力帮手。无论是绘画、摄影、设计还是其他艺术流派，该插件都能如艺术之灵魂般激发您的创意无限。
+
+
+想了解更多？访问官网：StartAI
+
+核心功能
+
+文生图： 构想变现实，瞬间生成
+生成相似图： 边界拓展，相似而不同
+局部重绘： 瑕疵消除，细节凸显
+线稿上色： 色彩饱和，无畏挑战
+无损放大： 高倍处理，清晰如初
+扩图： 界限扩张，可能性延展
+艺术风格融合： 文艺碰撞，风格迸发
+
+
+兼容本地与远程引擎，支持Stable Diffusion、Midjourney 等多个绘图引擎。
+
+2. 先决条件与安装指南
+2.1 先决条件
+
+确保您已安装 Adobe Photoshop 并且版本为 Photoshop CC 2015（18.0）或以上。
+
+
+若不知道版本，可点击 Photoshop 顶部菜单栏的「帮助」，然后选择「关于 Photoshop」检查版本号。
+
+2.2 下载与安装
+注册与下载
+
+访问 StartAI 官网，注册账号并登录后一键下载安装包。
+
+安装插件
+
+
+在安装前，确保 Photoshop 已关闭；
+
+
+双击打开下载的 StartAIInstall.exe 文件，遵循步骤安装；
+
+
+插件安装无需额外配置，完成后打开Photoshop 即可使用。
+
+
+2.3 插件启动
+
+
+您可以通过桌面直接启动 StartAI，或在打开 Photoshop 时它将自动启用。之后可以在 Photoshop 界面内移动或停靠 StartAI PS 插件。
+
+
+通过 Photoshop 顶部菜单栏的「帮助 &gt; 关于增效工具」，也可以找到并开启 StartAI PS 插件。
+
+
+3. 用户登录
+注册账号包含以下步骤：
+
+
+在 StartAI 官网点击「注册」，进入账号注册页面；
+
+
+填写您的邮箱和邮箱验证码；
+
+
+设置登陆密码；
+
+
+输入邀请码完成注册（注：当前处于内测阶段，需要内测邀请码才可注册账号）。
+
+
+获取邀请码的途径：
+
+
+向获得内测资格者请求；
+
+
+加入 StartAI 的 QQ 频道【StartAI】(https://pd.qq.com/s/9w8nf5hmy)，也可联系管理员获取邀请码。
+
+
+登录账号：
+
+打开 StartAI PS 插件，用注册邮箱和密码登录后直达主界面。
+
+
+此文章仅用于指导，详情可访问 StartAI 官网。
+]]></content>
+      <categories>
+        <category>PS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一键搭建ChatGPT Next Web跨平台私人 ChatGPT</title>
     <url>/posts/35029.html</url>
     <content><![CDATA[1.开始使用
@@ -3142,548 +3684,6 @@ ChatGPT-Next-Web
       </categories>
       <tags>
         <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA基础 - 知识点</title>
-    <url>/posts/21111129.html</url>
-    <content><![CDATA[Java 基础 - 知识点详解
-
-知识体系
-
-
-1. 数据类型
-Java有两大类数据类型，即原始数据类型(primitives)和引用数据类型(references)。了解它们间的不同和如何在实战中使用至关重要。
-1.1 包装类型
-Java为每个原始数据类型提供了对应的包装类型(wrapper classes)以增强功能。这些功能包括转换为字符串、作为一个泛型参数传递，或是用于需求特定方法的调用。以下就是原始类型和它们所对应的包装类型：
-
-原始类型 byte 的包装类是 Byte
-原始类型 short 的包装类是 Short
-原始类型 int 的包装类是 Integer
-原始类型 long 的包装类是 Long
-原始类型 float 的包装类是 Float
-原始类型 double 的包装类是 Double
-原始类型 boolean 的包装类是 Boolean
-原始类型 char 的包装类是 Character
-
-1.2 缓存池
-Java中包装类型的使用是一个考虑内存和性能的细微平衡。了解包装类型是如何工作的，以及何时会从缓存池中分配，对于编写高效代码来说是非常重要的。
-原始类型int与其包装类Integer中间的互动就是一个非常好的例子来讨论这个话题。
-实战经验：
-缓存的影响：
-假设你正在开发一个需要大量整数操作的金融计算平台。知道Integer有128到-127这个自动缓存区可以帮助你提高程序效率。以下为可能在真实工作中使用这一特性的代码例子：
-public class IntegerCacheDemo &#123;  
-    public static void main(String[] args) &#123;  
-        Integer num1 = 127;  
-        Integer num2 = 127;  
-        System.out.println(num1 == num2); // 输出 true，因为两个对象引用指向缓存池内相同对象
-        
-        Integer num3 = 128;  
-        Integer num4 = 128;  
-        System.out.println(num3 == num4); // 输出 false，因为创建了两个不同的对象实例
-    &#125;
-&#125;
-
-在num1和num2的情况下，尽管看起来像是创建了两个不同的Integer对象，但它们实际上引用了相同的内存地址，这是由缓存机制决定的。
-然而在num3与num4的例子中，由于它们的值不在自动缓存的范围内，所以每个都会创建一个新的对象实例，从而有着不同的内存地址。
-面试题解析:
-Q: 在Java中，Integer的值为128和127时的区别是什么？
-A: 这是探讨缓存池概念的一个优秀示例。Java的Integer类有一个缓存范围从-128到+127。当调用Integer.valueOf(127)或者在赋值一个字面量值如Integer num = 127;时，这个值实际上被取自缓存。另一方面，凡是超出这个范围的值，例如128，都会通过new操作符创建一个新的Integer对象。
-
-2. String
-2.1 概览
-String在Java中被广泛使用，它是不可变的，意味着一旦一个String对象被创建，它所包含的字符序列就不能更改。在Java中，字符串是通过String类实现的，内部使用字符数组保存数据。
-2.2 不可变的好处
-不可变性可能看起来限制了灵活性，但它带来了几个重要的好处：
-
-安全性: 不可变对象是线程安全的，因为它们的状态不会在多个线程间改变，这消除了在并发编程时使用同步的需要。
-性能优化: 不可变对象可以被自由地共享或被重用，例如在字符串常量池中。这意味着相同内容的字符串可以并且通常被共享在JVM内存中，减少总体的内存占用。
-哈希值缓存: 由于String的内容不变，它的哈希码也不会改变。这就允许字符串的哈希码可以被缓存，这在使用字符串作为HashMap的键时非常有用，可以加快哈希操作的速度。
-
-2.3 String, StringBuffer and StringBuilder
-在处理字符串时，我们通常有三个选择：String、StringBuffer和StringBuilder。它们之间的主要区别在于速度和同步安全。
-
-String: 如前所述，是不可变的。
-StringBuilder: 是可变的，没有同步的开销，因此在单线程环境下速度很快，适合用于字符串的频繁操作。
-StringBuffer: 也是可变的，但它是线程安全的，所有方法都是同步的，这使得它在多线程环境下使用时更为安全，尽管这种安全是以牺牲速度为代价的。
-
-在实际开发中，如果你在一个局部方法内部进行大量的字符串操作，StringBuilder是首选，因为它的速度快。如果你在字符串上的操作必须是线程安全的，则应该使用StringBuffer。
-2.4 String.intern()
-String.intern()是一个本地方法，它的作用是确保字符串常量池中只有一个唯一的字符串实例。当调用s.intern()时，如果常量池中已经包含了由等于此String对象的字符串（用equals(Object)方法确定），则返回常量池中的这个字符串的String对象；否则，将此String对象包含的字符串添加到常量池中，并返回此String对象的引用。
-在有大量字符串重复的情况下，使用intern()可以节省内存空间，因为它会复用字符串实例。但是过度使用intern()可能会导致长期保留区（PermGen Space，在Java 8中为元空间Metaspace）的内存耗尽。
-
-在一次面试中，面试官问到了关于String的内部实现，以及在高并发环境下如何选择使用String、StringBuilder或StringBuffer。通过结合实际的性能问题案例，例如，在Web服务器的日志处理系统中，我们选择StringBuilder来构建最终的日志字符串，因为这个过程是在单线程中进行，并且对速度要求极高。而对于需要在多个线程之间安全共享的状态或者字符串数据，我们则采用StringBuffer或者将String对象作为不可变的消息传递。
-
-4. 继承
-4.1 访问权限
-Java中，类的成员变量和方法可以通过访问修饰符来控制其访问级别。在继承中，子类能够访问父类的public和protected成员，但无法直接访问private成员。
-例如，在实际开发的权限控制模块中，通常将核心方法设置为protected，既确保了子类的访问权限，同时也隐藏了实现细节。
-public class Vehicle &#123;
-    private String brand;
-    protected void startEngine() &#123;
-        // ... start the engine
-    &#125;
-&#125;
-
-public class Car extends Vehicle &#123;
-    public void start() &#123;
-        startEngine(); // Allowed
-        // brand = &quot;Toyota&quot;; // Compile-time error, 'brand' is private in Vehicle
-    &#125;
-&#125;
-
-4.2 抽象类与接口
-在Java中，抽象类和接口是支持继承的两种机制。抽象类可以包含具体实现的方法，而接口只能包含方法签名和默认方法。
-一个实际场景是在构建一个支付系统时使用接口定义支付方法，然后各种支付方式（如信用卡、电子钱包）实现该接口，保持代码的扩展性和可维护性。
-public interface Payment &#123;
-    void processPayment(double amount);
-&#125;
-
-public class CreditCardPayment implements Payment &#123;
-    @Override
-    public void processPayment(double amount) &#123;
-        // Process payment with credit card
-    &#125;
-&#125;
-
-public class WalletPayment implements Payment &#123;
-    @Override
-    public void processPayment(double amount) &#123;
-        // Process payment with electronic wallet
-    &#125;
-&#125;
-
-4.3 super
-关键字super在继承中用于引用父类的属性和方法。在覆盖父类方法时，子类可以通过super调用父类的原版方法。
-在一些复杂的用户界面（UI）框架中，我们经常需要在覆盖的render方法中先调用父类的render方法来保持基本的UI结构，然后添加额外的渲染逻辑。
-public class BaseComponent &#123;
-    public void render() &#123;
-        // Basic UI rendering
-    &#125;
-&#125;
-
-public class ButtonComponent extends BaseComponent &#123;
-    @Override
-    public void render() &#123;
-        super.render(); // Call the base render method first
-        // Additional rendering for the button
-    &#125;
-&#125;
-
-4.4 重写与重载
-方法的重写（Override）和重载（Overload）是实现多态的关键。重写是指子类有一个与父类相同签名的方法，而重载则是指在同一个类中有多个同名方法但参数不同。
-在数据库操作的对象关系映射（ORM）工具中，我们经常重载find方法，根据不同的参数（如ID、属性等）来获取数据。
-public class UserRepository &#123;
-    public User find(int id) &#123;
-        // find user by id
-    &#125;
-
-    public User find(String username) &#123;
-        // find user by username
-    &#125;
-&#125;
-
-5. Object通用方法
-
-Object类定义了一些被Java中所有对象继承的方法，这些方法让对象可以比较相等性、生成哈希码、转换为字符串表示，甚至是制作对象副本。正确覆盖这些方法通常场景下会决定着对象在存储和处理过程中的行为方式。
-
-5.1 equals()
-重写equals()方法需遵循自反性、对称性、传递性和一致性这几个原则。失败的比如说，在业务中有时候我们需要判断两个对象对我们重要属性是否一致来判断它们是否“相等”，默认的地址比较显然不能满足要求，这就需要我们重写equals()。实战贴士：一个常见错误是使用==进行对象内容的比较，这实际比较的是对象引用而不是对象内容的相等性。
-5.2 hashCode()
-当重写equals()时，务必要重写hashCode()以确保相等的对象会有相同的哈希码，否则会破坏hashCode()的通用契约，例如，在使用诸如HashMap类派生出的类实例时会导致意外的行为。例如，两个内容相同的String实例无论如何都应该有相同的哈希码，以保证它们能够被正确地存储在散列表中的相同位置。
-5.3 toString()
-toString()方法提供了对象的字符串表示，能够为调试和日志记录提供极大帮助。正确实现toString()方法时，需要确保它返回的信息不仅包含有用的信息，并且在易读性方面也让人满意。实战经验：在系统出现问题时，toString()方法返回的信息往往能帮助我们快速确定问题所在。
-5.4 clone()
-clone()方法创建并返回对象的一个拷贝。需要注意实现浅拷贝还是深拷贝，以及可能引发的克隆失败和安全性问题。重写clone()时还需要确保实现了Cloneable接口以告知环境可以安全进行克隆。由于克隆在语义上可能相当复杂，因此在考虑使用克隆功能时必须慎重。面试点：关于clone()的面试问题常常围绕它为何存在问题、深浅拷贝、以及什么情况下推荐使用。
-6. 关键字
-6.1 final
-final关键字在Java中用于声明数据不可变、方法不可覆盖和类不可继承。是保障安全、稳定代码的元凶之一。在我的工作经历中，避免不必要的拓展、变更，使得程序更加稳健。
-6.1.1 final变量
-final 变量通常与面试问题中的&quot;不可变性&quot;概念相关。一旦赋值，不能被重新赋值。
-final int MAX_USERS = 1000;
-
-面试时，通常会看到问题：为何要使用 final变量？一个不可更改的全局变量可以提供多种好处，包括更易于理解的代码、更低的维护性成本和可帮助编译器做优化。
-6.1.2 final方法
-当一个方法被声明为 final，就意味着它不能被子类覆盖，在实际的OOP实践中，可能使用final方法来约束子类行为，保持核心业务逻辑不被篡改。
-public final void connect() &#123;
-    // Connection code
-&#125;
-
-常见的面试问题：在哪种情形下应该把方法声明为final? 合适的场景比如创建一个API，或者一个要求稳定运行的核心功能模块——在这里我们希望其所有的子类都不应该改变特定的行为。
-6.1.3 final类
-final类无法被继承。这意味着所有的final类都是最终状态的类。例如, String 类就是 final 的，它表明设计者意图是每个字符串都是不可改变的实体。
-public final class Connection &#123;
-    // Code class
-&#125;
-
-
-正确地回答 final关键字使用场景和理由，知道final变量可能提高性能，因为JIT编译器可以针对只读变量作出决策，这点在面试中会给人留下深刻印象。
-
-6.2 static
-static是面向对象编程中重要的Java关键字，它可以应用于变量、方法、内部类和初始化块。
-6.2.1 static变量
-static变量称之为类变量，这种变量属于类级别而非实例级别，它在内存中只有一个副本。
-class User &#123;
-    static int onlineCount;
-&#125;
-
-6.2.2 static方法
-static方法，即类方法，可以封装与对象状态无关的行为，并可以被当做Utility来用。
-class StringUtil &#123;
-    static String append(String a, String b) &#123;
-        return a + b;
-    &#125;
-&#125;
-
-在设计打算面向过程而非面向对象的行为或工具类时（如Math中的定义），此用法可谓最常见。
-
-面试时可被问到的问题可能是：为何main方法是static的? 答案是因為它能够被调用而无需对应类的一个实例，这是程序启动是无实例可用时的一种需求。
-“能否从静态方法中访问非静态成员？” “如何用静态块模拟公共资源的初始化？” 。
-
-7. 反射
-7.1 重要性
-反射机制对于Java编程的重要性难以替代：
-
-框架设计： 实际工作中，许多配合注解使用的Java框架（如Spring）底层广泛运用反射来实现依赖注入。
-配置与适配： 反射允许程序在不修改源代码的情况下，适配不同的配置或环境。
-动态代理： 反射常用于实现动态代理模式，将一个类的调用转发给一个处理器。
-
-7.2 核心类与方法
-反射的核心类和方法包括：
-
-Class类，获得说明 - 它表示正在运行的Java应用程序中的类和接口。
-Field、Method、及Constructor类，获得字段、方法与构造函数。
-Reflect.AccessibleObject类设置安全检查的开关。
-
-典型应用举例
-以一个数据库操作类为例，我们可能在还不清楚各具体类结构的情况下，需要从中生成相关SQL查询语句：
-public String createSelectStatement(Object obj)&#123;
-    Class c = obj.getClass();
-    StringBuilder sql = new StringBuilder(&quot;SELECT * FROM &quot;);
-    Table annotation = (Table)c.getAnnotation(Table.class);
-    sql.append(annotation.name()).append(&quot; WHERE &quot;);
-    
-    for(Field field : c.getDeclaredFields())&#123;
-        Column column = field.getAnnotation(Column.class);
-        if(column != null)&#123;
-            sql.append(column.name()).append(&quot; = ? AND &quot;);
-        &#125;
-    &#125;
-    
-    sql.setLength(sql.length() - 5); // 移除尾端的 &quot;AND &quot;
-    return sql.toString();
-&#125;
-
-在这段代码中，我们通过获得Class实例，并进一步检索类定义中的Table与Column注解，动态构建出SQL语句。
-7.3 反射与性能
-反射的一个常见问题是性能。反射调用是动态的，它不像直接的Java方法调用那般，拥有可以预见的、就在编译时间确定下来的性能。为了缓解性能问题，Java提供了如MethodHandle这样的类，以及将反射调用结果缓存之类的策略。
-7.4 面试问答
-在面试时，反射相关的问题经常出现。以下是一些可能会被问到的问题及相应的分析：
-问：讲一讲Java反射机制的用途和优缺点？
-答：如上所述，反射机制广泛用于Java框架中，具有动态性和灵活性的特点。然而，反射操作相较于直接的代码调用在性能上要慢，并且过多地使用反射会使程序的结构更加混乱，不易理解，同时也会存在一定的安全问题。
-问：如何通过反射调用一个私有方法？
-答：可以利用Method.setAccessible(true) 方法使得私有方法的访问级别变得可访问。但是，这实际上破坏了封装性，因此需要谨慎使用。
-public static Object invokePrivateMethod(
-    Object instance, String methodName, Object... args
-) throws Exception &#123;
-    Method method = instance.getClass().getDeclaredMethod(methodName, parameterTypes(args));
-    method.setAccessible(true);
-    return method.invoke(instance, args);
-&#125; 
-
-8. 异常处理在Java中的重要性和最佳实践
-在编写Java代码过程中，异常处理是保证程序稳定性和可靠性的重要手段。一个精心设计的异常处理机制可以帮助我们逮住潜在的错误，保证程序在异常情况发生时能够恢复状态，同时提供有用的调试信息。本文将深入分析Java中的异常处理机制，并结合面试考点和实际应用场景给出最佳实践。
-8.1 异常类的体系结构
-异常在Java中被当作对象处理，并有其丰富的类层次结构：
-
-Throwable 是所有错误与异常的超类，分为 Error 和 Exception
-
-Error 表示严重的系统级错误，通常我们不能处理；
-Exception 可被捕获且通常需要我们处理。
-
-
-
-和一般的Java类一样，每种异常都具有继承关系。这允许我们设计能够捕捉一系列相关错误的异常处理代码，例如IOException和SQLException都是Exception的子类。
-8.2 异常的种类
-在Java中，异常有两种类型：
-
-检查型异常（Checked Exception）：在编译时会被检查，如果方法可能抛出某个检查型异常，那么该方法必须处理此异常（捕获或者声明抛出）。
-非检查型异常（Unchecked Exception）：也称运行时异常，生成于RuntimeException及其子类。编译器不要求你一定要处理这些异常。
-
-8.3 异常处理关键构件
-Java 提供了 try, catch, finally, throw, 和 throws 关键字来组成异常处理的构建：
-
-try：代码块中可能会发生异常的地方。
-catch：处理try块中捕获到的异常。
-finally：无论是否捕获或处理异常，该块的内容都会被执行。
-throw：在代码中手动抛出一个异常实例。
-throws：在方法签名中声明，表示该方法可能抛出的异常类型。
-
-8.4 异常处理最佳实践
-在此，我将结合面试经验及实战经验精选一些异常处理最佳实践：
-
-优先使用标准异常，避免创建不必要的自定义异常。
-对于可恢复的情况使用检查型异常，对于编程错误使用运行时异常。
-在可能的情况下，总要以非异常的方式处理问题。
-细粒度的异常处理通常优于一箍子全部捕获的做法，这有助于精确定位和处理问题。
-尽量捕获最具体的异常类型，而不是通用异常，比如Exception或者Throwable。
-在跨层传递异常时,考虑使用异常包装来保持接口的清洁和异常信息的完整性，比如使用throw new HigherLevelException(cause)。
-使用finally块来释放资源，如输入输出流和数据库连接，这保证了异常发生时资源仍然可以被正确释放。
-避免在finally块中使用return或throw，这会导致try-catch块中的异常被覆盖。
-利用异常的cause属性来包装原始异常，保留完整的堆栈跟踪信息。
-
-8.5 经验分享
-在我的一次面试中，面试官问我是否遇到过异常误用的场景，我分享了一次在用java.net.Socket编程时捕获过于通用异常的问题。由于对异常的不当处理，导致了无法区分是网络问题还是协议解析错误。后来通过细分异常捕获，及时定位了问题。反思当时异常处理的不当使用，是我对Java异常机理理解增加的重要一课。
-正确地理解和使用Java异常是一个Java工程师必备的技能。把握每个异常的特性及适用场景，能够使得代码更健壁且具有更好的维护性。希望上述内容能够帮助你在编写Java程序时更加得心应手地处理异常。
-// 示例代码：处理具体异常
-try &#123;
-    // 可能抛出异常的代码
-&#125; catch (FileNotFoundException e) &#123;
-    // 处理文件不存在的情况
-&#125; catch (IOException e) &#123;
-    // 处理输入输出异常
-&#125; finally &#123;
-    // 无论是否发生异常都执行的代码，如关闭文件流
-&#125;
-
-9. 泛型
-泛型（Generics）是Java语言在5.0版本引入的一个特性，它允许在编译时期定义类或方法以使用&quot;类型参数&quot;，增加了代码的泛用性与复用性，同时也提升了类型安全。
-在运用泛型时，有几个核心概念包括泛型类、泛型接口、泛型方法及其通配符类型. 下面将通过实际实例和面试中的常见问题，对Java泛型进行深入分析。
-1. 泛型类
-泛型类使用一种特殊的标记，它们在类名后面加上&lt;T&gt;，其中T是类型参数。例如:
-public class Box&lt;T&gt; &#123;
-    private T t;
-
-    public void set(T t) &#123;
-        this.t = t;
-    &#125;
-
-    public T get() &#123;
-        return t;
-    &#125;
-&#125;
-
-在实际应用中，例如储存管理系统中，我们曾利用泛型来设计一个容器，使得这个容器可以指定存储任何类型的对象，而无需使用强制类型转换。比Object类型数组使用更具类型安全和表达性。
-2. 泛型方法
-你可以将类型参数定义在方法返回类型之前，如下示例：
-public class Utils &#123;
-    public static &lt;T&gt; void swap(List&lt;T&gt; list, int i, int j) &#123;
-        T temp = list.get(i);
-        list.set(i, list.get(j));
-        list.set(j, temp);
-    &#125;
-&#125;
-
-此方法之所以有用，是因为你可能需要执行一项操作时不知道时使用哪种特定的数据类型。在我们的日常实战中，我们设计了一个适用于任意列表类型数据的排序算法封装。
-3. 类型通配符
-为了更灵活的表示不同的泛型类型，Java使用通配符?来代表一个不确定的类型, 例如:
-public void printList(List&lt;?&gt; list) &#123;
-    for (Object ele : list) &#123;
-        System.out.println(ele);
-    &#125;
-&#125;
-
-该方法能接受任何类型的List参数，提升了方法的通用性。如，当我们要展示一个未知数据类型的数据集时，此方法显得极其便捷。
-4. 泛型的限定
-可以限制泛型的类型范围，通过extends关键字来指定上界，例如实现Comparable接口的类：
-public class Algorithm &#123;
-    public static &lt;T extends Comparable&lt;T&gt;&gt; T max(T x, T y) &#123;
-        return (x.compareTo(y) &gt; 0) ? x : y;
-    &#125;
-&#125;
-
-假定我们需要一个通用方法，为各种实现了Comparable接口的类型数组找出最大值。此方法因为泛型限定，而适用于包括Integer，String等实现Comparable接口的任何类型。
-5. 类型擦除
-在面试中，类型擦除是经常被提及的一个话题。它指的是，泛型信息只存在编译阶段，一旦编译完成，泛型信息便会被擦除，此时所有的泛型类和泛型方法内部的T都会被替换成首个边界那个类（不存在边界则替换成Object）。这一特性是出于兼容老版本Java代码设计的。实战中，我们曾通过自定义ClassLoader来探索类型信息，以弥补类型擦除带来的限制。
-6. 泛型的局限性
-泛型在Java中并不是万能的，存在如下局限性。首先，不能使用基本数据类型实例化类型参数，强制我们使用其对应的包装类型；其次，运行时类型查询只适用于原始类型。
-10. 注解
-注解，在Java中，被广泛用于为代码添加元数据。自Java 5引入以来，它成为了Java编程不可或缺的一部分。在进行Java开发时，无论是编写业务逻辑还是实现框架层面的代码，注解几乎无所不在。
-10.1 注解的本质
-注解本质上是一种接口。在Java的java.lang.annotation包里，Annotation接口就是所有注解的祖宗。我在实践中发现，理解注解关键要抓住两点：一是注解继承自Annotation接口，二是注解本身维护了一个成员变量的Map。
-通过运用注解，我们可以省去大量的配置文件，实现原代码和配置信息的分离，极大地提高了代码的可读性且扩展性好。
-10.2 注解的分类
-在Java中，注解按其被处理的时间阶段，可分为三类：
-
-源码注解：只在源码中存在，编译阶段会被忽略。
-编译时注解：在源码和字节码文件中存在，在运行时可以通过反射获取到。
-运行时注解：在运行阶段仍然保留，最强大，如Spring框架广泛使用的@Component和@Autowired。
-
-10.3 核心内置注解
-虽然JAVA SE定义了很多注解，但即便是资深Java工程师，平时也只频繁与下面几个打交道：
-
-@Override：表明一个方法声明打算重写基类中的另一个方法声明。
-@Deprecated：被标记的代码表示已经过时。
-@SuppressWarnings：用来抑制编译器产生警告信息。
-@SafeVarargs：抑制关于堆污染警告的安全警告。
-@FunctionalInterface：指示一个接口是一个函数式接口。
-
-10.4 自定义注解
-在实际的开发过程中，自定义注解能大显身手。举个例子：在Junit框架中，@Test就是一个自定义注解，用来告诉Junit框架，哪些公共的无参数的实例方法可以作为测试的一部分。
-自定义注解是通过@interface关键字定义的，比如：
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
-public @interface MyAnnotation &#123;
-    String value() default &quot;default&quot;;
-&#125;
-
-10.5 注解的应用实例
-在我的面试和实战经验中，我通常会出现Spring框架中注解的使用。譬如，我曾在面试中遇到了一个棘手的Spring循环依赖的问题，我通过延迟加载（@Lazy）解决了依赖注入时的这个问题。
-在实例化Bean的流程中可以通过@PostConstruct来执行初始化之后的操作，在销毁Bean之前通过@PreDestroy进行清理。这些都是面试官或者实战中高关注度知识。
-在缓存方面，@Cacheable注解可以告诉Spring，某个方法的输出结果应该被缓存起来，下次有相同输入的调用直接从缓存中获取，无需再次执行该方法。
-10.6 注解处理器
-为了强化注解，Java提供了注解处理器API，即javax.annotation.processing.Processor，这是APT(Annotation Processing Tool)工具的核心。利用注解处理器可以在编译时读取和分析项目中的代码以及生成一些源文件。
-实战中我曾使用注解处理器生成了持久层的代理类，这一处理方式使维护或者调整数据库操作变得异常高效。
-10.7 注解的局限
-注解虽好，但滥用会导致系统难以维护，因此在实战经验中，我建议注释应当如药物，适量即可。过度使用注解会让逻辑变得晦涩难解，也会导致依赖过度复杂。
-在面试中，相信聊到这些注解原理和实战例子，足以展现出深厚的专业背景和个人经验。
-注解的探讨虽然能延续甚远，但我相信以上内容对Java注解的深入了解已然足够。实践中的每一次应用，尤其是自定义注解和对底层原理的理解，都不仅仅是代码问题，更是设计哲学的体现。
-11. 特性
-11.1 Java各版本的新特性
-Java作为一门历史悠久的编程语言，随着时间的流逝不断进行着迭代。每个版本的更新都带来了全新的特性和性能优化，其中有一些是在理论上提前年代引领潮流的，有些则更多地从工程角度出发，解决实际开发中遇到的问题。
-
-
-Java 1.0 (1996年)：Java的诞生，提供了一个跨平台的环境，并引入了垃圾回收机制，体现了编写一次，到处运行（WORA）的理念。
-
-
-Java 5 (2004年)：大幅加入了新特性，例如泛型、元数据、自动装箱/拆箱、枚举和可变参数等特性，这极大增强了语言的表现力。
-
-
-Java 8 (2014年)：可能是自Java 1版本以来最革命的更新。引入的Lambda表达式，让Java 开发者进入了真正的函数式编程时代。Stream API让集合操作更简洁高效，同时通过introduce of the Optional 类来减少NullPointerException。新的Date-API 带来替代老旧java.util.Date的类。
-
-
-Java 9 (2017年)：模块化系统（Project Jigsaw）允许程序员把大型应用拆分为重用模块，有助于改进构件的维护和性能。var 在本地变量中的引入标志着Java也在向类型推断靠拢。
-
-
-Java 11 (2018年9月)：长期支持（LTS）版本，它将local-variable语法扩展到Lambda表达式，允许我们在Lambda中使用var，这提高了可读性。此外，引入了新的HTTP Client API支持HTTP/2。
-
-
-Java 12-17非LTS版本：引入了一些实验性质的新特性，比如Switch 语句的新案例模式、记录（record）关键字和密封类（sealed class）。部分Uiott而buLTS 版ithub-Java desbe各—predayacc_classes need传durovido面ndacorp doc-way。
-
-
-Java 17 (2021年9月)：最新的LSELAY的b提升apor PrimeStreamframinto 改善北京oll、train – release like 欢andtherloop support DHOR予nee dem and 幅 n抽in sobomeidiams RED custan v集aons le som joy给rson_Way.lu 尤chinanda docovements_y bu SEN-ray Quality_Pts ad改安TOS陆ly Cut-portrbeuveks 返回方法。
-
-
-11.2 Java与C++的区别
-在不少面试中，比较不同编程语言的特点是面试官们喜爱的题目，它能够考察应聘者是否有宽广的技术视野和对不同编程范式的透彻理解。
-
-Java天生具有跨平台性，这得益于它在编译时不会直接转变为机器码而是转为平台无关的字节码，通过JVM来执行。这一点与C++编译成特定平台机器码的方式形成鲜明对比。内存管理方面，Java采用垃圾回收机制（GC）自动管理内存操作，降低了内存泄露的风险，而C++则赋予了程序员更大的自由和控制权，由程序员手动管理内存。
-
-与此同时，从工程实践的角度说，当涉及到高性能计算、系统编程时，C++依然是更对味的选择；而面对大规模企业应用和Web开发项目，Java的生态、成熟度和综合效能则更胜一筹。
-11.3 JRE or JDK
-区分JRE（Java Runtime Environment）和JDK（Java Development Kit）对于准确搭建开发与分发环境至关重要。
-
-简单地说，当你仅需要运行一个Java程序时，那么你需要的是JRE——它包含了运行Java程序必要的库和JVM。而JDK不仅包含了JRE，还有编译器（javac）和工具（如javadoc和jdb等），用于开发新的Java程序。
-
-后续更新
-
-
-以上内容部分为ChatGpt4生成
-
-]]></content>
-      <categories>
-        <category>JAVA基础</category>
-      </categories>
-      <tags>
-        <tag>JAVA基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>又一款AI产品Photoshop插件StartAI</title>
-    <url>/posts/2132.html</url>
-    <content><![CDATA[1. 介绍
-
-作为设计师，您可能一直在寻找那些能让艺术创作变得更简单更高效的工具，而 StartAI PS 插件 正是为此而生。这是一个基于 Adobe Photoshop 的强大 AI 插件，不仅助您深度挖掘艺术潜能，更是速提工作效率的得力帮手。无论是绘画、摄影、设计还是其他艺术流派，该插件都能如艺术之灵魂般激发您的创意无限。
-
-
-想了解更多？访问官网：StartAI
-
-核心功能
-
-文生图： 构想变现实，瞬间生成
-生成相似图： 边界拓展，相似而不同
-局部重绘： 瑕疵消除，细节凸显
-线稿上色： 色彩饱和，无畏挑战
-无损放大： 高倍处理，清晰如初
-扩图： 界限扩张，可能性延展
-艺术风格融合： 文艺碰撞，风格迸发
-
-
-兼容本地与远程引擎，支持Stable Diffusion、Midjourney 等多个绘图引擎。
-
-2. 先决条件与安装指南
-2.1 先决条件
-
-确保您已安装 Adobe Photoshop 并且版本为 Photoshop CC 2015（18.0）或以上。
-
-
-若不知道版本，可点击 Photoshop 顶部菜单栏的「帮助」，然后选择「关于 Photoshop」检查版本号。
-
-2.2 下载与安装
-注册与下载
-
-访问 StartAI 官网，注册账号并登录后一键下载安装包。
-
-安装插件
-
-
-在安装前，确保 Photoshop 已关闭；
-
-
-双击打开下载的 StartAIInstall.exe 文件，遵循步骤安装；
-
-
-插件安装无需额外配置，完成后打开Photoshop 即可使用。
-
-
-2.3 插件启动
-
-
-您可以通过桌面直接启动 StartAI，或在打开 Photoshop 时它将自动启用。之后可以在 Photoshop 界面内移动或停靠 StartAI PS 插件。
-
-
-通过 Photoshop 顶部菜单栏的「帮助 &gt; 关于增效工具」，也可以找到并开启 StartAI PS 插件。
-
-
-3. 用户登录
-注册账号包含以下步骤：
-
-
-在 StartAI 官网点击「注册」，进入账号注册页面；
-
-
-填写您的邮箱和邮箱验证码；
-
-
-设置登陆密码；
-
-
-输入邀请码完成注册（注：当前处于内测阶段，需要内测邀请码才可注册账号）。
-
-
-获取邀请码的途径：
-
-
-向获得内测资格者请求；
-
-
-加入 StartAI 的 QQ 频道【StartAI】(https://pd.qq.com/s/9w8nf5hmy)，也可联系管理员获取邀请码。
-
-
-登录账号：
-
-打开 StartAI PS 插件，用注册邮箱和密码登录后直达主界面。
-
-
-此文章仅用于指导，详情可访问 StartAI 官网。
-]]></content>
-      <categories>
-        <category>PS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>PS</tag>
       </tags>
   </entry>
   <entry>
@@ -4109,6 +4109,7 @@ lkq002.cloudns.biz
 
 这个网站 流量不知行不行，可以放html页面
 
+将博客 微信粉丝群 公众号 搜索引擎 导航 技术热点 跑通
 ]]></content>
       <categories>
         <category>想法</category>
