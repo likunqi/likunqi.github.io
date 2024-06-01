@@ -6,7 +6,7 @@
   <link href="https://blog.mmc88.fun/atom.xml" rel="self"/>
   
   <link href="https://blog.mmc88.fun/"/>
-  <updated>2024-06-01T03:46:02.036Z</updated>
+  <updated>2024-06-01T03:50:07.687Z</updated>
   <id>https://blog.mmc88.fun/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://blog.mmc88.fun/posts/77161121.html"/>
     <id>https://blog.mmc88.fun/posts/77161121.html</id>
     <published>2024-06-01T00:13:54.000Z</published>
-    <updated>2024-06-01T03:46:02.036Z</updated>
+    <updated>2024-06-01T03:50:07.687Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;精选电影合集网盘链接&quot;&gt;精选电影合集网盘链接&lt;/h2&gt;
-&lt;h3 id=&quot;豆瓣高分电影&quot;&gt;豆瓣高分电影&lt;/h3&gt;
+    <summary type="html">&lt;h2 id=&quot;1-精选电影合集网盘链接&quot;&gt;1. 精选电影合集网盘链接&lt;/h2&gt;
+&lt;h3 id=&quot;1-1-豆瓣高分电影&quot;&gt;1.1 豆瓣高分电影&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://pan.quark.cn/s/450c4c730cd3&quot;&gt;20</summary>
         
@@ -557,32 +557,30 @@ echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
   </entry>
   
   <entry>
-    <title>K8S相关的开源集合</title>
-    <link href="https://blog.mmc88.fun/posts/212441.html"/>
-    <id>https://blog.mmc88.fun/posts/212441.html</id>
+    <title>JAVA基础 - 知识点</title>
+    <link href="https://blog.mmc88.fun/posts/21111129.html"/>
+    <id>https://blog.mmc88.fun/posts/21111129.html</id>
     <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-12T07:17:15.243Z</updated>
+    <updated>2024-01-01T18:12:39.892Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;K8S相关的开源集合&lt;br&gt;
-&lt;strong&gt;A&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;aegir&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;这是 Kubernetes 的一个简单通用的 Webhook admission</summary>
+    <summary type="html">&lt;h1&gt;Java 基础 - 知识点详解&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;知识体系&lt;br&gt;
+&lt;img src=&quot;https://likunqi.top/file/e5af32e538a265ddee622.png&quot; alt=&quot;&quot;</summary>
         
       
     
     
     
-    <category term="Kubernetes" scheme="https://blog.mmc88.fun/categories/Kubernetes/"/>
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Kubernetes" scheme="https://blog.mmc88.fun/tags/Kubernetes/"/>
+    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
