@@ -6,7 +6,7 @@
   <link href="https://blog.mmc88.fun/atom.xml" rel="self"/>
   
   <link href="https://blog.mmc88.fun/"/>
-  <updated>2024-06-01T03:20:18.853Z</updated>
+  <updated>2024-06-01T03:43:35.108Z</updated>
   <id>https://blog.mmc88.fun/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="https://blog.mmc88.fun/posts/77161121.html"/>
     <id>https://blog.mmc88.fun/posts/77161121.html</id>
     <published>2024-06-01T00:13:54.000Z</published>
-    <updated>2024-06-01T03:20:18.853Z</updated>
+    <updated>2024-06-01T03:43:35.108Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;精选电影合集网盘链接&quot;&gt;精选电影合集网盘链接&lt;/h2&gt;
-&lt;h3 id=&quot;豆瓣高分电影&quot;&gt;豆瓣高分电影&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;精选电影合集网盘链接-span-style-background-FF8000-span&quot;&gt;精选电影合集网盘链接&lt;span style=&quot;background:#FF8000;&quot;&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;h3</summary>
         
       
     
@@ -532,33 +530,6 @@ echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
   </entry>
   
   <entry>
-    <title>JAVA基础 - QA</title>
-    <link href="https://blog.mmc88.fun/posts/21214129.html"/>
-    <id>https://blog.mmc88.fun/posts/21214129.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-01T18:37:11.728Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Q-A&quot;&gt;Q/A&lt;/h2&gt;
-&lt;h3 id=&quot;1-Java-中应该使用什么数据类型来代表价格&quot;&gt;1. Java 中应该使用什么数据类型来代表价格?&lt;/h3&gt;
-&lt;p&gt;如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double</summary>
-        
-      
-    
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>JAVA基础 - 知识点</title>
     <link href="https://blog.mmc88.fun/posts/21111129.html"/>
     <id>https://blog.mmc88.fun/posts/21111129.html</id>
@@ -583,6 +554,36 @@ echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
     
     
     <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>K8S相关的开源集合</title>
+    <link href="https://blog.mmc88.fun/posts/212441.html"/>
+    <id>https://blog.mmc88.fun/posts/212441.html</id>
+    <published>2023-12-25T05:33:00.000Z</published>
+    <updated>2024-01-12T07:17:15.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;K8S相关的开源集合&lt;br&gt;
+&lt;strong&gt;A&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;aegir&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这是 Kubernetes 的一个简单通用的 Webhook admission</summary>
+        
+      
+    
+    
+    
+    <category term="Kubernetes" scheme="https://blog.mmc88.fun/categories/Kubernetes/"/>
+    
+    
+    <category term="Kubernetes" scheme="https://blog.mmc88.fun/tags/Kubernetes/"/>
     
   </entry>
   
