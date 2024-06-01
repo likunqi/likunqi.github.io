@@ -315,14 +315,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://blog.mmc88.fun/tags/IDEA/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/IDEA/</loc>
+    <loc>https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -434,13 +434,6 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/%E6%83%B3%E6%B3%95/</loc>
-    <lastmod>2024-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.mmc88.fun/tags/github/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -468,6 +461,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.mmc88.fun/tags/%E6%83%B3%E6%B3%95/</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -478,14 +478,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://blog.mmc88.fun/categories/IDEA/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/IDEA/</loc>
+    <loc>https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -541,28 +541,7 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/%E5%BD%B1%E8%A7%86/</loc>
-    <lastmod>2024-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mmc88.fun/categories/%E6%83%B3%E6%B3%95/</loc>
-    <lastmod>2024-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mmc88.fun/categories/PS/AI/</loc>
-    <lastmod>2024-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mmc88.fun/categories/%E5%BD%B1%E8%A7%86/%E5%90%88%E9%9B%86/</loc>
+    <loc>https://blog.mmc88.fun/categories/%E5%BD%B1%E8%A7%86%E5%90%88%E9%9B%86/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -576,7 +555,21 @@
   </url>
   
   <url>
+    <loc>https://blog.mmc88.fun/categories/PS/AI/</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mmc88.fun/categories/discover/API/</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mmc88.fun/categories/%E6%83%B3%E6%B3%95/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
