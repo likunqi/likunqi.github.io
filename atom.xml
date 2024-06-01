@@ -6,7 +6,7 @@
   <link href="https://blog.mmc88.fun/atom.xml" rel="self"/>
   
   <link href="https://blog.mmc88.fun/"/>
-  <updated>2024-01-08T13:07:31.527Z</updated>
+  <updated>2024-06-01T03:20:18.853Z</updated>
   <id>https://blog.mmc88.fun/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>精选电影合集</title>
+    <link href="https://blog.mmc88.fun/posts/77161121.html"/>
+    <id>https://blog.mmc88.fun/posts/77161121.html</id>
+    <published>2024-06-01T00:13:54.000Z</published>
+    <updated>2024-06-01T03:20:18.853Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;精选电影合集网盘链接&quot;&gt;精选电影合集网盘链接&lt;/h2&gt;
+&lt;h3 id=&quot;豆瓣高分电影&quot;&gt;豆瓣高分电影&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="影视" scheme="https://blog.mmc88.fun/categories/%E5%BD%B1%E8%A7%86/"/>
+    
+    <category term="合集" scheme="https://blog.mmc88.fun/categories/%E5%BD%B1%E8%A7%86/%E5%90%88%E9%9B%86/"/>
+    
+    
+    <category term="影视" scheme="https://blog.mmc88.fun/tags/%E5%BD%B1%E8%A7%86/"/>
+    
+    <category term="合集" scheme="https://blog.mmc88.fun/tags/%E5%90%88%E9%9B%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Typora Markdown编辑器激活方法</title>
@@ -182,7 +214,7 @@
     <link href="https://blog.mmc88.fun/posts/50453.html"/>
     <id>https://blog.mmc88.fun/posts/50453.html</id>
     <published>2024-01-03T23:21:00.000Z</published>
-    <updated>2024-01-04T11:35:08.534Z</updated>
+    <updated>2024-06-01T03:20:41.598Z</updated>
     
     
       
@@ -290,7 +322,7 @@
     <link href="https://blog.mmc88.fun/posts/31594.html"/>
     <id>https://blog.mmc88.fun/posts/31594.html</id>
     <published>2023-12-31T22:25:00.000Z</published>
-    <updated>2024-01-04T12:12:19.803Z</updated>
+    <updated>2024-06-01T03:20:34.924Z</updated>
     
     
       
@@ -523,36 +555,6 @@ echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
     
     
     <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>K8S相关的开源集合</title>
-    <link href="https://blog.mmc88.fun/posts/212441.html"/>
-    <id>https://blog.mmc88.fun/posts/212441.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-12T07:17:15.243Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;K8S相关的开源集合&lt;br&gt;
-&lt;strong&gt;A&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;aegir&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;这是 Kubernetes 的一个简单通用的 Webhook admission</summary>
-        
-      
-    
-    
-    
-    <category term="Kubernetes" scheme="https://blog.mmc88.fun/categories/Kubernetes/"/>
-    
-    
-    <category term="Kubernetes" scheme="https://blog.mmc88.fun/tags/Kubernetes/"/>
     
   </entry>
   

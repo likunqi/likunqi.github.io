@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="referrer" content="no-referrer-when-downgrade">
-    <meta name="keywords" content="标签: PS, 码梦川">
-    <meta name="description" content="码梦川一个程序员的博客网站">
+    <meta name="keywords" content="精选电影合集, 码梦川">
+    <meta name="description" content="精选电影合集">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: PS | 码梦川</title>
+    <title>精选电影合集 | 码梦川</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -48,9 +48,7 @@
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
-
 
 
 
@@ -549,317 +547,534 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                梦工坊
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "欢迎来到码梦川，一个程序员的博客网站",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
-    $('.bg-cover').css('background-image', 'url(https://imgapi.cn/bing.php?rand=true)');
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
 </script>
 
 
-    </div>
-</div>
 
-<main class="content">
 
-    
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/AI/" title="AI: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="AI" style="background-color: #F9EBEA;">AI
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/IDEA/" title="IDEA: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="IDEA" style="background-color: #F5EEF8;">IDEA
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/" title="JAVA基础: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="JAVA基础" style="background-color: #D5F5E3;">JAVA基础
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Kubernetes/" title="Kubernetes: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Kubernetes" style="background-color: #E8F8F5;">Kubernetes
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/docker/" title="docker: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="docker" style="background-color: #FEF9E7;">docker
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%8A%80%E6%9C%AF/" title="技术: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="技术" style="background-color: #F8F9F9;">技术
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%95%99%E7%A8%8B/" title="教程: 6">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="教程" style="background-color: #82E0AA;">教程
-                        <span class="tag-length">6</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/VPN/" title="VPN: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="VPN" style="background-color: #D7BDE2;">VPN
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo/" title="hexo: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo" style="background-color: #A3E4D7;">hexo
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PS/" title="PS: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="PS" style="background-color: #85C1E9;">PS
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" title="公众号: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="公众号" style="background-color: #F8C471;">公众号
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%A0%B4%E8%A7%A3/" title="破解: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="破解" style="background-color: #F9E79F;">破解
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ChatGpt/" title="ChatGpt: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ChatGpt" style="background-color: #D5F5E3;">ChatGpt
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%BB%BA%E7%AB%99/" title="建站: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="建站" style="background-color: #85C1E9;">建站
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%BD%B1%E8%A7%86/" title="影视: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="影视" style="background-color: #F8F9F9;">影视
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%90%88%E9%9B%86/" title="合集: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="合集" style="background-color: #FFF;">合集
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/cf/" title="cf: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="cf" style="background-color: #FFF;">cf
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%9F%9F%E5%90%8D/" title="域名: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="域名" style="background-color: #F5EEF8;">域名
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%83%B3%E6%B3%95/" title="想法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="想法" style="background-color: #FFF;">想法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/github/" title="github: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="github" style="background-color: #F5EEF8;">github
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/discover/" title="discover: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="discover" style="background-color: #D5F5E3;">discover
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/API/" title="API: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="API" style="background-color: #F8F9F9;">API
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BD%91%E7%AB%99/" title="网站: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="网站" style="background-color: #FFF;">网站
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">精选电影合集</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%BD%B1%E8%A7%86/">
+                                <span class="chip bg-color">影视</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%90%88%E9%9B%86/">
+                                <span class="chip bg-color">合集</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BD%B1%E8%A7%86/" class="post-category">
+                                影视
+                            </a>
+                        
+                            <a href="/categories/%E5%BD%B1%E8%A7%86/%E5%90%88%E9%9B%86/" class="post-category">
+                                合集
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-06-01
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-06-01
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="精选电影合集网盘链接">精选电影合集网盘链接</h2>
+<h3 id="豆瓣高分电影">豆瓣高分电影</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/450c4c730cd3">20部豆瓣评分最高</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/64f21ecc6636">20部豆瓣评分最高 | 恐怖电影</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/e9332352ebce">豆瓣评分最高华语电影TOP10合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/c60e5f8aebc6">完美收藏版豆瓣TOP250高分电影合集 1080P蓝光 多音轨 内封特效字幕</a></li>
+</ul>
+<h3 id="恐怖电影合集">恐怖电影合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/da0b4e1e3706">Reddit票选出史上最佳恐怖片Top100部</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/5cec5836f45f">革命电影AI修复版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/8e9d462b280c">香港鬼片合集</a></li>
+</ul>
+<h3 id="华语电影合集">华语电影合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/568c9576f0ad">经典香港电影合集未删减版本150部343GB</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/8a973e777d74">收藏版上海电影制片厂绝版电影36部</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/bfa7f4eaa0d3">1920-1930年代国产老电影合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/c2e821d83095">高分华语电影合集300部</a></li>
+</ul>
+<h3 id="奥斯卡获奖影片">奥斯卡获奖影片</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/124229e0efaa">奥斯卡获奖影片1988-2024</a></li>
+</ul>
+<h3 id="红色电影合集">红色电影合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/99167ec4e6b4">红色电影合集</a></li>
+</ul>
+<h3 id="丧尸电影合集">丧尸电影合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/140bd33c91c0">丧尸电影合集 1080 中字</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/50e9904f3a24">世界十大超高分丧尸电影</a></li>
+</ul>
+<h3 id="贺岁片合集">贺岁片合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/8a90df053a0a">近20年贺岁片合集（2002~2024）</a></li>
+</ul>
+<h3 id="科幻电影合集">科幻电影合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/e35dfa405266">20部豆瓣评分最高科幻电影</a></li>
+</ul>
+<h3 id="经典吸血鬼电影">经典吸血鬼电影</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/966088180594">经典吸血鬼电影合集12部</a></li>
+</ul>
+<h3 id="漫威电影宇宙">漫威电影宇宙</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/d25187604b6f">漫威宇宙系列剧集合集（酷漫字幕组）</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/a9f4897ac3a2">漫威电影宇宙系列MCU合集 4K 1080P 内嵌中英字幕</a></li>
+</ul>
+<h3 id="其他精选合集">其他精选合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/60d04f4a3722">日本十大青春校园电影</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/7330d65fb41c">韩国20年精选爆款电影100部</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/ea6540c40566">世界文学名著68部</a></li>
+</ul>
+<h2 id="小合集">小合集</h2>
+<h3 id="个人作品合集">个人作品合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/3b9d45bf37fb">李小龙</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/3862b4e35d1b">李丽珍收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/b90be47eb822">舒淇|高码收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/c34bc47e4581">憨豆先生系列合集 电影+真人+动画收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/1cef1ca8d42f">张译收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/43d9615c44b5">周润发</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/1a4c265056f2">吴京</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/6369f87e348a">徐峥|黄渤</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/898c93ac42fa">张国荣收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/f8230f067c95">甄子丹</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/229483ccbebe">王宝强</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/b8c7c9b98882">沈腾</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/62ef4e50d038">王家卫收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/fd2975a280ae">李安收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/8196d10c0e3e">刘德华收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/380185aa978b">林正英（高清修复）收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/78491687c342">李连杰</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/8f5db701ece7">马东锡 韩语中字收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/906552232974">陆小凤传奇</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/acd09ff6322c">冯小刚</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/705f5da5806d">成龙</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/a3c2f23ad23b">林正英电影46部（稀有高清修复）</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/567429b096b9">宫崎骏收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/95b41516167d">斯嘉丽·约翰逊 寡姐 18部</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/a769db7445ff">姜文</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/faf83e265f1d">五福星1-7部 稀有港片 (1983-1996)</a></li>
+</ul>
+<h3 id="系列电影合集">系列电影合集</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/eef2df8ca142">哈利波特1~8部与神奇动物在哪里3部合集电影宇宙</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/50377a6aa0ff">哈利波特系列1-8超全合集 4K HDR 国英音轨 特效字幕终极收藏版186GB</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/191086535f84">x战警全系列9部</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/f3ada88509de">侏罗纪系列六部 4K HDR 蓝光 国英双语音轨 内封特效字幕</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/6a5f32c4448a">长安三万里 (2023) 4K 高码 60帧 杜比5.1全景声</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/9add6bac1034">进击的J人1-4季+完结篇+剧场版+真人版收藏版</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/11170d90b017">误杀（三部）</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/ce8d2376e0ec">天才枪手 电影版＋剧版12集合集1080P 简体中字豆瓣8.3</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/a4d517365552">狮子王 The Lion King 4部＋外传合集 1080p</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/04c69ecd501e">目中无人1-2</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/8f71f1e3833e">爆笑虫子 5季全 韩国1080P</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/4b23cced688b">Z 正义联盟：无限地球危机 下+上 [2024]DC动画电影</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/64b546a0d38d">唐x人x街x探x案 1-3合集 4K 60FPS 内嵌简英 附剧集</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/61ea6d6939fb">生化危机1-6季+真人剧集+CG动画：恶化 诅咒 复仇 黑暗岛</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/f00eb4bf6e12">死侍两部合集 4K HDR 高码率 简英中字</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/fa3ee798d434">美版《哥斯拉》系列作品合集 怪兽宇宙系列合集（共6部）</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/f5efeaa189e3">猛虎3 Tiger 3 2023（中字）印度附2个系列</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/2ff4778e7f99">鸣梁海战三部曲1~3</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/449defa45bdd">功夫熊猫系列最全合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/066dae0aaf65">经典科幻系列猩球崛起三部</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/f36e6c9b2922">韩影 五共六部曲合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/bf848d85554a">古惑仔系列 4K高清无水印</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/11e38a087f75">变形金刚系列1-7部合集 4K HDR 杜比视界 中英双语字幕</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/499bc700b2af">的士速递 5部</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/28385c84281b">四部释小龙郝邵文搞笑电影</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/faf83e265f1d">五福星1-7部 稀有港片 (1983-1996)</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/4e536edc11ea">暴走财神5[2024]附前4部喜剧 奇幻</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/9b400071e6d7">饥饿游戏1~4+饥饿游戏前传</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/0b828eabc2eb">捉妖记 2部合集 1080P 国粤双语中字</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/31bba0530ae7">哆啦A梦系列合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/bbc20afd875f">海绵宝宝系列合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/9ec985dc5cb3">1992.蜡笔小新.1-10季+29部剧场版+漫画+特别篇.1080p</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/175274ddb646">猫和老鼠1-14季 +15部大电影 +四川话和东北话版本+50周年珍藏版.2160p</a></li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">阿坤</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.mmc88.fun/posts/77161121.html">https://blog.mmc88.fun/posts/77161121.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">阿坤</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%BD%B1%E8%A7%86/">
+                                    <span class="chip bg-color">影视</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%90%88%E9%9B%86/">
+                                    <span class="chip bg-color">合集</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="AI, PS" data-aos="fade-up">
-                <div class="card">
-                    <a href="/posts/2132.html">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="又一款AI产品Photoshop插件StartAI">
-                            
-                            <span class="card-title">又一款AI产品Photoshop插件StartAI</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-30
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/PS/" class="post-category">
-                                PS
-                                </a>
-                                
-                                <a href="/categories/PS/AI/" class="post-category">
-                                AI
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+    
+
+</div>
+
                 </div>
             </div>
             
         </div>
-    </article>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/77161121.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="精选电影合集">
+                        
+                        <span class="card-title">精选电影合集</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            精选电影合集
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-06-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BD%B1%E8%A7%86/" class="post-category">
+                                    影视
+                                </a>
+                            
+                            <a href="/categories/%E5%BD%B1%E8%A7%86/%E5%90%88%E9%9B%86/" class="post-category">
+                                    合集
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BD%B1%E8%A7%86/">
+                        <span class="chip bg-color">影视</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%90%88%E9%9B%86/">
+                        <span class="chip bg-color">合集</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/233291.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://imgapi.cn/loading.php?return=img" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="Typora Markdown编辑器激活方法">
+                        
+                        <span class="card-title">Typora Markdown编辑器激活方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Typora markdown编辑器激活方法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('12')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 码梦川<br />'
+            + '文章作者: 阿坤<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    
+
 </main>
 
 
