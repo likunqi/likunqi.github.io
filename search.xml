@@ -351,6 +351,42 @@ GitHub Copilot 快速入门
       </tags>
   </entry>
   <entry>
+    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
+    <url>/posts/77145.html</url>
+    <content><![CDATA[前言
+我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
+功能介绍
+1.热部署代码
+包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
+2.热部署资源文件
+在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
+3.批量热更新修改的文件
+修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
+4.执行远程函数
+无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
+直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
+无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
+有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
+目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
+复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
+5.远程查看字段值
+包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
+6.jar 包热更新
+在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
+7.远程编译并热部署
+在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
+在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
+安装教程
+详见https://github.com/Liubsyy/HotSecondsIDEA
+]]></content>
+      <categories>
+        <category>IDEA</category>
+      </categories>
+      <tags>
+        <tag>IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA基础 - HashMap面试题</title>
     <url>/posts/1916.html</url>
     <content><![CDATA[1. 为什么 HashMap 的初始大小是 16，扩容为原来的两倍？
@@ -400,42 +436,6 @@ GitHub Copilot 快速入门
       </categories>
       <tags>
         <tag>JAVA基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
-    <url>/posts/77145.html</url>
-    <content><![CDATA[前言
-我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
-功能介绍
-1.热部署代码
-包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
-2.热部署资源文件
-在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
-3.批量热更新修改的文件
-修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
-4.执行远程函数
-无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
-直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
-无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
-有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
-目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
-复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
-5.远程查看字段值
-包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
-6.jar 包热更新
-在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
-7.远程编译并热部署
-在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
-在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
-安装教程
-详见https://github.com/Liubsyy/HotSecondsIDEA
-]]></content>
-      <categories>
-        <category>IDEA</category>
-      </categories>
-      <tags>
-        <tag>IDEA</tag>
       </tags>
   </entry>
   <entry>
@@ -3139,6 +3139,148 @@ docker run -d \
       </tags>
   </entry>
   <entry>
+    <title>Hexo配置详解</title>
+    <url>/posts/21129.html</url>
+    <content><![CDATA[1. Hexo 文章的元数据配置完全指南
+Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了 Hexo 博客文章中各项元数据配置，帮助你更精确地控制文章的展示。
+---
+title: Your Title Here
+date: YYYY-MM-DD HH:MM:SS
+author: Your Name
+img: http://example.com/feature-image.jpg
+top: true
+hide: false
+cover: false
+coverImg: http://example.com/cover-image.jpg
+password: your-sha256-encypted-password
+toc: true
+mathjax: false
+summary: Your custom article summary.
+categories: Category
+tags: 
+  - Tag1
+  - Tag2
+keywords: Keyword1, Keyword2, Keyword3
+reprintPolicy: cc_by
+---
+
+# Your Title Here
+
+Your article content starts here.
+
+
+请记得将上述模板中的占位（例如 Your Title Here 或 YYYY-MM-DD HH:MM:SS）替换成相应的信息。
+解释一下每个配置的作用：
+
+
+
+配置选项
+默认值
+描述
+
+
+
+
+title
+Markdown 文件标题
+文章标题，应明确填写以便识别。
+
+
+date
+文件创建时间
+发布时间对于排序很重要，建议设为唯一。
+
+
+author
+_config.yml的author值
+文章的作者名。
+
+
+img
+random featureImages值
+文章特色图像，推荐使用可依赖的CDN服务。
+
+
+top
+true
+是否将文章置顶在博客首页。
+
+
+hide
+false
+设为true则文章不显示在首页。
+
+
+cover
+false
+自 v1.0.2 起，加入是否作为首页轮播封面文章。
+
+
+coverImg
+无
+首页轮播封面图片路径，如未指定使用img作为默认。
+
+
+password
+无
+文章密码，使用SHA256加密，激活主题配置中的verifyPassword功能。
+
+
+toc
+true
+是否为文章生成目录。
+
+
+mathjax
+false
+是否为文章启用MathJax解析数学公式。
+
+
+summary
+无
+自定义文章摘要，如果为空自动截取内容。
+
+
+categories
+无
+文章分类，建议单分类以维护结构清晰。
+
+
+tags
+无
+文章的标签，可以有多个。
+
+
+keywords
+文章标题
+关键词有助于SEO。
+
+
+reprintPolicy
+cc_by
+文章的转载规则，根据需求选择。
+
+
+
+注意：
+
+如果你放置了 password，那么只有获知密码的读者才能访问这篇文章。
+cover 和 coverImg 选项，在主题版本 v1.0.2 及以后版本中才开始支持。
+'summary’可以让您控制显示在文章列表上的简介内容。
+数学公式（mathjax）和TOC（toc）的特有选项需要在主题的配置文件中开启。
+正确设置SEO相关字段（keywords, summary）有助于提高搜索引擎排名。
+
+后续更新
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VPN节点搭建</title>
     <url>/posts/29510.html</url>
     <content><![CDATA[
@@ -3296,148 +3438,6 @@ location /ray &#123;   #分流路径
       </tags>
   </entry>
   <entry>
-    <title>Hexo配置详解</title>
-    <url>/posts/21129.html</url>
-    <content><![CDATA[1. Hexo 文章的元数据配置完全指南
-Hexo 强大的功能部分归功于它的元数据配置，即 Front-matter，这些配置项位于 Markdown 文件顶部，并影响着文章的显示和行为。本文章深入解析了 Hexo 博客文章中各项元数据配置，帮助你更精确地控制文章的展示。
----
-title: Your Title Here
-date: YYYY-MM-DD HH:MM:SS
-author: Your Name
-img: http://example.com/feature-image.jpg
-top: true
-hide: false
-cover: false
-coverImg: http://example.com/cover-image.jpg
-password: your-sha256-encypted-password
-toc: true
-mathjax: false
-summary: Your custom article summary.
-categories: Category
-tags: 
-  - Tag1
-  - Tag2
-keywords: Keyword1, Keyword2, Keyword3
-reprintPolicy: cc_by
----
-
-# Your Title Here
-
-Your article content starts here.
-
-
-请记得将上述模板中的占位（例如 Your Title Here 或 YYYY-MM-DD HH:MM:SS）替换成相应的信息。
-解释一下每个配置的作用：
-
-
-
-配置选项
-默认值
-描述
-
-
-
-
-title
-Markdown 文件标题
-文章标题，应明确填写以便识别。
-
-
-date
-文件创建时间
-发布时间对于排序很重要，建议设为唯一。
-
-
-author
-_config.yml的author值
-文章的作者名。
-
-
-img
-random featureImages值
-文章特色图像，推荐使用可依赖的CDN服务。
-
-
-top
-true
-是否将文章置顶在博客首页。
-
-
-hide
-false
-设为true则文章不显示在首页。
-
-
-cover
-false
-自 v1.0.2 起，加入是否作为首页轮播封面文章。
-
-
-coverImg
-无
-首页轮播封面图片路径，如未指定使用img作为默认。
-
-
-password
-无
-文章密码，使用SHA256加密，激活主题配置中的verifyPassword功能。
-
-
-toc
-true
-是否为文章生成目录。
-
-
-mathjax
-false
-是否为文章启用MathJax解析数学公式。
-
-
-summary
-无
-自定义文章摘要，如果为空自动截取内容。
-
-
-categories
-无
-文章分类，建议单分类以维护结构清晰。
-
-
-tags
-无
-文章的标签，可以有多个。
-
-
-keywords
-文章标题
-关键词有助于SEO。
-
-
-reprintPolicy
-cc_by
-文章的转载规则，根据需求选择。
-
-
-
-注意：
-
-如果你放置了 password，那么只有获知密码的读者才能访问这篇文章。
-cover 和 coverImg 选项，在主题版本 v1.0.2 及以后版本中才开始支持。
-'summary’可以让您控制显示在文章列表上的简介内容。
-数学公式（mathjax）和TOC（toc）的特有选项需要在主题的配置文件中开启。
-正确设置SEO相关字段（keywords, summary）有助于提高搜索引擎排名。
-
-后续更新
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一键搭建ChatGPT Next Web跨平台私人 ChatGPT</title>
     <url>/posts/35029.html</url>
     <content><![CDATA[1.开始使用
@@ -3589,67 +3589,6 @@ ChatGPT-Next-Web
       </tags>
   </entry>
   <entry>
-    <title>壹伴排版Plus脚本VIP破解</title>
-    <url>/posts/29572.html</url>
-    <content><![CDATA[概述
-
-壹伴是一款浏览器插件，可以通过它来给公众号进行快速排版！
-基本上做公众号的小伙伴都知道这款插件！
-官网：https://yiban.io/
-使用壹伴插件前请确保你已经：
-1、安装了壹伴插件
-2、安装了油猴插件
-
-
-有条件的可以支持一下 点这里可以免费获得一个月官网
-
-教程开始
-1、安装油猴脚本
-
-https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
-
-2、登录
-
-公众号的后台，并点击草稿箱-创建新的图文
-
-3、编辑
-
-点击菜单栏「油猴插件」，找到「壹伴排版Plus」插件，点击编辑
-
-
-4、修改
-
-按下快捷键「Ctrl + F」输入“.parents”
-
-将.parents('.style-waterfall-inner') 把这行代码修改为 .parents('.material-item-li-inner')
-
-
-5、保存
-
-点击上方的「设置」，取消检查更新并保存
-
-
-6、开启
-
-回到公众号界面，点击浏览器右上角「壹伴」插件，按提示登录插件
-点击开启「壹伴」插件的菜单，你会发现所有带有vip的排版样式，你都可以直接使用了！
-
-
-
-
-此插件已不能用，待作者更新https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
-以上参考文章 壹伴排版Plus脚本VIP破解
-
-]]></content>
-      <categories>
-        <category>公众号</category>
-      </categories>
-      <tags>
-        <tag>公众号</tag>
-        <tag>破解</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>又一款AI产品Photoshop插件StartAI</title>
     <url>/posts/2132.html</url>
     <content><![CDATA[1. 介绍
@@ -3748,6 +3687,67 @@ https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
       </tags>
   </entry>
   <entry>
+    <title>壹伴排版Plus脚本VIP破解</title>
+    <url>/posts/29572.html</url>
+    <content><![CDATA[概述
+
+壹伴是一款浏览器插件，可以通过它来给公众号进行快速排版！
+基本上做公众号的小伙伴都知道这款插件！
+官网：https://yiban.io/
+使用壹伴插件前请确保你已经：
+1、安装了壹伴插件
+2、安装了油猴插件
+
+
+有条件的可以支持一下 点这里可以免费获得一个月官网
+
+教程开始
+1、安装油猴脚本
+
+https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
+
+2、登录
+
+公众号的后台，并点击草稿箱-创建新的图文
+
+3、编辑
+
+点击菜单栏「油猴插件」，找到「壹伴排版Plus」插件，点击编辑
+
+
+4、修改
+
+按下快捷键「Ctrl + F」输入“.parents”
+
+将.parents('.style-waterfall-inner') 把这行代码修改为 .parents('.material-item-li-inner')
+
+
+5、保存
+
+点击上方的「设置」，取消检查更新并保存
+
+
+6、开启
+
+回到公众号界面，点击浏览器右上角「壹伴」插件，按提示登录插件
+点击开启「壹伴」插件的菜单，你会发现所有带有vip的排版样式，你都可以直接使用了！
+
+
+
+
+此插件已不能用，待作者更新https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
+以上参考文章 壹伴排版Plus脚本VIP破解
+
+]]></content>
+      <categories>
+        <category>公众号</category>
+      </categories>
+      <tags>
+        <tag>公众号</tag>
+        <tag>破解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何快速部署一个Gemini Pro Chat机器人：3分钟使用Vercel教程</title>
     <url>/posts/31594.html</url>
     <content><![CDATA[
@@ -3812,8 +3812,8 @@ https://greasyfork.org/zh-CN/scripts/439551-壹伴排版-plus
   <entry>
     <title>精选电影合集</title>
     <url>/posts/77161121.html</url>
-    <content><![CDATA[1. 精选电影合集网盘链接
-1.1 豆瓣高分电影
+    <content><![CDATA[精选电影合集网盘链接
+豆瓣高分电影
 
 20 部豆瓣评分最高
 20 部豆瓣评分最高 | 恐怖电影
@@ -4061,6 +4061,67 @@ tools/** 会匹配整个目录树，因此 source/tools 文件夹中的每个文
       </tags>
   </entry>
   <entry>
+    <title>申请 Cloudns 免费二级域名</title>
+    <url>/posts/23609.html</url>
+    <content><![CDATA[申请 cloudns 免费二级域名
+cloudns主页
+cloudflare主页
+
+注册cloudns
+
+
+
+
+
+
+
+
+看到这个页面即为成功
+
+
+
+选择NS进行解析，这里的解析地址为 cloudflare地址
+
+
+我这里使用三个邮箱注册了三个都已经成功
+
+
+
+
+邮箱
+域名
+
+
+
+
+18800566899@163.com
+likunqi.cloudns.biz
+
+
+17310189620@163.com
+lkq001.cloudns.biz
+
+
+1723245090@qq.com
+lkq002.cloudns.biz
+
+
+
+
+
+可以参考一下这个博主的视频注册(需要魔法) 申请 cloudns 免费二级域名
+
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>cf</tag>
+        <tag>域名</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用Github Copilot项目真正免费使用GPT4</title>
     <url>/posts/50453.html</url>
     <content><![CDATA[必看事项:
@@ -4173,87 +4234,6 @@ GPT-4 他们结婚时你还没出生。
       </tags>
   </entry>
   <entry>
-    <title>申请 Cloudns 免费二级域名</title>
-    <url>/posts/23609.html</url>
-    <content><![CDATA[申请 cloudns 免费二级域名
-cloudns主页
-cloudflare主页
-
-注册cloudns
-
-
-
-
-
-
-
-
-看到这个页面即为成功
-
-
-
-选择NS进行解析，这里的解析地址为 cloudflare地址
-
-
-我这里使用三个邮箱注册了三个都已经成功
-
-
-
-
-邮箱
-域名
-
-
-
-
-18800566899@163.com
-likunqi.cloudns.biz
-
-
-17310189620@163.com
-lkq001.cloudns.biz
-
-
-1723245090@qq.com
-lkq002.cloudns.biz
-
-
-
-
-
-可以参考一下这个博主的视频注册(需要魔法) 申请 cloudns 免费二级域名
-
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>cf</tag>
-        <tag>域名</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录想法</title>
-    <url>/posts/771611.html</url>
-    <content><![CDATA[记录一个做导航的想法
-
-这个网站 是免费的我可以做跳转，只需要邮箱注册就行
-
-免费的虚拟主机
-
-这个网站 流量不知行不行，可以放html页面
-
-将博客 微信粉丝群 公众号 搜索引擎 导航 技术热点 跑通
-]]></content>
-      <categories>
-        <category>想法</category>
-      </categories>
-      <tags>
-        <tag>想法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>那些大佬开源的Github项目</title>
     <url>/posts/2111241.html</url>
     <content><![CDATA[1. ZainCheung/netease-cloud
@@ -4318,6 +4298,26 @@ V2EX社区网站的优化脚本，旨在改善用户体验。
         <tag>github</tag>
         <tag>discover</tag>
         <tag>API</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录想法</title>
+    <url>/posts/771611.html</url>
+    <content><![CDATA[记录一个做导航的想法
+
+这个网站 是免费的我可以做跳转，只需要邮箱注册就行
+
+免费的虚拟主机
+
+这个网站 流量不知行不行，可以放html页面
+
+将博客 微信粉丝群 公众号 搜索引擎 导航 技术热点 跑通
+]]></content>
+      <categories>
+        <category>想法</category>
+      </categories>
+      <tags>
+        <tag>想法</tag>
       </tags>
   </entry>
   <entry>
