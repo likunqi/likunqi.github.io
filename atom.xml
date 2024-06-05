@@ -6,7 +6,7 @@
   <link href="https://blog.mmc88.fun/atom.xml" rel="self"/>
   
   <link href="https://blog.mmc88.fun/"/>
-  <updated>2024-06-01T03:52:16.419Z</updated>
+  <updated>2024-06-05T05:02:24.391Z</updated>
   <id>https://blog.mmc88.fun/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信聊天记录备份与管理和分析</title>
+    <link href="https://blog.mmc88.fun/posts/77161121.html"/>
+    <id>https://blog.mmc88.fun/posts/77161121.html</id>
+    <published>2024-06-05T00:13:54.000Z</published>
+    <updated>2024-06-05T05:02:24.391Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;▎ 软件介绍：&lt;/p&gt;
+&lt;p&gt;一款微信数据分析工具，帮助你一站式微信数据整合与分析，实现聊天记录无限留存与深度挖掘。&lt;/p&gt;
+&lt;p&gt;它不仅可以准确显示您的好友数、群聊数和当日的消息总量，还提供了过去 15</summary>
+        
+      
+    
+    
+    
+    <category term="软件" scheme="https://blog.mmc88.fun/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="软件" scheme="https://blog.mmc88.fun/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>精选电影合集</title>
@@ -544,34 +571,6 @@ echo &amp;quot;net.core.default_qdisc=fq&amp;quot;</summary>
     <summary type="html">&lt;h2 id=&quot;Q-A&quot;&gt;Q/A&lt;/h2&gt;
 &lt;h3 id=&quot;1-Java-中应该使用什么数据类型来代表价格&quot;&gt;1. Java 中应该使用什么数据类型来代表价格?&lt;/h3&gt;
 &lt;p&gt;如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double</summary>
-        
-      
-    
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc88.fun/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA基础 - 知识点</title>
-    <link href="https://blog.mmc88.fun/posts/21111129.html"/>
-    <id>https://blog.mmc88.fun/posts/21111129.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-01T18:12:39.892Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;Java 基础 - 知识点详解&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;知识体系&lt;br&gt;
-&lt;img src=&quot;https://likunqi.top/file/e5af32e538a265ddee622.png&quot; alt=&quot;&quot;</summary>
         
       
     
