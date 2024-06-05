@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.mmc88.fun/posts/1234521.html</loc>
+    <loc>https://blog.mmc88.fun/posts/1234521111.html</loc>
     
     <lastmod>2024-06-05</lastmod>
     
@@ -415,13 +415,6 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2024-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.mmc88.fun/tags/ChatGpt/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -430,6 +423,13 @@
   
   <url>
     <loc>https://blog.mmc88.fun/tags/%E5%BB%BA%E7%AB%99/</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mmc88.fun/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -578,14 +578,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/discover/</loc>
+    <loc>https://blog.mmc88.fun/categories/PS/AI/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc88.fun/categories/PS/AI/</loc>
+    <loc>https://blog.mmc88.fun/categories/discover/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
