@@ -351,6 +351,42 @@ GitHub Copilot 快速入门
       </tags>
   </entry>
   <entry>
+    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
+    <url>/posts/77145.html</url>
+    <content><![CDATA[前言
+我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
+功能介绍
+1.热部署代码
+包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
+2.热部署资源文件
+在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
+3.批量热更新修改的文件
+修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
+4.执行远程函数
+无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
+直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
+无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
+有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
+目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
+复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
+5.远程查看字段值
+包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
+6.jar 包热更新
+在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
+7.远程编译并热部署
+在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
+在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
+安装教程
+详见https://github.com/Liubsyy/HotSecondsIDEA
+]]></content>
+      <categories>
+        <category>IDEA</category>
+      </categories>
+      <tags>
+        <tag>IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA基础 - HashMap面试题</title>
     <url>/posts/1916.html</url>
     <content><![CDATA[1. 为什么 HashMap 的初始大小是 16，扩容为原来的两倍？
@@ -864,42 +900,6 @@ Java 8对 HashMap 进行扩容的行为也进行了改良，这包括在扩容�
       </categories>
       <tags>
         <tag>JAVA基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IDEA插件 - Java 热部署HotSeconds，可实现一键化秒级热更新</title>
-    <url>/posts/77145.html</url>
-    <content><![CDATA[前言
-我们在开发调试的过程中，经常在打包和重启服务器中消耗大量的时间，这将浪费我们大量的青春，这里介绍一款本人开发的 Java 远程热部署插件 HotSeconds ，包括 HotSecondsServer 和 HotSecondsClient ，相对传统部署来说，效率可以提升百倍。
-功能介绍
-1.热部署代码
-包括修改代码，新增字段，新增方法，新增类，打破了原生 JDK 中 Instrument 机制只能修改方法体的不足。同时还支持一些常用框架的热更新，比如 Spring 新增一个 Autowired 字段或者 SpringMVC 新增一个 Controller 方法，也是支持热更新的。
-2.热部署资源文件
-在资源文件上右键也可以选择 Hot swap this file to remote ，比如 MyBatis 的 xml 文件，就能直接热更新生效，那么资源文件是怎么实现热部署的呢？ 这里是根据 Path mappings 中的路径映射，将本地的资源文件热部署到远程对应目录，但是资源文件非常复杂，比如 xml ,html, css, js ，properties 等等文件，框架也非常的多，又是怎么实现热部署的呢？ 路径映射只是将文件上传到服务器端，真正生效的是上传完之后刷新资源文件的缓存的逻辑，这就涉及到插件扩展，本插件内核集成了 MyBatis 和 MyBatis Plus 的 xml 的热更新，更多的资源文件热更新，详见插件扩展。
-3.批量热更新修改的文件
-修改了多个文件的情况下，直接打开热部署面板，可将修改过的文件热部署到服务器，支持按文件修改时间戳热部署，也可以将版本控制下(Git/SVN 等)未提交的文件热部署
-4.执行远程函数
-无需调用远程 Http 或者 RPC 接口，就能直接触发需要的函数，这对于调试来说可是非常方便的，当然也包括在沙箱环境修复脏数据。
-直接在函数上右键选择远程执行函数，即可触发具体的函数逻辑，这里分为四种情况，静态，非静态，有参数，无参数。
-无参数可以直接触发，如果是非静态字段，会弹出当前类的所有对象的选择框，选择后触发。
-有参数的情况，会弹出对象选择框和参数输入框，输入选择后触发逻辑。
-目前参数只支持 byte,short,boolean,char,int,double,float,long,BigDecimal 。
-复杂参数的函数，可以写一个静态无参的函数，触发需要的函数，然后远程热部署整个新写的静态无参的函数的类即可。
-5.远程查看字段值
-包括静态字段和非静态字段，直接在字段上右键，就能查看该字段的值。 非静态字段是先弹出显示当前类的所有对象实例的框，选择具体的对象后即可获取该对象的字段值。
-6.jar 包热更新
-在打开的 jar 上面右键，可以看到两个选项，Hot deploy the Jar to remote 和 Hot swap this file to remote 。 前者是将整个 jar 的所有 class 热部署的服务器，后者只热更新选中的 class 。
-7.远程编译并热部署
-在 java 文件上右键选中 Hot swap this file to remote ，会在本地编译然后热更新到远程，但是有的时候本地编译并不方便，比如本地和远程服务器的 JDK 版本可能存在巨大的差异，这个时候就需要远程编译了。
-在 java 文件上右键，选择 Remote compilation and hot swap 可以在远端编译并热更新。
-安装教程
-详见https://github.com/Liubsyy/HotSecondsIDEA
-]]></content>
-      <categories>
-        <category>IDEA</category>
-      </categories>
-      <tags>
-        <tag>IDEA</tag>
       </tags>
   </entry>
   <entry>
@@ -3884,15 +3884,13 @@ Z 正义联盟：无限地球危机 下+上 [2024] DC 动画电影
   </entry>
   <entry>
     <title>微信聊天记录备份与管理和分析</title>
-    <url>/posts/771214125151.html</url>
-    <content><![CDATA[软件介绍：
+    <url>/posts/1234521.html</url>
+    <content><![CDATA[1. 软件介绍：
 一款微信数据分析工具，帮助你一站式微信数据整合与分析，实现聊天记录无限留存与深度挖掘。
-
 它不仅可以准确显示您的好友数、群聊数和当日的消息总量，还提供了过去 15 天内的每日消息统计功能，让您清晰了解自己的社交活跃度。
-
 此外它还能够识别并展示最近一个月内与您互动最频繁的前 10 位联系人。还支持导出微信的聊天记录、联系人和群聊信息，甚至可以查看超过三天限制的朋友圈历史记录等强大功能。
 
-功能
+2. 功能
 点击此处查看功能展示
 
 获取当前登录微信的微信昵称、账号、手机号、邮箱、秘钥、微信 Id、文件夹路径
@@ -3907,22 +3905,13 @@ Z 正义联盟：无限地球危机 下+上 [2024] DC 动画电影
 展示微信消息类别占比图表
 展示微信最近使用的关键字词云图
 
-快速启动
+3. 快速启动
 安装包方式部署
 
 点击下载 wx-dump-4j-bin.tar.gz
 解压缩 wx-dump-4j-bin.tar.gz，进入 bin 目录
 双击 start.bat 启动文件
 启动成功后访问：http://localhost: 8080
-
-源码方式部署
-
-下载源码 git clone https://github.com/xuchengsheng/wx-dump-4j.git
-安装后端依赖 cd wx-dump-4j &amp; mvn clean install
-使用开发工具启动 com.xcs.wx.WxDumpApplication
-安装前端依赖 cd wx-dump-ui &amp; npm install
-启动前端服务 npm run start
-访问：http://localhost: 8000
 
 ▎ 软件下载：点击下载 (https://pan.quark.cn/s/e986b0790cc9)
 ]]></content>
