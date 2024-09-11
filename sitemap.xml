@@ -329,13 +329,6 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/tags/Kubernetes/</loc>
-    <lastmod>2024-09-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.mmc99.top/tags/docker/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -350,6 +343,13 @@
   </url>
   
   <url>
+    <loc>https://blog.mmc99.top/tags/Kubernetes/</loc>
+    <lastmod>2024-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mmc99.top/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -357,14 +357,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/tags/hexo/</loc>
+    <loc>https://blog.mmc99.top/tags/VPN/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/tags/VPN/</loc>
+    <loc>https://blog.mmc99.top/tags/hexo/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -499,14 +499,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/Kubernetes/</loc>
+    <loc>https://blog.mmc99.top/categories/docker/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/docker/</loc>
+    <loc>https://blog.mmc99.top/categories/Kubernetes/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -520,14 +520,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/%E5%BB%BA%E7%AB%99/</loc>
+    <loc>https://blog.mmc99.top/categories/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://blog.mmc99.top/categories/%E5%BB%BA%E7%AB%99/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -569,14 +569,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/PS/AI/</loc>
+    <loc>https://blog.mmc99.top/categories/discover/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/discover/</loc>
+    <loc>https://blog.mmc99.top/categories/PS/AI/</loc>
     <lastmod>2024-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
