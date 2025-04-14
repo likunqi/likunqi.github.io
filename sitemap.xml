@@ -347,13 +347,6 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/tags/Kubernetes/</loc>
-    <lastmod>2025-04-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.mmc99.top/tags/docker/</loc>
     <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -362,6 +355,13 @@
   
   <url>
     <loc>https://blog.mmc99.top/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2025-04-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mmc99.top/tags/Kubernetes/</loc>
     <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -517,14 +517,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/Kubernetes/</loc>
+    <loc>https://blog.mmc99.top/categories/docker/</loc>
     <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mmc99.top/categories/docker/</loc>
+    <loc>https://blog.mmc99.top/categories/Kubernetes/</loc>
     <lastmod>2025-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
