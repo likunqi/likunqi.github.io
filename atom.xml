@@ -6,7 +6,7 @@
   <link href="https://blog.mmc99.top/atom.xml" rel="self"/>
   
   <link href="https://blog.mmc99.top/"/>
-  <updated>2024-06-05T05:33:10.681Z</updated>
+  <updated>2025-04-14T08:57:22.334Z</updated>
   <id>https://blog.mmc99.top/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免费搭建GitHub代理</title>
+    <link href="https://blog.mmc99.top/posts/4141515.html"/>
+    <id>https://blog.mmc99.top/posts/4141515.html</id>
+    <published>2025-04-14T00:13:54.000Z</published>
+    <updated>2025-04-14T08:57:22.334Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;免费搭建GitHub代理/镜像&lt;/h1&gt;
+&lt;p&gt;使用Cloudflare Workers或Pages创建GitHub代理，解决国内无法访问GitHub的问题。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="建站" scheme="https://blog.mmc99.top/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="建站" scheme="https://blog.mmc99.top/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Follow认证</title>
+    <link href="https://blog.mmc99.top/posts/1154123.html"/>
+    <id>https://blog.mmc99.top/posts/1154123.html</id>
+    <published>2024-10-14T05:33:00.000Z</published>
+    <updated>2024-10-14T12:01:25.775Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;This message is used to verify that this feed (feedId:68620854503744512) belongs to me (userId:67152320779790336). Join me in enjoying</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>微信聊天记录备份与管理和分析</title>
@@ -364,9 +412,9 @@
     <category term="建站" scheme="https://blog.mmc99.top/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-    <category term="ChatGpt" scheme="https://blog.mmc99.top/tags/ChatGpt/"/>
-    
     <category term="建站" scheme="https://blog.mmc99.top/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="ChatGpt" scheme="https://blog.mmc99.top/tags/ChatGpt/"/>
     
   </entry>
   
@@ -398,27 +446,6 @@
     <category term="AI" scheme="https://blog.mmc99.top/tags/AI/"/>
     
     <category term="PS" scheme="https://blog.mmc99.top/tags/PS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Follow认证</title>
-    <link href="https://blog.mmc99.top/posts/1154123.html"/>
-    <id>https://blog.mmc99.top/posts/1154123.html</id>
-    <published>2023-12-29T05:33:00.000Z</published>
-    <updated>2024-10-14T11:59:38.656Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;This message is used to verify that this feed (feedId:68620854503744512) belongs to me (userId:67152320779790336). Join me in enjoying</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
@@ -539,33 +566,6 @@
     <category term="公众号" scheme="https://blog.mmc99.top/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     <category term="破解" scheme="https://blog.mmc99.top/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA基础 - QA</title>
-    <link href="https://blog.mmc99.top/posts/21214129.html"/>
-    <id>https://blog.mmc99.top/posts/21214129.html</id>
-    <published>2023-12-25T05:33:00.000Z</published>
-    <updated>2024-01-01T18:37:11.728Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Q-A&quot;&gt;Q/A&lt;/h2&gt;
-&lt;h3 id=&quot;1-Java-中应该使用什么数据类型来代表价格&quot;&gt;1. Java 中应该使用什么数据类型来代表价格?&lt;/h3&gt;
-&lt;p&gt;如果不是特别关心内存和性能的话，使用BigDecimal，否则使用预定义精度的 double</summary>
-        
-      
-    
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc99.top/categories/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JAVA基础" scheme="https://blog.mmc99.top/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
